@@ -1,0 +1,80 @@
+﻿body {
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.form-inicio {
+    width: 350px;
+    background: #27AE60;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.controles {
+    width: 100%;
+    background: #E5E8E8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #FBFDFE;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+
+.form-inicio p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-inicio .titulo {
+    text-align: center;
+}
+
+.form-inicio .face {
+    width: 30px;
+    height: 30px;
+}
+
+.social {
+    border-style: dashed;
+}
+
+.form-inicio .botones {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    background: #034E73;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.form-inicio .datos {
+    font-family: 'calibri';
+    font-size: 15px;
+}
+
+.form-inicio .paises {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    background: #197CB4;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #FBFDFE;
+}
