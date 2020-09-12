@@ -56,8 +56,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Iniciar Sesion</a></li>
-                        <li><a runat="server" href="~/Contact">Registrarse</a></li>
+                        <li><a runat="server" href="~/Iniciar">Iniciar Sesion</a></li>
+                        <li><a runat="server" href="~/Registro">Registrarse</a></li>
                     </ul>
                 </div>
             </div>
