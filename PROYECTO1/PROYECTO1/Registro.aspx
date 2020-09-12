@@ -16,7 +16,7 @@
          <asp:TextBox ID="TextBoxContraseña"  class="controles" runat="server"></asp:TextBox>
 
          <asp:Label ID="Label5" class="datos" runat="server" Text="Label">Fecha de Nacimiento</asp:Label>
-         <asp:DropDownList ID="DropDownList3"  class="controles" runat="server">
+         <asp:DropDownList ID="DropDownListAño"  class="controles" runat="server">
 
               <asp:listitem text="Año" ></asp:listitem>
              <asp:listitem text="2020" ></asp:listitem>
@@ -49,10 +49,10 @@
              <asp:listitem text="1993"></asp:listitem>
              <asp:listitem text="1992" ></asp:listitem>
              <asp:listitem text="1991" ></asp:listitem>
-             <%--<asp:listitem text="1990" ></asp:listitem>--%>
+             <asp:listitem text="1990" ></asp:listitem>
          </asp:DropDownList>
 
-         <asp:DropDownList ID="DropDownList1"  class="controles" runat="server">
+         <asp:DropDownList ID="DropDownListMes"  class="controles" runat="server">
              <asp:listitem text="Mes" ></asp:listitem>
              <asp:listitem text="Enero" value="1"></asp:listitem>
              <asp:listitem text="Febrero" value="2"></asp:listitem>
@@ -68,7 +68,7 @@
              <asp:listitem text="Diciembre" value="12"></asp:listitem>
          </asp:DropDownList>
          
-         <asp:DropDownList ID="DropDownList2" class="controles" runat="server">
+         <asp:DropDownList ID="DropDownListDia" class="controles" runat="server">
 
              <asp:listitem text="Día" ></asp:listitem>
              <asp:listitem text="1" ></asp:listitem>
@@ -111,6 +111,6 @@
          <asp:Label ID="Label7" class="datos" runat="server" Text="Label">Correo electrónico</asp:Label>
          <asp:TextBox ID="TextBoxCorreo"  class="controles" runat="server"></asp:TextBox>
 
-         <asp:Button ID="Button1" runat="server" CssClass="botones" Text="Registrarse" />
+         <asp:Button ID="ButtonRegistrarse" runat="server" CssClass="botones" Text="Registrarse" OnClick="ButtonRegistrarse_Click" />
     </section>
 </asp:Content>

@@ -9,7 +9,7 @@
 
         <asp:Label ID="Label2" class="datos" runat="server" Text="Label">Contraseña</asp:Label>
         <asp:TextBox ID="TextBoxPass"  type="password" class="controles" runat="server" style="text-align:center"></asp:TextBox>
-        <asp:Button ID="ButtonIniciar" CssClass="botones" runat="server" Text="Iniciar Sesión" />
+        <asp:Button ID="ButtonIniciar" CssClass="botones" runat="server" Text="Iniciar Sesión" OnClick="ButtonIniciar_Click" />
 
     </section>
    
