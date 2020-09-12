@@ -5,6 +5,7 @@
 <html lang="es">
 <head runat="server">
      <link href="Styles/estiloInicio.css" rel="stylesheet" type="text/css">
+     <link href="Styles/estiloTabla.css" rel="stylesheet" type="text/css">
     
 
 

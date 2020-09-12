@@ -38,8 +38,16 @@ namespace PROYECTO1
                 comando.Parameters.AddWithValue("@correo", TextBoxNombreUsuario.Text);
                 comando.ExecuteNonQuery();
             }
-                
-            
+
+            TextBoxNombres.Text = "";
+            TextBoxContraseña.Text = "";
+            TextBoxApellidos.Text = "";
+            TextBoxCorreo.Text = "";
+            TextBoxPais.Text = "";
+            TextBoxNombreUsuario.Text = "";
+            DropDownListAño.SelectedIndex = 0;
+            DropDownListDia.SelectedIndex = 0;
+            DropDownListMes.SelectedIndex = 0;
         }
     }
 }
