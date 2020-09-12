@@ -11,7 +11,15 @@
 <body>
     <form id="form1" runat="server">
         <div >
+           <section class="form-boton">
+              <asp:Button Cssclass="bot" ID="ButtonCarga" runat="server" Text="Cargar" />
+             <asp:Button Cssclass="bot" ID="ButtonDescarga" runat="server" Text="Descargar" />
+              <asp:Button Cssclass="bot" ID="ButtonSalir" runat="server"  href="~/Default" Text="Salir" OnClick="ButtonSalir_Click" />
+           </section>
+                
+           
          <section class="form-tabla">
+           
 <table class="egt" >
 
   <tr>

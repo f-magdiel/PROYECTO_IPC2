@@ -18,3 +18,15 @@
 .egt  {
     margin: 0 auto;
 }
+
+.form-boton .bot {
+    width: 80px;
+    height: 30px;
+    border: none;
+    padding: 12px;
+    background: #ff5722;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align:center;
+}

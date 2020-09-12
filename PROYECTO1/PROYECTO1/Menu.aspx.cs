@@ -13,5 +13,10 @@ namespace PROYECTO1
         {
 
         }
+
+        protected void ButtonSalir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }
