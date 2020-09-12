@@ -12,8 +12,8 @@
          <asp:Label ID="Label3" class="datos" runat="server" Text="Label">Nombre de usuario</asp:Label>
          <asp:TextBox ID="TextBoxNombreUsuario"  class="controles" runat="server"></asp:TextBox>
 
-         <asp:Label ID="Label4" class="datos" runat="server" Text="Label">Contraseña</asp:Label>
-         <asp:TextBox ID="TextBoxContraseña"  class="controles" runat="server"></asp:TextBox>
+         <asp:Label ID="Label4" class="datos"  runat="server" Text="Label">Contraseña</asp:Label>
+         <asp:TextBox ID="TextBoxContraseña"   type="password" class="controles" runat="server"></asp:TextBox>
 
          <asp:Label ID="Label5" class="datos" runat="server" Text="Label">Fecha de Nacimiento</asp:Label>
          <asp:DropDownList ID="DropDownListAño"  class="controles" runat="server">
@@ -51,6 +51,8 @@
              <asp:listitem text="1991" ></asp:listitem>
              <asp:listitem text="1990" ></asp:listitem>
          </asp:DropDownList>
+         
+       
 
          <asp:DropDownList ID="DropDownListMes"  class="controles" runat="server">
              <asp:listitem text="Mes" ></asp:listitem>
