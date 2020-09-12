@@ -32,6 +32,18 @@
     color: black;
 }
 
+.lista {
+    width: 100px;
+    background: #E5E8E8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #FBFDFE;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+
 .form-inicio p {
     height: 40px;
     text-align: center;
