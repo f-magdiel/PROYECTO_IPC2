@@ -6,7 +6,7 @@
 <head runat="server">
      <link href="Styles/estiloTabla.css" rel="stylesheet" type="text/css">
 
-     </link>
+     
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
@@ -17,7 +17,7 @@
                
                <asp:TextBox ID="TextBoxCarga" runat="server"></asp:TextBox>
              <asp:Button Cssclass="bot" ID="ButtonCarga" runat="server" Text="Cargar" OnClick="ButtonCarga_Click1" />
-              <asp:Button Cssclass="bot" ID="ButtonDescarga" runat="server" Text="Descargar" />
+              <asp:Button Cssclass="bot" ID="ButtonDescarga" runat="server" Text="Descargar" OnClick="ButtonDescarga_Click" />
               <asp:Button Cssclass="bot" ID="ButtonSalir" runat="server"  href="~/Default" Text="Salir" OnClick="ButtonSalir_Click" />
                <asp:Label ID="LabelTexto" runat="server" Text="Label"></asp:Label>
                </section>
