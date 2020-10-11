@@ -1,0 +1,68 @@
+﻿.form-boton {
+    width: 300px;
+    height: 100px;
+    border: none;
+    padding: 12px;
+    background: #034E73;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'calibri';
+    float: left;
+}
+
+.caja {
+    
+    position: absolute;
+    left:20px;
+    top: 350px;
+    float: left;
+    height: 20px;
+}
+
+.btn1 {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background: #E87D1E;
+    color: white;
+    border-radius: 4px;
+    float: left;
+    font-size: 16px;
+    font-family: 'calibri';
+    position: absolute;
+    top:350px;
+    left:200px;
+}
+
+.btn2 {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background: #E87D1E;
+    color: white;
+    border-radius: 4px;
+    float: left;
+    font-size: 16px;
+    font-family: 'calibri';
+    position: absolute;
+    left: 200px;
+    top: 400px;
+}
+.btn3 {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background: #E87D1E;
+    color: white;
+    border-radius: 4px;
+    float: right;
+    font-size: 16px;
+    font-family: 'calibri';
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+

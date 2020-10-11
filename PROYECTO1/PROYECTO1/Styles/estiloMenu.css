@@ -1,0 +1,32 @@
+﻿body {
+    background: #33FF96;
+}
+
+.form-menu .opcion {
+    width: 180px;
+    height: 50px;
+    border: none;
+    padding: 12px;
+    background: #ff5722;
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 20px;
+    font-family: 'calibri';
+}
+
+.form-menu {
+    width: 1200px;
+    height: 100px;
+    border: none;
+    padding: 12px;
+    background: #034E73;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+

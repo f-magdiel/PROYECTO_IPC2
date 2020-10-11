@@ -24,9 +24,9 @@ namespace PROYECTO1
             String fecha = dia + "/" + mes + "/" + año;
             TextBoxCorreo.Text = fecha;
 
-            using (SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-BBB7M4H; Initial Catalog = Usuario; Integrated Security = True"))
+            using (SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-O6I4JBC; Initial Catalog = Jugador; Integrated Security = True"))
             {
-                String query = "INSERT INTO Registro (username,nombres,apellidos,contraseña,fecha_nacimiento,pais,correo_eletronico) VALUES (@username,@nombres,@apellidos,@contraseña,@fecha,@pais,@correo)";
+                String query = "INSERT INTO Usuario (Username,Nombres,Apellidos,Contraseña,Fecha_nacimiento,Pais,Correo_electronico) VALUES (@username,@nombres,@apellidos,@contraseña,@fecha,@pais,@correo)";
                 sqlCon.Open();
                 SqlCommand comando = new SqlCommand(query, sqlCon);
                 comando.Parameters.AddWithValue("@username", TextBoxNombreUsuario.Text);

@@ -18,17 +18,17 @@ namespace PROYECTO1
 
         protected void ButtonIniciar_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-BBB7M4H; Initial Catalog = Usuario; Integrated Security = True")) {
+            using (SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-O6I4JBC; Initial Catalog = Jugador; Integrated Security = True")) {
 
                 sqlCon.Open();
-                string query = "SELECT username,contraseña FROM Registro WHERE username = @username AND contraseña=@password";
+                string query = "SELECT Username,Contraseña FROM Usuario WHERE Username = @username AND Contraseña=@password";
                 SqlCommand sqlCmd = new SqlCommand(query,sqlCon);
                 sqlCmd.Parameters.AddWithValue("@username",TextBoxUsername.Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@password",TextBoxPass.Text.Trim());
                 SqlDataReader leer = sqlCmd.ExecuteReader();
                 if (leer.Read())
                 {
-                    Response.Redirect("Menu.aspx");
+                    Response.Redirect("Opciones.aspx");
                 }
                 else {
                     Response.Redirect("Default"); 
