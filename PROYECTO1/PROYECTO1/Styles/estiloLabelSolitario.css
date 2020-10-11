@@ -98,7 +98,8 @@ form-contenedor {
 }
 
 .listaficha {
-    width:100px;
+    width:150px;
+    height:30px;
     float: left;
     position: absolute;
     top: 180px;
@@ -107,4 +108,19 @@ form-contenedor {
     font-family: 'calibri';
     color: black;
     border-radius: 4px;
+}
+
+.btnseleccionar {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background: #E87D1E;
+    color: white;
+    border-radius: 4px;
+    float: left;
+    font-size: 16px;
+    font-family: 'calibri';
+    position: absolute;
+    top: 180px;
+    left: 1250px;
 }

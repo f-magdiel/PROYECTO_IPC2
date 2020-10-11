@@ -18,6 +18,7 @@
 
         
         <div >
+            <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" />
             <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server">
                 <asp:ListItem Value="X">Negro</asp:ListItem>
                 <asp:ListItem Value="O">Blanco</asp:ListItem>
