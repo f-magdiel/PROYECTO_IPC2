@@ -78,6 +78,8 @@ namespace PROYECTO1
                 BtnD1.Enabled = false;
                 BtnD2.Enabled = false;
                 BtnD3.Enabled = false;
+                BtnD4.Enabled = false;
+                BtnD5.Enabled = false;
                 BtnD6.Enabled = false;
                 BtnD7.Enabled = false;
                 BtnD8.Enabled = false;
@@ -86,6 +88,8 @@ namespace PROYECTO1
                 BtnE1.Enabled = false;
                 BtnE2.Enabled = false;
                 BtnE3.Enabled = false;
+                BtnE4.Enabled = false;
+                BtnE5.Enabled = false;
                 BtnE6.Enabled = false;
                 BtnE7.Enabled = false;
                 BtnE8.Enabled = false;
