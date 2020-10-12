@@ -18,8 +18,8 @@ namespace PROYECTO1
     public partial class WebForm1 : System.Web.UI.Page
     {
        
-        public static bool banderaNegra = false;
-        public static bool banderaBlanca = true;
+        public static bool banderaNegra = false; // false para le negro
+        public static bool banderaBlanca = true; // true para el blanco
         public static bool banderaFicha = false;
         public static bool banderaTiro = false;
         public static bool banderaGeneral = true;
@@ -33,9 +33,94 @@ namespace PROYECTO1
         public ArrayList arrayColumna = new ArrayList();
         public ArrayList arrayColor = new ArrayList();
         public static string[,] tablero = new string[8, 8];
-        
+        public static Button[,] boton = new Button[8, 8];
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                tablero[3, 3] = "O";
+                tablero[3, 4] = "X";
+                tablero[4, 3] = "X";
+                tablero[4, 4] = "O";
+            }
+
+            if (!IsPostBack)
+            {
+
+                boton[0, 0] = BtnA1;
+                boton[0, 1] = BtnB1;
+                boton[0, 2] = BtnC1;
+                boton[0, 3] = BtnD1;
+                boton[0, 4] = BtnE1;
+                boton[0, 5] = BtnF1;
+                boton[0, 6] = BtnG1;
+                boton[0, 7] = BtnH1;
+
+                boton[1, 0] = BtnA2;
+                boton[1, 1] = BtnB2;
+                boton[1, 2] = BtnC2;
+                boton[1, 3] = BtnD2;
+                boton[1, 4] = BtnE2;
+                boton[1, 5] = BtnF2;
+                boton[1, 6] = BtnG2;
+                boton[1, 7] = BtnH2;
+
+                boton[2, 0] = BtnA3;
+                boton[2, 1] = BtnB3;
+                boton[2, 2] = BtnC3;
+                boton[2, 3] = BtnD3;
+                boton[2, 4] = BtnE3;
+                boton[2, 5] = BtnF3;
+                boton[2, 6] = BtnG3;
+                boton[2, 7] = BtnH3;
+
+                boton[3, 0] = BtnA4;
+                boton[3, 1] = BtnB4;
+                boton[3, 2] = BtnC4;
+                boton[3, 3] = BtnD4;
+                boton[3, 4] = BtnE4;
+                boton[3, 5] = BtnF4;
+                boton[3, 6] = BtnG4;
+                boton[3, 7] = BtnH4;
+
+                boton[4, 0] = BtnA5;
+                boton[4, 1] = BtnB5;
+                boton[4, 2] = BtnC5;
+                boton[4, 3] = BtnD5;
+                boton[4, 4] = BtnE5;
+                boton[4, 5] = BtnF5;
+                boton[4, 6] = BtnG5;
+                boton[4, 7] = BtnH5;
+
+                boton[5, 0] = BtnA6;
+                boton[5, 1] = BtnB6;
+                boton[5, 2] = BtnC6;
+                boton[5, 3] = BtnD6;
+                boton[5, 4] = BtnE6;
+                boton[5, 5] = BtnF6;
+                boton[5, 6] = BtnG6;
+                boton[5, 7] = BtnH6;
+
+                boton[6, 0] = BtnA7;
+                boton[6, 1] = BtnB7;
+                boton[6, 2] = BtnC7;
+                boton[6, 3] = BtnD7;
+                boton[6, 4] = BtnE7;
+                boton[6, 5] = BtnF7;
+                boton[6, 6] = BtnG7;
+                boton[6, 7] = BtnH7;
+
+                boton[7, 0] = BtnA8;
+                boton[7, 1] = BtnB8;
+                boton[7, 2] = BtnC8;
+                boton[7, 3] = BtnD8;
+                boton[7, 4] = BtnE8;
+                boton[7, 5] = BtnF8;
+                boton[7, 6] = BtnG8;
+                boton[7, 7] = BtnH8;
+            }
+
             if (!IsPostBack)
             {
 
@@ -233,6 +318,13 @@ namespace PROYECTO1
             }
         }
 
+        public void capturaFicha(int fila,int columna)
+        {   //x,y
+            int inicioFila = fila;
+            int inicioColumna = columna;
+            //for de izquierda
+            
+        }
         public void ingresarFichas()
         {
             for (int i = 0; i < 8; i++)
@@ -4705,12 +4797,14 @@ namespace PROYECTO1
                 BtnF4.BackColor = Color.White;
                 banderaBlanca = false;
                 banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnF4.BackColor = Color.Black;
                 banderaNegra = false;
                 banderaBlanca = true;
+                
             }
         }
 
@@ -6288,6 +6382,43 @@ namespace PROYECTO1
            
             
            
+        }
+
+        protected void ButtonSeleccionar_Click(object sender, EventArgs e)
+        {
+            string seleccion = DropDownListFicha.SelectedValue.ToString();
+            if(seleccion=="O")
+            {
+                banderaBlanca = true;
+                banderaNegra = false;
+                tablero[3, 3] = "O";
+                tablero[3, 4] = "X";
+                tablero[4, 3] = "X";
+                tablero[4, 4] = "O";
+
+                BtnD4.BackColor = Color.White;
+                BtnE4.BackColor = Color.Black;
+                BtnD5.BackColor = Color.Black;
+                BtnE5.BackColor = Color.White;
+
+            }
+            else if(seleccion=="X")
+            {
+                banderaBlanca = false;
+                banderaNegra = true;
+               
+
+                tablero[3, 3] = "X";
+                tablero[3, 4] = "O";
+                tablero[4, 3] = "O";
+                tablero[4, 4] = "X";
+
+                BtnD4.BackColor = Color.Black;
+                BtnE4.BackColor = Color.White;
+                BtnD5.BackColor = Color.White;
+                BtnE5.BackColor = Color.Black;
+
+            }
         }
     }
 }

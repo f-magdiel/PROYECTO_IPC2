@@ -42,15 +42,6 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button ButtonSolitario;
 
         /// <summary>
-        /// Control ButtonVersus.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonVersus;
-
-        /// <summary>
         /// Control ButtonTorneo.
         /// </summary>
         /// <remarks>

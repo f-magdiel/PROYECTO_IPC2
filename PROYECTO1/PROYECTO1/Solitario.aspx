@@ -18,7 +18,7 @@
 
         
         <div >
-            <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" />
+            <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" OnClick="ButtonSeleccionar_Click" />
             <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server">
                 <asp:ListItem Value="X">Negro</asp:ListItem>
                 <asp:ListItem Value="O">Blanco</asp:ListItem>
@@ -34,7 +34,7 @@
              <asp:Button Cssclass="btn1" ID="ButtonCarga" runat="server" Text="Cargar" OnClick="ButtonCarga_Click1" />
               <asp:Button Cssclass="btn2" ID="ButtonDescarga" runat="server" Text="Descargar" OnClick="ButtonDescarga_Click" />
               <asp:Button Cssclass="btn3" ID="ButtonSalir" runat="server"  href="~/Opciones" Text="Regresar" OnClick="ButtonSalir_Click" />
-               <asp:Label Cssclass="labeltitulo" ID="LabelTitulo" runat="server" Text="Jugador"></asp:Label>
+               <asp:Label Cssclass="labeltitulo" ID="LabelTitulo" runat="server" Text=" "></asp:Label>
               
                 
            
