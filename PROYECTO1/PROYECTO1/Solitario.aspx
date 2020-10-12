@@ -18,6 +18,7 @@
 
         
         <div >
+            <asp:Button Cssclass="btnaletoria" ID="ButtonRandom" runat="server" Text="Aleatoria" OnClick="ButtonRandom_Click" />
             <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" OnClick="ButtonSeleccionar_Click" />
             <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server">
                 <asp:ListItem Value="X">Negro</asp:ListItem>

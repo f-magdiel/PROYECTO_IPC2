@@ -124,3 +124,18 @@ form-contenedor {
     top: 180px;
     left: 1250px;
 }
+
+.btnaletoria {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background: #E87D1E;
+    color: white;
+    border-radius: 4px;
+    float: left;
+    font-size: 16px;
+    font-family: 'calibri';
+    position: absolute;
+    top: 220px;
+    left: 1250px;
+}

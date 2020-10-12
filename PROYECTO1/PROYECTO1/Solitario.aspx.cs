@@ -17,9 +17,9 @@ namespace PROYECTO1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-       
-        public static bool banderaNegra = false; // false para le negro
-        public static bool banderaBlanca = true; // true para el blanco
+        public static bool activacionMaqina = false;
+        public static bool banderaNegra = false; // false para el negro, al inicio no se ha seleccionado nada xd
+        public static bool banderaBlanca = false; // false para el blanco
         public static bool banderaFicha = false;
         public static bool banderaTiro = false;
         public static bool banderaGeneral = true;
@@ -37,6 +37,12 @@ namespace PROYECTO1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsPostBack)
+            {
+                banderaBlanca = false;
+                banderaNegra = false;
+            }
             if (!IsPostBack)
             {
                 tablero[3, 3] = "O";
@@ -47,6 +53,7 @@ namespace PROYECTO1
 
             if (!IsPostBack)
             {
+
 
                 boton[0, 0] = BtnA1;
                 boton[0, 1] = BtnB1;
@@ -324,6 +331,16 @@ namespace PROYECTO1
             int inicioColumna = columna;
             //for de izquierda
             
+        }
+
+        public void maquinaBlanca()
+        {
+
+        }
+
+        public void maquinaNegra()
+        {
+
         }
         public void ingresarFichas()
         {
@@ -4329,15 +4346,11 @@ namespace PROYECTO1
         {
             if (banderaBlanca == true) {
                 BtnA1.BackColor = Color.White;
-                
-                
-                banderaBlanca = false;
-                banderaNegra = true;
+             
             } else if(banderaNegra == true){
                 BtnA1.BackColor = Color.Black;
                 
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4346,8 +4359,7 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
@@ -4363,14 +4375,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnC1.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4379,14 +4389,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnD1.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4395,14 +4403,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnE1.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4411,14 +4417,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnF1.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4427,14 +4431,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnG1.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4443,14 +4445,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH1.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnH1.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4459,14 +4459,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnA2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4475,14 +4473,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnB2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4491,14 +4487,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnC2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4507,14 +4501,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnD2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4523,14 +4515,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+              
             }
             else if (banderaNegra == true)
             {
                 BtnE2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4539,14 +4529,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnF2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4555,14 +4543,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnG2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4571,14 +4557,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH2.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnH2.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4587,14 +4571,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnA3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4603,14 +4585,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnB3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4619,14 +4599,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnC3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4635,14 +4613,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnD3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4651,14 +4627,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnE3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4667,14 +4641,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnF3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4683,14 +4655,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnG3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4699,14 +4669,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH3.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnH3.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4715,14 +4683,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnA4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4731,14 +4697,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnB4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4747,14 +4711,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnC4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4763,14 +4725,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnD4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4779,14 +4739,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnE4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4795,15 +4753,13 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
                 
             }
             else if (banderaNegra == true)
             {
                 BtnF4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
                 
             }
         }
@@ -4813,14 +4769,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnG4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4829,14 +4783,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH4.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnH4.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4845,14 +4797,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnA5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4861,14 +4811,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnB5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4877,14 +4825,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnC5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4893,14 +4839,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnD5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4909,14 +4853,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnE5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4925,14 +4867,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnF5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -4941,14 +4881,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnG5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4957,14 +4895,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH5.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnH5.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4973,14 +4909,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnA6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -4989,14 +4923,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnB6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5005,14 +4937,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnC6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5021,14 +4951,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnD6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5037,14 +4965,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnE6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5053,14 +4979,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnF6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5069,14 +4993,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnG6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5085,14 +5007,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH6.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnH6.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5101,14 +5021,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnA7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5117,14 +5035,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnB7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5133,14 +5049,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnC7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5149,14 +5063,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnD7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5165,14 +5077,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnE7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5181,14 +5091,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnF7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5197,14 +5105,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnG7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5213,14 +5119,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH7.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnH7.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5229,14 +5133,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnA8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5245,14 +5147,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnB8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5261,14 +5161,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnC8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5277,14 +5175,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+                
             }
             else if (banderaNegra == true)
             {
                 BtnD8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5293,14 +5189,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnE8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5309,14 +5203,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnF8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -5325,14 +5217,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnG8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+                
             }
         }
 
@@ -5341,14 +5231,12 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH8.BackColor = Color.White;
-                banderaBlanca = false;
-                banderaNegra = true;
+               
             }
             else if (banderaNegra == true)
             {
                 BtnH8.BackColor = Color.Black;
-                banderaNegra = false;
-                banderaBlanca = true;
+               
             }
         }
 
@@ -6389,35 +6277,60 @@ namespace PROYECTO1
             string seleccion = DropDownListFicha.SelectedValue.ToString();
             if(seleccion=="O")
             {
+                // el color es activado
                 banderaBlanca = true;
-                banderaNegra = false;
-                tablero[3, 3] = "O";
-                tablero[3, 4] = "X";
-                tablero[4, 3] = "X";
-                tablero[4, 4] = "O";
+                
+                LabelTitulo.Text = "Jugador - Blanco";
+                //se habilitan los botones para las blancas
+                BtnF4.Enabled = true;
+                BtnE3.Enabled = true;
+                BtnC5.Enabled = true;
+                BtnD6.Enabled = true;
 
-                BtnD4.BackColor = Color.White;
-                BtnE4.BackColor = Color.Black;
-                BtnD5.BackColor = Color.Black;
-                BtnE5.BackColor = Color.White;
 
             }
             else if(seleccion=="X")
             {
-                banderaBlanca = false;
+                // el color es activado
                 banderaNegra = true;
-               
 
-                tablero[3, 3] = "X";
-                tablero[3, 4] = "O";
-                tablero[4, 3] = "O";
-                tablero[4, 4] = "X";
+                LabelTitulo.Text = "Jugador - Negro";
+                // si habilitan los botoens para las negras
+                BtnD3.Enabled = true;
+                BtnC4.Enabled = true;
+                BtnF5.Enabled = true;
+                BtnE6.Enabled = true;
 
-                BtnD4.BackColor = Color.Black;
-                BtnE4.BackColor = Color.White;
-                BtnD5.BackColor = Color.White;
-                BtnE5.BackColor = Color.Black;
+            }
+        }
 
+        protected void ButtonRandom_Click(object sender, EventArgs e)
+        {
+            Random aleatoria = new Random();
+            int valor = aleatoria.Next(0, 2);
+
+            if(valor == 0) //blanco
+            {
+                // el color es activado
+                banderaBlanca = true;
+                LabelTitulo.Text = "Jugador - Blanco";
+                //se habilitan los botones para las blancas
+                BtnF4.Enabled = true;
+                BtnE3.Enabled = true;
+                BtnC5.Enabled = true;
+                BtnD6.Enabled = true;
+
+            }
+            else if(valor == 1) //negro
+            {
+                // el color es activado
+                banderaNegra = true;
+                LabelTitulo.Text = "Jugador - Negro";
+                // si habilitan los botoens para las negras
+                BtnD3.Enabled = true;
+                BtnC4.Enabled = true;
+                BtnF5.Enabled = true;
+                BtnE6.Enabled = true;
             }
         }
     }
