@@ -137,87 +137,87 @@ namespace PROYECTO1
                
             }
 
-            //if(!IsPostBack)
-            //{
-            //    BtnA1.Enabled = false;
-            //    BtnA2.Enabled = false;
-            //    BtnA3.Enabled = false;
-            //    BtnA4.Enabled = false;
-            //    BtnA5.Enabled = false;
-            //    BtnA6.Enabled = false;
-            //    BtnA7.Enabled = false;
-            //    BtnA8.Enabled = false;
+            if (!IsPostBack)
+            {
+                BtnA1.Enabled = false;
+                BtnA2.Enabled = false;
+                BtnA3.Enabled = false;
+                BtnA4.Enabled = false;
+                BtnA5.Enabled = false;
+                BtnA6.Enabled = false;
+                BtnA7.Enabled = false;
+                BtnA8.Enabled = false;
 
-            //    BtnB1.Enabled = false;
-            //    BtnB2.Enabled = false;
-            //    BtnB3.Enabled = false;
-            //    BtnB4.Enabled = false;
-            //    BtnB5.Enabled = false;
-            //    BtnB6.Enabled = false;
-            //    BtnB7.Enabled = false;
-            //    BtnB8.Enabled = false;
+                BtnB1.Enabled = false;
+                BtnB2.Enabled = false;
+                BtnB3.Enabled = false;
+                BtnB4.Enabled = false;
+                BtnB5.Enabled = false;
+                BtnB6.Enabled = false;
+                BtnB7.Enabled = false;
+                BtnB8.Enabled = false;
 
-            //    BtnC1.Enabled = false;
-            //    BtnC2.Enabled = false;
-            //    BtnC3.Enabled = false;
-            //    BtnC4.Enabled = false;
-            //    BtnC5.Enabled = false;
-            //    BtnC6.Enabled = false;
-            //    BtnC7.Enabled = false;
-            //    BtnC8.Enabled = false;
+                BtnC1.Enabled = false;
+                BtnC2.Enabled = false;
+                BtnC3.Enabled = false;
+                BtnC4.Enabled = false;
+                BtnC5.Enabled = false;
+                BtnC6.Enabled = false;
+                BtnC7.Enabled = false;
+                BtnC8.Enabled = false;
 
-            //    BtnD1.Enabled = false;
-            //    BtnD2.Enabled = false;
-            //    BtnD3.Enabled = false;
-            //    BtnD4.Enabled = false;
-            //    BtnD5.Enabled = false;
-            //    BtnD6.Enabled = false;
-            //    BtnD7.Enabled = false;
-            //    BtnD8.Enabled = false;
-
-
-            //    BtnE1.Enabled = false;
-            //    BtnE2.Enabled = false;
-            //    BtnE3.Enabled = false;
-            //    BtnE4.Enabled = false;
-            //    BtnE5.Enabled = false;
-            //    BtnE6.Enabled = false;
-            //    BtnE7.Enabled = false;
-            //    BtnE8.Enabled = false;
+                BtnD1.Enabled = false;
+                BtnD2.Enabled = false;
+                BtnD3.Enabled = false;
+                BtnD4.Enabled = false;
+                BtnD5.Enabled = false;
+                BtnD6.Enabled = false;
+                BtnD7.Enabled = false;
+                BtnD8.Enabled = false;
 
 
-            //    BtnF1.Enabled = false;
-            //    BtnF2.Enabled = false;
-            //    BtnF3.Enabled = false;
-            //    BtnF4.Enabled = false;
-            //    BtnF5.Enabled = false;
-            //    BtnF6.Enabled = false;
-            //    BtnF7.Enabled = false;
-            //    BtnF8.Enabled = false;
-
-            //    BtnG1.Enabled = false;
-            //    BtnG2.Enabled = false;
-            //    BtnG3.Enabled = false;
-            //    BtnG4.Enabled = false;
-            //    BtnG5.Enabled = false;
-            //    BtnG6.Enabled = false;
-            //    BtnG7.Enabled = false;
-            //    BtnG8.Enabled = false;
-
-            //    BtnH1.Enabled = false;
-            //    BtnH2.Enabled = false;
-            //    BtnH3.Enabled = false;
-            //    BtnH4.Enabled = false;
-            //    BtnH5.Enabled = false;
-            //    BtnH6.Enabled = false;
-            //    BtnH7.Enabled = false;
-            //    BtnH8.Enabled = false;
+                BtnE1.Enabled = false;
+                BtnE2.Enabled = false;
+                BtnE3.Enabled = false;
+                BtnE4.Enabled = false;
+                BtnE5.Enabled = false;
+                BtnE6.Enabled = false;
+                BtnE7.Enabled = false;
+                BtnE8.Enabled = false;
 
 
-                
-            //}
+                BtnF1.Enabled = false;
+                BtnF2.Enabled = false;
+                BtnF3.Enabled = false;
+                BtnF4.Enabled = false;
+                BtnF5.Enabled = false;
+                BtnF6.Enabled = false;
+                BtnF7.Enabled = false;
+                BtnF8.Enabled = false;
+
+                BtnG1.Enabled = false;
+                BtnG2.Enabled = false;
+                BtnG3.Enabled = false;
+                BtnG4.Enabled = false;
+                BtnG5.Enabled = false;
+                BtnG6.Enabled = false;
+                BtnG7.Enabled = false;
+                BtnG8.Enabled = false;
+
+                BtnH1.Enabled = false;
+                BtnH2.Enabled = false;
+                BtnH3.Enabled = false;
+                BtnH4.Enabled = false;
+                BtnH5.Enabled = false;
+                BtnH6.Enabled = false;
+                BtnH7.Enabled = false;
+                BtnH8.Enabled = false;
+
+
+
+            }
         }
-       
+
 
         protected void ButtonSalir_Click(object sender, EventArgs e)
         {
