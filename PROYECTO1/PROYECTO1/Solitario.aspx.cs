@@ -17,6 +17,7 @@ namespace PROYECTO1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public static int contadorEspacio = 0;
         public static bool activacionMaqina = false;
         public static bool banderaNegra = false; // false para el negro, al inicio no se ha seleccionado nada xd
         public static bool banderaBlanca = false; // false para el blanco
@@ -33,7 +34,7 @@ namespace PROYECTO1
         public ArrayList arrayColumna = new ArrayList();
         public ArrayList arrayColor = new ArrayList();
         public static string[,] tablero = new string[8, 8];
-        public static Button[,] boton = new Button[8, 8];
+        public static Button[,] tableroColor = new Button[8, 8];
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,82 +52,80 @@ namespace PROYECTO1
                 tablero[4, 4] = "O";
             }
 
-            if (!IsPostBack)
-            {
+           
 
+                tableroColor[0, 0] = BtnA1;
+                tableroColor[0, 1] = BtnB1;
+                tableroColor[0, 2] = BtnC1;
+                tableroColor[0, 3] = BtnD1;
+                tableroColor[0, 4] = BtnE1;
+                tableroColor[0, 5] = BtnF1;
+                tableroColor[0, 6] = BtnG1;
+                tableroColor[0, 7] = BtnH1;
 
-                boton[0, 0] = BtnA1;
-                boton[0, 1] = BtnB1;
-                boton[0, 2] = BtnC1;
-                boton[0, 3] = BtnD1;
-                boton[0, 4] = BtnE1;
-                boton[0, 5] = BtnF1;
-                boton[0, 6] = BtnG1;
-                boton[0, 7] = BtnH1;
+                tableroColor[1, 0] = BtnA2;
+                tableroColor[1, 1] = BtnB2;
+                tableroColor[1, 2] = BtnC2;
+                tableroColor[1, 3] = BtnD2;
+                tableroColor[1, 4] = BtnE2;
+                tableroColor[1, 5] = BtnF2;
+                tableroColor[1, 6] = BtnG2;
+                tableroColor[1, 7] = BtnH2;
 
-                boton[1, 0] = BtnA2;
-                boton[1, 1] = BtnB2;
-                boton[1, 2] = BtnC2;
-                boton[1, 3] = BtnD2;
-                boton[1, 4] = BtnE2;
-                boton[1, 5] = BtnF2;
-                boton[1, 6] = BtnG2;
-                boton[1, 7] = BtnH2;
+                tableroColor[2, 0] = BtnA3;
+                tableroColor[2, 1] = BtnB3;
+                tableroColor[2, 2] = BtnC3;
+                tableroColor[2, 3] = BtnD3;
+                tableroColor[2, 4] = BtnE3;
+                tableroColor[2, 5] = BtnF3;
+                tableroColor[2, 6] = BtnG3;
+                tableroColor[2, 7] = BtnH3;
 
-                boton[2, 0] = BtnA3;
-                boton[2, 1] = BtnB3;
-                boton[2, 2] = BtnC3;
-                boton[2, 3] = BtnD3;
-                boton[2, 4] = BtnE3;
-                boton[2, 5] = BtnF3;
-                boton[2, 6] = BtnG3;
-                boton[2, 7] = BtnH3;
+                tableroColor[3, 0] = BtnA4;
+                tableroColor[3, 1] = BtnB4;
+                tableroColor[3, 2] = BtnC4;
+                tableroColor[3, 3] = BtnD4;
+                tableroColor[3, 4] = BtnE4;
+                tableroColor[3, 5] = BtnF4;
+                tableroColor[3, 6] = BtnG4;
+                tableroColor[3, 7] = BtnH4;
 
-                boton[3, 0] = BtnA4;
-                boton[3, 1] = BtnB4;
-                boton[3, 2] = BtnC4;
-                boton[3, 3] = BtnD4;
-                boton[3, 4] = BtnE4;
-                boton[3, 5] = BtnF4;
-                boton[3, 6] = BtnG4;
-                boton[3, 7] = BtnH4;
+                tableroColor[4, 0] = BtnA5;
+                tableroColor[4, 1] = BtnB5;
+                tableroColor[4, 2] = BtnC5;
+                tableroColor[4, 3] = BtnD5;
+                tableroColor[4, 4] = BtnE5;
+                tableroColor[4, 5] = BtnF5;
+                tableroColor[4, 6] = BtnG5;
+                tableroColor[4, 7] = BtnH5;
 
-                boton[4, 0] = BtnA5;
-                boton[4, 1] = BtnB5;
-                boton[4, 2] = BtnC5;
-                boton[4, 3] = BtnD5;
-                boton[4, 4] = BtnE5;
-                boton[4, 5] = BtnF5;
-                boton[4, 6] = BtnG5;
-                boton[4, 7] = BtnH5;
+                tableroColor[5, 0] = BtnA6;
+                tableroColor[5, 1] = BtnB6;
+                tableroColor[5, 2] = BtnC6;
+                tableroColor[5, 3] = BtnD6;
+                tableroColor[5, 4] = BtnE6;
+                tableroColor[5, 5] = BtnF6;
+                tableroColor[5, 6] = BtnG6;
+                tableroColor[5, 7] = BtnH6;
 
-                boton[5, 0] = BtnA6;
-                boton[5, 1] = BtnB6;
-                boton[5, 2] = BtnC6;
-                boton[5, 3] = BtnD6;
-                boton[5, 4] = BtnE6;
-                boton[5, 5] = BtnF6;
-                boton[5, 6] = BtnG6;
-                boton[5, 7] = BtnH6;
+                tableroColor[6, 0] = BtnA7;
+                tableroColor[6, 1] = BtnB7;
+                tableroColor[6, 2] = BtnC7;
+                tableroColor[6, 3] = BtnD7;
+                tableroColor[6, 4] = BtnE7;
+                tableroColor[6, 5] = BtnF7;
+                tableroColor[6, 6] = BtnG7;
+                tableroColor[6, 7] = BtnH7;
 
-                boton[6, 0] = BtnA7;
-                boton[6, 1] = BtnB7;
-                boton[6, 2] = BtnC7;
-                boton[6, 3] = BtnD7;
-                boton[6, 4] = BtnE7;
-                boton[6, 5] = BtnF7;
-                boton[6, 6] = BtnG7;
-                boton[6, 7] = BtnH7;
-
-                boton[7, 0] = BtnA8;
-                boton[7, 1] = BtnB8;
-                boton[7, 2] = BtnC8;
-                boton[7, 3] = BtnD8;
-                boton[7, 4] = BtnE8;
-                boton[7, 5] = BtnF8;
-                boton[7, 6] = BtnG8;
-                boton[7, 7] = BtnH8;
-            }
+                tableroColor[7, 0] = BtnA8;
+                tableroColor[7, 1] = BtnB8;
+                tableroColor[7, 2] = BtnC8;
+                tableroColor[7, 3] = BtnD8;
+                tableroColor[7, 4] = BtnE8;
+                tableroColor[7, 5] = BtnF8;
+                tableroColor[7, 6] = BtnG8;
+                tableroColor[7, 7] = BtnH8;
+            
 
             if (!IsPostBack)
             {
@@ -138,85 +137,85 @@ namespace PROYECTO1
                
             }
 
-            if(!IsPostBack)
-            {
-                BtnA1.Enabled = false;
-                BtnA2.Enabled = false;
-                BtnA3.Enabled = false;
-                BtnA4.Enabled = false;
-                BtnA5.Enabled = false;
-                BtnA6.Enabled = false;
-                BtnA7.Enabled = false;
-                BtnA8.Enabled = false;
+            //if(!IsPostBack)
+            //{
+            //    BtnA1.Enabled = false;
+            //    BtnA2.Enabled = false;
+            //    BtnA3.Enabled = false;
+            //    BtnA4.Enabled = false;
+            //    BtnA5.Enabled = false;
+            //    BtnA6.Enabled = false;
+            //    BtnA7.Enabled = false;
+            //    BtnA8.Enabled = false;
 
-                BtnB1.Enabled = false;
-                BtnB2.Enabled = false;
-                BtnB3.Enabled = false;
-                BtnB4.Enabled = false;
-                BtnB5.Enabled = false;
-                BtnB6.Enabled = false;
-                BtnB7.Enabled = false;
-                BtnB8.Enabled = false;
+            //    BtnB1.Enabled = false;
+            //    BtnB2.Enabled = false;
+            //    BtnB3.Enabled = false;
+            //    BtnB4.Enabled = false;
+            //    BtnB5.Enabled = false;
+            //    BtnB6.Enabled = false;
+            //    BtnB7.Enabled = false;
+            //    BtnB8.Enabled = false;
 
-                BtnC1.Enabled = false;
-                BtnC2.Enabled = false;
-                BtnC3.Enabled = false;
-                BtnC4.Enabled = false;
-                BtnC5.Enabled = false;
-                BtnC6.Enabled = false;
-                BtnC7.Enabled = false;
-                BtnC8.Enabled = false;
+            //    BtnC1.Enabled = false;
+            //    BtnC2.Enabled = false;
+            //    BtnC3.Enabled = false;
+            //    BtnC4.Enabled = false;
+            //    BtnC5.Enabled = false;
+            //    BtnC6.Enabled = false;
+            //    BtnC7.Enabled = false;
+            //    BtnC8.Enabled = false;
 
-                BtnD1.Enabled = false;
-                BtnD2.Enabled = false;
-                BtnD3.Enabled = false;
-                BtnD4.Enabled = false;
-                BtnD5.Enabled = false;
-                BtnD6.Enabled = false;
-                BtnD7.Enabled = false;
-                BtnD8.Enabled = false;
-
-
-                BtnE1.Enabled = false;
-                BtnE2.Enabled = false;
-                BtnE3.Enabled = false;
-                BtnE4.Enabled = false;
-                BtnE5.Enabled = false;
-                BtnE6.Enabled = false;
-                BtnE7.Enabled = false;
-                BtnE8.Enabled = false;
+            //    BtnD1.Enabled = false;
+            //    BtnD2.Enabled = false;
+            //    BtnD3.Enabled = false;
+            //    BtnD4.Enabled = false;
+            //    BtnD5.Enabled = false;
+            //    BtnD6.Enabled = false;
+            //    BtnD7.Enabled = false;
+            //    BtnD8.Enabled = false;
 
 
-                BtnF1.Enabled = false;
-                BtnF2.Enabled = false;
-                BtnF3.Enabled = false;
-                BtnF4.Enabled = false;
-                BtnF5.Enabled = false;
-                BtnF6.Enabled = false;
-                BtnF7.Enabled = false;
-                BtnF8.Enabled = false;
+            //    BtnE1.Enabled = false;
+            //    BtnE2.Enabled = false;
+            //    BtnE3.Enabled = false;
+            //    BtnE4.Enabled = false;
+            //    BtnE5.Enabled = false;
+            //    BtnE6.Enabled = false;
+            //    BtnE7.Enabled = false;
+            //    BtnE8.Enabled = false;
 
-                BtnG1.Enabled = false;
-                BtnG2.Enabled = false;
-                BtnG3.Enabled = false;
-                BtnG4.Enabled = false;
-                BtnG5.Enabled = false;
-                BtnG6.Enabled = false;
-                BtnG7.Enabled = false;
-                BtnG8.Enabled = false;
 
-                BtnH1.Enabled = false;
-                BtnH2.Enabled = false;
-                BtnH3.Enabled = false;
-                BtnH4.Enabled = false;
-                BtnH5.Enabled = false;
-                BtnH6.Enabled = false;
-                BtnH7.Enabled = false;
-                BtnH8.Enabled = false;
+            //    BtnF1.Enabled = false;
+            //    BtnF2.Enabled = false;
+            //    BtnF3.Enabled = false;
+            //    BtnF4.Enabled = false;
+            //    BtnF5.Enabled = false;
+            //    BtnF6.Enabled = false;
+            //    BtnF7.Enabled = false;
+            //    BtnF8.Enabled = false;
+
+            //    BtnG1.Enabled = false;
+            //    BtnG2.Enabled = false;
+            //    BtnG3.Enabled = false;
+            //    BtnG4.Enabled = false;
+            //    BtnG5.Enabled = false;
+            //    BtnG6.Enabled = false;
+            //    BtnG7.Enabled = false;
+            //    BtnG8.Enabled = false;
+
+            //    BtnH1.Enabled = false;
+            //    BtnH2.Enabled = false;
+            //    BtnH3.Enabled = false;
+            //    BtnH4.Enabled = false;
+            //    BtnH5.Enabled = false;
+            //    BtnH6.Enabled = false;
+            //    BtnH7.Enabled = false;
+            //    BtnH8.Enabled = false;
 
 
                 
-            }
+            //}
         }
        
 
@@ -324,15 +323,321 @@ namespace PROYECTO1
                 Response.Write("No se encontro el archivo"+exc);
             }
         }
-
-        public void capturaFicha(int fila,int columna)
+        // para cuando se ficha blanca--------------------------------------------------
+        public void capturaFichaBlanca(int fil,int column)
         {   //x,y
-            int inicioFila = fila;
-            int inicioColumna = columna;
-            //for de izquierda
+            int fila = fil;
+            int columna = column;
             
+
+
+            //direccion1
+            //fila = cambia , columna = igual
+            for (int i = fila; i>=0 ; i--) // para fila
+            {
+                if(tableroColor[i,columna].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[i,columna].BackColor == Color.White)
+                {
+                    if (contadorEspacio == 1)
+                    {
+                        //si es blanco se pinta 
+                        pintarBlancoDireccion1(fila,i,columna);
+                        contadorEspacio = 0;
+                        break; // para que se salga del for
+                    }
+                    else
+                    {
+                        contadorEspacio++;
+                        continue;
+                        
+                    }
+                }
+            }
+
+            //direccion2
+            //fila=disminuye   columna = aumenta
+            int filaContador = fila;
+            for (int i = columna; i <= 7 ; i++) // para columna
+            {
+                if(tableroColor[filaContador,columna].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[filaContador,columna].BackColor == Color.White)
+                {
+                    if (contadorEspacio == 1)
+                    {
+                        pintarBlancoDireccion2(fila, columna, i);
+                        contadorEspacio = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorEspacio++;
+                        continue;
+                        
+                    }
+                }
+                filaContador--;
+                if (filaContador == 0)
+                {
+                    break;
+                }
+            }
+
+            //direccion3
+            //fila = fija, columna = aumenta
+            for (int i = columna; i <= 7; i++) // para columna 
+            {
+                if(tableroColor[fila,i].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[fila,i].BackColor == Color.White)
+                {
+                    if(contadorEspacio == 1)
+                    {
+                        pintarBlancoDireccion3(fila,columna,i);
+                        contadorEspacio = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorEspacio++;
+                        continue;
+                        
+                    }
+                }
+            }
+
+            //direcion4
+            //fila = aumenta  columna = aumenta
+            int filadireccion4 = fila;
+            for (int i = columna; i <=7 ; i++) // para columna
+            {
+                if(tableroColor[filadireccion4,i].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if (tableroColor[filadireccion4, i].BackColor == Color.White)
+                {
+                    if(contadorEspacio == 1)
+                    {
+                        pintarBlancoDireccion4(fila, columna, i);
+                        contadorEspacio = 0;
+                        break;
+                    }
+                    else
+                    {
+                        
+                        contadorEspacio++;
+                        continue;
+                    }
+
+                }
+                filadireccion4++;
+                if(filadireccion4 == 7) // fila = 7 se sale del ciclo
+                {
+                    break;
+                }
+            }
+
+            //direccion5
+            //fila = aumenta   columna = fija
+            for (int i = fila; i <= 7; i++) // para fila
+            {
+                if(tableroColor[i,columna].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[i,columna].BackColor == Color.White)
+                {
+                    if(contadorEspacio == 1)
+                    {//metodo
+                        pintarBlancoDireccion5(fila, i, columna);
+                        contadorEspacio = 0;
+                        break;
+                    }
+                    else
+                    {
+                        
+                        contadorEspacio++;
+                        continue;
+                    }
+                }
+            }
+
+            //Direccion6
+            // fila = aumenta   columna = disminuye
+            int columnadireccion6 = columna;
+            for (int i = fila; i <= 7 ; i++) // para fila
+            {
+                if(tableroColor[i,columnadireccion6].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[i,columnadireccion6].BackColor == Color.White)
+                {
+                    if(contadorEspacio == 1)
+                    {
+                        //metododireccion6
+                        pintarBlancoDireccion6(fila, i, columna);
+                        contadorEspacio = 0;
+                        break;
+
+                    }
+                    else
+                    {
+                        contadorEspacio++;
+                        continue;
+                    }
+                  
+                }
+                columnadireccion6--;
+                if (columnadireccion6 == 0)
+                {
+                    break;
+                }
+            }
+
+            //direccion7
+            //fila = fija, columna = disminuye
+            
+            for (int i = columna; i >= 0; i--) // columna
+            {
+                if(tableroColor[fila,i].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[fila,i].BackColor == Color.White)
+                {
+                    if(contadorEspacio == 1)
+                    {
+                        //metodo
+                        pintarBlancoDireccion7(columna, i,fila);
+                        contadorEspacio = 0;
+                        break;
+
+                    }
+                    else
+                    {
+                        contadorEspacio++;
+                        continue;
+                    }
+                }
+            }
+
+            //direcion8
+            // fila = disminuye, columna = diminuye
+            int columnadireccion8 = columna;
+            for (int i = fila; i >=0 ; i--) // fila
+            {
+                if(tableroColor[i,columnadireccion8].BackColor == Color.Black)
+                {
+                    continue;
+                }
+                else if(tableroColor[i,columnadireccion8].BackColor == Color.White)
+                {
+                    if (contadorEspacio == 1)
+                    {
+                        //metodod
+                        pintarBlancoDireccion8(fila, i, columna);
+                        contadorEspacio = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorEspacio++;
+                        continue;
+                    }
+                }
+                columnadireccion8--;
+                if(columnadireccion6 == 0)
+                {
+                    break;
+                }
+
+            }
+
+        }
+        //metodos que pinta, recibe valores para pintar ************************************************************
+        public void pintarBlancoDireccion1(int filaInicio,int filaFin, int columna)
+        {
+            for (int i = filaInicio; i>=filaFin; i--)
+            {
+                tableroColor[i, columna].BackColor = Color.White;
+            }
         }
 
+        public void pintarBlancoDireccion2(int filaInicio, int columnaInicio, int columnaFin)
+        {
+            int fila = filaInicio;
+            for (int i = columnaInicio; i <=columnaFin; i++)
+            {
+                tableroColor[fila, i].BackColor = Color.White;
+                fila--;
+                
+            }
+        }
+
+        public void pintarBlancoDireccion3(int fila,int inicioColumna, int finColumna)
+        {
+            for (int i = inicioColumna; i <= finColumna; i++) //columna
+            {
+                tableroColor[fila, i].BackColor = Color.White;
+            }
+        }
+
+        public void pintarBlancoDireccion4(int fila,int inicioColumna, int finColumna)
+        {
+            int filaInicio = fila;
+            for (int i = inicioColumna; i <=finColumna ; i++)
+            {
+                tableroColor[filaInicio, i].BackColor = Color.White;
+                filaInicio++;
+            }
+
+        }
+
+        public void pintarBlancoDireccion5(int filaInicio, int filaFin, int columna)
+        {
+            for (int i = filaInicio; i <= filaFin ; i++)
+            {
+                tableroColor[i, columna].BackColor = Color.White;
+            }
+        }
+
+        public void pintarBlancoDireccion6(int inicioFila, int finFila, int columna)
+        {
+            int columnadireccion = columna;
+            for (int i = inicioFila; i <= finFila ; i++)
+            {
+                tableroColor[i, columnadireccion].BackColor = Color.White;
+                columnadireccion--; 
+            }
+        }
+
+        public void pintarBlancoDireccion7(int inicioColumna, int finColumna, int fila)
+        {
+            for (int i = inicioColumna; i >= finColumna; i--)
+            {
+                tableroColor[fila, i].BackColor = Color.White;
+            }
+        }
+
+        public void pintarBlancoDireccion8(int inicioFila, int finFila, int columna)
+        {
+            int columnadireccion = columna;
+            for (int i = inicioFila; i >=finFila; i--)
+            {
+                tableroColor[i, columnadireccion].BackColor = Color.White;
+                columnadireccion--;
+            }
+
+        }
         public void maquinaBlanca()
         {
 
@@ -4346,7 +4651,8 @@ namespace PROYECTO1
         {
             if (banderaBlanca == true) {
                 BtnA1.BackColor = Color.White;
-             
+                capturaFichaBlanca(0,0);
+
             } else if(banderaNegra == true){
                 BtnA1.BackColor = Color.Black;
                 
@@ -4359,7 +4665,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB1.BackColor = Color.White;
-               
+                capturaFichaBlanca(0,1);
+
             }
             else if (banderaNegra == true)
             {
@@ -4375,7 +4682,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC1.BackColor = Color.White;
-               
+                capturaFichaBlanca(0,2);
+
             }
             else if (banderaNegra == true)
             {
@@ -4389,7 +4697,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD1.BackColor = Color.White;
-               
+                capturaFichaBlanca(0,3);
+
             }
             else if (banderaNegra == true)
             {
@@ -4403,7 +4712,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE1.BackColor = Color.White;
-               
+                capturaFichaBlanca(0,4);
+
             }
             else if (banderaNegra == true)
             {
@@ -4417,7 +4727,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF1.BackColor = Color.White;
-               
+                capturaFichaBlanca(0,5);
+
             }
             else if (banderaNegra == true)
             {
@@ -4431,7 +4742,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG1.BackColor = Color.White;
-                
+                capturaFichaBlanca(0,6);
+
             }
             else if (banderaNegra == true)
             {
@@ -4445,7 +4757,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH1.BackColor = Color.White;
-                
+                capturaFichaBlanca(0,7);
+
             }
             else if (banderaNegra == true)
             {
@@ -4459,7 +4772,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA2.BackColor = Color.White;
-               
+                capturaFichaBlanca(1, 0);
+
             }
             else if (banderaNegra == true)
             {
@@ -4473,7 +4787,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB2.BackColor = Color.White;
-                
+                capturaFichaBlanca(1, 1);
+
             }
             else if (banderaNegra == true)
             {
@@ -4487,7 +4802,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC2.BackColor = Color.White;
-                
+                capturaFichaBlanca(1, 2);
+
             }
             else if (banderaNegra == true)
             {
@@ -4501,7 +4817,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD2.BackColor = Color.White;
-               
+                capturaFichaBlanca(1, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -4515,7 +4832,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE2.BackColor = Color.White;
-              
+                capturaFichaBlanca(1, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -4529,7 +4847,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF2.BackColor = Color.White;
-               
+                capturaFichaBlanca(1, 5);
+
             }
             else if (banderaNegra == true)
             {
@@ -4543,7 +4862,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG2.BackColor = Color.White;
-                
+                capturaFichaBlanca(1, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -4557,7 +4877,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH2.BackColor = Color.White;
-                
+                capturaFichaBlanca(1, 7);
+
             }
             else if (banderaNegra == true)
             {
@@ -4571,7 +4892,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 0);
+
             }
             else if (banderaNegra == true)
             {
@@ -4585,7 +4907,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 1);
+
             }
             else if (banderaNegra == true)
             {
@@ -4599,7 +4922,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 2);
+
             }
             else if (banderaNegra == true)
             {
@@ -4613,7 +4937,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -4627,7 +4952,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -4641,7 +4967,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 5);
+
             }
             else if (banderaNegra == true)
             {
@@ -4655,7 +4982,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -4669,7 +4997,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH3.BackColor = Color.White;
-                
+                capturaFichaBlanca(2, 7);
+
             }
             else if (banderaNegra == true)
             {
@@ -4683,7 +5012,7 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA4.BackColor = Color.White;
-                
+                capturaFichaBlanca(3, 0);
             }
             else if (banderaNegra == true)
             {
@@ -4697,11 +5026,13 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB4.BackColor = Color.White;
-               
+                capturaFichaBlanca(3, 1);
+
             }
             else if (banderaNegra == true)
             {
                 BtnB4.BackColor = Color.Black;
+
                
             }
         }
@@ -4711,7 +5042,7 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC4.BackColor = Color.White;
-               
+                capturaFichaBlanca(3, 2);
             }
             else if (banderaNegra == true)
             {
@@ -4725,7 +5056,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD4.BackColor = Color.White;
-                
+                capturaFichaBlanca(3, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -4739,7 +5071,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE4.BackColor = Color.White;
-               
+                capturaFichaBlanca(3, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -4753,14 +5086,17 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF4.BackColor = Color.White;
+                capturaFichaBlanca(3, 5);
                
                 
+
             }
             else if (banderaNegra == true)
             {
                 BtnF4.BackColor = Color.Black;
-               
                 
+
+
             }
         }
 
@@ -4769,7 +5105,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG4.BackColor = Color.White;
-               
+                capturaFichaBlanca(3, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -4783,7 +5120,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH4.BackColor = Color.White;
-                
+                capturaFichaBlanca(3, 7);
+
             }
             else if (banderaNegra == true)
             {
@@ -4797,7 +5135,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA5.BackColor = Color.White;
-               
+                capturaFichaBlanca(4, 0);
+
             }
             else if (banderaNegra == true)
             {
@@ -4811,7 +5150,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB5.BackColor = Color.White;
-                
+                capturaFichaBlanca(4, 1);
+
             }
             else if (banderaNegra == true)
             {
@@ -4825,7 +5165,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC5.BackColor = Color.White;
-               
+                capturaFichaBlanca(4, 2);
+
             }
             else if (banderaNegra == true)
             {
@@ -4839,7 +5180,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD5.BackColor = Color.White;
-               
+                capturaFichaBlanca(4, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -4853,7 +5195,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE5.BackColor = Color.White;
-               
+                capturaFichaBlanca(4, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -4867,7 +5210,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF5.BackColor = Color.White;
-               
+                capturaFichaBlanca(4, 5);
+
             }
             else if (banderaNegra == true)
             {
@@ -4881,7 +5225,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG5.BackColor = Color.White;
-                
+                capturaFichaBlanca(4, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -4895,7 +5240,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH5.BackColor = Color.White;
-                
+                capturaFichaBlanca(4, 7);
+
             }
             else if (banderaNegra == true)
             {
@@ -4909,7 +5255,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA6.BackColor = Color.White;
-               
+                capturaFichaBlanca(5, 0);
+
             }
             else if (banderaNegra == true)
             {
@@ -4923,7 +5270,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB6.BackColor = Color.White;
-                
+                capturaFichaBlanca(5, 1);
+
             }
             else if (banderaNegra == true)
             {
@@ -4937,7 +5285,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC6.BackColor = Color.White;
-                
+                capturaFichaBlanca(5, 2);
+
             }
             else if (banderaNegra == true)
             {
@@ -4951,7 +5300,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD6.BackColor = Color.White;
-               
+                capturaFichaBlanca(5, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -4965,7 +5315,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE6.BackColor = Color.White;
-                
+                capturaFichaBlanca(5, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -4979,7 +5330,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF6.BackColor = Color.White;
-               
+                capturaFichaBlanca(5, 5);
+
             }
             else if (banderaNegra == true)
             {
@@ -4993,7 +5345,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG6.BackColor = Color.White;
-                
+                capturaFichaBlanca(5, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -5007,7 +5360,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH6.BackColor = Color.White;
-               
+                capturaFichaBlanca(5, 7);
+
             }
             else if (banderaNegra == true)
             {
@@ -5021,7 +5375,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA7.BackColor = Color.White;
-               
+                capturaFichaBlanca(6, 0);
+
             }
             else if (banderaNegra == true)
             {
@@ -5035,7 +5390,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB7.BackColor = Color.White;
-               
+                capturaFichaBlanca(6, 1);
+
             }
             else if (banderaNegra == true)
             {
@@ -5049,7 +5405,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC7.BackColor = Color.White;
-               
+                capturaFichaBlanca(6, 2);
+
             }
             else if (banderaNegra == true)
             {
@@ -5063,7 +5420,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD7.BackColor = Color.White;
-                
+                capturaFichaBlanca(6, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -5077,7 +5435,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE7.BackColor = Color.White;
-               
+                capturaFichaBlanca(6, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -5091,7 +5450,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF7.BackColor = Color.White;
-               
+                capturaFichaBlanca(6, 5);
+
             }
             else if (banderaNegra == true)
             {
@@ -5105,7 +5465,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG7.BackColor = Color.White;
-                
+                capturaFichaBlanca(6, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -5119,7 +5480,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH7.BackColor = Color.White;
-               
+                capturaFichaBlanca(6, 7);
+
             }
             else if (banderaNegra == true)
             {
@@ -5133,7 +5495,7 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnA8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 0);
             }
             else if (banderaNegra == true)
             {
@@ -5147,7 +5509,7 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnB8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 1);
             }
             else if (banderaNegra == true)
             {
@@ -5161,7 +5523,7 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnC8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 2);
             }
             else if (banderaNegra == true)
             {
@@ -5175,7 +5537,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnD8.BackColor = Color.White;
-                
+                capturaFichaBlanca(7, 3);
+
             }
             else if (banderaNegra == true)
             {
@@ -5189,7 +5552,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnE8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 4);
+
             }
             else if (banderaNegra == true)
             {
@@ -5203,7 +5567,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnF8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 5);
+
             }
             else if (banderaNegra == true)
             {
@@ -5217,7 +5582,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnG8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 6);
+
             }
             else if (banderaNegra == true)
             {
@@ -5231,7 +5597,8 @@ namespace PROYECTO1
             if (banderaBlanca == true)
             {
                 BtnH8.BackColor = Color.White;
-               
+                capturaFichaBlanca(7, 7);
+
             }
             else if (banderaNegra == true)
             {
