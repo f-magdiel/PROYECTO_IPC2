@@ -138,85 +138,85 @@ namespace PROYECTO1
                
             }
 
-            if (!IsPostBack)
-            {
-                BtnA1.Enabled = false;
-                BtnA2.Enabled = false;
-                BtnA3.Enabled = false;
-                BtnA4.Enabled = false;
-                BtnA5.Enabled = false;
-                BtnA6.Enabled = false;
-                BtnA7.Enabled = false;
-                BtnA8.Enabled = false;
+            //if (!IsPostBack)
+            //{
+            //    BtnA1.Enabled = false;
+            //    BtnA2.Enabled = false;
+            //    BtnA3.Enabled = false;
+            //    BtnA4.Enabled = false;
+            //    BtnA5.Enabled = false;
+            //    BtnA6.Enabled = false;
+            //    BtnA7.Enabled = false;
+            //    BtnA8.Enabled = false;
 
-                BtnB1.Enabled = false;
-                BtnB2.Enabled = false;
-                BtnB3.Enabled = false;
-                BtnB4.Enabled = false;
-                BtnB5.Enabled = false;
-                BtnB6.Enabled = false;
-                BtnB7.Enabled = false;
-                BtnB8.Enabled = false;
+            //    BtnB1.Enabled = false;
+            //    BtnB2.Enabled = false;
+            //    BtnB3.Enabled = false;
+            //    BtnB4.Enabled = false;
+            //    BtnB5.Enabled = false;
+            //    BtnB6.Enabled = false;
+            //    BtnB7.Enabled = false;
+            //    BtnB8.Enabled = false;
 
-                BtnC1.Enabled = false;
-                BtnC2.Enabled = false;
-                BtnC3.Enabled = false;
-                BtnC4.Enabled = false;
-                BtnC5.Enabled = false;
-                BtnC6.Enabled = false;
-                BtnC7.Enabled = false;
-                BtnC8.Enabled = false;
+            //    BtnC1.Enabled = false;
+            //    BtnC2.Enabled = false;
+            //    BtnC3.Enabled = false;
+            //    BtnC4.Enabled = false;
+            //    BtnC5.Enabled = false;
+            //    BtnC6.Enabled = false;
+            //    BtnC7.Enabled = false;
+            //    BtnC8.Enabled = false;
 
-                BtnD1.Enabled = false;
-                BtnD2.Enabled = false;
-                BtnD3.Enabled = false;
-                BtnD4.Enabled = false;
-                BtnD5.Enabled = false;
-                BtnD6.Enabled = false;
-                BtnD7.Enabled = false;
-                BtnD8.Enabled = false;
-
-
-                BtnE1.Enabled = false;
-                BtnE2.Enabled = false;
-                BtnE3.Enabled = false;
-                BtnE4.Enabled = false;
-                BtnE5.Enabled = false;
-                BtnE6.Enabled = false;
-                BtnE7.Enabled = false;
-                BtnE8.Enabled = false;
+            //    BtnD1.Enabled = false;
+            //    BtnD2.Enabled = false;
+            //    BtnD3.Enabled = false;
+            //    BtnD4.Enabled = false;
+            //    BtnD5.Enabled = false;
+            //    BtnD6.Enabled = false;
+            //    BtnD7.Enabled = false;
+            //    BtnD8.Enabled = false;
 
 
-                BtnF1.Enabled = false;
-                BtnF2.Enabled = false;
-                BtnF3.Enabled = false;
-                BtnF4.Enabled = false;
-                BtnF5.Enabled = false;
-                BtnF6.Enabled = false;
-                BtnF7.Enabled = false;
-                BtnF8.Enabled = false;
-
-                BtnG1.Enabled = false;
-                BtnG2.Enabled = false;
-                BtnG3.Enabled = false;
-                BtnG4.Enabled = false;
-                BtnG5.Enabled = false;
-                BtnG6.Enabled = false;
-                BtnG7.Enabled = false;
-                BtnG8.Enabled = false;
-
-                BtnH1.Enabled = false;
-                BtnH2.Enabled = false;
-                BtnH3.Enabled = false;
-                BtnH4.Enabled = false;
-                BtnH5.Enabled = false;
-                BtnH6.Enabled = false;
-                BtnH7.Enabled = false;
-                BtnH8.Enabled = false;
+            //    BtnE1.Enabled = false;
+            //    BtnE2.Enabled = false;
+            //    BtnE3.Enabled = false;
+            //    BtnE4.Enabled = false;
+            //    BtnE5.Enabled = false;
+            //    BtnE6.Enabled = false;
+            //    BtnE7.Enabled = false;
+            //    BtnE8.Enabled = false;
 
 
+            //    BtnF1.Enabled = false;
+            //    BtnF2.Enabled = false;
+            //    BtnF3.Enabled = false;
+            //    BtnF4.Enabled = false;
+            //    BtnF5.Enabled = false;
+            //    BtnF6.Enabled = false;
+            //    BtnF7.Enabled = false;
+            //    BtnF8.Enabled = false;
 
-            }
+            //    BtnG1.Enabled = false;
+            //    BtnG2.Enabled = false;
+            //    BtnG3.Enabled = false;
+            //    BtnG4.Enabled = false;
+            //    BtnG5.Enabled = false;
+            //    BtnG6.Enabled = false;
+            //    BtnG7.Enabled = false;
+            //    BtnG8.Enabled = false;
+
+            //    BtnH1.Enabled = false;
+            //    BtnH2.Enabled = false;
+            //    BtnH3.Enabled = false;
+            //    BtnH4.Enabled = false;
+            //    BtnH5.Enabled = false;
+            //    BtnH6.Enabled = false;
+            //    BtnH7.Enabled = false;
+            //    BtnH8.Enabled = false;
+
+
+
+            //}
 
             if (!IsPostBack)
             {
@@ -413,6 +413,7 @@ namespace PROYECTO1
         {   //x,y
             int fila = fil;
             int columna = column;
+            int posicion = 0;
             
 
 
@@ -422,37 +423,58 @@ namespace PROYECTO1
             {
                 if(tableroColor[i,columna].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if(tableroColor[i,columna].BackColor == Color.White)
                 {
-                    pintarBlancoDireccion1(fila - 1, i, columna);
+                    if(posicion >= 1)
+                    {
+                        pintarBlancoDireccion1(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
             }
 
             //direccion2
             //fila=disminuye   columna = aumenta
-            int filaContador = fila-1;
-            for (int i = columna-1; i <= 7 ; i++) // para columna
+            int filaContador = fila;
+            for (int i = columna+1; i <= 7 ; i++) // para columna
             {
+
                 filaContador--;
-                if (tableroColor[filaContador,columna].BackColor == Color.Black)
-                {
-                    continue;
-                }
-                else if(tableroColor[filaContador,columna].BackColor == Color.White)
-                {
-                   
-                        pintarBlancoDireccion2(fila, columna, i);
-                        contadorEspacio = 0;
-                        break;
-                    
-                }
-               
-                if (filaContador == 0)
+                if (filaContador < 0)
                 {
                     break;
                 }
+                if (tableroColor[filaContador,i].BackColor == Color.Black)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if(tableroColor[filaContador,i].BackColor == Color.White)
+                {
+
+                    if (posicion >= 1)
+                    {
+                        pintarBlancoDireccion2(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    
+                    
+                }
+               
+                
             }
 
             //direccion3
@@ -461,14 +483,25 @@ namespace PROYECTO1
             {
                 if(tableroColor[fila,i].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if(tableroColor[fila,i].BackColor == Color.White)
                 {
-                   
-                        pintarBlancoDireccion3(fila,columna,i);
-                        contadorEspacio = 0;
+
+                    if (posicion >= 1)
+                    {
+                        pintarBlancoDireccion3(fila, columna, i);
+                        posicion = 0;
                         break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    
+                       
+
                     
                 }
             }
@@ -479,24 +512,34 @@ namespace PROYECTO1
             for (int i = columna+1; i <=7 ; i++) // para columna
             {
                 filadireccion4++;
+                
+                if (filadireccion4 >= 8) // fila >= 8 se sale del ciclo
+                {
+                    break;
+                }
                 if (tableroColor[filadireccion4,i].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if (tableroColor[filadireccion4, i].BackColor == Color.White)
                 {
-                   
+
+                    if (posicion >= 1)
+                    {
                         pintarBlancoDireccion4(fila, columna, i);
-                        contadorEspacio = 0;
+                        posicion = 0;
                         break;
+                    }
+                    else
+                    {
+                        break;
+                    }
                     
 
                 }
                 
-                if(filadireccion4 == 7) // fila = 7 se sale del ciclo
-                {
-                    break;
-                }
+                
             }
 
             //direccion5
@@ -505,14 +548,22 @@ namespace PROYECTO1
             {
                 if(tableroColor[i,columna].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if(tableroColor[i,columna].BackColor == Color.White)
                 {
-                    //metodo
+                    if (posicion >= 1)
+                    {
+                        //metodo
                         pintarBlancoDireccion5(fila, i, columna);
-                        contadorEspacio = 0;
+                        posicion = 0;
                         break;
+                    }
+                    else
+                    {
+                        break;
+                    }
                     
                 }
             }
@@ -523,25 +574,34 @@ namespace PROYECTO1
             for (int i = fila+1; i <= 7 ; i++) // para fila
             {
                 columnadireccion6--;
+                if (columnadireccion6  < 0)
+                {
+                    break;
+                }
                 if (tableroColor[i,columnadireccion6].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if(tableroColor[i,columnadireccion6].BackColor == Color.White)
                 {
-                    
+
+                    if (posicion >= 1)
+                    {
                         //metododireccion6
                         pintarBlancoDireccion6(fila, i, columna);
-                        contadorEspacio = 0;
+                        posicion = 0;
                         break;
+                    }
+                    else
+                    {
+                        break;
+                    }
 
                   
                 }
                
-                if (columnadireccion6 == 0)
-                {
-                    break;
-                }
+                
             }
 
             //direccion7
@@ -551,15 +611,23 @@ namespace PROYECTO1
             {
                 if(tableroColor[fila,i].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if(tableroColor[fila,i].BackColor == Color.White)
                 {
-                   
+                    if (posicion >= 1)
+                    {
+
                         //metodo
-                        pintarBlancoDireccion7(columna, i,fila);
-                        contadorEspacio = 0;
+                        pintarBlancoDireccion7(columna, i, fila);
+                        posicion = 0;
                         break;
+                    }
+                    else
+                    {
+                        break;
+                    }
 
                     
                 }
@@ -571,24 +639,33 @@ namespace PROYECTO1
             for (int i = fila-1; i >=0 ; i--) // fila
             {
                 columnadireccion8--;
+                if (columnadireccion8 < 0)
+                {
+                    break;
+                }
                 if (tableroColor[i,columnadireccion8].BackColor == Color.Black)
                 {
+                    posicion++;
                     continue;
                 }
                 else if(tableroColor[i,columnadireccion8].BackColor == Color.White)
                 {
-                    
+                    if (posicion >= 1)
+                    {
                         //metodod
                         pintarBlancoDireccion8(fila, i, columna);
-                        contadorEspacio = 0;
+                        posicion = 0;
                         break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                       
                     
                 }
                
-                if(columnadireccion8 == 0)
-                {
-                    break;
-                }
+                
 
             }
 
@@ -681,21 +758,14 @@ namespace PROYECTO1
                 {
                     if(tableroColor[i,j].BackColor == Color.Black)
                     {
-                        //meotodo aqui
-                        if(sigo == true) // sigo si, continua
-                        {
-                            continue;
-                        }
-                        else if(sigo == false) // sigo no, ya no continua
-                        {
-                            break;
-                        }
+                        //metood para mandar las coordenadas
+                        validacionFichaMaquinaNegra(i,j);
                     }
                 }
             }
         }
 
-        //para validar las fichas de las negras--------------------------------------------
+        //para validar recibir la fichas maquina 1 = negras--------------------------------------------
         public void validacionFichaMaquinaNegra(int valorFila, int valorColumna )
         {
             int columna = valorColumna;
@@ -731,7 +801,11 @@ namespace PROYECTO1
                                     for (int k = fila-1; k >=j; k--)
                                     {
                                         tableroColor[k, columna].BackColor = Color.Black;
+
+                                        
                                     }
+                                    opcion = "EXIT";
+                                    desicion = 0;
                                     break;
                                 }
                                 else
@@ -746,11 +820,42 @@ namespace PROYECTO1
                         break;
                     case "D2":
                         int filaD2 = fila;
-                        for (int j = columna; j <=7; j++)//columna
+                        for (int j = columna; j <= 7; j++)//columna
                         {
-                            if(tableroColor[filaD2,j].BackColor == Color.Black)
+                            filaD2--;
+                            if (tableroColor[filaD2, j].BackColor == Color.White)
                             {
+                                desicion++;
+                                continue;
+                            }
+                            else if (tableroColor[filaD2, j].BackColor == Color.Black)
+                            {
+                                opcion = "D3";
+                                break;
 
+                            }
+                            else if (tableroColor[filaD2,j].BackColor == Color.Green)
+                            {
+                                if (desicion >= 1)
+                                {
+                                    //medodo para pintar
+                                    int filaaux = fila;
+                                    for (int k = columna+1; k <= j; k++)
+                                    {
+                                        filaaux--;
+                                        tableroColor[filaaux, k].BackColor = Color.Black;
+
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion = "D3";
+                                    break;
+
+                                }
                             }
                         }
                         break;
@@ -767,6 +872,7 @@ namespace PROYECTO1
                     case "D8":
                         break;
                     case "EXIT":
+                        //meotodo para verificar si ha otras coincidencias
                         break;
 
                 }
@@ -5049,6 +5155,7 @@ namespace PROYECTO1
             {
                 BtnC3.BackColor = Color.White;
                 capturaFichaBlanca(2, 2);
+                jugadaMaquinaNegra();
 
             }
             else if (banderaNegra == true)
