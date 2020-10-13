@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContraJugador.aspx" />
     <Content Include="Iniciar.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -170,6 +171,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="ContraJugador.aspx.cs">
+      <DependentUpon>ContraJugador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContraJugador.aspx.designer.cs">
+      <DependentUpon>ContraJugador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar.aspx.cs">
       <DependentUpon>Iniciar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

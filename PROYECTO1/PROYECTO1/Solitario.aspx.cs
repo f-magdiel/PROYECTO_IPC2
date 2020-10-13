@@ -408,7 +408,7 @@ namespace PROYECTO1
        
        
 
-        // para cuando se ficha blanca--------------------------------------------------
+        // para cuando se ficha blanca--------------------------------------------------------------------y
         public void capturaFichaBlanca(int fil,int column)
         {   //x,y
             int fila = fil;
@@ -418,7 +418,7 @@ namespace PROYECTO1
 
             //direccion1
             //fila = cambia , columna = igual
-            for (int i = fila; i>=0 ; i--) // para fila
+            for (int i = fila-1; i>=0 ; i--) // para fila
             {
                 if(tableroColor[i,columna].BackColor == Color.Black)
                 {
@@ -426,47 +426,29 @@ namespace PROYECTO1
                 }
                 else if(tableroColor[i,columna].BackColor == Color.White)
                 {
-                    if (contadorEspacio == 1)
-                    {
-                        //si es blanco se pinta 
-                        pintarBlancoDireccion1(fila,i,columna);
-                        contadorEspacio = 0;
-                        break; // para que se salga del for
-                    }
-                    else
-                    {
-                        contadorEspacio++;
-                        continue;
-                        
-                    }
+                    pintarBlancoDireccion1(fila - 1, i, columna);
                 }
             }
 
             //direccion2
             //fila=disminuye   columna = aumenta
-            int filaContador = fila;
-            for (int i = columna; i <= 7 ; i++) // para columna
+            int filaContador = fila-1;
+            for (int i = columna-1; i <= 7 ; i++) // para columna
             {
-                if(tableroColor[filaContador,columna].BackColor == Color.Black)
+                filaContador--;
+                if (tableroColor[filaContador,columna].BackColor == Color.Black)
                 {
                     continue;
                 }
                 else if(tableroColor[filaContador,columna].BackColor == Color.White)
                 {
-                    if (contadorEspacio == 1)
-                    {
+                   
                         pintarBlancoDireccion2(fila, columna, i);
                         contadorEspacio = 0;
                         break;
-                    }
-                    else
-                    {
-                        contadorEspacio++;
-                        continue;
-                        
-                    }
+                    
                 }
-                filaContador--;
+               
                 if (filaContador == 0)
                 {
                     break;
@@ -475,7 +457,7 @@ namespace PROYECTO1
 
             //direccion3
             //fila = fija, columna = aumenta
-            for (int i = columna; i <= 7; i++) // para columna 
+            for (int i = columna+1; i <= 7; i++) // para columna 
             {
                 if(tableroColor[fila,i].BackColor == Color.Black)
                 {
@@ -483,47 +465,34 @@ namespace PROYECTO1
                 }
                 else if(tableroColor[fila,i].BackColor == Color.White)
                 {
-                    if(contadorEspacio == 1)
-                    {
+                   
                         pintarBlancoDireccion3(fila,columna,i);
                         contadorEspacio = 0;
                         break;
-                    }
-                    else
-                    {
-                        contadorEspacio++;
-                        continue;
-                        
-                    }
+                    
                 }
             }
 
             //direcion4
             //fila = aumenta  columna = aumenta
-            int filadireccion4 = fila;
-            for (int i = columna; i <=7 ; i++) // para columna
+            int filadireccion4 = fila+1;
+            for (int i = columna+1; i <=7 ; i++) // para columna
             {
-                if(tableroColor[filadireccion4,i].BackColor == Color.Black)
+                filadireccion4++;
+                if (tableroColor[filadireccion4,i].BackColor == Color.Black)
                 {
                     continue;
                 }
                 else if (tableroColor[filadireccion4, i].BackColor == Color.White)
                 {
-                    if(contadorEspacio == 1)
-                    {
+                   
                         pintarBlancoDireccion4(fila, columna, i);
                         contadorEspacio = 0;
                         break;
-                    }
-                    else
-                    {
-                        
-                        contadorEspacio++;
-                        continue;
-                    }
+                    
 
                 }
-                filadireccion4++;
+                
                 if(filadireccion4 == 7) // fila = 7 se sale del ciclo
                 {
                     break;
@@ -532,7 +501,7 @@ namespace PROYECTO1
 
             //direccion5
             //fila = aumenta   columna = fija
-            for (int i = fila; i <= 7; i++) // para fila
+            for (int i = fila+1; i <= 7; i++) // para fila
             {
                 if(tableroColor[i,columna].BackColor == Color.Black)
                 {
@@ -540,48 +509,35 @@ namespace PROYECTO1
                 }
                 else if(tableroColor[i,columna].BackColor == Color.White)
                 {
-                    if(contadorEspacio == 1)
-                    {//metodo
+                    //metodo
                         pintarBlancoDireccion5(fila, i, columna);
                         contadorEspacio = 0;
                         break;
-                    }
-                    else
-                    {
-                        
-                        contadorEspacio++;
-                        continue;
-                    }
+                    
                 }
             }
 
             //Direccion6
             // fila = aumenta   columna = disminuye
             int columnadireccion6 = columna;
-            for (int i = fila; i <= 7 ; i++) // para fila
+            for (int i = fila+1; i <= 7 ; i++) // para fila
             {
-                if(tableroColor[i,columnadireccion6].BackColor == Color.Black)
+                columnadireccion6--;
+                if (tableroColor[i,columnadireccion6].BackColor == Color.Black)
                 {
                     continue;
                 }
                 else if(tableroColor[i,columnadireccion6].BackColor == Color.White)
                 {
-                    if(contadorEspacio == 1)
-                    {
+                    
                         //metododireccion6
                         pintarBlancoDireccion6(fila, i, columna);
                         contadorEspacio = 0;
                         break;
 
-                    }
-                    else
-                    {
-                        contadorEspacio++;
-                        continue;
-                    }
                   
                 }
-                columnadireccion6--;
+               
                 if (columnadireccion6 == 0)
                 {
                     break;
@@ -591,7 +547,7 @@ namespace PROYECTO1
             //direccion7
             //fila = fija, columna = disminuye
             
-            for (int i = columna; i >= 0; i--) // columna
+            for (int i = columna-1; i >= 0; i--) // columna
             {
                 if(tableroColor[fila,i].BackColor == Color.Black)
                 {
@@ -599,48 +555,37 @@ namespace PROYECTO1
                 }
                 else if(tableroColor[fila,i].BackColor == Color.White)
                 {
-                    if(contadorEspacio == 1)
-                    {
+                   
                         //metodo
                         pintarBlancoDireccion7(columna, i,fila);
                         contadorEspacio = 0;
                         break;
 
-                    }
-                    else
-                    {
-                        contadorEspacio++;
-                        continue;
-                    }
+                    
                 }
             }
 
             //direcion8
             // fila = disminuye, columna = diminuye
             int columnadireccion8 = columna;
-            for (int i = fila; i >=0 ; i--) // fila
+            for (int i = fila-1; i >=0 ; i--) // fila
             {
-                if(tableroColor[i,columnadireccion8].BackColor == Color.Black)
+                columnadireccion8--;
+                if (tableroColor[i,columnadireccion8].BackColor == Color.Black)
                 {
                     continue;
                 }
                 else if(tableroColor[i,columnadireccion8].BackColor == Color.White)
                 {
-                    if (contadorEspacio == 1)
-                    {
+                    
                         //metodod
                         pintarBlancoDireccion8(fila, i, columna);
                         contadorEspacio = 0;
                         break;
-                    }
-                    else
-                    {
-                        contadorEspacio++;
-                        continue;
-                    }
+                    
                 }
-                columnadireccion8--;
-                if(columnadireccion6 == 0)
+               
+                if(columnadireccion8 == 0)
                 {
                     break;
                 }
@@ -770,19 +715,24 @@ namespace PROYECTO1
                             if(tableroColor[j,columna].BackColor == Color.White)
                             {
                                 desicion++;
-                                continue; // sige hasta encontrar un vacio
+                                continue; // sige hasta encontrar un verde
                             }
                             else if(tableroColor[j,columna].BackColor == Color.Black)
                             {
                                 opcion = "D2"; // pasa el otro estado si arriba hay un negro
                                 break;
                             }
-                            else if(tableroColor[i,columna].BackColor == Color.Green)
+                            else if(tableroColor[j,columna].BackColor == Color.Green)
                             {
                                 //condicion
                                 if (desicion >= 1)
                                 {
                                     //medodo para pintar
+                                    for (int k = fila-1; k >=j; k--)
+                                    {
+                                        tableroColor[k, columna].BackColor = Color.Black;
+                                    }
+                                    break;
                                 }
                                 else
                                 {
@@ -795,6 +745,14 @@ namespace PROYECTO1
 
                         break;
                     case "D2":
+                        int filaD2 = fila;
+                        for (int j = columna; j <=7; j++)//columna
+                        {
+                            if(tableroColor[filaD2,j].BackColor == Color.Black)
+                            {
+
+                            }
+                        }
                         break;
                     case "D3":
                         break;
@@ -5121,6 +5079,7 @@ namespace PROYECTO1
             {
                 BtnE3.BackColor = Color.White;
                 capturaFichaBlanca(2, 4);
+                jugadaMaquinaNegra();
 
             }
             else if (banderaNegra == true)
