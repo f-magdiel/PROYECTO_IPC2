@@ -736,6 +736,7 @@ namespace PROYECTO1
                 {
                     if(tableroColor[i,j].BackColor == Color.Black)
                     {
+                        //meotodo aqui
                         if(sigo == true) // sigo si, continua
                         {
                             continue;
@@ -755,6 +756,8 @@ namespace PROYECTO1
             int columna = valorColumna;
             int fila = valorFila;
             string opcion="D1";
+            int desicion = 0;
+
             for (int i = 0; i <= 8; i++)
             {
                 switch(opcion)
@@ -762,15 +765,31 @@ namespace PROYECTO1
                     case "D1":
                         //direccion1
                         //fila = cambia , columna = igual
-                        for (int j = fila; j >= 0; j--)
+                        for (int j = fila-1; j >= 0; j--)
                         {
                             if(tableroColor[j,columna].BackColor == Color.White)
                             {
+                                desicion++;
                                 continue; // sige hasta encontrar un vacio
                             }
                             else if(tableroColor[j,columna].BackColor == Color.Black)
                             {
                                 opcion = "D2"; // pasa el otro estado si arriba hay un negro
+                                break;
+                            }
+                            else if(tableroColor[i,columna].BackColor == Color.Green)
+                            {
+                                //condicion
+                                if (desicion >= 1)
+                                {
+                                    //medodo para pintar
+                                }
+                                else
+                                {
+                                    opcion = "D2";
+                                    break;
+                                    
+                                }
                             }
                         }
 
