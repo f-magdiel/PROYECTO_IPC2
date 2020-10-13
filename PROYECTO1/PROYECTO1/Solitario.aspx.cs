@@ -17,6 +17,7 @@ namespace PROYECTO1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public static bool sigo = false;
         public static int contadorEspacio = 0;
         public static bool activacionMaqina = false;
         public static bool banderaNegra = false; // false para el negro, al inicio no se ha seleccionado nada xd
@@ -216,6 +217,86 @@ namespace PROYECTO1
 
 
             }
+
+            if (!IsPostBack)
+            {
+                BtnA1.BackColor = Color.Green;
+                BtnA2.BackColor = Color.Green;
+                BtnA3.BackColor = Color.Green;
+                BtnA4.BackColor = Color.Green;
+                BtnA5.BackColor = Color.Green;
+                BtnA6.BackColor = Color.Green;
+                BtnA7.BackColor = Color.Green;
+                BtnA8.BackColor = Color.Green;
+
+                BtnB1.BackColor = Color.Green;
+                BtnB2.BackColor = Color.Green;
+                BtnB3.BackColor = Color.Green;
+                BtnB4.BackColor = Color.Green;
+                BtnB5.BackColor = Color.Green;
+                BtnB6.BackColor = Color.Green;
+                BtnB7.BackColor = Color.Green;
+                BtnB8.BackColor = Color.Green;
+
+                BtnC1.BackColor = Color.Green;
+                BtnC2.BackColor = Color.Green;
+                BtnC3.BackColor = Color.Green;
+                BtnC4.BackColor = Color.Green;
+                BtnC5.BackColor = Color.Green;
+                BtnC6.BackColor = Color.Green;
+                BtnC7.BackColor = Color.Green;
+                BtnC8.BackColor = Color.Green;
+
+                BtnD1.BackColor = Color.Green;
+                BtnD2.BackColor = Color.Green;
+                BtnD3.BackColor = Color.Green;
+
+
+                BtnD6.BackColor = Color.Green;
+                BtnD7.BackColor = Color.Green;
+                BtnD8.BackColor = Color.Green;
+
+
+                BtnE1.BackColor = Color.Green;
+                BtnE2.BackColor = Color.Green;
+                BtnE3.BackColor = Color.Green;
+                
+                    
+                BtnE6.BackColor = Color.Green;
+                BtnE7.BackColor = Color.Green;
+                BtnE8.BackColor = Color.Green;
+
+
+                BtnF1.BackColor = Color.Green;
+                BtnF2.BackColor = Color.Green;
+                BtnF3.BackColor = Color.Green;
+                BtnF4.BackColor = Color.Green;
+                BtnF5.BackColor = Color.Green;
+                BtnF6.BackColor = Color.Green;
+                BtnF7.BackColor = Color.Green;
+                BtnF8.BackColor = Color.Green;
+
+                BtnG1.BackColor = Color.Green;
+                BtnG2.BackColor = Color.Green;
+                BtnG3.BackColor = Color.Green;
+                BtnG4.BackColor = Color.Green;
+                BtnG5.BackColor = Color.Green;
+                BtnG6.BackColor = Color.Green;
+                BtnG7.BackColor = Color.Green;
+                BtnG8.BackColor = Color.Green;
+
+                BtnH1.BackColor = Color.Green;
+                BtnH2.BackColor = Color.Green;
+                BtnH3.BackColor = Color.Green;
+                BtnH4.BackColor = Color.Green;
+                BtnH5.BackColor = Color.Green;
+                BtnH6.BackColor = Color.Green;
+                BtnH7.BackColor = Color.Green;
+                BtnH8.BackColor = Color.Green;
+
+
+
+            }
         }
 
 
@@ -323,6 +404,10 @@ namespace PROYECTO1
                 Response.Write("No se encontro el archivo"+exc);
             }
         }
+
+       
+       
+
         // para cuando se ficha blanca--------------------------------------------------
         public void capturaFichaBlanca(int fil,int column)
         {   //x,y
@@ -642,11 +727,75 @@ namespace PROYECTO1
         {
 
         }
-
-        public void maquinaNegra()
+        //jugada maquina cuando es negra¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+        public void jugadaMaquinaNegra()
         {
-
+            for (int i = 0; i < 8; i++) //filas
+            {
+                for (int j = 0;  j < 8;  j++) //columnas
+                {
+                    if(tableroColor[i,j].BackColor == Color.Black)
+                    {
+                        if(sigo == true) // sigo si, continua
+                        {
+                            continue;
+                        }
+                        else if(sigo == false) // sigo no, ya no continua
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
         }
+
+        //para validar las fichas de las negras--------------------------------------------
+        public void validacionFichaMaquinaNegra(int valorFila, int valorColumna )
+        {
+            int columna = valorColumna;
+            int fila = valorFila;
+            string opcion="D1";
+            for (int i = 0; i <= 8; i++)
+            {
+                switch(opcion)
+                {
+                    case "D1":
+                        //direccion1
+                        //fila = cambia , columna = igual
+                        for (int j = fila; j >= 0; j--)
+                        {
+                            if(tableroColor[j,columna].BackColor == Color.White)
+                            {
+                                continue; // sige hasta encontrar un vacio
+                            }
+                            else if(tableroColor[j,columna].BackColor == Color.Black)
+                            {
+                                opcion = "D2"; // pasa el otro estado si arriba hay un negro
+                            }
+                        }
+
+                        break;
+                    case "D2":
+                        break;
+                    case "D3":
+                        break;
+                    case "D4":
+                        break;
+                    case "D5":
+                        break;
+                    case "D6":
+                        break;
+                    case "D7":
+                        break;
+                    case "D8":
+                        break;
+                    case "EXIT":
+                        break;
+
+                }
+            }
+        }
+
         public void ingresarFichas()
         {
             for (int i = 0; i < 8; i++)
