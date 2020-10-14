@@ -17,7 +17,15 @@ namespace PROYECTO1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        public static bool sigo = false;
+
+        //movimientos
+        public static int movimientoB = 0;
+        public static int movimientoN = 0;
+
+        public static int bloquesN = 0;
+        public static int bloquesB = 0;
+
+        public static bool sigo = true;
         public static int contadorEspacio = 0;
         public static bool activacionMaqina = false;
         public static bool banderaNegra = false; // false para el negro, al inicio no se ha seleccionado nada xd
@@ -39,7 +47,7 @@ namespace PROYECTO1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
             if (!IsPostBack)
             {
                 banderaBlanca = false;
@@ -305,6 +313,43 @@ namespace PROYECTO1
             Response.Redirect("Opciones.aspx");
         }
 
+        public void informacionFinal()
+        {
+            movimientoB = 0;
+            movimientoN = 0;
+            bloquesB = 0;
+            bloquesN = 0;
+            //blancas
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (tableroColor[i, j].BackColor == Color.White)
+                    {
+                        movimientoB++;
+                        
+                        
+                    }
+                    else if(tableroColor[i, j].BackColor == Color.Black)
+                    {
+                        movimientoN++;
+                       
+                    }
+                }
+            }
+
+            if(banderaBlanca == true)//cuando yo sea blanco
+            {
+                LabelContadorJugador.Text = movimientoB.ToString()+"-"+bloquesB.ToString();
+                LabelContadorMaquina.Text = movimientoN.ToString() + "-" + bloquesN.ToString();
+            }
+            else //cuando yo sea negro
+            {
+                LabelContadorMaquina.Text = movimientoB.ToString();
+                LabelContadorJugador.Text = movimientoN.ToString();
+            }
+           
+        }
         protected void ButtonCarga_Click1(object sender, EventArgs e)
         {
             try
@@ -745,21 +790,30 @@ namespace PROYECTO1
             }
 
         }
-        public void maquinaBlanca()
-        {
-
-        }
+        
         //jugada maquina cuando es negra¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
         public void jugadaMaquinaNegra()
         {
+            
+            sigo = true;
             for (int i = 0; i < 8; i++) //filas
             {
                 for (int j = 0;  j < 8;  j++) //columnas
                 {
                     if(tableroColor[i,j].BackColor == Color.Black)
                     {
-                        //metood para mandar las coordenadas
-                        validacionFichaMaquinaNegra(i,j);
+                        if (sigo == true)
+                        {
+                           
+                            //metood para mandar las coordenadas
+                            validacionFichaMaquinaNegra(i, j);
+                        }
+                        else if (sigo == false)
+                        {
+                            break;
+                        }
+                        
+                        
                     }
                 }
             }
@@ -801,10 +855,10 @@ namespace PROYECTO1
                                     for (int k = fila-1; k >=j; k--)
                                     {
                                         tableroColor[k, columna].BackColor = Color.Black;
-
-                                        
+                                    
                                     }
                                     opcion = "EXIT";
+                                    sigo = false;
                                     desicion = 0;
                                     break;
                                 }
@@ -820,9 +874,13 @@ namespace PROYECTO1
                         break;
                     case "D2":
                         int filaD2 = fila;
-                        for (int j = columna; j <= 7; j++)//columna
+                        for (int j = columna+1; j <= 7; j++)//columna
                         {
                             filaD2--;
+                            if(filaD2 < 0)
+                            {
+                                break;
+                            }
                             if (tableroColor[filaD2, j].BackColor == Color.White)
                             {
                                 desicion++;
@@ -840,14 +898,15 @@ namespace PROYECTO1
                                 {
                                     //medodo para pintar
                                     int filaaux = fila;
-                                    for (int k = columna+1; k <= j; k++)
+                                    for (int k = columna; k <= j; k++)
                                     {
-                                        filaaux--;
+                                        
                                         tableroColor[filaaux, k].BackColor = Color.Black;
-
+                                        filaaux--;
                                     }
                                     opcion = "EXIT";
                                     desicion = 0;
+                                    sigo = false;
                                     break;
                                 }
                                 else
@@ -860,24 +919,602 @@ namespace PROYECTO1
                         }
                         break;
                     case "D3":
+                        int filaD3 = fila;
+                        for (int j = columna+1; j <= 7; j++)//columna
+                        {
+                            if(tableroColor[filaD3,j].BackColor == Color.White)
+                            {
+                                desicion++;
+                                continue;
+                            }
+                            else if(tableroColor[filaD3, j].BackColor == Color.Black)
+                            {
+                                opcion = "D4";
+                                break;
+                            }
+                            else if(tableroColor[filaD3, j].BackColor == Color.Green)
+                            {
+                                if (desicion >= 1)
+                                {
+                                    //para pintar
+                                    for (int k = columna; k <= j; k++)
+                                    {
+                                        tableroColor[filaD3, k].BackColor = Color.Black;
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    sigo = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion = "D4";
+                                    break;
+                                }
+                            }
+                        }
+
                         break;
                     case "D4":
+                        int filaD4 = fila;
+                        for (int j = columna+1; j <=7 ; j++)
+                        {
+                            filaD4++;
+                            if (filaD4 >= 8)
+                            {
+                                break;
+                            }
+                            if(tableroColor[filaD4,j].BackColor == Color.White)
+                            {
+                                desicion++;
+                                continue;
+                            }
+                            else if(tableroColor[filaD4, j].BackColor == Color.Black)
+                            {
+                                opcion = "D5";
+                                break;
+                            }
+                            else if(tableroColor[filaD4, j].BackColor == Color.Green)
+                            {
+                                if (desicion >= 1)
+                                {
+                                    //para pintar
+                                    int filaaux = fila;
+                                    for (int k = columna; k <=j ; k++)
+                                    {
+                                        tableroColor[filaaux, k].BackColor = Color.Black;
+                                        filaaux++;
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    sigo = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion= "D5";
+                                    break;
+                                }
+                            }
+
+                        }
                         break;
                     case "D5":
+                        int columnaD5 = columna;
+                        for (int j = fila+1; j < 7; j++)//fila
+                        {
+                            
+                            if(tableroColor[j,columnaD5].BackColor == Color.White)
+                            {
+                                desicion++;
+                                continue;
+                            }
+                            else if(tableroColor[j, columnaD5].BackColor == Color.Black)
+                            {
+                                opcion = "D6";
+                                break;
+                            }
+                            else if(tableroColor[j, columnaD5].BackColor == Color.Green)
+                            {
+                                if (desicion >= 1)
+                                {
+                                    //para pintar
+                                    for (int k = fila; k <= j; k++)
+                                    {
+                                        tableroColor[k, columnaD5].BackColor = Color.Black;
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    sigo = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion = "D6";
+                                    break;
+                                }
+                            }
+
+                        }
                         break;
                     case "D6":
+                        int columnaD6 = columna;
+                        for (int j = fila+1; j <=7 ; j++) //fila
+                            {
+                                columnaD6--;
+                            if (columnaD6 < 0)
+                            {
+                                break;
+                            }
+                            if(tableroColor[j,columnaD6].BackColor == Color.White)
+                            {
+                                desicion++;
+                                continue;
+                            }
+                            else if(tableroColor[j, columnaD6].BackColor == Color.Black)
+                            {
+                                opcion = "D7";
+                                break;
+                            }
+                            else if (tableroColor[j, columnaD6].BackColor == Color.Green)
+                            {
+                                if(desicion >= 1)
+                                {
+                                    int columnaaux = columna;
+                                    for (int k = fila; k <=j ; k++)
+                                    {
+                                        tableroColor[k, columnaaux].BackColor = Color.Black;
+                                        columnaaux--;
+
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    sigo = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion = "D7";
+                                    break;
+                                }
+
+                            }
+                        }
                         break;
                     case "D7":
+                        int filaD7 = fila;
+                        for (int j = columna - 1; j >= 0; j--) // columna
+                        {
+                            if (tableroColor[filaD7,j].BackColor == Color.White)
+                            {
+                                desicion++;
+                                continue;
+                            }
+                            else if(tableroColor[filaD7, j].BackColor == Color.Black)
+                            {
+                                opcion = "D8";
+                                break;
+
+                            }
+                            else if(tableroColor[filaD7, j].BackColor == Color.Green)
+                            {
+                                if (desicion >= 1)
+                                {
+                                    // para pintar
+                                    for (int k = columna; k>=j ; k--)
+                                    {
+                                        tableroColor[filaD7, k].BackColor = Color.Black;
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    sigo = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion = "D8";
+                                    break;
+                                }
+                            }
+                        }
                         break;
                     case "D8":
+                        int columnaD8 = columna;
+                        for (int j = fila; j >= 0; j--)//fila
+                        {
+                            columnaD8--;
+                            if(columnaD8 < 0)
+                            {
+                                break;
+                            }
+                            if(tableroColor[j,columnaD8].BackColor == Color.White)
+                            {
+                                desicion++;
+                                continue;
+                            }
+                            else if (tableroColor[j, columnaD8].BackColor == Color.Black)
+                            {
+                                opcion = "EXIT";
+                                
+                                break;
+                            }
+                            else if(tableroColor[j, columnaD8].BackColor == Color.Green)
+                            {
+                                if (desicion >= 1)
+                                {
+                                    // para pintar
+                                    int columnaaux = columna;
+                                    for (int k = fila; k >= j; k--)
+                                    {
+                                        tableroColor[k, columnaaux].BackColor = Color.Black;
+                                        columnaaux--;
+                                    }
+                                    opcion = "EXIT";
+                                    desicion = 0;
+                                    sigo = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    opcion = "EXIT";
+                                    
+                                    break;
+                                }
+                            }
+
+                        }
                         break;
                     case "EXIT":
                         //meotodo para verificar si ha otras coincidencias
+                        //validacionDeLargosNegro(fila, columna);
                         break;
 
                 }
             }
         }
+
+
+        //inicioa aqui
+       
+        public void validacionDeLargosNegro(int fil, int column)
+        {   //x,y
+            int fila = fil;
+            int columna = column;
+            int posicion = 0;
+
+
+
+            //direccion1
+            //fila = cambia , columna = igual
+            for (int i = fila - 1; i >= 0; i--) // para fila
+            {
+                if (tableroColor[i, columna].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[i, columna].BackColor == Color.Black)
+                {
+                    if (posicion >= 1)
+                    {
+                        pintarBlancoDireccion1N(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            //direccion2
+            //fila=disminuye   columna = aumenta
+            int filaContador = fila;
+            for (int i = columna + 1; i <= 7; i++) // para columna
+            {
+
+                filaContador--;
+                if (filaContador < 0)
+                {
+                    break;
+                }
+                if (tableroColor[filaContador, i].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[filaContador, i].BackColor == Color.Black)
+                {
+
+                    if (posicion >= 1)
+                    {
+                        pintarBlancoDireccion2N(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+            }
+
+            //direccion3
+            //fila = fija, columna = aumenta
+            for (int i = columna + 1; i <= 7; i++) // para columna 
+            {
+                if (tableroColor[fila, i].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[fila, i].BackColor == Color.Black)
+                {
+
+                    if (posicion >= 1)
+                    {
+                        pintarBlancoDireccion3N(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+
+
+                }
+            }
+
+            //direcion4
+            //fila = aumenta  columna = aumenta
+            int filadireccion4 = fila + 1;
+            for (int i = columna + 1; i <= 7; i++) // para columna
+            {
+                filadireccion4++;
+
+                if (filadireccion4 >= 8) // fila >= 8 se sale del ciclo
+                {
+                    break;
+                }
+                if (tableroColor[filadireccion4, i].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[filadireccion4, i].BackColor == Color.Black)
+                {
+
+                    if (posicion >= 1)
+                    {
+                        pintarBlancoDireccion4N(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+            }
+
+            //direccion5
+            //fila = aumenta   columna = fija
+            for (int i = fila + 1; i <= 7; i++) // para fila
+            {
+                if (tableroColor[i, columna].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[i, columna].BackColor == Color.Black)
+                {
+                    if (posicion >= 1)
+                    {
+                        //metodo
+                        pintarBlancoDireccion5N(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                }
+            }
+
+            //Direccion6
+            // fila = aumenta   columna = disminuye
+            int columnadireccion6 = columna;
+            for (int i = fila + 1; i <= 7; i++) // para fila
+            {
+                columnadireccion6--;
+                if (columnadireccion6 < 0)
+                {
+                    break;
+                }
+                if (tableroColor[i, columnadireccion6].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[i, columnadireccion6].BackColor == Color.Black)
+                {
+
+                    if (posicion >= 1)
+                    {
+                        //metododireccion6
+                        pintarBlancoDireccion6N(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+            }
+
+            //direccion7
+            //fila = fija, columna = disminuye
+
+            for (int i = columna - 1; i >= 0; i--) // columna
+            {
+                if (tableroColor[fila, i].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[fila, i].BackColor == Color.Black)
+                {
+                    if (posicion >= 1)
+                    {
+
+                        //metodo
+                        pintarBlancoDireccion7N(columna, i, fila);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+            }
+
+            //direcion8
+            // fila = disminuye, columna = diminuye
+            int columnadireccion8 = columna;
+            for (int i = fila - 1; i >= 0; i--) // fila
+            {
+                columnadireccion8--;
+                if (columnadireccion8 < 0)
+                {
+                    break;
+                }
+                if (tableroColor[i, columnadireccion8].BackColor == Color.White)
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroColor[i, columnadireccion8].BackColor == Color.Black)
+                {
+                    if (posicion >= 1)
+                    {
+                        //metodod
+                        pintarBlancoDireccion8N(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+
+            }
+
+        }
+        //metodos que pinta, recibe valores para pintar ************************************************************
+        public void pintarBlancoDireccion1N(int filaInicio, int filaFin, int columna)
+        {
+            for (int i = filaInicio; i >= filaFin; i--)
+            {
+                tableroColor[i, columna].BackColor = Color.Black;
+            }
+        }
+
+        public void pintarBlancoDireccion2N(int filaInicio, int columnaInicio, int columnaFin)
+        {
+            int fila = filaInicio;
+            for (int i = columnaInicio; i <= columnaFin; i++)
+            {
+                tableroColor[fila, i].BackColor = Color.Black;
+                fila--;
+
+            }
+        }
+
+        public void pintarBlancoDireccion3N(int fila, int inicioColumna, int finColumna)
+        {
+            for (int i = inicioColumna; i <= finColumna; i++) //columna
+            {
+                tableroColor[fila, i].BackColor = Color.Black;
+            }
+        }
+
+        public void pintarBlancoDireccion4N(int fila, int inicioColumna, int finColumna)
+        {
+            int filaInicio = fila;
+            for (int i = inicioColumna; i <= finColumna; i++)
+            {
+                tableroColor[filaInicio, i].BackColor = Color.Black;
+                filaInicio++;
+            }
+
+        }
+
+        public void pintarBlancoDireccion5N(int filaInicio, int filaFin, int columna)
+        {
+            for (int i = filaInicio; i <= filaFin; i++)
+            {
+                tableroColor[i, columna].BackColor = Color.Black;
+            }
+        }
+
+        public void pintarBlancoDireccion6N(int inicioFila, int finFila, int columna)
+        {
+            int columnadireccion = columna;
+            for (int i = inicioFila; i <= finFila; i++)
+            {
+                tableroColor[i, columnadireccion].BackColor = Color.Black;
+                columnadireccion--;
+            }
+        }
+
+        public void pintarBlancoDireccion7N(int inicioColumna, int finColumna, int fila)
+        {
+            for (int i = inicioColumna; i >= finColumna; i--)
+            {
+                tableroColor[fila, i].BackColor = Color.Black;
+            }
+        }
+
+        public void pintarBlancoDireccion8N(int inicioFila, int finFila, int columna)
+        {
+            int columnadireccion = columna;
+            for (int i = inicioFila; i >= finFila; i--)
+            {
+                tableroColor[i, columnadireccion].BackColor = Color.Black;
+                columnadireccion--;
+            }
+
+        }
+
+        //MAquina que vefifica las fichas si hay mas para completarlos ********************+++
+
 
         public void ingresarFichas()
         {
@@ -4884,6 +5521,8 @@ namespace PROYECTO1
             if (banderaBlanca == true) {
                 BtnA1.BackColor = Color.White;
                 capturaFichaBlanca(0,0);
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             } else if(banderaNegra == true){
                 BtnA1.BackColor = Color.Black;
@@ -4898,7 +5537,8 @@ namespace PROYECTO1
             {
                 BtnB1.BackColor = Color.White;
                 capturaFichaBlanca(0,1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -4915,6 +5555,8 @@ namespace PROYECTO1
             {
                 BtnC1.BackColor = Color.White;
                 capturaFichaBlanca(0,2);
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             }
             else if (banderaNegra == true)
@@ -4930,6 +5572,8 @@ namespace PROYECTO1
             {
                 BtnD1.BackColor = Color.White;
                 capturaFichaBlanca(0,3);
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             }
             else if (banderaNegra == true)
@@ -4945,7 +5589,8 @@ namespace PROYECTO1
             {
                 BtnE1.BackColor = Color.White;
                 capturaFichaBlanca(0,4);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -4960,6 +5605,8 @@ namespace PROYECTO1
             {
                 BtnF1.BackColor = Color.White;
                 capturaFichaBlanca(0,5);
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             }
             else if (banderaNegra == true)
@@ -4975,6 +5622,8 @@ namespace PROYECTO1
             {
                 BtnG1.BackColor = Color.White;
                 capturaFichaBlanca(0,6);
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             }
             else if (banderaNegra == true)
@@ -4990,7 +5639,8 @@ namespace PROYECTO1
             {
                 BtnH1.BackColor = Color.White;
                 capturaFichaBlanca(0,7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5005,7 +5655,8 @@ namespace PROYECTO1
             {
                 BtnA2.BackColor = Color.White;
                 capturaFichaBlanca(1, 0);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5020,7 +5671,8 @@ namespace PROYECTO1
             {
                 BtnB2.BackColor = Color.White;
                 capturaFichaBlanca(1, 1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5035,7 +5687,8 @@ namespace PROYECTO1
             {
                 BtnC2.BackColor = Color.White;
                 capturaFichaBlanca(1, 2);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5050,7 +5703,8 @@ namespace PROYECTO1
             {
                 BtnD2.BackColor = Color.White;
                 capturaFichaBlanca(1, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5065,7 +5719,8 @@ namespace PROYECTO1
             {
                 BtnE2.BackColor = Color.White;
                 capturaFichaBlanca(1, 4);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5080,7 +5735,8 @@ namespace PROYECTO1
             {
                 BtnF2.BackColor = Color.White;
                 capturaFichaBlanca(1, 5);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5095,7 +5751,8 @@ namespace PROYECTO1
             {
                 BtnG2.BackColor = Color.White;
                 capturaFichaBlanca(1, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5110,7 +5767,8 @@ namespace PROYECTO1
             {
                 BtnH2.BackColor = Color.White;
                 capturaFichaBlanca(1, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5125,7 +5783,8 @@ namespace PROYECTO1
             {
                 BtnA3.BackColor = Color.White;
                 capturaFichaBlanca(2, 0);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5140,7 +5799,8 @@ namespace PROYECTO1
             {
                 BtnB3.BackColor = Color.White;
                 capturaFichaBlanca(2, 1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5156,7 +5816,7 @@ namespace PROYECTO1
                 BtnC3.BackColor = Color.White;
                 capturaFichaBlanca(2, 2);
                 jugadaMaquinaNegra();
-
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5171,7 +5831,8 @@ namespace PROYECTO1
             {
                 BtnD3.BackColor = Color.White;
                 capturaFichaBlanca(2, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5187,7 +5848,8 @@ namespace PROYECTO1
                 BtnE3.BackColor = Color.White;
                 capturaFichaBlanca(2, 4);
                 jugadaMaquinaNegra();
-
+                informacionFinal();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5202,7 +5864,8 @@ namespace PROYECTO1
             {
                 BtnF3.BackColor = Color.White;
                 capturaFichaBlanca(2, 5);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5217,7 +5880,8 @@ namespace PROYECTO1
             {
                 BtnG3.BackColor = Color.White;
                 capturaFichaBlanca(2, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5232,7 +5896,8 @@ namespace PROYECTO1
             {
                 BtnH3.BackColor = Color.White;
                 capturaFichaBlanca(2, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5247,11 +5912,13 @@ namespace PROYECTO1
             {
                 BtnA4.BackColor = Color.White;
                 capturaFichaBlanca(3, 0);
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
                 BtnA4.BackColor = Color.Black;
-               
+                informacionFinal();
             }
         }
 
@@ -5261,7 +5928,8 @@ namespace PROYECTO1
             {
                 BtnB4.BackColor = Color.White;
                 capturaFichaBlanca(3, 1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5277,6 +5945,8 @@ namespace PROYECTO1
             {
                 BtnC4.BackColor = Color.White;
                 capturaFichaBlanca(3, 2);
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5291,7 +5961,8 @@ namespace PROYECTO1
             {
                 BtnD4.BackColor = Color.White;
                 capturaFichaBlanca(3, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5306,6 +5977,8 @@ namespace PROYECTO1
             {
                 BtnE4.BackColor = Color.White;
                 capturaFichaBlanca(3, 4);
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             }
             else if (banderaNegra == true)
@@ -5321,8 +5994,8 @@ namespace PROYECTO1
             {
                 BtnF4.BackColor = Color.White;
                 capturaFichaBlanca(3, 5);
-               
-                
+                jugadaMaquinaNegra();
+                informacionFinal();
 
             }
             else if (banderaNegra == true)
@@ -5340,7 +6013,8 @@ namespace PROYECTO1
             {
                 BtnG4.BackColor = Color.White;
                 capturaFichaBlanca(3, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5355,7 +6029,8 @@ namespace PROYECTO1
             {
                 BtnH4.BackColor = Color.White;
                 capturaFichaBlanca(3, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5370,7 +6045,8 @@ namespace PROYECTO1
             {
                 BtnA5.BackColor = Color.White;
                 capturaFichaBlanca(4, 0);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5385,7 +6061,8 @@ namespace PROYECTO1
             {
                 BtnB5.BackColor = Color.White;
                 capturaFichaBlanca(4, 1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5400,7 +6077,8 @@ namespace PROYECTO1
             {
                 BtnC5.BackColor = Color.White;
                 capturaFichaBlanca(4, 2);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5415,7 +6093,8 @@ namespace PROYECTO1
             {
                 BtnD5.BackColor = Color.White;
                 capturaFichaBlanca(4, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5430,7 +6109,8 @@ namespace PROYECTO1
             {
                 BtnE5.BackColor = Color.White;
                 capturaFichaBlanca(4, 4);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5445,7 +6125,8 @@ namespace PROYECTO1
             {
                 BtnF5.BackColor = Color.White;
                 capturaFichaBlanca(4, 5);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5460,7 +6141,8 @@ namespace PROYECTO1
             {
                 BtnG5.BackColor = Color.White;
                 capturaFichaBlanca(4, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5475,7 +6157,8 @@ namespace PROYECTO1
             {
                 BtnH5.BackColor = Color.White;
                 capturaFichaBlanca(4, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5490,7 +6173,8 @@ namespace PROYECTO1
             {
                 BtnA6.BackColor = Color.White;
                 capturaFichaBlanca(5, 0);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5505,7 +6189,8 @@ namespace PROYECTO1
             {
                 BtnB6.BackColor = Color.White;
                 capturaFichaBlanca(5, 1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5520,7 +6205,8 @@ namespace PROYECTO1
             {
                 BtnC6.BackColor = Color.White;
                 capturaFichaBlanca(5, 2);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5535,7 +6221,8 @@ namespace PROYECTO1
             {
                 BtnD6.BackColor = Color.White;
                 capturaFichaBlanca(5, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5550,7 +6237,8 @@ namespace PROYECTO1
             {
                 BtnE6.BackColor = Color.White;
                 capturaFichaBlanca(5, 4);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5565,7 +6253,8 @@ namespace PROYECTO1
             {
                 BtnF6.BackColor = Color.White;
                 capturaFichaBlanca(5, 5);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5580,7 +6269,8 @@ namespace PROYECTO1
             {
                 BtnG6.BackColor = Color.White;
                 capturaFichaBlanca(5, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5595,7 +6285,8 @@ namespace PROYECTO1
             {
                 BtnH6.BackColor = Color.White;
                 capturaFichaBlanca(5, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5610,7 +6301,8 @@ namespace PROYECTO1
             {
                 BtnA7.BackColor = Color.White;
                 capturaFichaBlanca(6, 0);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5625,7 +6317,8 @@ namespace PROYECTO1
             {
                 BtnB7.BackColor = Color.White;
                 capturaFichaBlanca(6, 1);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5640,7 +6333,8 @@ namespace PROYECTO1
             {
                 BtnC7.BackColor = Color.White;
                 capturaFichaBlanca(6, 2);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5655,7 +6349,8 @@ namespace PROYECTO1
             {
                 BtnD7.BackColor = Color.White;
                 capturaFichaBlanca(6, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5670,7 +6365,8 @@ namespace PROYECTO1
             {
                 BtnE7.BackColor = Color.White;
                 capturaFichaBlanca(6, 4);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5685,7 +6381,8 @@ namespace PROYECTO1
             {
                 BtnF7.BackColor = Color.White;
                 capturaFichaBlanca(6, 5);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5700,7 +6397,8 @@ namespace PROYECTO1
             {
                 BtnG7.BackColor = Color.White;
                 capturaFichaBlanca(6, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5715,7 +6413,8 @@ namespace PROYECTO1
             {
                 BtnH7.BackColor = Color.White;
                 capturaFichaBlanca(6, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5730,6 +6429,8 @@ namespace PROYECTO1
             {
                 BtnA8.BackColor = Color.White;
                 capturaFichaBlanca(7, 0);
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5744,6 +6445,8 @@ namespace PROYECTO1
             {
                 BtnB8.BackColor = Color.White;
                 capturaFichaBlanca(7, 1);
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5758,6 +6461,8 @@ namespace PROYECTO1
             {
                 BtnC8.BackColor = Color.White;
                 capturaFichaBlanca(7, 2);
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5772,7 +6477,8 @@ namespace PROYECTO1
             {
                 BtnD8.BackColor = Color.White;
                 capturaFichaBlanca(7, 3);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5787,7 +6493,8 @@ namespace PROYECTO1
             {
                 BtnE8.BackColor = Color.White;
                 capturaFichaBlanca(7, 4);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5802,7 +6509,8 @@ namespace PROYECTO1
             {
                 BtnF8.BackColor = Color.White;
                 capturaFichaBlanca(7, 5);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5817,7 +6525,8 @@ namespace PROYECTO1
             {
                 BtnG8.BackColor = Color.White;
                 capturaFichaBlanca(7, 6);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {
@@ -5832,7 +6541,8 @@ namespace PROYECTO1
             {
                 BtnH8.BackColor = Color.White;
                 capturaFichaBlanca(7, 7);
-
+                jugadaMaquinaNegra();
+                informacionFinal();
             }
             else if (banderaNegra == true)
             {

@@ -18,5 +18,10 @@ namespace PROYECTO1
         {
             Response.Redirect("Solitario.aspx");
         }
+
+        protected void ButtonMaquina_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("VersusUno.aspx");
+        }
     }
 }

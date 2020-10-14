@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
         <div>
             <section class="form-menu">
-            <asp:Button class="opcion" ID="ButtonMaquina" runat="server" Text="Jugador vs Jugador" />
+            <asp:Button class="opcion" ID="ButtonMaquina" runat="server" Text="Jugador vs Jugador" OnClick="ButtonMaquina_Click" />
             <asp:Button class= "opcion" ID="ButtonSolitario" runat="server" Text="Contra Máquina" OnClick="ButtonSolitario_Click" />
             <asp:Button class= "opcion" ID="ButtonTorneo" runat="server" Text="Torneo" />
             <asp:Button class =" opcion" ID="ButtonReporte" runat="server" Text="Reporte" />

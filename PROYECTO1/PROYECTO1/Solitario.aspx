@@ -30,7 +30,7 @@
             <asp:Label Cssclass="contadormaquina" ID="LabelContadorMaquina" runat="server" Text="0"></asp:Label>
             <asp:Label Cssclass="contadorjugador" ID="LabelContadorJugador" runat="server" Text="0"></asp:Label>
             <asp:Label Cssclass="labelseleccion" ID="LabelSeleccion" runat="server" Text="Seleccionar Ficha:"></asp:Label>
-            <asp:Label Cssclass="labelturno" ID="LabelTurno" runat="server" Text="Turno:"></asp:Label>
+            <asp:Label Cssclass="labelturno" ID="LabelTurno" runat="server" Text="Usuario:"></asp:Label>
                <asp:TextBox Cssclass="caja" ID="TextBoxCarga" runat="server"></asp:TextBox>
              <asp:Button Cssclass="btn1" ID="ButtonCarga" runat="server" Text="Cargar" OnClick="ButtonCarga_Click1" />
               <asp:Button Cssclass="btn2" ID="ButtonDescarga" runat="server" Text="Descargar" OnClick="ButtonDescarga_Click" />
