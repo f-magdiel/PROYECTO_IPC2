@@ -604,6 +604,7 @@ namespace PROYECTO1
                     if(tableroColor[i,j].Text == "X")
                     {
                         tableroColor[i, j].Text = " ";
+                        tableroColor[i, j].Enabled = false;
                     }
                 }
             }
@@ -849,7 +850,7 @@ namespace PROYECTO1
 
             //direcion4
             //fila = aumenta  columna = aumenta
-            int filadireccion4 = fila+1;
+            int filadireccion4 = fila;
             for (int i = columna+1; i <=7 ; i++) // para columna
             {
                 filadireccion4++;
