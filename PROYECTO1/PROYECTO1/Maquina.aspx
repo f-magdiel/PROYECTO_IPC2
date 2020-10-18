@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VersusUno.aspx.cs" Inherits="PROYECTO1.VersusUno" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Maquina.aspx.cs" Inherits="PROYECTO1.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -7,21 +7,26 @@
      <link href="Styles/estiloTablero.css" rel="stylesheet" type="text/css"/>
      <link href="Styles/MenuSolitario.css" rel="stylesheet" type="text/css"/>
      <link href="Styles/estiloLabelSolitario.css" rel="stylesheet" type="text/css"/>
+    
+    
+     
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+
+        
+        <div >
             <asp:Button Cssclass="btnaletoria" ID="ButtonRandom" runat="server" Text="Aleatoria" OnClick="ButtonRandom_Click" />
             <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" OnClick="ButtonSeleccionar_Click" />
-            <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server" OnSelectedIndexChanged="DropDownListFicha_SelectedIndexChanged">
+            <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server">
                 <asp:ListItem Value="X">Negro</asp:ListItem>
                 <asp:ListItem Value="O">Blanco</asp:ListItem>
             </asp:DropDownList>
              <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>
-            <asp:Label Cssclass="movimientosmaquina" ID="LabelMaquina" runat="server" Text="Jugador1"></asp:Label>
-            <asp:Label Cssclass="movimientosjugador" ID="LabelJugador" runat="server" Text="Jugador2"></asp:Label>
+            <asp:Label Cssclass="movimientosmaquina" ID="LabelMaquina" runat="server" Text="Máquina"></asp:Label>
+            <asp:Label Cssclass="movimientosjugador" ID="LabelJugador" runat="server" Text="Jugador"></asp:Label>
             <asp:Label Cssclass="contadormaquina" ID="LabelContadorMaquina" runat="server" Text="0"></asp:Label>
             <asp:Label Cssclass="contadorjugador" ID="LabelContadorJugador" runat="server" Text="0"></asp:Label>
             <asp:Label Cssclass="labelseleccion" ID="LabelSeleccion" runat="server" Text="Seleccionar Ficha:"></asp:Label>

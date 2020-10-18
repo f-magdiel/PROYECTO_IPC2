@@ -125,8 +125,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Solitario.aspx" />
-    <Content Include="Opciones.aspx" />
+    <Content Include="Maquina.aspx" />
+    <Content Include="MenuPrincipal.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -163,7 +163,7 @@
     <Content Include="Styles\MenuSolitario.css" />
     <Content Include="Styles\estiloTablero.css" />
     <Content Include="Torneo.aspx" />
-    <Content Include="VersusUno.aspx" />
+    <Content Include="Solitario.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -224,19 +224,6 @@
     <Compile Include="Torneo.aspx.designer.cs">
       <DependentUpon>Torneo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VersusUno.aspx.cs">
-      <DependentUpon>VersusUno.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VersusUno.aspx.designer.cs">
-      <DependentUpon>VersusUno.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Solitario.aspx.cs">
       <DependentUpon>Solitario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,12 +231,25 @@
     <Compile Include="Solitario.aspx.designer.cs">
       <DependentUpon>Solitario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Opciones.aspx.cs">
-      <DependentUpon>Opciones.aspx</DependentUpon>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Maquina.aspx.cs">
+      <DependentUpon>Maquina.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Opciones.aspx.designer.cs">
-      <DependentUpon>Opciones.aspx</DependentUpon>
+    <Compile Include="Maquina.aspx.designer.cs">
+      <DependentUpon>Maquina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.designer.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

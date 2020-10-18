@@ -11,7 +11,7 @@ namespace PROYECTO1
 {
 
 
-    public partial class WebForm1
+    public partial class VersusUno
     {
 
         /// <summary>

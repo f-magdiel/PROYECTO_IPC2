@@ -28,7 +28,7 @@ namespace PROYECTO1
                 SqlDataReader leer = sqlCmd.ExecuteReader();
                 if (leer.Read())
                 {
-                    Response.Redirect("Opciones.aspx");
+                    Response.Redirect("MenuPrincipal.aspx");
                 }
                 else {
                     Response.Redirect("Default"); 

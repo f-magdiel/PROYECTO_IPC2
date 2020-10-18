@@ -16,12 +16,12 @@ namespace PROYECTO1
 
         protected void ButtonSolitario_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Solitario.aspx");
+            Response.Redirect("Maquina.aspx");
         }
 
         protected void ButtonMaquina_Click(object sender, EventArgs e)
         {
-            Response.Redirect("VersusUno.aspx");
+            Response.Redirect("Solitario.aspx");
         }
     }
 }
