@@ -21,7 +21,7 @@ namespace PROYECTO1
         //movimientos
         public static int movimientoB = 0;
         public static int movimientoN = 0;
-
+        public static string estadoPartida = "";
         public static int bloquesN = 0;
         public static int bloquesB = 0;
 
@@ -312,7 +312,7 @@ namespace PROYECTO1
         {
             Response.Redirect("MenuPrincipal.aspx");
         }
-        //resetear botones marcadas
+        
         
         //metodo para habilitar botones si soy blanco
         public void activacionBoton1(int fila, int columna) 
@@ -328,6 +328,7 @@ namespace PROYECTO1
             {
                 if(tableroColor[i, columnaTemp].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if (tableroColor[i, columnaTemp].BackColor == Color.Black)
@@ -364,6 +365,7 @@ namespace PROYECTO1
                 }
                 if(tableroColor[i,auxColumnaD2].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if(tableroColor[i, auxColumnaD2].BackColor == Color.Black)
@@ -397,6 +399,7 @@ namespace PROYECTO1
             {
                 if(tableroColor[auxFilaD3,i].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if(tableroColor[auxFilaD3,i].BackColor == Color.Black)
@@ -409,8 +412,8 @@ namespace PROYECTO1
                     if(contadorFicha>=1)
                     {
                         //habilitar boton
+                       
                         tableroColor[auxFilaD3, i].Enabled = true;
-                        
                         tableroColor[auxFilaD3, i].Text = "X";
                         contadorFicha = 0;
                         break;
@@ -434,6 +437,7 @@ namespace PROYECTO1
                 }
                 if(tableroColor[auxFilaD4,i].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if(tableroColor[auxFilaD4, i].BackColor == Color.Black)
@@ -465,6 +469,7 @@ namespace PROYECTO1
             {
                 if(tableroColor[i,auxColumnaD5].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if(tableroColor[i,auxColumnaD5].BackColor == Color.Black)
@@ -500,6 +505,7 @@ namespace PROYECTO1
                 }
                 if(tableroColor[auxFilaD6,i].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if(tableroColor[auxFilaD6, i].BackColor == Color.Black)
@@ -530,6 +536,7 @@ namespace PROYECTO1
             {
                 if(tableroColor[auxFilaD7,i].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if(tableroColor[auxFilaD7, i].BackColor == Color.Black)
@@ -566,6 +573,7 @@ namespace PROYECTO1
                 }
                 if(tableroColor[i,auxColumnaD8].BackColor == Color.White)
                 {
+                    contadorFicha = 0;
                     break;
                 }
                 else if (tableroColor[i, auxColumnaD8].BackColor == Color.Black)
@@ -585,7 +593,7 @@ namespace PROYECTO1
                     else
                     {
                         contadorFicha = 0;
-                            break;
+                        break;
                     }
                 }
             }
@@ -597,17 +605,20 @@ namespace PROYECTO1
             movimientoN = 0;
             bloquesB = 0;
             bloquesN = 0;
+
+
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    if(tableroColor[i,j].Text == "X")
+                    if (tableroColor[i, j].Text == "X")
                     {
                         tableroColor[i, j].Text = " ";
                         tableroColor[i, j].Enabled = false;
                     }
                 }
             }
+
 
             //blancas
             for (int i = 0; i < 8; i++)
@@ -634,8 +645,8 @@ namespace PROYECTO1
                    
                 }
             }
-
-            if(banderaBlanca == true)//cuando yo sea blanco
+           
+            if (banderaBlanca == true)//cuando yo sea blanco
             {
                 LabelContadorJugador.Text = movimientoB.ToString()+"-"+bloquesB.ToString();
                 LabelContadorMaquina.Text = movimientoN.ToString() + "-" + bloquesN.ToString();
@@ -7895,6 +7906,7 @@ namespace PROYECTO1
                 
                 LabelTitulo.Text = "Jugador - Blanco";
                 //se habilitan los botones para las blancas
+                
                 BtnF4.Enabled = true;
                 BtnE3.Enabled = true;
                 BtnC5.Enabled = true;
