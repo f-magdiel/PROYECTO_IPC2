@@ -51,22 +51,31 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.DropDownList DropDownListFicha;
 
         /// <summary>
-        /// Control LabJugador.
+        /// Control LabeTiempo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabJugador;
+        protected global::System.Web.UI.WebControls.Label LabeTiempo;
 
         /// <summary>
-        /// Control LabMaquina.
+        /// Control LabeTiempoMaquina.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabMaquina;
+        protected global::System.Web.UI.WebControls.Label LabeTiempoMaquina;
+
+        /// <summary>
+        /// Control LabelTiempoJugador.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTiempoJugador;
 
         /// <summary>
         /// Control LabeMovimienntos.

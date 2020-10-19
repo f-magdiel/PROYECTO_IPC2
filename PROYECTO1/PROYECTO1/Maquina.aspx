@@ -25,8 +25,11 @@
                 <asp:ListItem Value="X">Negro</asp:ListItem>
                 <asp:ListItem Value="O">Blanco</asp:ListItem>
             </asp:DropDownList>
-            <asp:Label Cssclass="jugador" ID="LabJugador" runat="server" Text="Jugador:"></asp:Label>
-            <asp:Label Cssclass="maquina" ID="LabMaquina" runat="server" Text="Máquina:"></asp:Label>
+            
+            <asp:Label Cssclass="labeltiempo" ID="LabeTiempo" runat="server" Text="Maquina----------Jugador"></asp:Label>
+            <asp:Label Cssclass="timermaquina" ID="LabeTiempoMaquina" runat="server" Text="0"></asp:Label>
+            <asp:Label Cssclass="timerjugador" ID="LabelTiempoJugador" runat="server" Text="0"></asp:Label>
+           
             <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>
             <asp:Label Cssclass="movimientosmaquina" ID="LabelMaquina" runat="server" Text="Máquina"></asp:Label>
             <asp:Label Cssclass="movimientosjugador" ID="LabelJugador" runat="server" Text="Jugador"></asp:Label>
