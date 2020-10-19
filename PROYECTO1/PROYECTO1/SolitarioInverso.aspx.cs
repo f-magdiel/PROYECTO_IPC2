@@ -16,11 +16,11 @@ using System.Threading;
 
 namespace PROYECTO1
 {
-    public partial class VersusUno : System.Web.UI.Page
+    public partial class SolitarioInverso : System.Web.UI.Page
     {
 
         //para monstrar los movimiento se usar bool
-        public static  bool usuarioBlanco = false;
+        public static bool usuarioBlanco = false;
         public static bool usuarioNegro = false;
         //posiciones
         public static int posicionNegra = 1;
@@ -314,38 +314,6 @@ namespace PROYECTO1
             }
         }
 
-        protected void ButtonRandom_Click(object sender, EventArgs e)
-        {
-            Random aleatoria = new Random();
-            int valor = aleatoria.Next(0, 2);
-
-            if (valor == 0) //blanco
-            {
-                // el color es activado
-                banderaBlanca = true;
-                usuarioBlanco = true;
-                LabelTitulo.Text = "Jugador - Blanco";
-                //se habilitan los botones para las blancas
-                BtnF4.Enabled = true;
-                BtnE3.Enabled = true;
-                BtnC5.Enabled = true;
-                BtnD6.Enabled = true;
-
-            }
-            else if (valor == 1) //negro
-            {
-                // el color es activado
-                banderaNegra = true;
-                usuarioNegro = true;
-                LabelTitulo.Text = "Jugador - Negro";
-                // si habilitan los botoens para las negras
-                BtnD3.Enabled = true;
-                BtnC4.Enabled = true;
-                BtnF5.Enabled = true;
-                BtnE6.Enabled = true;
-            }
-        }
-
         protected void ButtonSeleccionar_Click(object sender, EventArgs e)
         {
             ButtonSeleccionar.Text = "Seleccionado";
@@ -381,6 +349,39 @@ namespace PROYECTO1
             }
         }
 
+        protected void ButtonRandom_Click(object sender, EventArgs e)
+        {
+            Random aleatoria = new Random();
+            int valor = aleatoria.Next(0, 2);
+
+            if (valor == 0) //blanco
+            {
+                // el color es activado
+                banderaBlanca = true;
+                usuarioBlanco = true;
+                LabelTitulo.Text = "Jugador - Blanco";
+                //se habilitan los botones para las blancas
+                BtnF4.Enabled = true;
+                BtnE3.Enabled = true;
+                BtnC5.Enabled = true;
+                BtnD6.Enabled = true;
+
+            }
+            else if (valor == 1) //negro
+            {
+                // el color es activado
+                banderaNegra = true;
+                usuarioNegro = true;
+                LabelTitulo.Text = "Jugador - Negro";
+                // si habilitan los botoens para las negras
+                BtnD3.Enabled = true;
+                BtnC4.Enabled = true;
+                BtnF5.Enabled = true;
+                BtnE6.Enabled = true;
+            }
+        }
+
+        //NUEVA LINEAS
         //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
         // para cuando se ficha blanca--------------------------------------------------------------------y
@@ -1673,26 +1674,27 @@ namespace PROYECTO1
                 {
 
 
-                    if(banderaBlanca == true)
+                    if (banderaBlanca == true)
                     {
                         if (tableroColor[i, j].BackColor == Color.Black)
                         {
-                          
+
                             activacionBoton2(i, j);//metodo para habilitar botones si soy negro
-                            
+
                         }
 
-                    }else if(banderaNegra == true)
+                    }
+                    else if (banderaNegra == true)
                     {
                         if (tableroColor[i, j].BackColor == Color.White)
                         {
-                                                    
+
                             activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
 
                         }
                     }
-                    
-                    
+
+
 
                 }
             }
@@ -1702,11 +1704,11 @@ namespace PROYECTO1
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    if(tableroColor[i,j].BackColor == Color.White)
+                    if (tableroColor[i, j].BackColor == Color.White)
                     {
                         movimientoB++;
                     }
-                    else if (tableroColor[i,j].BackColor == Color.Black)
+                    else if (tableroColor[i, j].BackColor == Color.Black)
                     {
                         movimientoN++;
                     }
@@ -1736,7 +1738,7 @@ namespace PROYECTO1
                 LabelContadorUsuario.Text = movimientoB.ToString();
                 LabelContadorInvitado.Text = movimientoN.ToString();
             }
-            else if(usuarioNegro == true)//cuando yo sea negro
+            else if (usuarioNegro == true)//cuando yo sea negro
             {
                 LabelContadorUsuario.Text = movimientoN.ToString();
                 LabelContadorInvitado.Text = movimientoB.ToString();
@@ -1745,12 +1747,12 @@ namespace PROYECTO1
             //validar estado de partida
             if (movimientoGeneral == 0)
             {
-                if (movimientoB > movimientoN)
+                if (movimientoB < movimientoN)
                 {
                     //gana blanca
                     LabelTitulo.Text = "Ganó ficha blanca";
                 }
-                else if (movimientoN > movimientoB)
+                else if (movimientoN < movimientoB)
                 {
                     //gana negras
                     LabelTitulo.Text = "Ganó ficha negra";
@@ -1823,7 +1825,7 @@ namespace PROYECTO1
                     }
                     else if (banderaNegra == true)
                     {
-                       
+
                         if (tableroColor[i, j].BackColor == Color.Black)
                         {
 
@@ -1885,12 +1887,12 @@ namespace PROYECTO1
             //validar estado de partida
             if (movimientoGeneral == 0)
             {
-                if (movimientoB > movimientoN)
+                if (movimientoB < movimientoN)
                 {
                     //gana blanca
                     LabelTitulo.Text = "Ganó ficha blanca";
                 }
-                else if (movimientoN > movimientoB)
+                else if (movimientoN < movimientoB)
                 {
                     //gana negras
                     LabelTitulo.Text = "Ganó ficha negra";
@@ -6330,7 +6332,7 @@ namespace PROYECTO1
                 siguiente.AppendChild(colorTiro);
             }
 
-            doc.Save("C:\\Users\\MAGDIEL\\Desktop\\Pruebas\\PartidaSolitario.xml");
+            doc.Save("C:\\Users\\MAGDIEL\\Desktop\\Pruebas\\PartidaSolitarioInverso.xml");
 
 
 
@@ -6356,7 +6358,7 @@ namespace PROYECTO1
             else if (banderaNegra == true)
             {
                 BtnA1.BackColor = Color.Black;
-                capturaFichaNegra(0,0);
+                capturaFichaNegra(0, 0);
                 informacionFinal();
                 banderaNegra = false;
                 banderaBlanca = true;

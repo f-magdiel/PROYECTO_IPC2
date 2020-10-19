@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Solitario.aspx.cs" Inherits="PROYECTO1.VersusUno" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SolitarioInverso.aspx.cs" Inherits="PROYECTO1.SolitarioInverso" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <link href="Styles/estiloTablero.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/estiloTablero.css" rel="stylesheet" type="text/css"/>
      <link href="Styles/MenuSolitario.css" rel="stylesheet" type="text/css"/>
      <link href="Styles/estiloLabelSolitario.css" rel="stylesheet" type="text/css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -13,7 +13,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Button Cssclass="btnaletoria" ID="ButtonRandom" runat="server" Text="Aleatoria" OnClick="ButtonRandom_Click" />
+
+             <asp:Button Cssclass="btnaletoria" ID="ButtonRandom" runat="server" Text="Aleatoria" OnClick="ButtonRandom_Click" />
             <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" OnClick="ButtonSeleccionar_Click" />
             <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server" OnSelectedIndexChanged="DropDownListFicha_SelectedIndexChanged">
                 <asp:ListItem Value="X">Negro</asp:ListItem>

@@ -157,6 +157,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="SolitarioInverso.aspx" />
     <Content Include="Styles\estiloInicio.css" />
     <Content Include="Styles\estiloLabelSolitario.css" />
     <Content Include="Styles\estiloMenu.css" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SolitarioInverso.aspx.cs">
+      <DependentUpon>SolitarioInverso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolitarioInverso.aspx.designer.cs">
+      <DependentUpon>SolitarioInverso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Torneo.aspx.cs">
       <DependentUpon>Torneo.aspx</DependentUpon>

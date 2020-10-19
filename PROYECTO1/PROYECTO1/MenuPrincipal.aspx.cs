@@ -23,5 +23,30 @@ namespace PROYECTO1
         {
             Response.Redirect("Solitario.aspx");
         }
+
+        protected void ButtonSolitarioInverso_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SolitarioInverso.aspx");
+        }
+
+        protected void ButtonMaquinaInverso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ButtonXtream_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ButtonTorneo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ButtonReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

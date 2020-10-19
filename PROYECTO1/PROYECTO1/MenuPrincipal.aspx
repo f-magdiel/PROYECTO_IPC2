@@ -12,10 +12,13 @@
     <form id="form1" runat="server">
         <div>
             <section class="form-menu">
-            <asp:Button class="opcion" ID="ButtonMaquina" runat="server" Text="Jugador vs Jugador" OnClick="ButtonMaquina_Click" />
-            <asp:Button class= "opcion" ID="ButtonSolitario" runat="server" Text="Contra Máquina" OnClick="ButtonSolitario_Click" />
-            <asp:Button class= "opcion" ID="ButtonTorneo" runat="server" Text="Torneo" />
-            <asp:Button class =" opcion" ID="ButtonReporte" runat="server" Text="Reporte" />
+            <asp:Button class="opcion" ID="ButtonXtream" runat="server" Text="Xtream" OnClick="ButtonXtream_Click" />
+            <asp:Button class="opcion" ID="ButtonMaquinaInverso" runat="server" Text="Máquina Inverso" OnClick="ButtonMaquinaInverso_Click" />
+            <asp:Button class="opcion" ID="ButtonSolitarioInverso" runat="server" Text="1 vs 1 Inverso" OnClick="ButtonSolitarioInverso_Click" />
+            <asp:Button class="opcion" ID="ButtonMaquina" runat="server" Text="1 vs 1 Normal" OnClick="ButtonMaquina_Click" />
+            <asp:Button class= "opcion" ID="ButtonSolitario" runat="server" Text="Máquina Normal" OnClick="ButtonSolitario_Click" />
+            <asp:Button class= "opcion" ID="ButtonTorneo" runat="server" Text="Torneo" OnClick="ButtonTorneo_Click" />
+            <asp:Button class =" opcion" ID="ButtonReporte" runat="server" Text="Reporte" OnClick="ButtonReporte_Click" />
 
         </section>
         </div>
