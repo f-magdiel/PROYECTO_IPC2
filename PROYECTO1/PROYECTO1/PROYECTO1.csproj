@@ -107,6 +107,7 @@
   <ItemGroup>
     <Content Include="ContraJugador.aspx" />
     <Content Include="Iniciar.aspx" />
+    <Content Include="MaquinaInverso.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -127,6 +128,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Maquina.aspx" />
     <Content Include="MenuPrincipal.aspx" />
+    <Content Include="Xtream.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -187,6 +189,13 @@
       <DependentUpon>Iniciar.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="MaquinaInverso.aspx.cs">
+      <DependentUpon>MaquinaInverso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaquinaInverso.aspx.designer.cs">
+      <DependentUpon>MaquinaInverso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -258,6 +267,13 @@
     </Compile>
     <Compile Include="MenuPrincipal.aspx.designer.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xtream.aspx.cs">
+      <DependentUpon>Xtream.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xtream.aspx.designer.cs">
+      <DependentUpon>Xtream.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

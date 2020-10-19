@@ -31,12 +31,12 @@ namespace PROYECTO1
 
         protected void ButtonMaquinaInverso_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("MaquinaInverso.aspx");
         }
 
         protected void ButtonXtream_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Xtream.aspx");
         }
 
         protected void ButtonTorneo_Click(object sender, EventArgs e)
