@@ -1728,6 +1728,9 @@ namespace PROYECTO1
             }
            
         }
+
+
+        //boton para cargar
         protected void ButtonCarga_Click1(object sender, EventArgs e)
         {
             try
