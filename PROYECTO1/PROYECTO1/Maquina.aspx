@@ -18,19 +18,22 @@
 
         
         <div >
+
             <asp:Button Cssclass="btnaletoria" ID="ButtonRandom" runat="server" Text="Aleatoria" OnClick="ButtonRandom_Click" />
             <asp:Button Cssclass="btnseleccionar" ID="ButtonSeleccionar" runat="server" Text="Seleccionar" OnClick="ButtonSeleccionar_Click" />
             <asp:DropDownList CssClass="listaficha" ID="DropDownListFicha" runat="server">
                 <asp:ListItem Value="X">Negro</asp:ListItem>
                 <asp:ListItem Value="O">Blanco</asp:ListItem>
             </asp:DropDownList>
-             <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>
+            <asp:Label Cssclass="jugador" ID="LabJugador" runat="server" Text="Jugador:"></asp:Label>
+            <asp:Label Cssclass="maquina" ID="LabMaquina" runat="server" Text="Máquina:"></asp:Label>
+            <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>
             <asp:Label Cssclass="movimientosmaquina" ID="LabelMaquina" runat="server" Text="Máquina"></asp:Label>
             <asp:Label Cssclass="movimientosjugador" ID="LabelJugador" runat="server" Text="Jugador"></asp:Label>
             <asp:Label Cssclass="contadormaquina" ID="LabelContadorMaquina" runat="server" Text="0"></asp:Label>
             <asp:Label Cssclass="contadorjugador" ID="LabelContadorJugador" runat="server" Text="0"></asp:Label>
             <asp:Label Cssclass="labelseleccion" ID="LabelSeleccion" runat="server" Text="Seleccionar Ficha:"></asp:Label>
-            <asp:Label Cssclass="labelturno" ID="LabelTurno" runat="server" Text="Usuario:"></asp:Label>
+            <asp:Label Cssclass="labelturno" ID="LabelTurno" runat="server" Text="Estado partida:"></asp:Label>
                <asp:TextBox Cssclass="caja" ID="TextBoxCarga" runat="server"></asp:TextBox>
              <asp:Button Cssclass="btn1" ID="ButtonCarga" runat="server" Text="Cargar" OnClick="ButtonCarga_Click1" />
               <asp:Button Cssclass="btn2" ID="ButtonDescarga" runat="server" Text="Descargar" OnClick="ButtonDescarga_Click" />

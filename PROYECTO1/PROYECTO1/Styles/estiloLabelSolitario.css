@@ -11,7 +11,7 @@ form-contenedor {
     float: left;
     position: absolute;
     top: 50px;
-    left: 700px;
+    left: 640px;
     font-size: 20px;
     font-family: 'calibri';
     background: #034E73;
@@ -138,4 +138,25 @@ form-contenedor {
     position: absolute;
     top: 220px;
     left: 1250px;
+}
+
+
+.jugador {
+    float: left;
+    position: absolute;
+    top: 560px;
+    left: 500px;
+    color: white;
+    font-size: 20px;
+    font-family: 'calibri';
+}
+
+.maquina {
+    float: left;
+    position: absolute;
+    top: 560px;
+    left: 850px;
+    color: white;
+    font-size: 20px;
+    font-family: 'calibri';
 }

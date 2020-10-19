@@ -17,8 +17,12 @@ namespace PROYECTO1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        //posiciones
+        public static int posicionNegra = 1;
+        public static int posicionBlanca = 1;
 
         //movimientos
+        public static int movimientoGeneral = 0;
         public static int movimientoB = 0;
         public static int movimientoN = 0;
         public static string estadoPartida = "";
@@ -601,12 +605,13 @@ namespace PROYECTO1
         //metodo para verificar si hay mas espacios
         public void informacionFinal()
         {
+            movimientoGeneral = 0;
             movimientoB = 0;
             movimientoN = 0;
             bloquesB = 0;
             bloquesN = 0;
 
-
+            // resetea la tabla 
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -633,8 +638,7 @@ namespace PROYECTO1
                         if (banderaBlanca == true)
                         {                        
                            activacionBoton1(i,j);//metodo para habilitar botones
-                        }
-                        
+                        }                      
                         
                     }
                     else if(tableroColor[i, j].BackColor == Color.Black)
@@ -645,16 +649,54 @@ namespace PROYECTO1
                    
                 }
             }
-           
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (tableroColor[i, j].Text == "X")
+                    {
+                        //posiciones que diga que no hay mas movimientos
+                        movimientoGeneral++;
+                    }
+                }
+            }
+
             if (banderaBlanca == true)//cuando yo sea blanco
             {
-                LabelContadorJugador.Text = movimientoB.ToString()+"-"+bloquesB.ToString();
-                LabelContadorMaquina.Text = movimientoN.ToString() + "-" + bloquesN.ToString();
+                LabelContadorJugador.Text = movimientoB.ToString();
+                LabelContadorMaquina.Text = movimientoN.ToString();
             }
             else //cuando yo sea negro
             {
                 LabelContadorMaquina.Text = movimientoB.ToString();
                 LabelContadorJugador.Text = movimientoN.ToString();
+            }
+
+            //validar estado de partida
+            if (movimientoGeneral == 0)
+            {
+                if (movimientoB > movimientoN)
+                {
+                    //gana blanca
+                    LabelTitulo.Text = "Ganó ficha blanca";
+                }
+                else if(movimientoN > movimientoB)
+                {
+                    //gana negras
+                    LabelTitulo.Text = "Ganó ficha negra";
+
+                }
+                else if(movimientoB == movimientoN)
+                {
+                    //es empate
+                    LabelTitulo.Text = "Empate";
+
+                }
+
+            }
+            else
+            {
+                movimientoGeneral = 0;
             }
            
         }
@@ -7904,7 +7946,7 @@ namespace PROYECTO1
                 // el color es activado
                 banderaBlanca = true;
                 
-                LabelTitulo.Text = "Jugador - Blanco";
+                LabelTitulo.Text = "Se está jugando";
                 //se habilitan los botones para las blancas
                 
                 BtnF4.Enabled = true;
@@ -7919,7 +7961,7 @@ namespace PROYECTO1
                 // el color es activado
                 banderaNegra = true;
 
-                LabelTitulo.Text = "Jugador - Negro";
+                LabelTitulo.Text = "Se está jugando";
                 // si habilitan los botoens para las negras
                 BtnD3.Enabled = true;
                 BtnC4.Enabled = true;
