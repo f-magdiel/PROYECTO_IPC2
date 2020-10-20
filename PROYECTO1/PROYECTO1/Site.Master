@@ -60,7 +60,7 @@
                         <li><a runat="server" href="~/Iniciar">Iniciar Sesion</a></li>
                         <li><a runat="server" href="~/Registro">Registrarse</a></li>
                          <li><a runat="server" href="~/Solitario">Invitado</a></li>
-                         <li><a runat="server" href="~/Registro">Invitado Inverso</a></li>
+                         <li><a runat="server" href="~/SolitarioInverso">Invitado Inverso</a></li>
                     </ul>
                 </div>
             </div>

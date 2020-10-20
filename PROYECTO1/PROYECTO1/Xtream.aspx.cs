@@ -18,6 +18,20 @@ namespace PROYECTO1
 {
     public partial class Xtream : System.Web.UI.Page
     {
+
+        //colores
+        public static int contadorColorj1 = 0;
+        public static int contadorColorj2 = 0;
+
+
+        //turnos
+        public static bool turnoJ1 = false;
+        public static bool turnoJ2 = false;
+
+
+
+
+
         //para monstrar los movimiento se usar bool
         public static bool usuarioBlanco = false;
         public static bool usuarioNegro = false;
@@ -26,6 +40,7 @@ namespace PROYECTO1
         public static int posicionBlanca = 1;
 
         //movimientos
+        public static bool activacionMaqina = false;
         public static int movimientoGeneral = 0;
         public static int movimientoB = 0;
         public static int movimientoN = 0;
@@ -35,9 +50,7 @@ namespace PROYECTO1
 
         public static bool sigo = true;
         public static int contadorEspacio = 0;
-        public static bool activacionMaqina = false;
-        public static bool banderaNegra = false; // false para el negro, al inicio no se ha seleccionado nada xd
-        public static bool banderaBlanca = false; // false para el blanco
+       
         public static bool banderaFicha = false;
         public static bool banderaTiro = false;
         public static bool banderaGeneral = true;
@@ -52,21 +65,18 @@ namespace PROYECTO1
         public ArrayList arrayColor = new ArrayList();
         public static string[,] tablero = new string[8, 8];
         public static Button[,] tableroColor = new Button[8, 8];
+
+        //para los colores que se seleccionaran
+        public static ArrayList arrayJugador1 = new ArrayList();
+        public static ArrayList arrayJugador2 = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                banderaBlanca = false;
-                banderaNegra = false;
-            }
-            if (!IsPostBack)
-            {
-                tablero[3, 3] = "O";
-                tablero[3, 4] = "X";
-                tablero[4, 3] = "X";
-                tablero[4, 4] = "O";
-            }
 
+
+            if(!IsPostBack){
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
 
             tableroColor[0, 0] = BtnA1;
@@ -142,15 +152,7 @@ namespace PROYECTO1
             tableroColor[7, 7] = BtnH8;
 
 
-            if (!IsPostBack)
-            {
-
-                BtnD4.BackColor = Color.White;
-                BtnE4.BackColor = Color.Black;
-                BtnD5.BackColor = Color.Black;
-                BtnE5.BackColor = Color.White;
-
-            }
+            
 
             if (!IsPostBack)
             {
@@ -184,8 +186,8 @@ namespace PROYECTO1
                 BtnD1.Enabled = false;
                 BtnD2.Enabled = false;
                 BtnD3.Enabled = false;
-                BtnD4.Enabled = false;
-                BtnD5.Enabled = false;
+                BtnD4.Enabled = true;
+                BtnD5.Enabled = true;
                 BtnD6.Enabled = false;
                 BtnD7.Enabled = false;
                 BtnD8.Enabled = false;
@@ -194,8 +196,8 @@ namespace PROYECTO1
                 BtnE1.Enabled = false;
                 BtnE2.Enabled = false;
                 BtnE3.Enabled = false;
-                BtnE4.Enabled = false;
-                BtnE5.Enabled = false;
+                BtnE4.Enabled = true;
+                BtnE5.Enabled = true;
                 BtnE6.Enabled = false;
                 BtnE7.Enabled = false;
                 BtnE8.Enabled = false;
@@ -264,8 +266,8 @@ namespace PROYECTO1
                 BtnD1.BackColor = Color.Green;
                 BtnD2.BackColor = Color.Green;
                 BtnD3.BackColor = Color.Green;
-
-
+                BtnD4.BackColor = Color.Green;
+                BtnD5.BackColor = Color.Green;
                 BtnD6.BackColor = Color.Green;
                 BtnD7.BackColor = Color.Green;
                 BtnD8.BackColor = Color.Green;
@@ -274,8 +276,8 @@ namespace PROYECTO1
                 BtnE1.BackColor = Color.Green;
                 BtnE2.BackColor = Color.Green;
                 BtnE3.BackColor = Color.Green;
-
-
+                BtnE4.BackColor = Color.Green;
+                BtnE5.BackColor = Color.Green;
                 BtnE6.BackColor = Color.Green;
                 BtnE7.BackColor = Color.Green;
                 BtnE8.BackColor = Color.Green;
@@ -313,71 +315,212 @@ namespace PROYECTO1
             }
         }
 
-        protected void ButtonRandom_Click(object sender, EventArgs e)
+        protected void ButtonSeleccionar2_Click(object sender, EventArgs e)
         {
-            Random aleatoria = new Random();
-            int valor = aleatoria.Next(0, 2);
-
-            if (valor == 0) //blanco
+            
+            if (contadorColorj2<5)
             {
-                // el color es activado
-                banderaBlanca = true;
-                usuarioBlanco = true;
-                LabelTitulo.Text = "Jugador - Blanco";
-                //se habilitan los botones para las blancas
-                BtnF4.Enabled = true;
-                BtnE3.Enabled = true;
-                BtnC5.Enabled = true;
-                BtnD6.Enabled = true;
-
-            }
-            else if (valor == 1) //negro
-            {
-                // el color es activado
-                banderaNegra = true;
-                usuarioNegro = true;
-                LabelTitulo.Text = "Jugador - Negro";
-                // si habilitan los botoens para las negras
-                BtnD3.Enabled = true;
-                BtnC4.Enabled = true;
-                BtnF5.Enabled = true;
-                BtnE6.Enabled = true;
+                string seleccion = DropDownListFicha2.SelectedItem.ToString();
+                int valor = DropDownListFicha2.SelectedIndex;
+                if (seleccion == "Rojo")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Rojo");
+                }
+                else if (seleccion == "Amarillo")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Amarillo");
+                }
+                else if (seleccion == "Azul")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Azul");
+                }
+                else if (seleccion == "Anaranjado")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Anaranjado");
+                }
+                else if (seleccion == "Verde")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Verde");
+                }
+                else if (seleccion == "Violeta")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Violeta");
+                }
+                else if (seleccion == "Blanco")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Blanco");
+                }
+                else if (seleccion == "Negro")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Negro");
+                }
+                else if (seleccion == "Celeste")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Celeste");
+                }
+                else if (seleccion == "Gris")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha2.SelectedValue = "Elegir";
+                    contadorColorj2++;
+                    LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
+                    arrayJugador2.Add("Gris");
+                }
             }
         }
 
-        protected void ButtonSeleccionar_Click(object sender, EventArgs e)
+        protected void ButtonSeleccionar1_Click(object sender, EventArgs e)
         {
-            ButtonSeleccionar.Text = "Seleccionado";
-            string seleccion = DropDownListFicha.SelectedValue.ToString();
-            if (seleccion == "O")
+            if (contadorColorj1<5)
             {
-                // el color es activado
-                banderaBlanca = true;
-                usuarioBlanco = true;
-                LabelTitulo.Text = "Se está jugando";
-                //se habilitan los botones para las blancas
+
+                string seleccion = DropDownListFicha1.SelectedItem.ToString();
+                int valor = DropDownListFicha1.SelectedIndex;
 
 
-                BtnF4.Enabled = true;
-                BtnE3.Enabled = true;
-                BtnC5.Enabled = true;
-                BtnD6.Enabled = true;
+                if (seleccion == "Rojo")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Rojo");
+                    
 
+                }
+                else if (seleccion == "Amarillo")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Amarillo");
+                }
+                else if (seleccion == "Azul")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Azul");
+                }
+                else if (seleccion == "Anaranjado")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Anaranjado");
+                }
+                else if (seleccion == "Verde")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Verde");
+                }
+                else if (seleccion == "Violeta")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Violeta");
+                }
+                else if (seleccion == "Blanco")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Blanco");
+                }
+                else if (seleccion == "Negro")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Negro");
+                }
+                else if (seleccion == "Celeste")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Celeste");
+                }
+                else if (seleccion == "Gris")
+                {
+                    DropDownListFicha1.Items.RemoveAt(valor);
+                    DropDownListFicha2.Items.RemoveAt(valor);
+                    DropDownListFicha1.SelectedValue = "Elegir";
+                    contadorColorj1++;
+                    LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
+                    arrayJugador1.Add("Gris");
+                }
 
             }
-            else if (seleccion == "X")
-            {
-                // el color es activado
-                banderaNegra = true;
-                usuarioNegro = true;
-                LabelTitulo.Text = "Se está jugando";
-                // si habilitan los botoens para las negras
-                BtnD3.Enabled = true;
-                BtnC4.Enabled = true;
-                BtnF5.Enabled = true;
-                BtnE6.Enabled = true;
+            
+           
 
-            }
         }
 
         //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
@@ -1672,25 +1815,25 @@ namespace PROYECTO1
                 {
 
 
-                    if (banderaBlanca == true)
-                    {
-                        if (tableroColor[i, j].BackColor == Color.Black)
-                        {
+                    //if (banderaBlanca == true)
+                    //{
+                    //    if (tableroColor[i, j].BackColor == Color.Black)
+                    //    {
 
-                            activacionBoton2(i, j);//metodo para habilitar botones si soy negro
+                    //        activacionBoton2(i, j);//metodo para habilitar botones si soy negro
 
-                        }
+                    //    }
 
-                    }
-                    else if (banderaNegra == true)
-                    {
-                        if (tableroColor[i, j].BackColor == Color.White)
-                        {
+                    //}
+                    //else if (banderaNegra == true)
+                    //{
+                    //    if (tableroColor[i, j].BackColor == Color.White)
+                    //    {
 
-                            activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
+                    //        activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
 
-                        }
-                    }
+                    //    }
+                    //}
 
 
 
@@ -1811,26 +1954,26 @@ namespace PROYECTO1
                 {
 
 
-                    if (banderaBlanca == true)
-                    {
-                        if (tableroColor[i, j].BackColor == Color.White)
-                        {
+                    //if (banderaBlanca == true)
+                    //{
+                    //    if (tableroColor[i, j].BackColor == Color.White)
+                    //    {
 
-                            activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
+                    //        activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
 
-                        }
+                    //    }
 
-                    }
-                    else if (banderaNegra == true)
-                    {
+                    //}
+                    //else if (banderaNegra == true)
+                    //{
 
-                        if (tableroColor[i, j].BackColor == Color.Black)
-                        {
+                    //    if (tableroColor[i, j].BackColor == Color.Black)
+                    //    {
 
-                            activacionBoton2(i, j);//metodo para habilitar botones si soy negro
+                    //        activacionBoton2(i, j);//metodo para habilitar botones si soy negro
 
-                        }
-                    }
+                    //    }
+                    //}
 
 
 
@@ -1979,24 +2122,24 @@ namespace PROYECTO1
                                 colorTiro = lector.ReadString();
                                 colorTiro = colorTiro.Replace(" ", "");
 
-                                if (colorTiro == "blanco")
-                                {
+                                //if (colorTiro == "blanco")
+                                //{
 
-                                    banderaNegra = false;
-                                    banderaBlanca = true;
-                                    usuarioBlanco = true;
-                                    banderaGeneral = true;
-                                    banderaTiro = false;
-                                }
-                                else if (colorTiro == "negro")
-                                {
+                                //    banderaNegra = false;
+                                //    banderaBlanca = true;
+                                //    usuarioBlanco = true;
+                                //    banderaGeneral = true;
+                                //    banderaTiro = false;
+                                //}
+                                //else if (colorTiro == "negro")
+                                //{
 
-                                    banderaNegra = true;
-                                    banderaBlanca = false;
-                                    usuarioNegro = true;
-                                    banderaGeneral = true;
-                                    banderaTiro = false;
-                                }
+                                //    banderaNegra = true;
+                                //    banderaBlanca = false;
+                                //    usuarioNegro = true;
+                                //    banderaGeneral = true;
+                                //    banderaTiro = false;
+                                //}
 
                             }
                         }
@@ -6317,18 +6460,18 @@ namespace PROYECTO1
             XmlElement siguiente = doc.CreateElement("siguienteTiro");
             raiz.AppendChild(siguiente);
 
-            if (banderaBlanca == true)
-            {
-                XmlElement colorTiro = doc.CreateElement("color");
-                colorTiro.AppendChild(doc.CreateTextNode("blanco"));
-                siguiente.AppendChild(colorTiro);
-            }
-            else if (banderaNegra == true)
-            {
-                XmlElement colorTiro = doc.CreateElement("color");
-                colorTiro.AppendChild(doc.CreateTextNode("negro"));
-                siguiente.AppendChild(colorTiro);
-            }
+            //if (banderaBlanca == true)
+            //{
+            //    XmlElement colorTiro = doc.CreateElement("color");
+            //    colorTiro.AppendChild(doc.CreateTextNode("blanco"));
+            //    siguiente.AppendChild(colorTiro);
+            //}
+            //else if (banderaNegra == true)
+            //{
+            //    XmlElement colorTiro = doc.CreateElement("color");
+            //    colorTiro.AppendChild(doc.CreateTextNode("negro"));
+            //    siguiente.AppendChild(colorTiro);
+            //}
 
             doc.Save("C:\\Users\\MAGDIEL\\Desktop\\Pruebas\\PartidaSolitario.xml");
 
@@ -6344,1361 +6487,332 @@ namespace PROYECTO1
 
         protected void BtnA1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA1.BackColor = Color.White;
-                capturaFichaBlanca(0, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA1.BackColor = Color.Black;
-                capturaFichaNegra(0, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnB1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB1.BackColor = Color.White;
-                capturaFichaBlanca(0, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB1.BackColor = Color.Black;
-                capturaFichaNegra(0, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnC1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC1.BackColor = Color.White;
-                capturaFichaBlanca(0, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC1.BackColor = Color.Black;
-                capturaFichaNegra(0, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
 
         }
 
         protected void BtnD1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD1.BackColor = Color.White;
-                capturaFichaBlanca(0, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD1.BackColor = Color.Black;
-                capturaFichaNegra(0, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
 
         }
 
         protected void BtnE1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE1.BackColor = Color.White;
-                capturaFichaBlanca(0, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE1.BackColor = Color.Black;
-                capturaFichaNegra(0, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
         }
 
         protected void BtnF1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF1.BackColor = Color.White;
-                capturaFichaBlanca(0, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF1.BackColor = Color.Black;
-                capturaFichaNegra(0, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnG1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG1.BackColor = Color.White;
-                capturaFichaBlanca(0, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG1.BackColor = Color.Black;
-                capturaFichaNegra(0, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
 
         }
 
         protected void BtnH1_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH1.BackColor = Color.White;
-                capturaFichaBlanca(0, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH1.BackColor = Color.Black;
-                capturaFichaNegra(0, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnA2_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA2.BackColor = Color.White;
-                capturaFichaBlanca(1, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA2.BackColor = Color.Black;
-                capturaFichaNegra(1, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
 
         }
 
         protected void BtnB2_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnB2.BackColor = Color.White;
-                capturaFichaBlanca(1, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB2.BackColor = Color.Black;
-                capturaFichaNegra(1, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnC2_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnC2.BackColor = Color.White;
-                capturaFichaBlanca(1, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC2.BackColor = Color.Black;
-                capturaFichaNegra(1, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnD2_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD2.BackColor = Color.White;
-                capturaFichaBlanca(1, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD2.BackColor = Color.Black;
-                capturaFichaNegra(1, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
 
         }
 
         protected void BtnE2_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnE2.BackColor = Color.White;
-                capturaFichaBlanca(1, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE2.BackColor = Color.Black;
-                capturaFichaNegra(1, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnF2_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnF2.BackColor = Color.White;
-                capturaFichaBlanca(1, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF2.BackColor = Color.Black;
-                capturaFichaNegra(1, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
         }
 
         protected void BtnG2_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnG2.BackColor = Color.White;
-                capturaFichaBlanca(1, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG2.BackColor = Color.Black;
-                capturaFichaNegra(1, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnH2_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnH2.BackColor = Color.White;
-                capturaFichaBlanca(1, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH2.BackColor = Color.Black;
-                capturaFichaNegra(1, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnA3_Click(object sender, EventArgs e)
         {
 
-            if (banderaBlanca == true)
-            {
-                BtnA3.BackColor = Color.White;
-                capturaFichaBlanca(2, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA3.BackColor = Color.Black;
-                capturaFichaNegra(2, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnB3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB3.BackColor = Color.White;
-                capturaFichaBlanca(2, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
 
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB3.BackColor = Color.Black;
-                capturaFichaNegra(2, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnC3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC3.BackColor = Color.White;
-                capturaFichaBlanca(2, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
 
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC3.BackColor = Color.Black;
-                capturaFichaNegra(2, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnD3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD3.BackColor = Color.White;
-                capturaFichaBlanca(2, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
+            
 
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD3.BackColor = Color.Black;
-                capturaFichaNegra(2, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnE3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE3.BackColor = Color.White;
-                capturaFichaBlanca(2, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE3.BackColor = Color.Black;
-                capturaFichaNegra(2, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnF3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF3.BackColor = Color.White;
-                capturaFichaBlanca(2, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF3.BackColor = Color.Black;
-                capturaFichaNegra(2, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnG3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG3.BackColor = Color.White;
-                capturaFichaBlanca(2, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG3.BackColor = Color.Black;
-                capturaFichaNegra(2, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnH3_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH3.BackColor = Color.White;
-                capturaFichaBlanca(2, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH3.BackColor = Color.Black;
-                capturaFichaNegra(2, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnA4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA4.BackColor = Color.White;
-                capturaFichaBlanca(3, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA4.BackColor = Color.Black;
-                capturaFichaNegra(3, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnB4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB4.BackColor = Color.White;
-                capturaFichaBlanca(3, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB4.BackColor = Color.Black;
-                capturaFichaNegra(3, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnC4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC4.BackColor = Color.White;
-                capturaFichaBlanca(3, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC4.BackColor = Color.Black;
-                capturaFichaNegra(3, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
 
         }
 
         protected void BtnD4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD4.BackColor = Color.White;
-                capturaFichaBlanca(3, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD4.BackColor = Color.Black;
-                capturaFichaNegra(3, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            LabelSeleccionJugador1.Text = arrayJugador1[0].ToString();
         }
 
         protected void BtnE4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE4.BackColor = Color.White;
-                capturaFichaBlanca(3, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE4.BackColor = Color.Black;
-                capturaFichaNegra(3, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnF4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF4.BackColor = Color.White;
-                capturaFichaBlanca(3, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF4.BackColor = Color.Black;
-                capturaFichaNegra(3, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnG4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG4.BackColor = Color.White;
-                capturaFichaBlanca(3, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG4.BackColor = Color.Black;
-                capturaFichaNegra(3, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnH4_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH4.BackColor = Color.White;
-                capturaFichaBlanca(3, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH4.BackColor = Color.Black;
-                capturaFichaNegra(3, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnA5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA5.BackColor = Color.White;
-                capturaFichaBlanca(4, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA5.BackColor = Color.Black;
-                capturaFichaNegra(4, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnB5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB5.BackColor = Color.White;
-                capturaFichaBlanca(4, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB5.BackColor = Color.Black;
-                capturaFichaNegra(4, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnC5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC5.BackColor = Color.White;
-                capturaFichaBlanca(4, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC5.BackColor = Color.Black;
-                capturaFichaNegra(4, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnD5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD5.BackColor = Color.White;
-                capturaFichaBlanca(4, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD5.BackColor = Color.Black;
-                capturaFichaNegra(4, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnE5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE5.BackColor = Color.White;
-                capturaFichaBlanca(4, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE5.BackColor = Color.Black;
-                capturaFichaNegra(4, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnF5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF5.BackColor = Color.White;
-                capturaFichaBlanca(4, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF5.BackColor = Color.Black;
-                capturaFichaNegra(4, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
 
         }
 
         protected void BtnG5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG5.BackColor = Color.White;
-                capturaFichaBlanca(4, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG5.BackColor = Color.Black;
-                capturaFichaNegra(4, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
 
         }
 
         protected void BtnH5_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH5.BackColor = Color.White;
-                capturaFichaBlanca(4, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH5.BackColor = Color.Black;
-                capturaFichaNegra(4, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnA6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA6.BackColor = Color.White;
-                capturaFichaBlanca(5, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA6.BackColor = Color.Black;
-                capturaFichaNegra(5, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnB6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB6.BackColor = Color.White;
-                capturaFichaBlanca(5, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB6.BackColor = Color.Black;
-                capturaFichaNegra(5, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnC6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC6.BackColor = Color.White;
-                capturaFichaBlanca(5, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC6.BackColor = Color.Black;
-                capturaFichaNegra(5, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnD6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD6.BackColor = Color.White;
-                capturaFichaBlanca(5, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD6.BackColor = Color.Black;
-                capturaFichaNegra(5, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnE6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE6.BackColor = Color.White;
-                capturaFichaBlanca(5, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE6.BackColor = Color.Black;
-                capturaFichaNegra(5, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
         }
 
         protected void BtnF6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF6.BackColor = Color.White;
-                capturaFichaBlanca(5, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF6.BackColor = Color.Black;
-                capturaFichaNegra(5, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnG6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG6.BackColor = Color.White;
-                capturaFichaBlanca(5, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG6.BackColor = Color.Black;
-                capturaFichaNegra(5, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnH6_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH6.BackColor = Color.White;
-                capturaFichaBlanca(5, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH6.BackColor = Color.Black;
-                capturaFichaNegra(5, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnA7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA7.BackColor = Color.White;
-                capturaFichaBlanca(6, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA7.BackColor = Color.Black;
-                capturaFichaNegra(6, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnB7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB7.BackColor = Color.White;
-                capturaFichaBlanca(6, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB7.BackColor = Color.Black;
-                capturaFichaNegra(6, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnC7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC7.BackColor = Color.White;
-                capturaFichaBlanca(6, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC7.BackColor = Color.Black;
-                capturaFichaNegra(6, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnD7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD7.BackColor = Color.White;
-                capturaFichaBlanca(6, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD7.BackColor = Color.Black;
-                capturaFichaNegra(6, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
         }
 
         protected void BtnE7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE7.BackColor = Color.White;
-                capturaFichaBlanca(6, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE7.BackColor = Color.Black;
-                capturaFichaNegra(6, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnF7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF7.BackColor = Color.White;
-                capturaFichaBlanca(6, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF7.BackColor = Color.Black;
-                capturaFichaNegra(6, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnG7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG7.BackColor = Color.White;
-                capturaFichaBlanca(6, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG7.BackColor = Color.Black;
-                capturaFichaNegra(6, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnH7_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH7.BackColor = Color.White;
-                capturaFichaBlanca(6, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH7.BackColor = Color.Black;
-                capturaFichaNegra(6, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+           
         }
 
         protected void BtnA8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnA8.BackColor = Color.White;
-                capturaFichaBlanca(7, 0);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnA8.BackColor = Color.Black;
-                capturaFichaNegra(7, 0);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnB8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnB8.BackColor = Color.White;
-                capturaFichaBlanca(7, 1);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnB8.BackColor = Color.Black;
-                capturaFichaNegra(7, 1);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
         }
 
         protected void BtnC8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnC8.BackColor = Color.White;
-                capturaFichaBlanca(7, 2);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnC8.BackColor = Color.Black;
-                capturaFichaNegra(7, 2);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnD8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnD8.BackColor = Color.White;
-                capturaFichaBlanca(7, 3);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnD8.BackColor = Color.Black;
-                capturaFichaNegra(7, 3);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnE8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnE8.BackColor = Color.White;
-                capturaFichaBlanca(7, 4);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnE8.BackColor = Color.Black;
-                capturaFichaNegra(7, 4);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnF8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnF8.BackColor = Color.White;
-                capturaFichaBlanca(7, 5);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnF8.BackColor = Color.Black;
-                capturaFichaNegra(7, 5);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnG8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnG8.BackColor = Color.White;
-                capturaFichaBlanca(7, 6);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnG8.BackColor = Color.Black;
-                capturaFichaNegra(7, 6);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
 
         protected void BtnH8_Click(object sender, EventArgs e)
         {
-            if (banderaBlanca == true)
-            {
-                BtnH8.BackColor = Color.White;
-                capturaFichaBlanca(7, 7);
-                informacionFinal();
-                banderaNegra = true;
-                banderaBlanca = false;
-
-            }
-            else if (banderaNegra == true)
-            {
-                BtnH8.BackColor = Color.Black;
-                capturaFichaNegra(7, 7);
-                informacionFinal();
-                banderaNegra = false;
-                banderaBlanca = true;
-            }
+            
         }
         protected void DropDownListFicha_SelectedIndexChanged(object sender, EventArgs e)
         {

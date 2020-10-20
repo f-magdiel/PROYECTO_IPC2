@@ -24,31 +24,49 @@ namespace PROYECTO1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control ButtonRandom.
+        /// Control ButtonSeleccionar2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonRandom;
+        protected global::System.Web.UI.WebControls.Button ButtonSeleccionar2;
 
         /// <summary>
-        /// Control ButtonSeleccionar.
+        /// Control ButtonSeleccionar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSeleccionar;
+        protected global::System.Web.UI.WebControls.Button ButtonSeleccionar1;
 
         /// <summary>
-        /// Control DropDownListFicha.
+        /// Control DropDownListFicha1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListFicha;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListFicha1;
+
+        /// <summary>
+        /// Control DropDownListFicha2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListFicha2;
+
+        /// <summary>
+        /// Control LabelSeleccionJugador2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSeleccionJugador2;
 
         /// <summary>
         /// Control LabeMovimienntos.
@@ -96,13 +114,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label LabelContadorUsuario;
 
         /// <summary>
-        /// Control LabelSeleccion.
+        /// Control LabelSeleccionJugador1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelSeleccion;
+        protected global::System.Web.UI.WebControls.Label LabelSeleccionJugador1;
 
         /// <summary>
         /// Control LabelTurno.
