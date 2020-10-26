@@ -6827,18 +6827,10 @@ namespace PROYECTO1
 
         }
 
-        protected void ButtonGenerar_Click(object sender, RepeaterItemEventArgs e)
-        {
-           
-
-        }
-
         protected void ButtonGenerar_Click1(object sender, EventArgs e)
         {
-
-           
-
-            
+            HtmlTableRow row = TableroCompleto.Rows[0];
+            TableroCompleto.Rows.Remove(row);
         }
     }
 }

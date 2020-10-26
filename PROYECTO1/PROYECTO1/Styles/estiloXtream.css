@@ -41,6 +41,7 @@
     top: 400px;
     left: 300px;
     border-radius: 4px;
+    text-align:center;
 }
 
 .form-tablero .cuadros {
@@ -48,9 +49,9 @@
     height: 40px;
     border: none;
     padding: 12px;
-    background: #FCF9F9;
+    background: #F9E79F;
     color: white;
-    border-radius: 4px;
+    border-radius: 50%;
 }
 
 

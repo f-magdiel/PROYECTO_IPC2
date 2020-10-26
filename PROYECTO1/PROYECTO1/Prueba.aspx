@@ -5,90 +5,53 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <script runat="server">
 
-  void Page_Load(Object sender, EventArgs e)
+  void Button_Click(Object sender, EventArgs e)
   {
 
-    // Get the number of rows and columns selected by the user.
-    int numrows = Convert.ToInt32(Select1.Value);
-    int numcells = Convert.ToInt32(Select2.Value);
+    // Remove the first row from the table.
+    HtmlTableRow row = Table1.Rows[0];
+    Table1.Rows.Remove(row);
 
-    // Iterate through the rows.
-    for (int j = 0; j < numrows; j++)
-    {
-
-      // Create a new row and add it to the Rows collection.
-      HtmlTableRow row = new HtmlTableRow();
-
-      // Provide a different background color for alternating rows.
-      if (j % 2 == 1)
-        row.BgColor = "Gray";
-
-      // Iterate through the cells of a row.
-      for (int i = 0; i < numcells; i++)
-      {
-        // Create a new cell and add it to the HtmlTableRow 
-        // Cells collection.
-        HtmlTableCell cell = new HtmlTableCell();
-        cell.Controls.Add(new LiteralControl("columna " 
-                          ));
-        row.Cells.Add(cell);
-      }
-
-      // Add the row to the HtmlTable Rows collection.
-      Table1.Rows.Add(row);
-    }
   }
 
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-   <title>HtmlTable Example</title>
+   <title>HtmlTableRowCollectionExample</title>
 </head>
 <body>
 
    <form id="form1" runat="server">
 
-      <h3>HtmlTable Example</h3>
+      <h3>HtmlTableRowCollection Example</h3>
 
-      <table id="Table1" style="border-width:1px ; border-color:Black; padding:5px"
-             cellspacing="0" 
-             runat="server"/>
-        
-      <hr />
+          <table id="Table1" runat="server" 
+                style="border-width: 1px; border-color: Black">
+              <tr>
+            <td>
+               Cell 1
+            </td>
+            <td>
+               Cell 2
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Cell 3
+            </td>
+            <td>
+               Cell 4
+            </td>
+         </tr>
 
-      Select the number of rows and columns to create: <br /><br />
+      </table>
 
-      Table rows:
-      <select id="Select1" 
-              runat="server">
-
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-
-      </select>
-
-      &nbsp;&nbsp;
-
-      Table cells:
-      <select id="Select2" 
-              runat="server">
-
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-
-      </select>
-       
       <br /><br />
   
-      <input type="submit" 
-             value="Generate Table" 
+      <input type="button" 
+             value="Remove First Row from Table"
+             onserverclick="Button_Click" 
              runat="server"/>
 
    </form>

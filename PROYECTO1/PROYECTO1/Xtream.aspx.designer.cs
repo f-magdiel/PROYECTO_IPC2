@@ -303,6 +303,15 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label LabelTitulo;
 
         /// <summary>
+        /// Control TableroCompleto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable TableroCompleto;
+
+        /// <summary>
         /// Control Label10.
         /// </summary>
         /// <remarks>
