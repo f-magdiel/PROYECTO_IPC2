@@ -4,9 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="Styles/estiloTablero.css" rel="stylesheet" type="text/css"/>
-     <link href="Styles/MenuSolitario.css" rel="stylesheet" type="text/css"/>
-     <link href="Styles/estiloLabelSolitario.css" rel="stylesheet" type="text/css"/>
+         
     <link href="Styles/estiloXtream.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -14,6 +12,16 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label CssClass="tiempojugador2" ID="LabelTiempoJ2" runat="server" Text="0"></asp:Label>
+            <asp:Label CssClass="tiempojugador1" ID="LabelTiempoJ1" runat="server" Text="0"></asp:Label>
+            <asp:Label CssClass="titulojugador2" ID="Label87" runat="server" Text="Jugador 2"></asp:Label>
+            <asp:Label CssClass="titulojugador1" ID="Label86" runat="server" Text="Jugador 1"></asp:Label>
+            <asp:Label CssClass="tituloCronometro" ID="Label85" runat="server" Text="Cronometro"></asp:Label>
+            <asp:Label CssClass="estadoturno" ID="LabelIndicadorTurno" runat="server" Text="Indefinido"></asp:Label>
+            <asp:Label CssClass="tituloturno" ID="LabelTurnos" runat="server" Text="Turno:"></asp:Label>
+            <asp:Label CssClass="filaTamaño" ID="Labelfila" runat="server" Text="Fila"></asp:Label>
+            <asp:Label CssClass="columnaTamaño" ID="Labelcolumna" runat="server" Text="Columna"></asp:Label>
+            <asp:Label CssClass="tituloTamaño" ID="Labeltamaño" runat="server" Text="Tamaño Tablero"></asp:Label>
             <asp:Button CssClass="botongenerar" ID="ButtonGenerar" runat="server" Text="Generar" OnClick="ButtonGenerar_Click1" />
             <asp:DropDownList Cssclass="listaFila" ID="DropDownListFila" runat="server">
                 <asp:ListItem>Elegir</asp:ListItem>
@@ -68,12 +76,13 @@
             </asp:DropDownList>
             <asp:Label CssClass="seleccion2" ID="LabelSeleccionJugador2" runat="server" Text="Color Jugador 2:"></asp:Label>
              <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>
-            <asp:Label Cssclass="movimientosmaquina" ID="LabelMaquina" runat="server" Text="Invitado"></asp:Label>
-            <asp:Label Cssclass="movimientosjugador" ID="LabelJugador" runat="server" Text="Usuario"></asp:Label>
-            <asp:Label Cssclass="contadormaquina" ID="LabelContadorInvitado" runat="server" Text="0"></asp:Label>
-            <asp:Label Cssclass="contadorjugador" ID="LabelContadorUsuario" runat="server" Text="0"></asp:Label>
-            <asp:Label Cssclass="labelseleccion" ID="LabelSeleccionJugador1" runat="server" Text="Color Jugador 1:"></asp:Label>
-            <asp:Label Cssclass="labelturno" ID="LabelTurno" runat="server" Text="Estado partida:"></asp:Label>
+            <asp:Label Cssclass="movimientosinvitado" ID="LabelJugador2" runat="server" Text="Jugador 2"></asp:Label>
+            <asp:Label Cssclass="movimientosusuario" ID="LabelJugador1" runat="server" Text="Jugador 1"></asp:Label>
+            <asp:Label Cssclass="contadorinvitado" ID="LabelContadorJ2" runat="server" Text="0"></asp:Label>
+            <asp:Label Cssclass="contadorusuario" ID="LabelContadorJ1" runat="server" Text="0"></asp:Label>
+            <asp:Label Cssclass="seleccion1" ID="LabelSeleccionJugador1" runat="server" Text="Color Jugador 1:"></asp:Label>
+            <asp:Label Cssclass="labelestado" ID="Labelestado" runat="server" Text="Estado"></asp:Label>
+            <asp:Label CssClass="tituloestado" ID="LabelTituloEstado" runat="server" Text="Estado Partida:"></asp:Label>
                <asp:TextBox Cssclass="caja" ID="TextBoxCarga" runat="server"></asp:TextBox>
              <asp:Button Cssclass="btn1" ID="ButtonCarga" runat="server" Text="Cargar" OnClick="ButtonCarga_Click1" />
               <asp:Button Cssclass="btn2" ID="ButtonDescarga" runat="server" Text="Descargar" OnClick="ButtonDescarga_Click" />
@@ -82,8 +91,8 @@
               
                 
            
- <section class="form-tabla">
-          <table class="egt" >
+ <section class="form-tablero">
+          <table class="xtream" >
 
   <tr>
 

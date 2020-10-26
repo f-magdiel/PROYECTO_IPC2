@@ -1882,16 +1882,16 @@ namespace PROYECTO1
                 }
             }
 
-            if (usuarioBlanco == true)//cuando yo sea blanco
-            {
-                LabelContadorUsuario.Text = movimientoB.ToString();
-                LabelContadorInvitado.Text = movimientoN.ToString();
-            }
-            else if (usuarioNegro == true)//cuando yo sea negro
-            {
-                LabelContadorUsuario.Text = movimientoN.ToString();
-                LabelContadorInvitado.Text = movimientoB.ToString();
-            }
+            //if (usuarioBlanco == true)//cuando yo sea blanco
+            //{
+            //    LabelContadorUsuario.Text = movimientoB.ToString();
+            //    LabelContadorInvitado.Text = movimientoN.ToString();
+            //}
+            //else if (usuarioNegro == true)//cuando yo sea negro
+            //{
+            //    LabelContadorUsuario.Text = movimientoN.ToString();
+            //    LabelContadorInvitado.Text = movimientoB.ToString();
+            //}
 
             //validar estado de partida
             if (movimientoGeneral == 0)
@@ -2022,16 +2022,16 @@ namespace PROYECTO1
                 }
             }
 
-            if (usuarioBlanco == true)//cuando yo sea blanco
-            {
-                LabelContadorUsuario.Text = movimientoB.ToString();
-                LabelContadorInvitado.Text = movimientoN.ToString();
-            }
-            else if (usuarioNegro == true)//cuando yo sea negro
-            {
-                LabelContadorUsuario.Text = movimientoN.ToString();
-                LabelContadorInvitado.Text = movimientoB.ToString();
-            }
+            //if (usuarioBlanco == true)//cuando yo sea blanco
+            //{
+            //    LabelContadorUsuario.Text = movimientoB.ToString();
+            //    LabelContadorInvitado.Text = movimientoN.ToString();
+            //}
+            //else if (usuarioNegro == true)//cuando yo sea negro
+            //{
+            //    LabelContadorUsuario.Text = movimientoN.ToString();
+            //    LabelContadorInvitado.Text = movimientoB.ToString();
+            //}
 
             //validar estado de partida
             if (movimientoGeneral == 0)
@@ -6836,7 +6836,7 @@ namespace PROYECTO1
         protected void ButtonGenerar_Click1(object sender, EventArgs e)
         {
 
-            //boton para generar el tablero 
+           
 
             
         }

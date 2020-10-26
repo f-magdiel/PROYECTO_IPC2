@@ -24,6 +24,96 @@ namespace PROYECTO1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control LabelTiempoJ2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTiempoJ2;
+
+        /// <summary>
+        /// Control LabelTiempoJ1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTiempoJ1;
+
+        /// <summary>
+        /// Control Label87.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label87;
+
+        /// <summary>
+        /// Control Label86.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label86;
+
+        /// <summary>
+        /// Control Label85.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label85;
+
+        /// <summary>
+        /// Control LabelIndicadorTurno.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelIndicadorTurno;
+
+        /// <summary>
+        /// Control LabelTurnos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTurnos;
+
+        /// <summary>
+        /// Control Labelfila.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labelfila;
+
+        /// <summary>
+        /// Control Labelcolumna.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labelcolumna;
+
+        /// <summary>
+        /// Control Labeltamaño.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labeltamaño;
+
+        /// <summary>
         /// Control ButtonGenerar.
         /// </summary>
         /// <remarks>
@@ -105,40 +195,40 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label LabeMovimienntos;
 
         /// <summary>
-        /// Control LabelMaquina.
+        /// Control LabelJugador2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMaquina;
+        protected global::System.Web.UI.WebControls.Label LabelJugador2;
 
         /// <summary>
-        /// Control LabelJugador.
+        /// Control LabelJugador1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelJugador;
+        protected global::System.Web.UI.WebControls.Label LabelJugador1;
 
         /// <summary>
-        /// Control LabelContadorInvitado.
+        /// Control LabelContadorJ2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelContadorInvitado;
+        protected global::System.Web.UI.WebControls.Label LabelContadorJ2;
 
         /// <summary>
-        /// Control LabelContadorUsuario.
+        /// Control LabelContadorJ1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelContadorUsuario;
+        protected global::System.Web.UI.WebControls.Label LabelContadorJ1;
 
         /// <summary>
         /// Control LabelSeleccionJugador1.
@@ -150,13 +240,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label LabelSeleccionJugador1;
 
         /// <summary>
-        /// Control LabelTurno.
+        /// Control Labelestado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTurno;
+        protected global::System.Web.UI.WebControls.Label Labelestado;
+
+        /// <summary>
+        /// Control LabelTituloEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTituloEstado;
 
         /// <summary>
         /// Control TextBoxCarga.
