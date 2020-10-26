@@ -84,9 +84,12 @@ namespace PROYECTO1
                 turnoJ2 = false;
             }
             //para el tablero
+
+            if (!IsPostBack)
+            {
+                
+            }
             
-
-
             //tableroColor[0, 0] = BtnA1;
             //tableroColor[0, 1] = BtnB1;
             //tableroColor[0, 2] = BtnC1;
@@ -160,7 +163,7 @@ namespace PROYECTO1
             //tableroColor[7, 7] = BtnH8;
 
 
-            
+
 
             //if (!IsPostBack)
             //{
@@ -6829,8 +6832,34 @@ namespace PROYECTO1
 
         protected void ButtonGenerar_Click1(object sender, EventArgs e)
         {
-            HtmlTableRow row = TableroCompleto.Rows[0];
-            TableroCompleto.Rows.Remove(row);
+            //para realizar la seleccion
+            int fila = Int32.Parse(DropDownListFila.SelectedItem.Value);
+            int columna = Int32.Parse(DropDownListColumna.SelectedItem.Value);
+
+
+            if(fila == 6 && columna == 6)
+            {
+                //para eliminar las columnas no necesarias
+                for (int j = 20; j >=7; j--)
+                {
+                    for (int i = 0; i <= 21; i++)
+                    {
+                        HtmlTableCell cell = TableroCompleto.Rows[i].Cells[j];
+                        TableroCompleto.Rows[i].Cells.Remove(cell);
+                    }
+
+                }
+
+                ////para eliminar las filas no necesarias
+                for (int i = 20; i >=7; i--)
+                {
+                    HtmlTableRow row = TableroCompleto.Rows[i];
+                    TableroCompleto.Rows.Remove(row);
+                }
+               
+                TableroCompleto.Align = "Center";
+            }
+           
         }
     }
 }

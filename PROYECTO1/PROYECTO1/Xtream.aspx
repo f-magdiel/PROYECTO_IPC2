@@ -92,7 +92,7 @@
                 
            
  <section class="form-tablero">
-  <table id="TableroCompleto" class="xtream" runat="server" >
+  <table id="TableroCompleto" class="xtream" runat="server" postback="false">
 
   <tr>
 
