@@ -1,127 +1,46 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Prueba.aspx.cs" Inherits="PROYECTO1.Prueba" %>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<script runat="server">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Timer Example Page</title>
+    <script runat="server">
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            OriginalTime.Text = DateTime.Now.ToLongTimeString();
+        }
 
-  void Button_Click(Object sender, EventArgs e)
-  {
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            StockPrice.Text = GetStockPrice();
+            TimeOfPrice.Text = DateTime.Now.ToLongTimeString();
+        }
 
-    // Set the HtmlTable properties according to the
-    // user selections.
-    Table1.CellSpacing = Convert.ToInt32(SpacingSelect.Value);
-    Table1.CellPadding = Convert.ToInt32(PaddingSelect.Value);
-    Table1.Align = "Center";
-
-  }
-
-</script>
-
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-   <title>HtmlTable Example</title>
+        private string GetStockPrice()
+        {
+            double randomStockPrice = 50 + new Random().NextDouble();
+            return randomStockPrice.ToString("C");
+        }
+    </script>
 </head>
 <body>
-
-   <form id="form1" runat="server">
-
-      <h3>HtmlTable Example</h3>
-
-      <table id="Table1" 
-             style="border-width:1px; border-color:Black"
-             runat="server">
-
-         <tr>
-            <th>
-               Column 1
-            </th>
-            <th>
-               Column 2
-            </th>
-            <th>
-               Column 3
-            </th>
-         </tr>
-         <tr>
-            <td>
-               Cell 1
-            </td>
-            <td>
-               Cell 2
-            </td>
-            <td>
-               Cell 3
-            </td>
-         </tr>
-         <tr>
-            <td>
-               Cell 4
-            </td>
-            <td>
-               Cell 5
-            </td>
-            <td>
-               Cell 6
-            </td>
-         </tr>
-
-      </table>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="1000" />
       
-      <br /><br /><br /><br /><br /><br /><br /><br />
-      
-      <hr />
-
-      Select the display settings: <br /><br />
-
-      Align:
-      <select id="AlignSelect" 
-              runat="server">
-
-         <option value="Left">Left</option>
-         <option value="Center">Center</option>
-         <option value="Right">Right</option>
-        
-      </select>
-
-      &nbsp;&nbsp;
-
-      CellPadding:
-      <select id="PaddingSelect" 
-              runat="server">
-
-         <option value="0">0</option>
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-
-      </select>
-
-      &nbsp;&nbsp;
-
-      CellSpacing:
-      <select id="SpacingSelect" 
-              runat="server">
-
-         <option value="0">0</option>
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-
-      </select>
-       
-      <br /><br />
-  
-      <input type="button" 
-             value="Generate Table"
-             onserverclick="Button_Click" 
-             runat="server"/>
-
-   </form>
-
+        <asp:UpdatePanel ID="StockPricePanel" runat="server" UpdateMode="Conditional">
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="Timer1" />
+        </Triggers>
+        <ContentTemplate>
+            Stock price is <asp:Label id="StockPrice" runat="server"></asp:Label><br />
+            as of <asp:Label id="TimeOfPrice" runat="server"></asp:Label>  
+        </ContentTemplate>
+        </asp:UpdatePanel>
+        <div>
+        Page originally created at <asp:Label ID="OriginalTime" runat="server"></asp:Label>
+        </div>
+    </form>
 </body>
 </html>

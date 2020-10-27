@@ -23,7 +23,10 @@ namespace PROYECTO1
     public partial class Xtream : System.Web.UI.Page
     {
         //tablero
-        
+        public static int tiempoJ1 = 0;
+        public static int tiempoJ2 = 0;
+        public static bool llaveTiempo1 = false;
+        public static bool llaveTiempo2 = false;
 
         //colores
         public static int contadorColorj1 = 0;
@@ -85,10 +88,7 @@ namespace PROYECTO1
             }
             //para el tablero
 
-            if (!IsPostBack)
-            {
-                
-            }
+           
             
             //tableroColor[0, 0] = BtnA1;
             //tableroColor[0, 1] = BtnB1;
@@ -6829,9 +6829,25 @@ namespace PROYECTO1
         {
 
         }
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+
+            if (llaveTiempo1 == true)
+            {
+                tiempoJ1++;
+                LabelTiempoJ1.Text = tiempoJ1.ToString();
+            }
+
+            if (llaveTiempo2 == true)
+            {
+                tiempoJ2++;
+                LabelTiempoJ2.Text = tiempoJ2.ToString();
+            }
+        }
 
         protected void ButtonGenerar_Click1(object sender, EventArgs e)
         {
+           
             //para realizar la seleccion
             int fila = Int32.Parse(DropDownListFila.SelectedItem.Value);
             int columna = Int32.Parse(DropDownListColumna.SelectedItem.Value);
@@ -6850,14 +6866,14 @@ namespace PROYECTO1
 
                 }
 
-                ////para eliminar las filas no necesarias
+                //para eliminar las filas no necesarias
                 for (int i = 20; i >=7; i--)
                 {
                     HtmlTableRow row = TableroCompleto.Rows[i];
                     TableroCompleto.Rows.Remove(row);
                 }
                
-                TableroCompleto.Align = "Center";
+               
             }
            
         }

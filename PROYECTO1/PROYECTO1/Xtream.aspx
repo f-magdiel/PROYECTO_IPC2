@@ -12,8 +12,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
+             <asp:ScriptManager ID="ScriptManager1" runat="server" />
+            
+            <asp:Timer ID="Timer1" OnTick="Timer1_Tick"  Interval="1000" runat="server"/>
+             <asp:UpdatePanel ID="TimeJ1" runat="server" UpdateMode="Conditional">
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="Timer1" />
+        </Triggers>
+        <ContentTemplate>
+             <asp:Label CssClass="tiempojugador1" ID="LabelTiempoJ1" runat="server" Text="0"></asp:Label>
+        </ContentTemplate>
+        </asp:UpdatePanel>
+
+
+
             <asp:Label CssClass="tiempojugador2" ID="LabelTiempoJ2" runat="server" Text="0"></asp:Label>
-            <asp:Label CssClass="tiempojugador1" ID="LabelTiempoJ1" runat="server" Text="0"></asp:Label>
+            
             <asp:Label CssClass="titulojugador2" ID="Label87" runat="server" Text="Jugador 2"></asp:Label>
             <asp:Label CssClass="titulojugador1" ID="Label86" runat="server" Text="Jugador 1"></asp:Label>
             <asp:Label CssClass="tituloCronometro" ID="Label85" runat="server" Text="Cronometro"></asp:Label>
@@ -92,7 +106,8 @@
                 
            
  <section class="form-tablero">
-  <table id="TableroCompleto" class="xtream" runat="server" postback="false">
+     
+  <table id="TableroCompleto" class="xtream" runat="server" >
 
   <tr>
 

@@ -2217,7 +2217,7 @@ namespace PROYECTO1
                     case "D1":
                         //direccion1
                         //fila = cambia , columna = igual
-                        for (int j = fila-1; j >= 0; j--)
+                        for (int j = fila-1; j >= 0; j--) //fila
                         {
                             if(tableroColor[j,columna].BackColor == Color.White)
                             {
