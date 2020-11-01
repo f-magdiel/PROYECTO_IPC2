@@ -28,6 +28,13 @@
 
             <asp:Label CssClass="tiempojugador2" ID="LabelTiempoJ2" runat="server" Text="0"></asp:Label>
             
+            <asp:DropDownList CssClass="listamodalidad" ID="DropDownListModalidad" runat="server">
+                <asp:ListItem>Elegir</asp:ListItem>
+                <asp:ListItem>Normal</asp:ListItem>
+                <asp:ListItem>Inversa</asp:ListItem>
+             </asp:DropDownList>
+            <asp:Button CssClass="btnmodalidad" ID="ButtonModalidad" runat="server" Text="Modalidad" OnClick="ButtonModalidad_Click" />
+           
             <asp:Label CssClass="titulojugador2" ID="Label87" runat="server" Text="Jugador 2"></asp:Label>
             <asp:Label CssClass="titulojugador1" ID="Label86" runat="server" Text="Jugador 1"></asp:Label>
             <asp:Label CssClass="tituloCronometro" ID="Label85" runat="server" Text="Cronometro"></asp:Label>
@@ -148,18 +155,18 @@
       <td><asp:Button  ID="BtnF1" runat="server" Text="" OnClick="BtnF1_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG1" runat="server" Text="" OnClick="BtnG1_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH1" runat="server" Text="" OnClick="BtnH1_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ1" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK1" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM1" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP1" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR1" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS1" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI1_Click" /></td>
+      <td><asp:Button  ID="BtnJ1" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ1_Click" /></td>
+      <td><asp:Button  ID="BtnK1" runat="server" Text="" CssClass="cuadros" OnClick="BtnK1_Click" /></td>
+      <td><asp:Button  ID="BtnL1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL1_Click" /></td>
+      <td><asp:Button  ID="BtnM1" runat="server" Text="" CssClass="cuadros" OnClick="BtnM1_Click" /></td>
+      <td><asp:Button  ID="BtnN1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN1_Click" /></td>
+      <td><asp:Button  ID="BtnÑ1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ1_Click" /></td>
+      <td><asp:Button  ID="BtnO1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO1_Click" /></td>
+      <td><asp:Button  ID="BtnP1" runat="server" Text="" CssClass="cuadros" OnClick="BtnP1_Click" /></td>
+      <td><asp:Button  ID="BtnQ1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ1_Click" /></td>
+      <td><asp:Button  ID="BtnR1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR1_Click" /></td>
+      <td><asp:Button  ID="BtnS1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS1_Click" /></td>
       <td><asp:Label ID="Label12" runat="server" Text="1"></asp:Label></td>
 
   </tr>
@@ -174,18 +181,18 @@
       <td><asp:Button  ID="BtnF2" runat="server" Text="" OnClick="BtnF2_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG2" runat="server" Text="" OnClick="BtnG2_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH2" runat="server" Text="" OnClick="BtnH2_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ2" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnK2" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM2" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP2" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR2" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS2" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI2_Click" /></td>
+      <td><asp:Button  ID="BtnJ2" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ2_Click" /></td>
+      <td><asp:Button  ID="BtnK2" runat="server" Text="" CssClass="cuadros" OnClick="BtnK2_Click" /></td>
+      <td><asp:Button  ID="BtnL2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL2_Click" /></td>
+      <td><asp:Button  ID="BtnM2" runat="server" Text="" CssClass="cuadros" OnClick="BtnM2_Click" /></td>
+      <td><asp:Button  ID="BtnN2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN2_Click" /></td>
+      <td><asp:Button  ID="BtnÑ2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ2_Click" /></td>
+      <td><asp:Button  ID="BtnO2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO2_Click" /></td>
+      <td><asp:Button  ID="BtnP2" runat="server" Text="" CssClass="cuadros" OnClick="BtnP2_Click" /></td>
+      <td><asp:Button  ID="BtnQ2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ2_Click" /></td>
+      <td><asp:Button  ID="BtnR2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR2_Click" /></td>
+      <td><asp:Button  ID="BtnS2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS2_Click" /></td>
       <td><asp:Label ID="Label14" runat="server" Text="2"></asp:Label></td>
 
   </tr>
@@ -200,18 +207,18 @@
       <td><asp:Button  ID="BtnF3" runat="server" Text="" OnClick="BtnF3_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG3" runat="server" Text="" OnClick="BtnG3_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH3" runat="server" Text="" OnClick="BtnH3_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ3" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK3" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM3" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP3" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR3" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS3" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI3_Click" /></td>
+      <td><asp:Button  ID="BtnJ3" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ3_Click" /></td>
+      <td><asp:Button  ID="BtnK3" runat="server" Text="" CssClass="cuadros" OnClick="BtnK3_Click" /></td>
+      <td><asp:Button  ID="BtnL3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL3_Click" /></td>
+      <td><asp:Button  ID="BtnM3" runat="server" Text="" CssClass="cuadros" OnClick="BtnM3_Click" /></td>
+      <td><asp:Button  ID="BtnN3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN3_Click" /></td>
+      <td><asp:Button  ID="BtnÑ3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ3_Click" /></td>
+      <td><asp:Button  ID="BtnO3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO3_Click" /></td>
+      <td><asp:Button  ID="BtnP3" runat="server" Text="" CssClass="cuadros" OnClick="BtnP3_Click" /></td>
+      <td><asp:Button  ID="BtnQ3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ3_Click" /></td>
+      <td><asp:Button  ID="BtnR3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR3_Click" /></td>
+      <td><asp:Button  ID="BtnS3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS3_Click" /></td>
       <td><asp:Label ID="Label16" runat="server" Text="3"></asp:Label></td>
 
   </tr>
@@ -226,18 +233,18 @@
       <td><asp:Button  ID="BtnF4" runat="server" Text="" OnClick="BtnF4_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG4" runat="server" Text="" OnClick="BtnG4_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH4" runat="server" Text="" OnClick="BtnH4_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ4" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK4" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM4" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP4" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR4" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS4" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI4_Click" /></td>
+      <td><asp:Button  ID="BtnJ4" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ4_Click" /></td>
+      <td><asp:Button  ID="BtnK4" runat="server" Text="" CssClass="cuadros" OnClick="BtnK4_Click" /></td>
+      <td><asp:Button  ID="BtnL4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL4_Click" /></td>
+      <td><asp:Button  ID="BtnM4" runat="server" Text="" CssClass="cuadros" OnClick="BtnM4_Click" /></td>
+      <td><asp:Button  ID="BtnN4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN4_Click" /></td>
+      <td><asp:Button  ID="BtnÑ4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ4_Click" /></td>
+      <td><asp:Button  ID="BtnO4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO4_Click" /></td>
+      <td><asp:Button  ID="BtnP4" runat="server" Text="" CssClass="cuadros" OnClick="BtnP4_Click" /></td>
+      <td><asp:Button  ID="BtnQ4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ4_Click" /></td>
+      <td><asp:Button  ID="BtnR4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR4_Click" /></td>
+      <td><asp:Button  ID="BtnS4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS4_Click" /></td>
       <td><asp:Label  ID="Label18" runat="server" Text="4"></asp:Label></td>
 
   </tr>
@@ -252,18 +259,18 @@
       <td><asp:Button  ID="BtnF5" runat="server" Text="" OnClick="BtnF5_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG5" runat="server" Text="" OnClick="BtnG5_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH5" runat="server" Text="" OnClick="BtnH5_Click" CssClass="cuadros" /></td>
-       <td><asp:Button  ID="BtnI5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ5" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK5" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM5" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP5" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR5" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS5" runat="server" Text=""  CssClass="cuadros" /></td>
+       <td><asp:Button  ID="BtnI5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI5_Click" /></td>
+      <td><asp:Button  ID="BtnJ5" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ5_Click" /></td>
+      <td><asp:Button  ID="BtnK5" runat="server" Text="" CssClass="cuadros" OnClick="BtnK5_Click" /></td>
+      <td><asp:Button  ID="BtnL5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL5_Click" /></td>
+      <td><asp:Button  ID="BtnM5" runat="server" Text="" CssClass="cuadros" OnClick="BtnM5_Click" /></td>
+      <td><asp:Button  ID="BtnN5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN5_Click" /></td>
+      <td><asp:Button  ID="BtnÑ5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ5_Click" /></td>
+      <td><asp:Button  ID="BtnO5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO5_Click" /></td>
+      <td><asp:Button  ID="BtnP5" runat="server" Text="" CssClass="cuadros" OnClick="BtnP5_Click" /></td>
+      <td><asp:Button  ID="BtnQ5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ5_Click" /></td>
+      <td><asp:Button  ID="BtnR5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR5_Click" /></td>
+      <td><asp:Button  ID="BtnS5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS5_Click" /></td>
       <td><asp:Label ID="Label20" runat="server" Text="5"></asp:Label></td>
   </tr>
      <tr>
@@ -277,18 +284,18 @@
       <td><asp:Button  ID="BtnF6" runat="server" Text="" OnClick="BtnF6_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG6" runat="server" Text="" OnClick="BtnG6_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH6" runat="server" Text="" OnClick="BtnH6_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ6" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK6" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM6" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP6" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR6" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS6" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI6_Click" /></td>
+      <td><asp:Button  ID="BtnJ6" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ6_Click" /></td>
+      <td><asp:Button  ID="BtnK6" runat="server" Text="" CssClass="cuadros" OnClick="BtnK6_Click" /></td>
+      <td><asp:Button  ID="BtnL6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL6_Click" /></td>
+      <td><asp:Button  ID="BtnM6" runat="server" Text="" CssClass="cuadros" OnClick="BtnM6_Click" /></td>
+      <td><asp:Button  ID="BtnN6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN6_Click" /></td>
+      <td><asp:Button  ID="BtnÑ6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ6_Click" /></td>
+      <td><asp:Button  ID="BtnO6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO6_Click" /></td>
+      <td><asp:Button  ID="BtnP6" runat="server" Text="" CssClass="cuadros" OnClick="BtnP6_Click" /></td>
+      <td><asp:Button  ID="BtnQ6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ6_Click" /></td>
+      <td><asp:Button  ID="BtnR6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR6_Click" /></td>
+      <td><asp:Button  ID="BtnS6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS6_Click" /></td>
       <td><asp:Label ID="Label22" runat="server" Text="6"></asp:Label></td>
 
   </tr>
@@ -303,18 +310,18 @@
       <td><asp:Button  ID="BtnF7" runat="server" Text="" OnClick="BtnF7_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG7" runat="server" Text="" OnClick="BtnG7_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH7" runat="server" Text="" OnClick="BtnH7_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ7" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK7" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM7" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP7" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR7" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS7" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI7_Click" /></td>
+      <td><asp:Button  ID="BtnJ7" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ7_Click" /></td>
+      <td><asp:Button  ID="BtnK7" runat="server" Text="" CssClass="cuadros" OnClick="BtnK7_Click" /></td>
+      <td><asp:Button  ID="BtnL7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL7_Click" /></td>
+      <td><asp:Button  ID="BtnM7" runat="server" Text="" CssClass="cuadros" OnClick="BtnM7_Click" /></td>
+      <td><asp:Button  ID="BtnN7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN7_Click" /></td>
+      <td><asp:Button  ID="BtnÑ7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ7_Click" /></td>
+      <td><asp:Button  ID="BtnO7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO7_Click" /></td>
+      <td><asp:Button  ID="BtnP7" runat="server" Text="" CssClass="cuadros" OnClick="BtnP7_Click" /></td>
+      <td><asp:Button  ID="BtnQ7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ7_Click" /></td>
+      <td><asp:Button  ID="BtnR7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR7_Click" /></td>
+      <td><asp:Button  ID="BtnS7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS7_Click" /></td>
       <td><asp:Label ID="Label24" runat="server" Text="7"></asp:Label></td>
 
   </tr>
@@ -329,18 +336,18 @@
       <td><asp:Button  ID="BtnF8" runat="server" Text="" OnClick="BtnF8_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG8" runat="server" Text="" OnClick="BtnG8_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH8" runat="server" Text="" OnClick="BtnH8_Click" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ8" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK8" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM8" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP8" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR8" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS8" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI8_Click" /></td>
+      <td><asp:Button  ID="BtnJ8" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ8_Click" /></td>
+      <td><asp:Button  ID="BtnK8" runat="server" Text="" CssClass="cuadros" OnClick="BtnK8_Click" /></td>
+      <td><asp:Button  ID="BtnL8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL8_Click" /></td>
+      <td><asp:Button  ID="BtnM8" runat="server" Text="" CssClass="cuadros" OnClick="BtnM8_Click" /></td>
+      <td><asp:Button  ID="BtnN8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN8_Click" /></td>
+      <td><asp:Button  ID="BtnÑ8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ8_Click" /></td>
+      <td><asp:Button  ID="BtnO8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO8_Click" /></td>
+      <td><asp:Button  ID="BtnP8" runat="server" Text="" CssClass="cuadros" OnClick="BtnP8_Click" /></td>
+      <td><asp:Button  ID="BtnQ8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ8_Click" /></td>
+      <td><asp:Button  ID="BtnR8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR8_Click" /></td>
+      <td><asp:Button  ID="BtnS8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS8_Click" /></td>
       <td><asp:Label ID="Label26" runat="server" Text="8"></asp:Label></td>
 
   </tr>
@@ -356,18 +363,18 @@
       <td><asp:Button  ID="BtnF9" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG9" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ9" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK9" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM9" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP9" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR9" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS9" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI9_Click" /></td>
+      <td><asp:Button  ID="BtnJ9" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ9_Click" /></td>
+      <td><asp:Button  ID="BtnK9" runat="server" Text="" CssClass="cuadros" OnClick="BtnK9_Click" /></td>
+      <td><asp:Button  ID="BtnL9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL9_Click" /></td>
+      <td><asp:Button  ID="BtnM9" runat="server" Text="" CssClass="cuadros" OnClick="BtnM9_Click" /></td>
+      <td><asp:Button  ID="BtnN9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN9_Click" /></td>
+      <td><asp:Button  ID="BtnÑ9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ9_Click" /></td>
+      <td><asp:Button  ID="BtnO9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO9_Click" /></td>
+      <td><asp:Button  ID="BtnP9" runat="server" Text="" CssClass="cuadros" OnClick="BtnP9_Click" /></td>
+      <td><asp:Button  ID="BtnQ9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ9_Click" /></td>
+      <td><asp:Button  ID="BtnR9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR9_Click" /></td>
+      <td><asp:Button  ID="BtnS9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS9_Click" /></td>
       <td><asp:Label ID="Label62" runat="server" Text="9"></asp:Label></td>
 
   </tr>
@@ -383,18 +390,18 @@
       <td><asp:Button  ID="BtnF10" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG10" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ10" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK10" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM10" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP10" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR10" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS10" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI10_Click" /></td>
+      <td><asp:Button  ID="BtnJ10" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ10_Click" /></td>
+      <td><asp:Button  ID="BtnK10" runat="server" Text="" CssClass="cuadros" OnClick="BtnK10_Click" /></td>
+      <td><asp:Button  ID="BtnL10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL10_Click" /></td>
+      <td><asp:Button  ID="BtnM10" runat="server" Text="" CssClass="cuadros" OnClick="BtnM10_Click" /></td>
+      <td><asp:Button  ID="BtnN10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN10_Click" /></td>
+      <td><asp:Button  ID="BtnÑ10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ10_Click" /></td>
+      <td><asp:Button  ID="BtnO10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO10_Click" /></td>
+      <td><asp:Button  ID="BtnP10" runat="server" Text="" CssClass="cuadros" OnClick="BtnP10_Click" /></td>
+      <td><asp:Button  ID="BtnQ10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ10_Click" /></td>
+      <td><asp:Button  ID="BtnR10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR10_Click" /></td>
+      <td><asp:Button  ID="BtnS10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS10_Click" /></td>
       <td><asp:Label ID="Label64" runat="server" Text="10"></asp:Label></td>
 
   </tr>
@@ -409,18 +416,18 @@
       <td><asp:Button  ID="BtnF11" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG11" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ11" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK11" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM11" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP11" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR11" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS11" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI11_Click" /></td>
+      <td><asp:Button  ID="BtnJ11" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ11_Click" /></td>
+      <td><asp:Button  ID="BtnK11" runat="server" Text="" CssClass="cuadros" OnClick="BtnK11_Click" /></td>
+      <td><asp:Button  ID="BtnL11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL11_Click" /></td>
+      <td><asp:Button  ID="BtnM11" runat="server" Text="" CssClass="cuadros" OnClick="BtnM11_Click" /></td>
+      <td><asp:Button  ID="BtnN11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN11_Click" /></td>
+      <td><asp:Button  ID="BtnÑ11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ11_Click" /></td>
+      <td><asp:Button  ID="BtnO11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO11_Click" /></td>
+      <td><asp:Button  ID="BtnP11" runat="server" Text="" CssClass="cuadros" OnClick="BtnP11_Click" /></td>
+      <td><asp:Button  ID="BtnQ11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ11_Click" /></td>
+      <td><asp:Button  ID="BtnR11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR11_Click" /></td>
+      <td><asp:Button  ID="BtnS11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS11_Click" /></td>
       <td><asp:Label ID="Label66" runat="server" Text="11"></asp:Label></td>
 
   </tr>
@@ -435,18 +442,18 @@
       <td><asp:Button  ID="BtnF12" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG12" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ12" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK12" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM12" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP12" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR12" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS12" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI12_Click" /></td>
+      <td><asp:Button  ID="BtnJ12" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ12_Click" /></td>
+      <td><asp:Button  ID="BtnK12" runat="server" Text="" CssClass="cuadros" OnClick="BtnK12_Click" /></td>
+      <td><asp:Button  ID="BtnL12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL12_Click" /></td>
+      <td><asp:Button  ID="BtnM12" runat="server" Text="" CssClass="cuadros" OnClick="BtnM12_Click" /></td>
+      <td><asp:Button  ID="BtnN12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN12_Click" /></td>
+      <td><asp:Button  ID="BtnÑ12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ12_Click" /></td>
+      <td><asp:Button  ID="BtnO12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO12_Click" /></td>
+      <td><asp:Button  ID="BtnP12" runat="server" Text="" CssClass="cuadros" OnClick="BtnP12_Click" /></td>
+      <td><asp:Button  ID="BtnQ12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ12_Click" /></td>
+      <td><asp:Button  ID="BtnR12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR12_Click" /></td>
+      <td><asp:Button  ID="BtnS12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS12_Click" /></td>
       <td><asp:Label ID="Label68" runat="server" Text="12"></asp:Label></td>
 
   </tr>
@@ -461,18 +468,18 @@
       <td><asp:Button  ID="BtnF13" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG13" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ13" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK13" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM13" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP13" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR13" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS13" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI13_Click" /></td>
+      <td><asp:Button  ID="BtnJ13" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ13_Click" /></td>
+      <td><asp:Button  ID="BtnK13" runat="server" Text="" CssClass="cuadros" OnClick="BtnK13_Click" /></td>
+      <td><asp:Button  ID="BtnL13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL13_Click" /></td>
+      <td><asp:Button  ID="BtnM13" runat="server" Text="" CssClass="cuadros" OnClick="BtnM13_Click" /></td>
+      <td><asp:Button  ID="BtnN13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN13_Click" /></td>
+      <td><asp:Button  ID="BtnÑ13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ13_Click" /></td>
+      <td><asp:Button  ID="BtnO13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO13_Click" /></td>
+      <td><asp:Button  ID="BtnP13" runat="server" Text="" CssClass="cuadros" OnClick="BtnP13_Click" /></td>
+      <td><asp:Button  ID="BtnQ13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ13_Click" /></td>
+      <td><asp:Button  ID="BtnR13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR13_Click" /></td>
+      <td><asp:Button  ID="BtnS13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS13_Click" /></td>
       <td><asp:Label ID="Label70" runat="server" Text="13"></asp:Label></td>
 
   </tr>
@@ -487,18 +494,18 @@
       <td><asp:Button  ID="BtnF14" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG14" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ14" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK14" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM14" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP14" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR14" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS14" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI14_Click" /></td>
+      <td><asp:Button  ID="BtnJ14" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ14_Click" /></td>
+      <td><asp:Button  ID="BtnK14" runat="server" Text="" CssClass="cuadros" OnClick="BtnK14_Click" /></td>
+      <td><asp:Button  ID="BtnL14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL14_Click" /></td>
+      <td><asp:Button  ID="BtnM14" runat="server" Text="" CssClass="cuadros" OnClick="BtnM14_Click" /></td>
+      <td><asp:Button  ID="BtnN14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN14_Click" /></td>
+      <td><asp:Button  ID="BtnÑ14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ14_Click" /></td>
+      <td><asp:Button  ID="BtnO14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO14_Click" /></td>
+      <td><asp:Button  ID="BtnP14" runat="server" Text="" CssClass="cuadros" OnClick="BtnP14_Click" /></td>
+      <td><asp:Button  ID="BtnQ14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ14_Click" /></td>
+      <td><asp:Button  ID="BtnR14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR14_Click" /></td>
+      <td><asp:Button  ID="BtnS14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS14_Click" /></td>
       <td><asp:Label ID="Label72" runat="server" Text="14"></asp:Label></td>
 
   </tr>
@@ -513,18 +520,18 @@
       <td><asp:Button  ID="BtnF15" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG15" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ15" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK15" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM15" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP15" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR15" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS15" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI15_Click" /></td>
+      <td><asp:Button  ID="BtnJ15" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ15_Click" /></td>
+      <td><asp:Button  ID="BtnK15" runat="server" Text="" CssClass="cuadros" OnClick="BtnK15_Click" /></td>
+      <td><asp:Button  ID="BtnL15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL15_Click" /></td>
+      <td><asp:Button  ID="BtnM15" runat="server" Text="" CssClass="cuadros" OnClick="BtnM15_Click" /></td>
+      <td><asp:Button  ID="BtnN15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN15_Click" /></td>
+      <td><asp:Button  ID="BtnÑ15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ15_Click" /></td>
+      <td><asp:Button  ID="BtnO15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO15_Click" /></td>
+      <td><asp:Button  ID="BtnP15" runat="server" Text="" CssClass="cuadros" OnClick="BtnP15_Click" /></td>
+      <td><asp:Button  ID="BtnQ15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ15_Click" /></td>
+      <td><asp:Button  ID="BtnR15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR15_Click" /></td>
+      <td><asp:Button  ID="BtnS15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS15_Click" /></td>
       <td><asp:Label ID="Label74" runat="server" Text="15"></asp:Label></td>
 
   </tr>
@@ -539,18 +546,18 @@
       <td><asp:Button  ID="BtnF16" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG16" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ16" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK16" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM16" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP16" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR16" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS16" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI16_Click" /></td>
+      <td><asp:Button  ID="BtnJ16" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ16_Click" /></td>
+      <td><asp:Button  ID="BtnK16" runat="server" Text="" CssClass="cuadros" OnClick="BtnK16_Click" /></td>
+      <td><asp:Button  ID="BtnL16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL16_Click" /></td>
+      <td><asp:Button  ID="BtnM16" runat="server" Text="" CssClass="cuadros" OnClick="BtnM16_Click" /></td>
+      <td><asp:Button  ID="BtnN16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN16_Click" /></td>
+      <td><asp:Button  ID="BtnÑ16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ16_Click" /></td>
+      <td><asp:Button  ID="BtnO16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO16_Click" /></td>
+      <td><asp:Button  ID="BtnP16" runat="server" Text="" CssClass="cuadros" OnClick="BtnP16_Click" /></td>
+      <td><asp:Button  ID="BtnQ16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ16_Click" /></td>
+      <td><asp:Button  ID="BtnR16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR16_Click" /></td>
+      <td><asp:Button  ID="BtnS16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS16_Click" /></td>
       <td><asp:Label ID="Label76" runat="server" Text="16"></asp:Label></td>
 
   </tr>
@@ -565,18 +572,18 @@
       <td><asp:Button  ID="BtnF17" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG17" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ17" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK17" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM17" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP17" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR17" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS17" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI17_Click" /></td>
+      <td><asp:Button  ID="BtnJ17" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ17_Click" /></td>
+      <td><asp:Button  ID="BtnK17" runat="server" Text="" CssClass="cuadros" OnClick="BtnK17_Click" /></td>
+      <td><asp:Button  ID="BtnL17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL17_Click" /></td>
+      <td><asp:Button  ID="BtnM17" runat="server" Text="" CssClass="cuadros" OnClick="BtnM17_Click" /></td>
+      <td><asp:Button  ID="BtnN17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN17_Click" /></td>
+      <td><asp:Button  ID="BtnÑ17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ17_Click" /></td>
+      <td><asp:Button  ID="BtnO17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO17_Click" /></td>
+      <td><asp:Button  ID="BtnP17" runat="server" Text="" CssClass="cuadros" OnClick="BtnP17_Click" /></td>
+      <td><asp:Button  ID="BtnQ17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ17_Click" /></td>
+      <td><asp:Button  ID="BtnR17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR17_Click" /></td>
+      <td><asp:Button  ID="BtnS17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS17_Click" /></td>
       <td><asp:Label ID="Label78" runat="server" Text="17"></asp:Label></td>
 
   </tr>
@@ -591,18 +598,18 @@
       <td><asp:Button  ID="BtnF18" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG18" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ18" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK18" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM18" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP18" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR18" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS18" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI18_Click" /></td>
+      <td><asp:Button  ID="BtnJ18" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ18_Click" /></td>
+      <td><asp:Button  ID="BtnK18" runat="server" Text="" CssClass="cuadros" OnClick="BtnK18_Click" /></td>
+      <td><asp:Button  ID="BtnL18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL18_Click" /></td>
+      <td><asp:Button  ID="BtnM18" runat="server" Text="" CssClass="cuadros" OnClick="BtnM18_Click" /></td>
+      <td><asp:Button  ID="BtnN18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN18_Click" /></td>
+      <td><asp:Button  ID="BtnÑ18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ18_Click" /></td>
+      <td><asp:Button  ID="BtnO18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO18_Click" /></td>
+      <td><asp:Button  ID="BtnP18" runat="server" Text="" CssClass="cuadros" OnClick="BtnP18_Click" /></td>
+      <td><asp:Button  ID="BtnQ18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ18_Click" /></td>
+      <td><asp:Button  ID="BtnR18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR18_Click" /></td>
+      <td><asp:Button  ID="BtnS18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS18_Click" /></td>
       <td><asp:Label ID="Label80" runat="server" Text="18"></asp:Label></td>
 
   </tr>
@@ -617,18 +624,18 @@
       <td><asp:Button  ID="BtnF19" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG19" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ19" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK19" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM19" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP19" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR19" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS19" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI19_Click" /></td>
+      <td><asp:Button  ID="BtnJ19" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ19_Click" /></td>
+      <td><asp:Button  ID="BtnK19" runat="server" Text="" CssClass="cuadros" OnClick="BtnK19_Click" /></td>
+      <td><asp:Button  ID="BtnL19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL19_Click" /></td>
+      <td><asp:Button  ID="BtnM19" runat="server" Text="" CssClass="cuadros" OnClick="BtnM19_Click" /></td>
+      <td><asp:Button  ID="BtnN19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN19_Click" /></td>
+      <td><asp:Button  ID="BtnÑ19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ19_Click" /></td>
+      <td><asp:Button  ID="BtnO19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO19_Click" /></td>
+      <td><asp:Button  ID="BtnP19" runat="server" Text="" CssClass="cuadros" OnClick="BtnP19_Click" /></td>
+      <td><asp:Button  ID="BtnQ19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ19_Click" /></td>
+      <td><asp:Button  ID="BtnR19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR19_Click" /></td>
+      <td><asp:Button  ID="BtnS19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS19_Click" /></td>
       <td><asp:Label ID="Label82" runat="server" Text="19"></asp:Label></td>
 
   </tr>
@@ -643,18 +650,18 @@
       <td><asp:Button  ID="BtnF20" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnG20" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnH20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnI20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnJ20" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtbK20" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnL20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnM20" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnN20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnÑ20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnO20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnP20" runat="server" Text="" CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnQ20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnR20" runat="server" Text=""  CssClass="cuadros" /></td>
-      <td><asp:Button  ID="BtnS20" runat="server" Text=""  CssClass="cuadros" /></td>
+      <td><asp:Button  ID="BtnI20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnI20_Click" /></td>
+      <td><asp:Button  ID="BtnJ20" runat="server" Text="" CssClass="cuadros" OnClick="BtnJ20_Click" /></td>
+      <td><asp:Button  ID="BtnK20" runat="server" Text="" CssClass="cuadros" OnClick="BtnK20_Click" /></td>
+      <td><asp:Button  ID="BtnL20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnL20_Click" /></td>
+      <td><asp:Button  ID="BtnM20" runat="server" Text="" CssClass="cuadros" OnClick="BtnM20_Click" /></td>
+      <td><asp:Button  ID="BtnN20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnN20_Click" /></td>
+      <td><asp:Button  ID="BtnÑ20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnÑ20_Click" /></td>
+      <td><asp:Button  ID="BtnO20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnO20_Click" /></td>
+      <td><asp:Button  ID="BtnP20" runat="server" Text="" CssClass="cuadros" OnClick="BtnP20_Click" /></td>
+      <td><asp:Button  ID="BtnQ20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ20_Click" /></td>
+      <td><asp:Button  ID="BtnR20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR20_Click" /></td>
+      <td><asp:Button  ID="BtnS20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS20_Click" /></td>
       <td><asp:Label ID="Label84" runat="server" Text="20"></asp:Label></td>
 
   </tr>

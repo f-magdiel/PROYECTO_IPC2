@@ -73,7 +73,7 @@ namespace PROYECTO1
         public ArrayList arrayColumna = new ArrayList();
         public ArrayList arrayColor = new ArrayList();
         public static string[,] tablero = new string[8, 8];
-        public static Button[,] tableroColor = new Button[8, 8];
+        public static Button[,] tableroColor = new Button[21, 21]; // array de botones de todo el tablero
 
         //para los colores que se seleccionaran
         public static ArrayList arrayJugador1 = new ArrayList();
@@ -88,79 +88,140 @@ namespace PROYECTO1
             }
             //para el tablero
 
-           
-            
-            //tableroColor[0, 0] = BtnA1;
-            //tableroColor[0, 1] = BtnB1;
-            //tableroColor[0, 2] = BtnC1;
-            //tableroColor[0, 3] = BtnD1;
-            //tableroColor[0, 4] = BtnE1;
-            //tableroColor[0, 5] = BtnF1;
-            //tableroColor[0, 6] = BtnG1;
-            //tableroColor[0, 7] = BtnH1;
 
-            //tableroColor[1, 0] = BtnA2;
-            //tableroColor[1, 1] = BtnB2;
-            //tableroColor[1, 2] = BtnC2;
-            //tableroColor[1, 3] = BtnD2;
-            //tableroColor[1, 4] = BtnE2;
-            //tableroColor[1, 5] = BtnF2;
-            //tableroColor[1, 6] = BtnG2;
-            //tableroColor[1, 7] = BtnH2;
 
-            //tableroColor[2, 0] = BtnA3;
-            //tableroColor[2, 1] = BtnB3;
-            //tableroColor[2, 2] = BtnC3;
-            //tableroColor[2, 3] = BtnD3;
-            //tableroColor[2, 4] = BtnE3;
-            //tableroColor[2, 5] = BtnF3;
-            //tableroColor[2, 6] = BtnG3;
-            //tableroColor[2, 7] = BtnH3;
+            tableroColor[0, 0] = BtnA1;
+            tableroColor[0, 1] = BtnB1;
+            tableroColor[0, 2] = BtnC1;
+            tableroColor[0, 3] = BtnD1;
+            tableroColor[0, 4] = BtnE1;
+            tableroColor[0, 5] = BtnF1;
+            tableroColor[0, 6] = BtnG1;
+            tableroColor[0, 7] = BtnH1;
+            tableroColor[0, 8] = BtnI1;
+            tableroColor[0, 9] = BtnJ1;
+            tableroColor[0, 10] = BtnK1;
+            tableroColor[0, 11] = BtnL1;
+            tableroColor[0, 12] = BtnM1;
+            tableroColor[0, 13] = BtnN1;
+            tableroColor[0, 14] = BtnÑ1;
+            tableroColor[0, 16] = BtnO1;
+            tableroColor[0, 17] = BtnP1;
+            tableroColor[0, 18] = BtnQ1;
+            tableroColor[0, 19] = BtnR1;
+            tableroColor[0, 20] = BtnS1;
 
-            //tableroColor[3, 0] = BtnA4;
-            //tableroColor[3, 1] = BtnB4;
-            //tableroColor[3, 2] = BtnC4;
-            //tableroColor[3, 3] = BtnD4;
-            //tableroColor[3, 4] = BtnE4;
-            //tableroColor[3, 5] = BtnF4;
-            //tableroColor[3, 6] = BtnG4;
-            //tableroColor[3, 7] = BtnH4;
+            tableroColor[1, 0] = BtnA2;
+            tableroColor[1, 1] = BtnB2;
+            tableroColor[1, 2] = BtnC2;
+            tableroColor[1, 3] = BtnD2;
+            tableroColor[1, 4] = BtnE2;
+            tableroColor[1, 5] = BtnF2;
+            tableroColor[1, 6] = BtnG2;
+            tableroColor[1, 7] = BtnH2;
+            tableroColor[1, 8] = BtnI2;
+            tableroColor[1, 9] = BtnJ2;
+            tableroColor[1, 10] = BtnK2;
+            tableroColor[1, 11] = BtnL2;
+            tableroColor[1, 12] = BtnM2;
+            tableroColor[1, 13] = BtnN2;
+            tableroColor[1, 14] = BtnÑ2;
+            tableroColor[1, 16] = BtnO2;
+            tableroColor[1, 17] = BtnP2;
+            tableroColor[1, 18] = BtnQ2;
+            tableroColor[1, 19] = BtnR2;
+            tableroColor[1, 20] = BtnS2;
 
-            //tableroColor[4, 0] = BtnA5;
-            //tableroColor[4, 1] = BtnB5;
-            //tableroColor[4, 2] = BtnC5;
-            //tableroColor[4, 3] = BtnD5;
-            //tableroColor[4, 4] = BtnE5;
-            //tableroColor[4, 5] = BtnF5;
-            //tableroColor[4, 6] = BtnG5;
-            //tableroColor[4, 7] = BtnH5;
 
-            //tableroColor[5, 0] = BtnA6;
-            //tableroColor[5, 1] = BtnB6;
-            //tableroColor[5, 2] = BtnC6;
-            //tableroColor[5, 3] = BtnD6;
-            //tableroColor[5, 4] = BtnE6;
-            //tableroColor[5, 5] = BtnF6;
-            //tableroColor[5, 6] = BtnG6;
-            //tableroColor[5, 7] = BtnH6;
+            tableroColor[2, 0] = BtnA3;
+            tableroColor[2, 1] = BtnB3;
+            tableroColor[2, 2] = BtnC3;
+            tableroColor[2, 3] = BtnD3;
+            tableroColor[2, 4] = BtnE3;
+            tableroColor[2, 5] = BtnF3;
+            tableroColor[2, 6] = BtnG3;
+            tableroColor[2, 7] = BtnH3;
+            tableroColor[2, 8] = BtnI3;
+            tableroColor[2, 9] = BtnJ3;
+            tableroColor[2, 10] = BtnK3;
+            tableroColor[2, 11] = BtnL3;
+            tableroColor[2, 12] = BtnM3;
+            tableroColor[2, 13] = BtnN3;
+            tableroColor[2, 14] = BtnÑ3;
+            tableroColor[2, 16] = BtnO3;
+            tableroColor[2, 17] = BtnP3;
+            tableroColor[2, 18] = BtnQ3;
+            tableroColor[2, 19] = BtnR3;
+            tableroColor[2, 20] = BtnS3;
 
-            //tableroColor[6, 0] = BtnA7;
-            //tableroColor[6, 1] = BtnB7;
-            //tableroColor[6, 2] = BtnC7;
-            //tableroColor[6, 3] = BtnD7;
-            //tableroColor[6, 4] = BtnE7;
-            //tableroColor[6, 5] = BtnF7;
-            //tableroColor[6, 6] = BtnG7;
-            //tableroColor[6, 7] = BtnH7;
+            tableroColor[3, 0] = BtnA4;
+            tableroColor[3, 1] = BtnB4;
+            tableroColor[3, 2] = BtnC4;
+            tableroColor[3, 3] = BtnD4;
+            tableroColor[3, 4] = BtnE4;
+            tableroColor[3, 5] = BtnF4;
+            tableroColor[3, 6] = BtnG4;
+            tableroColor[3, 7] = BtnH4;
+            tableroColor[3, 8] = BtnI4;
+            tableroColor[3, 9] = BtnJ4;
+            tableroColor[3, 10] = BtnK4;
+            tableroColor[3, 11] = BtnL4;
+            tableroColor[3, 12] = BtnM4;
+            tableroColor[3, 13] = BtnN4;
+            tableroColor[3, 14] = BtnÑ4;
+            tableroColor[3, 16] = BtnO4;
+            tableroColor[3, 17] = BtnP4;
+            tableroColor[3, 18] = BtnQ4;
+            tableroColor[3, 19] = BtnR4;
+            tableroColor[3, 20] = BtnS4;
 
-            //tableroColor[7, 0] = BtnA8;
-            //tableroColor[7, 1] = BtnB8;
-            //tableroColor[7, 2] = BtnC8;
-            //tableroColor[7, 3] = BtnD8;
-            //tableroColor[7, 4] = BtnE8;
-            //tableroColor[7, 5] = BtnF8;
-            //tableroColor[7, 6] = BtnG8;
-            //tableroColor[7, 7] = BtnH8;
+            tableroColor[4, 0] = BtnA5;
+            tableroColor[4, 1] = BtnB5;
+            tableroColor[4, 2] = BtnC5;
+            tableroColor[4, 3] = BtnD5;
+            tableroColor[4, 4] = BtnE5;
+            tableroColor[4, 5] = BtnF5;
+            tableroColor[4, 6] = BtnG5;
+            tableroColor[4, 7] = BtnH5;
+            tableroColor[4, 8] = BtnI5;
+            tableroColor[4, 9] = BtnJ5;
+            tableroColor[4, 10] = BtnK5;
+            tableroColor[4, 11] = BtnL5;
+            tableroColor[4, 12] = BtnM5;
+            tableroColor[4, 13] = BtnN5;
+            tableroColor[4, 14] = BtnÑ5;
+            tableroColor[4, 16] = BtnO5;
+            tableroColor[4, 17] = BtnP5;
+            tableroColor[4, 18] = BtnQ5;
+            tableroColor[4, 19] = BtnR5;
+            tableroColor[4, 20] = BtnS5;
+
+            tableroColor[5, 0] = BtnA6;
+            tableroColor[5, 1] = BtnB6;
+            tableroColor[5, 2] = BtnC6;
+            tableroColor[5, 3] = BtnD6;
+            tableroColor[5, 4] = BtnE6;
+            tableroColor[5, 5] = BtnF6;
+            tableroColor[5, 6] = BtnG6;
+            tableroColor[5, 7] = BtnH6;
+
+            tableroColor[6, 0] = BtnA7;
+            tableroColor[6, 1] = BtnB7;
+            tableroColor[6, 2] = BtnC7;
+            tableroColor[6, 3] = BtnD7;
+            tableroColor[6, 4] = BtnE7;
+            tableroColor[6, 5] = BtnF7;
+            tableroColor[6, 6] = BtnG7;
+            tableroColor[6, 7] = BtnH7;
+
+            tableroColor[7, 0] = BtnA8;
+            tableroColor[7, 1] = BtnB8;
+            tableroColor[7, 2] = BtnC8;
+            tableroColor[7, 3] = BtnD8;
+            tableroColor[7, 4] = BtnE8;
+            tableroColor[7, 5] = BtnF8;
+            tableroColor[7, 6] = BtnG8;
+            tableroColor[7, 7] = BtnH8;
 
 
 
@@ -6539,6 +6600,11 @@ namespace PROYECTO1
             
         }
 
+        protected void BtnI1_Click(object sender, EventArgs e)
+        {
+
+        }
+       
         protected void BtnA2_Click(object sender, EventArgs e)
         {
             
@@ -6876,6 +6942,1206 @@ namespace PROYECTO1
                
             }
            
+        }
+
+        protected void BtnJ1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnI20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnJ20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnK20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnL20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnM20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnN20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnÑ20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnO20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnP20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnQ20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnR20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnS20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ButtonModalidad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

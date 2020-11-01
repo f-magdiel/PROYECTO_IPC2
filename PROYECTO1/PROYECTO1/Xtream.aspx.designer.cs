@@ -69,6 +69,24 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label LabelTiempoJ2;
 
         /// <summary>
+        /// Control DropDownListModalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListModalidad;
+
+        /// <summary>
+        /// Control ButtonModalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonModalidad;
+
+        /// <summary>
         /// Control Label87.
         /// </summary>
         /// <remarks>
@@ -636,13 +654,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ1;
 
         /// <summary>
-        /// Control BtbK1.
+        /// Control BtnK1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK1;
+        protected global::System.Web.UI.WebControls.Button BtnK1;
 
         /// <summary>
         /// Control BtnL1.
@@ -1032,13 +1050,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ3;
 
         /// <summary>
-        /// Control BtbK3.
+        /// Control BtnK3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK3;
+        protected global::System.Web.UI.WebControls.Button BtnK3;
 
         /// <summary>
         /// Control BtnL3.
@@ -1230,13 +1248,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ4;
 
         /// <summary>
-        /// Control BtbK4.
+        /// Control BtnK4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK4;
+        protected global::System.Web.UI.WebControls.Button BtnK4;
 
         /// <summary>
         /// Control BtnL4.
@@ -1428,13 +1446,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ5;
 
         /// <summary>
-        /// Control BtbK5.
+        /// Control BtnK5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK5;
+        protected global::System.Web.UI.WebControls.Button BtnK5;
 
         /// <summary>
         /// Control BtnL5.
@@ -1626,13 +1644,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ6;
 
         /// <summary>
-        /// Control BtbK6.
+        /// Control BtnK6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK6;
+        protected global::System.Web.UI.WebControls.Button BtnK6;
 
         /// <summary>
         /// Control BtnL6.
@@ -1824,13 +1842,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ7;
 
         /// <summary>
-        /// Control BtbK7.
+        /// Control BtnK7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK7;
+        protected global::System.Web.UI.WebControls.Button BtnK7;
 
         /// <summary>
         /// Control BtnL7.
@@ -2022,13 +2040,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ8;
 
         /// <summary>
-        /// Control BtbK8.
+        /// Control BtnK8.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK8;
+        protected global::System.Web.UI.WebControls.Button BtnK8;
 
         /// <summary>
         /// Control BtnL8.
@@ -2220,13 +2238,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ9;
 
         /// <summary>
-        /// Control BtbK9.
+        /// Control BtnK9.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK9;
+        protected global::System.Web.UI.WebControls.Button BtnK9;
 
         /// <summary>
         /// Control BtnL9.
@@ -2418,13 +2436,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ10;
 
         /// <summary>
-        /// Control BtbK10.
+        /// Control BtnK10.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK10;
+        protected global::System.Web.UI.WebControls.Button BtnK10;
 
         /// <summary>
         /// Control BtnL10.
@@ -2616,13 +2634,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ11;
 
         /// <summary>
-        /// Control BtbK11.
+        /// Control BtnK11.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK11;
+        protected global::System.Web.UI.WebControls.Button BtnK11;
 
         /// <summary>
         /// Control BtnL11.
@@ -2814,13 +2832,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ12;
 
         /// <summary>
-        /// Control BtbK12.
+        /// Control BtnK12.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK12;
+        protected global::System.Web.UI.WebControls.Button BtnK12;
 
         /// <summary>
         /// Control BtnL12.
@@ -3012,13 +3030,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ13;
 
         /// <summary>
-        /// Control BtbK13.
+        /// Control BtnK13.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK13;
+        protected global::System.Web.UI.WebControls.Button BtnK13;
 
         /// <summary>
         /// Control BtnL13.
@@ -3210,13 +3228,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ14;
 
         /// <summary>
-        /// Control BtbK14.
+        /// Control BtnK14.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK14;
+        protected global::System.Web.UI.WebControls.Button BtnK14;
 
         /// <summary>
         /// Control BtnL14.
@@ -3408,13 +3426,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ15;
 
         /// <summary>
-        /// Control BtbK15.
+        /// Control BtnK15.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK15;
+        protected global::System.Web.UI.WebControls.Button BtnK15;
 
         /// <summary>
         /// Control BtnL15.
@@ -3606,13 +3624,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ16;
 
         /// <summary>
-        /// Control BtbK16.
+        /// Control BtnK16.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK16;
+        protected global::System.Web.UI.WebControls.Button BtnK16;
 
         /// <summary>
         /// Control BtnL16.
@@ -3804,13 +3822,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ17;
 
         /// <summary>
-        /// Control BtbK17.
+        /// Control BtnK17.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK17;
+        protected global::System.Web.UI.WebControls.Button BtnK17;
 
         /// <summary>
         /// Control BtnL17.
@@ -4002,13 +4020,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ18;
 
         /// <summary>
-        /// Control BtbK18.
+        /// Control BtnK18.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK18;
+        protected global::System.Web.UI.WebControls.Button BtnK18;
 
         /// <summary>
         /// Control BtnL18.
@@ -4200,13 +4218,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ19;
 
         /// <summary>
-        /// Control BtbK19.
+        /// Control BtnK19.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK19;
+        protected global::System.Web.UI.WebControls.Button BtnK19;
 
         /// <summary>
         /// Control BtnL19.
@@ -4398,13 +4416,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnJ20;
 
         /// <summary>
-        /// Control BtbK20.
+        /// Control BtnK20.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtbK20;
+        protected global::System.Web.UI.WebControls.Button BtnK20;
 
         /// <summary>
         /// Control BtnL20.
