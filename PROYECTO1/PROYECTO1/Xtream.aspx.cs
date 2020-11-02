@@ -7189,144 +7189,405 @@ namespace PROYECTO1
                 TableroCompleto.Rows[i].Visible = false;
             }
 
-           
+            TableroCompleto.Align = "Center";
 
+            //metodo para habilitar los 4 botones en medio
+            habilitarLosCuatro(filaTamaño, columnaTamaño);
         }
 
-        public void habilitarLosCuatro(int fil, int col)
+        public void habilitarLosCuatro(int filaObtenido, int columnaObtenido)
         {
-            string opcion = fila.ToString() + "-" + col.ToString();
+            string opcion = filaObtenido.ToString() + "-" + columnaObtenido.ToString();
 
             switch (opcion)
             {
+                
                 case "6-6":
+                    BtnC3.Enabled = true;
+                    BtnD3.Enabled = true;
+                    BtnC4.Enabled = true;
+                    BtnD4.Enabled = true;
                     break;
                 case "6-8":
+                    BtnD3.Enabled = true;
+                    BtnE3.Enabled = true;
+                    BtnD4.Enabled = true;
+                    BtnE4.Enabled = true;
                     break;
                 case "6-10":
+                    BtnE3.Enabled = true;
+                    BtnF3.Enabled = true;
+                    BtnE4.Enabled = true;
+                    BtnF4.Enabled = true;
                     break;
                 case "6-12":
+                    BtnF3.Enabled = true;
+                    BtnG3.Enabled = true;
+                    BtnF4.Enabled = true;
+                    BtnG4.Enabled = true;
                     break;
                 case "6-14":
+                    BtnG3.Enabled = true;
+                    BtnH3.Enabled = true;
+                    BtnG4.Enabled = true;
+                    BtnH4.Enabled = true;
                     break;
                 case "6-16":
+                    BtnH3.Enabled = true;
+                    BtnI3.Enabled = true;
+                    BtnH4.Enabled = true;
+                    BtnI4.Enabled = true;
                     break;
                 case "6-18":
+                    BtnI3.Enabled = true;
+                    BtnJ3.Enabled = true;
+                    BtnI4.Enabled = true;
+                    BtnJ4.Enabled = true;
                     break;
                 case "6-20":
+                    BtnJ3.Enabled = true;
+                    BtnK3.Enabled = true;
+                    BtnJ4.Enabled = true;
+                    BtnK4.Enabled = true;
                     break;
                 case "8-6":
+                    BtnC4.Enabled = true;
+                    BtnD4.Enabled = true;
+                    BtnC5.Enabled = true;
+                    BtnD5.Enabled = true;
                     break;
                 case "8-8":
+                    BtnD4.Enabled = true;
+                    BtnE4.Enabled = true;
+                    BtnD5.Enabled = true;
+                    BtnE5.Enabled = true;
                     break;
                 case "8-10":
+                    BtnE4.Enabled = true;
+                    BtnF4.Enabled = true;
+                    BtnE5.Enabled = true;
+                    BtnF5.Enabled = true;
                     break;
                 case "8-12":
+                    BtnF4.Enabled = true;
+                    BtnG4.Enabled = true;
+                    BtnF5.Enabled = true;
+                    BtnG5.Enabled = true;
                     break;
                 case "8-14":
+                    BtnG4.Enabled = true;
+                    BtnH4.Enabled = true;
+                    BtnG5.Enabled = true;
+                    BtnH5.Enabled = true;
                     break;
                 case "8-16":
+                    BtnH4.Enabled = true;
+                    BtnI4.Enabled = true;
+                    BtnH5.Enabled = true;
+                    BtnI5.Enabled = true;
                     break;
                 case "8-18":
+                    BtnI4.Enabled = true;
+                    BtnJ4.Enabled = true;
+                    BtnI5.Enabled = true;
+                    BtnJ5.Enabled = true;
                     break;
                 case "8-20":
+                    BtnJ4.Enabled = true;
+                    BtnK4.Enabled = true;
+                    BtnJ5.Enabled = true;
+                    BtnK5.Enabled = true;
                     break;
                 case "10-6":
+                    BtnC5.Enabled = true;
+                    BtnD5.Enabled = true;
+                    BtnC6.Enabled = true;
+                    BtnD6.Enabled = true;
                     break;
                 case "10-8":
+                    BtnD5.Enabled = true;
+                    BtnE5.Enabled = true;
+                    BtnD6.Enabled = true;
+                    BtnE6.Enabled = true;
                     break;
                 case "10-10":
+                    BtnE5.Enabled = true;
+                    BtnF5.Enabled = true;
+                    BtnE6.Enabled = true;
+                    BtnF6.Enabled = true;
                     break;
                 case "10-12":
+                    BtnF5.Enabled = true;
+                    BtnG5.Enabled = true;
+                    BtnF6.Enabled = true;
+                    BtnG6.Enabled = true;
                     break;
                 case "10-14":
+                    BtnG5.Enabled = true;
+                    BtnH5.Enabled = true;
+                    BtnG6.Enabled = true;
+                    BtnH6.Enabled = true;
                     break;
                 case "10-16":
+                    BtnH5.Enabled = true;
+                    BtnI5.Enabled = true;
+                    BtnH6.Enabled = true;
+                    BtnI6.Enabled = true;
                     break;
                 case "10-18":
+                    BtnI5.Enabled = true;
+                    BtnJ5.Enabled = true;
+                    BtnI6.Enabled = true;
+                    BtnJ6.Enabled = true;
                     break;
                 case "10-20":
+                    BtnJ5.Enabled = true;
+                    BtnK5.Enabled = true;
+                    BtnJ6.Enabled = true;
+                    BtnK6.Enabled = true;
                     break;
                 case "12-6":
+                    BtnC6.Enabled = true;
+                    BtnD6.Enabled = true;
+                    BtnC7.Enabled = true;
+                    BtnD7.Enabled = true;
                     break;
                 case "12-8":
+                    BtnD6.Enabled = true;
+                    BtnE6.Enabled = true;
+                    BtnD7.Enabled = true;
+                    BtnE7.Enabled = true;
                     break;
                 case "12-10":
+                    BtnE6.Enabled = true;
+                    BtnF6.Enabled = true;
+                    BtnE7.Enabled = true;
+                    BtnF7.Enabled = true;
                     break;
                 case "12-12":
+                    BtnF6.Enabled = true;
+                    BtnG6.Enabled = true;
+                    BtnF7.Enabled = true;
+                    BtnG7.Enabled = true;
                     break;
                 case "12-14":
+                    BtnG6.Enabled = true;
+                    BtnH6.Enabled = true;
+                    BtnG7.Enabled = true;
+                    BtnH7.Enabled = true;
                     break;
                 case "12-16":
+                    BtnH6.Enabled = true;
+                    BtnI6.Enabled = true;
+                    BtnH7.Enabled = true;
+                    BtnI7.Enabled = true;
                     break;
                 case "12-18":
+                    BtnI6.Enabled = true;
+                    BtnJ6.Enabled = true;
+                    BtnI7.Enabled = true;
+                    BtnJ7.Enabled = true;
                     break;
                 case "12-20":
+                    BtnJ6.Enabled = true;
+                    BtnK6.Enabled = true;
+                    BtnJ7.Enabled = true;
+                    BtnK7.Enabled = true;
                     break;
                 case "14-6":
+                    BtnC7.Enabled = true;
+                    BtnD7.Enabled = true;
+                    BtnC8.Enabled = true;
+                    BtnD8.Enabled = true;
                     break;
                 case "14-8":
+                    BtnD7.Enabled = true;
+                    BtnE7.Enabled = true;
+                    BtnD8.Enabled = true;
+                    BtnE8.Enabled = true;
                     break;
                 case "14-10":
+                    BtnE7.Enabled = true;
+                    BtnF7.Enabled = true;
+                    BtnE8.Enabled = true;
+                    BtnF8.Enabled = true;
                     break;
                 case "14-12":
+                    BtnF7.Enabled = true;
+                    BtnG7.Enabled = true;
+                    BtnF8.Enabled = true;
+                    BtnG8.Enabled = true;
                     break;
                 case "14-14":
+                    BtnG7.Enabled = true;
+                    BtnH7.Enabled = true;
+                    BtnG8.Enabled = true;
+                    BtnH8.Enabled = true;
                     break;
                 case "14-16":
+                    BtnH7.Enabled = true;
+                    BtnI7.Enabled = true;
+                    BtnH8.Enabled = true;
+                    BtnI8.Enabled = true;
                     break;
                 case "14-18":
+                    BtnI7.Enabled = true;
+                    BtnJ7.Enabled = true;
+                    BtnI8.Enabled = true;
+                    BtnJ8.Enabled = true;
                     break;
                 case "14-20":
+                    BtnJ7.Enabled = true;
+                    BtnK7.Enabled = true;
+                    BtnJ8.Enabled = true;
+                    BtnK8.Enabled = true;
                     break;
                 case "16-6":
+                    BtnC8.Enabled = true;
+                    BtnD8.Enabled = true;
+                    BtnC9.Enabled = true;
+                    BtnD9.Enabled = true;
                     break;
                 case "16-8":
+                    BtnD8.Enabled = true;
+                    BtnE8.Enabled = true;
+                    BtnD9.Enabled = true;
+                    BtnE9.Enabled = true;
                     break;
                 case "16-10":
+                    BtnE8.Enabled = true;
+                    BtnF8.Enabled = true;
+                    BtnE9.Enabled = true;
+                    BtnF9.Enabled = true;
                     break;
                 case "16-12":
+                    BtnF8.Enabled = true;
+                    BtnG8.Enabled = true;
+                    BtnF9.Enabled = true;
+                    BtnG9.Enabled = true;
                     break;
                 case "16-14":
+                    BtnG8.Enabled = true;
+                    BtnH8.Enabled = true;
+                    BtnG9.Enabled = true;
+                    BtnH9.Enabled = true;
                     break;
                 case "16-16":
+                    BtnH8.Enabled = true;
+                    BtnI8.Enabled = true;
+                    BtnH9.Enabled = true;
+                    BtnI9.Enabled = true;
                     break;
                 case "16-18":
+                    BtnI8.Enabled = true;
+                    BtnJ8.Enabled = true;
+                    BtnI9.Enabled = true;
+                    BtnJ9.Enabled = true;
                     break;
                 case "16-20":
+                    BtnJ8.Enabled = true;
+                    BtnK8.Enabled = true;
+                    BtnJ9.Enabled = true;
+                    BtnK9.Enabled = true;
                     break;
                 case "18-6":
+                    BtnC9.Enabled = true;
+                    BtnD9.Enabled = true;
+                    BtnC10.Enabled = true;
+                    BtnD10.Enabled = true;
                     break;
                 case "18-8":
+                    BtnD9.Enabled = true;
+                    BtnE9.Enabled = true;
+                    BtnD10.Enabled = true;
+                    BtnE10.Enabled = true;
                     break;
                 case "18-10":
+                    BtnE9.Enabled = true;
+                    BtnF9.Enabled = true;
+                    BtnE10.Enabled = true;
+                    BtnF10.Enabled = true;
                     break;
                 case "18-12":
+                    BtnF9.Enabled = true;
+                    BtnG9.Enabled = true;
+                    BtnF10.Enabled = true;
+                    BtnG10.Enabled = true;
                     break;
                 case "18-14":
+                    BtnG9.Enabled = true;
+                    BtnH9.Enabled = true;
+                    BtnG10.Enabled = true;
+                    BtnH10.Enabled = true;
                     break;
                 case "18-16":
+                    BtnH9.Enabled = true;
+                    BtnI9.Enabled = true;
+                    BtnH10.Enabled = true;
+                    BtnI10.Enabled = true;
                     break;
                 case "18-18":
+                    BtnI9.Enabled = true;
+                    BtnJ9.Enabled = true;
+                    BtnI10.Enabled = true;
+                    BtnJ10.Enabled = true;
                     break;
                 case "18-20":
+                    BtnJ9.Enabled = true;
+                    BtnK9.Enabled = true;
+                    BtnJ10.Enabled = true;
+                    BtnK10.Enabled = true;
                     break;
                 case "20-6":
+                    BtnC10.Enabled = true;
+                    BtnD10.Enabled = true;
+                    BtnC11.Enabled = true;
+                    BtnD11.Enabled = true;
                     break;
                 case "20-8":
+                    BtnD10.Enabled = true;
+                    BtnE10.Enabled = true;
+                    BtnD11.Enabled = true;
+                    BtnE11.Enabled = true;
                     break;
                 case "20-10":
+                    BtnE10.Enabled = true;
+                    BtnF10.Enabled = true;
+                    BtnE11.Enabled = true;
+                    BtnF11.Enabled = true;
                     break;
                 case "20-12":
+                    BtnF10.Enabled = true;
+                    BtnG10.Enabled = true;
+                    BtnF11.Enabled = true;
+                    BtnG11.Enabled = true;
                     break;
                 case "20-14":
+                    BtnG10.Enabled = true;
+                    BtnH10.Enabled = true;
+                    BtnG11.Enabled = true;
+                    BtnH11.Enabled = true;
                     break;
                 case "20-16":
+                    BtnH10.Enabled = true;
+                    BtnI10.Enabled = true;
+                    BtnH11.Enabled = true;
+                    BtnI11.Enabled = true;
                     break;
                 case "20-18":
+                    BtnI10.Enabled = true;
+                    BtnJ10.Enabled = true;
+                    BtnI11.Enabled = true;
+                    BtnJ11.Enabled = true;
                     break;
                 case "20-20":
+                    BtnJ10.Enabled = true;
+                    BtnK10.Enabled = true;
+                    BtnJ11.Enabled = true;
+                    BtnK11.Enabled = true;
                     break;
+               
+
             }
         }
         
