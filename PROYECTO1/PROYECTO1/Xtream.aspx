@@ -119,26 +119,26 @@
   <tr>
 
        <td><asp:Label ID="Label10" runat="server" Text=" "></asp:Label></td>
-       <td><asp:Label ID="Label1" runat="server" Text="A"></asp:Label></td>
-       <td><asp:Label ID="Label2" runat="server" Text="B"></asp:Label></td>
-       <td><asp:Label ID="Label3" runat="server" Text="C"></asp:Label></td>
-       <td><asp:Label ID="Label4" runat="server" Text="D"></asp:Label></td>
-       <td><asp:Label ID="Label5" runat="server" Text="E"></asp:Label></td>
-       <td><asp:Label ID="Label6" runat="server" Text="F"></asp:Label></td>
-       <td><asp:Label ID="Label7" runat="server" Text="G"></asp:Label></td>
-       <td><asp:Label ID="Label8" runat="server" Text="H"></asp:Label></td>
-       <td><asp:Label ID="Label37" runat="server" Text="I"></asp:Label></td>
-       <td><asp:Label ID="Label38" runat="server" Text="J"></asp:Label></td>
-       <td><asp:Label ID="Label39" runat="server" Text="K"></asp:Label></td>
-       <td><asp:Label ID="Label40" runat="server" Text="L"></asp:Label></td>
-       <td><asp:Label ID="Label41" runat="server" Text="M"></asp:Label></td>
-       <td><asp:Label ID="Label42" runat="server" Text="N"></asp:Label></td>
-       <td><asp:Label ID="Label43" runat="server" Text="Ñ"></asp:Label></td>
-       <td><asp:Label ID="Label44" runat="server" Text="O"></asp:Label></td>
-       <td><asp:Label ID="Label45" runat="server" Text="P"></asp:Label></td>
-       <td><asp:Label ID="Label46" runat="server" Text="Q"></asp:Label></td>
-       <td><asp:Label ID="Label47" runat="server" Text="R"></asp:Label></td>
-       <td><asp:Label ID="Label48" runat="server" Text="S"></asp:Label></td>
+       <td><asp:Label ID="LabelAS" runat="server" Text="A"></asp:Label></td>
+       <td><asp:Label ID="LabelBS" runat="server" Text="B"></asp:Label></td>
+       <td><asp:Label ID="LabelCS" runat="server" Text="C"></asp:Label></td>
+       <td><asp:Label ID="LabelDS" runat="server" Text="D"></asp:Label></td>
+       <td><asp:Label ID="LabelES" runat="server" Text="E"></asp:Label></td>
+       <td><asp:Label ID="LabelFS" runat="server" Text="F"></asp:Label></td>
+       <td><asp:Label ID="LabelGS" runat="server" Text="G"></asp:Label></td>
+       <td><asp:Label ID="LabelHS" runat="server" Text="H"></asp:Label></td>
+       <td><asp:Label ID="LabelIS" runat="server" Text="I"></asp:Label></td>
+       <td><asp:Label ID="LabelJS" runat="server" Text="J"></asp:Label></td>
+       <td><asp:Label ID="LabelKS" runat="server" Text="K"></asp:Label></td>
+       <td><asp:Label ID="LabelLS" runat="server" Text="L"></asp:Label></td>
+       <td><asp:Label ID="LabelMS" runat="server" Text="M"></asp:Label></td>
+       <td><asp:Label ID="LabelNS" runat="server" Text="N"></asp:Label></td>
+       <td><asp:Label ID="LabelÑS" runat="server" Text="Ñ"></asp:Label></td>
+       <td><asp:Label ID="LabelOS" runat="server" Text="O"></asp:Label></td>
+       <td><asp:Label ID="LabelPS" runat="server" Text="P"></asp:Label></td>
+       <td><asp:Label ID="LabelQS" runat="server" Text="Q"></asp:Label></td>
+       <td><asp:Label ID="LabelRS" runat="server" Text="R"></asp:Label></td>
+       <td><asp:Label ID="LabelSS" runat="server" Text="S"></asp:Label></td>
        <td><asp:Label ID="Label9" runat="server" Text=" "></asp:Label></td>
       
     
@@ -146,7 +146,7 @@
   </tr>
      <tr>
 
-      <td><asp:Label ID="Label11" runat="server" Text="1 "></asp:Label></td>
+      <td><asp:Label ID="LabelI1" runat="server" Text="1 "></asp:Label></td>
       <td><asp:Button Cssclass="cuadros" ID="BtnA1" runat="server" Text="" OnClick="BtnA1_Click" /></td>
       <td><asp:Button  ID="BtnB1" runat="server" Text="" OnClick="BtnB1_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC1" runat="server" Text="" OnClick="BtnC1_Click" CssClass="cuadros" /></td>
@@ -167,12 +167,12 @@
       <td><asp:Button  ID="BtnQ1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ1_Click" /></td>
       <td><asp:Button  ID="BtnR1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR1_Click" /></td>
       <td><asp:Button  ID="BtnS1" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS1_Click" /></td>
-      <td><asp:Label ID="Label12" runat="server" Text="1"></asp:Label></td>
+      <td><asp:Label ID="LabelD1" runat="server" Text="1"></asp:Label></td>
 
   </tr>
      <tr>
 
-     <td><asp:Label ID="Label13" runat="server" Text="2 "></asp:Label></td>
+     <td><asp:Label ID="LabelI2" runat="server" Text="2 "></asp:Label></td>
       <td><asp:Button  ID="BtnA2" runat="server" Text="" OnClick="BtnA2_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB2" runat="server" Text="" OnClick="BtnB2_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC2" runat="server" Text="" OnClick="BtnC2_Click" CssClass="cuadros" /></td>
@@ -193,12 +193,12 @@
       <td><asp:Button  ID="BtnQ2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ2_Click" /></td>
       <td><asp:Button  ID="BtnR2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR2_Click" /></td>
       <td><asp:Button  ID="BtnS2" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS2_Click" /></td>
-      <td><asp:Label ID="Label14" runat="server" Text="2"></asp:Label></td>
+      <td><asp:Label ID="LabelD2" runat="server" Text="2"></asp:Label></td>
 
   </tr>
      <tr>
 
-     <td><asp:Label ID="Label15" runat="server" Text="3 "></asp:Label></td>
+     <td><asp:Label ID="LabelI3" runat="server" Text="3 "></asp:Label></td>
       <td><asp:Button  ID="BtnA3" runat="server" Text="" OnClick="BtnA3_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB3" runat="server" Text="" OnClick="BtnB3_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC3" runat="server" Text="" OnClick="BtnC3_Click" CssClass="cuadros" /></td>
@@ -219,12 +219,12 @@
       <td><asp:Button  ID="BtnQ3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ3_Click" /></td>
       <td><asp:Button  ID="BtnR3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR3_Click" /></td>
       <td><asp:Button  ID="BtnS3" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS3_Click" /></td>
-      <td><asp:Label ID="Label16" runat="server" Text="3"></asp:Label></td>
+      <td><asp:Label ID="LabelD3" runat="server" Text="3"></asp:Label></td>
 
   </tr>
      <tr>
 
-    <td><asp:Label ID="Label17" runat="server" Text="4 "></asp:Label></td>
+    <td><asp:Label ID="LabelI4" runat="server" Text="4 "></asp:Label></td>
       <td><asp:Button  ID="BtnA4" runat="server" Text="" OnClick="BtnA4_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB4" runat="server" Text="" OnClick="BtnB4_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC4" runat="server" Text="" OnClick="BtnC4_Click" CssClass="cuadros" /></td>
@@ -245,12 +245,12 @@
       <td><asp:Button  ID="BtnQ4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ4_Click" /></td>
       <td><asp:Button  ID="BtnR4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR4_Click" /></td>
       <td><asp:Button  ID="BtnS4" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS4_Click" /></td>
-      <td><asp:Label  ID="Label18" runat="server" Text="4"></asp:Label></td>
+      <td><asp:Label  ID="LabelD4" runat="server" Text="4"></asp:Label></td>
 
   </tr>
      <tr>
 
-    <td><asp:Label ID="Label19" runat="server" Text="5 "></asp:Label></td>
+    <td><asp:Label ID="LabelI5" runat="server" Text="5 "></asp:Label></td>
       <td><asp:Button ID="BtnA5" runat="server" Text="" OnClick="BtnA5_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB5" runat="server" Text="" OnClick="BtnB5_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC5" runat="server" Text="" OnClick="BtnC5_Click" CssClass="cuadros" /></td>
@@ -271,11 +271,11 @@
       <td><asp:Button  ID="BtnQ5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ5_Click" /></td>
       <td><asp:Button  ID="BtnR5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR5_Click" /></td>
       <td><asp:Button  ID="BtnS5" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS5_Click" /></td>
-      <td><asp:Label ID="Label20" runat="server" Text="5"></asp:Label></td>
+      <td><asp:Label ID="LabelD5" runat="server" Text="5"></asp:Label></td>
   </tr>
      <tr>
 
-    <td><asp:Label ID="Label21" runat="server" Text="6 "></asp:Label></td>
+    <td><asp:Label ID="LabelI6" runat="server" Text="6 "></asp:Label></td>
       <td><asp:Button ID="BtnA6" runat="server" Text="" OnClick="BtnA6_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB6" runat="server" Text="" OnClick="BtnB6_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC6" runat="server" Text="" OnClick="BtnC6_Click" CssClass="cuadros" /></td>
@@ -296,12 +296,12 @@
       <td><asp:Button  ID="BtnQ6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ6_Click" /></td>
       <td><asp:Button  ID="BtnR6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR6_Click" /></td>
       <td><asp:Button  ID="BtnS6" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS6_Click" /></td>
-      <td><asp:Label ID="Label22" runat="server" Text="6"></asp:Label></td>
+      <td><asp:Label ID="LabelD6" runat="server" Text="6"></asp:Label></td>
 
   </tr>
      <tr>
 
-     <td><asp:Label ID="Label23" runat="server" Text="7 "></asp:Label></td>
+     <td><asp:Label ID="LabelI7" runat="server" Text="7 "></asp:Label></td>
       <td><asp:Button  ID="BtnA7" runat="server" Text="" OnClick="BtnA7_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB7" runat="server" Text="" OnClick="BtnB7_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC7" runat="server" Text="" OnClick="BtnC7_Click" CssClass="cuadros" /></td>
@@ -322,12 +322,12 @@
       <td><asp:Button  ID="BtnQ7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ7_Click" /></td>
       <td><asp:Button  ID="BtnR7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR7_Click" /></td>
       <td><asp:Button  ID="BtnS7" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS7_Click" /></td>
-      <td><asp:Label ID="Label24" runat="server" Text="7"></asp:Label></td>
+      <td><asp:Label ID="LabelD7" runat="server" Text="7"></asp:Label></td>
 
   </tr>
      <tr>
 
-     <td><asp:Label ID="Label25" runat="server" Text="8 "></asp:Label></td>
+     <td><asp:Label ID="LabelI8" runat="server" Text="8 "></asp:Label></td>
       <td><asp:Button  ID="BtnA8" runat="server" Text="" OnClick="BtnA8_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB8" runat="server" Text="" OnClick="BtnB8_Click" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC8" runat="server" Text="" OnClick="BtnC8_Click" CssClass="cuadros" /></td>
@@ -348,13 +348,13 @@
       <td><asp:Button  ID="BtnQ8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ8_Click" /></td>
       <td><asp:Button  ID="BtnR8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR8_Click" /></td>
       <td><asp:Button  ID="BtnS8" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS8_Click" /></td>
-      <td><asp:Label ID="Label26" runat="server" Text="8"></asp:Label></td>
+      <td><asp:Label ID="LabelD8" runat="server" Text="8"></asp:Label></td>
 
   </tr>
      
  <tr>
 
-     <td><asp:Label ID="Label61" runat="server" Text="9 "></asp:Label></td>
+     <td><asp:Label ID="LabelI9" runat="server" Text="9 "></asp:Label></td>
       <td><asp:Button  ID="BtnA9" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB9" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC9" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -375,13 +375,13 @@
       <td><asp:Button  ID="BtnQ9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ9_Click" /></td>
       <td><asp:Button  ID="BtnR9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR9_Click" /></td>
       <td><asp:Button  ID="BtnS9" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS9_Click" /></td>
-      <td><asp:Label ID="Label62" runat="server" Text="9"></asp:Label></td>
+      <td><asp:Label ID="LabelD9" runat="server" Text="9"></asp:Label></td>
 
   </tr>
 
    <tr>
 
-     <td><asp:Label ID="Label63" runat="server" Text="10 "></asp:Label></td>
+     <td><asp:Label ID="LabelI10" runat="server" Text="10 "></asp:Label></td>
       <td><asp:Button  ID="BtnA10" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB10" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC10" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -402,12 +402,12 @@
       <td><asp:Button  ID="BtnQ10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ10_Click" /></td>
       <td><asp:Button  ID="BtnR10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR10_Click" /></td>
       <td><asp:Button  ID="BtnS10" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS10_Click" /></td>
-      <td><asp:Label ID="Label64" runat="server" Text="10"></asp:Label></td>
+      <td><asp:Label ID="LabelD10" runat="server" Text="10"></asp:Label></td>
 
   </tr>
 <tr>
 
-     <td><asp:Label ID="Label65" runat="server" Text="11 "></asp:Label></td>
+     <td><asp:Label ID="LabelI11" runat="server" Text="11 "></asp:Label></td>
       <td><asp:Button  ID="BtnA11" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB11" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC11" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -428,12 +428,12 @@
       <td><asp:Button  ID="BtnQ11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ11_Click" /></td>
       <td><asp:Button  ID="BtnR11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR11_Click" /></td>
       <td><asp:Button  ID="BtnS11" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS11_Click" /></td>
-      <td><asp:Label ID="Label66" runat="server" Text="11"></asp:Label></td>
+      <td><asp:Label ID="LabelD11" runat="server" Text="11"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label67" runat="server" Text="12 "></asp:Label></td>
+     <td><asp:Label ID="LabelI12" runat="server" Text="12 "></asp:Label></td>
       <td><asp:Button  ID="BtnA12" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB12" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC12" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -454,12 +454,12 @@
       <td><asp:Button  ID="BtnQ12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ12_Click" /></td>
       <td><asp:Button  ID="BtnR12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR12_Click" /></td>
       <td><asp:Button  ID="BtnS12" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS12_Click" /></td>
-      <td><asp:Label ID="Label68" runat="server" Text="12"></asp:Label></td>
+      <td><asp:Label ID="LabelD12" runat="server" Text="12"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label69" runat="server" Text="13 "></asp:Label></td>
+     <td><asp:Label ID="LabelI13" runat="server" Text="13 "></asp:Label></td>
       <td><asp:Button  ID="BtnA13" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB13" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC13" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -480,12 +480,12 @@
       <td><asp:Button  ID="BtnQ13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ13_Click" /></td>
       <td><asp:Button  ID="BtnR13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR13_Click" /></td>
       <td><asp:Button  ID="BtnS13" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS13_Click" /></td>
-      <td><asp:Label ID="Label70" runat="server" Text="13"></asp:Label></td>
+      <td><asp:Label ID="LabelD13" runat="server" Text="13"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label71" runat="server" Text="14 "></asp:Label></td>
+     <td><asp:Label ID="LabelI14" runat="server" Text="14 "></asp:Label></td>
       <td><asp:Button  ID="BtnA14" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB14" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC14" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -506,12 +506,12 @@
       <td><asp:Button  ID="BtnQ14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ14_Click" /></td>
       <td><asp:Button  ID="BtnR14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR14_Click" /></td>
       <td><asp:Button  ID="BtnS14" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS14_Click" /></td>
-      <td><asp:Label ID="Label72" runat="server" Text="14"></asp:Label></td>
+      <td><asp:Label ID="LabelD14" runat="server" Text="14"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label73" runat="server" Text="15 "></asp:Label></td>
+     <td><asp:Label ID="LabelI15" runat="server" Text="15 "></asp:Label></td>
       <td><asp:Button  ID="BtnA15" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB15" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC15" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -532,12 +532,12 @@
       <td><asp:Button  ID="BtnQ15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ15_Click" /></td>
       <td><asp:Button  ID="BtnR15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR15_Click" /></td>
       <td><asp:Button  ID="BtnS15" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS15_Click" /></td>
-      <td><asp:Label ID="Label74" runat="server" Text="15"></asp:Label></td>
+      <td><asp:Label ID="LabelD15" runat="server" Text="15"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label75" runat="server" Text="16 "></asp:Label></td>
+     <td><asp:Label ID="LabelI16" runat="server" Text="16 "></asp:Label></td>
       <td><asp:Button  ID="BtnA16" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB16" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC16" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -558,12 +558,12 @@
       <td><asp:Button  ID="BtnQ16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ16_Click" /></td>
       <td><asp:Button  ID="BtnR16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR16_Click" /></td>
       <td><asp:Button  ID="BtnS16" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS16_Click" /></td>
-      <td><asp:Label ID="Label76" runat="server" Text="16"></asp:Label></td>
+      <td><asp:Label ID="LabelD16" runat="server" Text="16"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label77" runat="server" Text="17 "></asp:Label></td>
+     <td><asp:Label ID="LabelI17" runat="server" Text="17 "></asp:Label></td>
       <td><asp:Button  ID="BtnA17" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB17" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC17" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -584,12 +584,12 @@
       <td><asp:Button  ID="BtnQ17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ17_Click" /></td>
       <td><asp:Button  ID="BtnR17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR17_Click" /></td>
       <td><asp:Button  ID="BtnS17" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS17_Click" /></td>
-      <td><asp:Label ID="Label78" runat="server" Text="17"></asp:Label></td>
+      <td><asp:Label ID="LabelD17" runat="server" Text="17"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label79" runat="server" Text="18 "></asp:Label></td>
+     <td><asp:Label ID="LabelI18" runat="server" Text="18 "></asp:Label></td>
       <td><asp:Button  ID="BtnA18" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB18" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC18" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -610,12 +610,12 @@
       <td><asp:Button  ID="BtnQ18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ18_Click" /></td>
       <td><asp:Button  ID="BtnR18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR18_Click" /></td>
       <td><asp:Button  ID="BtnS18" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS18_Click" /></td>
-      <td><asp:Label ID="Label80" runat="server" Text="18"></asp:Label></td>
+      <td><asp:Label ID="LabelD18" runat="server" Text="18"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label81" runat="server" Text="19 "></asp:Label></td>
+     <td><asp:Label ID="LabelI19" runat="server" Text="19 "></asp:Label></td>
       <td><asp:Button  ID="BtnA19" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB19" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC19" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -636,12 +636,12 @@
       <td><asp:Button  ID="BtnQ19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ19_Click" /></td>
       <td><asp:Button  ID="BtnR19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR19_Click" /></td>
       <td><asp:Button  ID="BtnS19" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS19_Click" /></td>
-      <td><asp:Label ID="Label82" runat="server" Text="19"></asp:Label></td>
+      <td><asp:Label ID="LabelD19" runat="server" Text="19"></asp:Label></td>
 
   </tr>
  <tr>
 
-     <td><asp:Label ID="Label83" runat="server" Text="20 "></asp:Label></td>
+     <td><asp:Label ID="LabelI20" runat="server" Text="20 "></asp:Label></td>
       <td><asp:Button  ID="BtnA20" runat="server" Text="" CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnB20" runat="server" Text=""  CssClass="cuadros" /></td>
       <td><asp:Button  ID="BtnC20" runat="server" Text=""  CssClass="cuadros" /></td>
@@ -662,32 +662,32 @@
       <td><asp:Button  ID="BtnQ20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnQ20_Click" /></td>
       <td><asp:Button  ID="BtnR20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnR20_Click" /></td>
       <td><asp:Button  ID="BtnS20" runat="server" Text=""  CssClass="cuadros" OnClick="BtnS20_Click" /></td>
-      <td><asp:Label ID="Label84" runat="server" Text="20"></asp:Label></td>
+      <td><asp:Label ID="LabelD20" runat="server" Text="20"></asp:Label></td>
 
   </tr>
    <tr>
 
        <td><asp:Label ID="Label27" runat="server" Text=" "></asp:Label></td>
-       <td><asp:Label ID="Label28" runat="server" Text="A"></asp:Label></td>
-       <td><asp:Label ID="Label29" runat="server" Text="B"></asp:Label></td>
-       <td><asp:Label ID="Label30" runat="server" Text="C"></asp:Label></td>
-       <td><asp:Label ID="Label31" runat="server" Text="D"></asp:Label></td>
-       <td><asp:Label ID="Label32" runat="server" Text="E"></asp:Label></td>
-       <td><asp:Label ID="Label33" runat="server" Text="F"></asp:Label></td>
-       <td><asp:Label ID="Label34" runat="server" Text="G"></asp:Label></td>
-       <td><asp:Label ID="Label35" runat="server" Text="H"></asp:Label></td>
-        <td><asp:Label ID="Label49" runat="server" Text="I"></asp:Label></td>
-        <td><asp:Label ID="Label50" runat="server" Text="J"></asp:Label></td>
-        <td><asp:Label ID="Label51" runat="server" Text="K"></asp:Label></td>
-        <td><asp:Label ID="Label52" runat="server" Text="L"></asp:Label></td>
-        <td><asp:Label ID="Label53" runat="server" Text="M"></asp:Label></td>
-        <td><asp:Label ID="Label54" runat="server" Text="N"></asp:Label></td>
-        <td><asp:Label ID="Label55" runat="server" Text="Ñ"></asp:Label></td>
-        <td><asp:Label ID="Label56" runat="server" Text="O"></asp:Label></td>
-        <td><asp:Label ID="Label57" runat="server" Text="P"></asp:Label></td>
-        <td><asp:Label ID="Label58" runat="server" Text="Q"></asp:Label></td>
-        <td><asp:Label ID="Label59" runat="server" Text="R"></asp:Label></td>
-        <td><asp:Label ID="Label60" runat="server" Text="S"></asp:Label></td>
+       <td><asp:Label ID="LabelAI" runat="server" Text="A"></asp:Label></td>
+       <td><asp:Label ID="LabelBI" runat="server" Text="B"></asp:Label></td>
+       <td><asp:Label ID="LabelCI" runat="server" Text="C"></asp:Label></td>
+       <td><asp:Label ID="LabelDI" runat="server" Text="D"></asp:Label></td>
+       <td><asp:Label ID="LabelEI" runat="server" Text="E"></asp:Label></td>
+       <td><asp:Label ID="LabelFI" runat="server" Text="F"></asp:Label></td>
+       <td><asp:Label ID="LabelGI" runat="server" Text="G"></asp:Label></td>
+       <td><asp:Label ID="LabelHI" runat="server" Text="H"></asp:Label></td>
+        <td><asp:Label ID="LabelII" runat="server" Text="I"></asp:Label></td>
+        <td><asp:Label ID="LabelJI" runat="server" Text="J"></asp:Label></td>
+        <td><asp:Label ID="LabelKI" runat="server" Text="K"></asp:Label></td>
+        <td><asp:Label ID="LabelLI" runat="server" Text="L"></asp:Label></td>
+        <td><asp:Label ID="LabelMI" runat="server" Text="M"></asp:Label></td>
+        <td><asp:Label ID="LabelNI" runat="server" Text="N"></asp:Label></td>
+        <td><asp:Label ID="LabelÑI" runat="server" Text="Ñ"></asp:Label></td>
+        <td><asp:Label ID="LabelOI" runat="server" Text="O"></asp:Label></td>
+        <td><asp:Label ID="LabelPI" runat="server" Text="P"></asp:Label></td>
+        <td><asp:Label ID="LabelQI" runat="server" Text="Q"></asp:Label></td>
+        <td><asp:Label ID="LabelRI" runat="server" Text="R"></asp:Label></td>
+        <td><asp:Label ID="LabelSI" runat="server" Text="S"></asp:Label></td>
        <td><asp:Label ID="Label36" runat="server" Text=" "></asp:Label></td>
       
     

@@ -37,6 +37,9 @@ namespace PROYECTO1
         public static bool turnoJ1 = false;
         public static bool turnoJ2 = false;
 
+        //tamaño tablero generado
+        public static int filaTamaño;
+        public static int columnaTamaño;
 
 
 
@@ -73,7 +76,11 @@ namespace PROYECTO1
         public ArrayList arrayColumna = new ArrayList();
         public ArrayList arrayColor = new ArrayList();
         public static string[,] tablero = new string[8, 8];
-        public static Button[,] tableroColor = new Button[21, 21]; // array de botones de todo el tablero
+        public static Button[,] tableroColor = new Button[20, 20]; // array de botones de todo el tablero
+        public static Label[] labelIzquierdo = new Label[20];
+        public static Label[] labelDerecho = new Label[20];
+        public static Label[] labelSuperior = new Label[20];
+        public static Label[] labelInferior = new Label[20];
 
         //para los colores que se seleccionaran
         public static ArrayList arrayJugador1 = new ArrayList();
@@ -81,15 +88,98 @@ namespace PROYECTO1
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
+            //para los turnos
             if(!IsPostBack){
                 turnoJ1 = true;
                 turnoJ2 = false;
             }
-            //para el tablero
 
+            //labels para el tablero
+            labelIzquierdo[0] = LabelI1;
+            labelIzquierdo[1] = LabelI2;
+            labelIzquierdo[2] = LabelI3;
+            labelIzquierdo[3] = LabelI4;
+            labelIzquierdo[4] = LabelI5;
+            labelIzquierdo[5] = LabelI6;
+            labelIzquierdo[6] = LabelI7;
+            labelIzquierdo[7] = LabelI8;
+            labelIzquierdo[8] = LabelI9;
+            labelIzquierdo[9] = LabelI10;
+            labelIzquierdo[10] = LabelI11;
+            labelIzquierdo[11] = LabelI12;
+            labelIzquierdo[12] = LabelI13;
+            labelIzquierdo[13] = LabelI14;
+            labelIzquierdo[14] = LabelI15;
+            labelIzquierdo[15] = LabelI16;
+            labelIzquierdo[16] = LabelI17;
+            labelIzquierdo[17] = LabelI18;
+            labelIzquierdo[18] = LabelI19;
+            labelIzquierdo[19] = LabelI20;
 
+            labelDerecho[0] = LabelD1;
+            labelDerecho[1] = LabelD2;
+            labelDerecho[2] = LabelD3;
+            labelDerecho[3] = LabelD4;
+            labelDerecho[4] = LabelD5;
+            labelDerecho[5] = LabelD6;
+            labelDerecho[6] = LabelD7;
+            labelDerecho[7] = LabelD8;
+            labelDerecho[8] = LabelD9;
+            labelDerecho[9] = LabelD10;
+            labelDerecho[10] = LabelD11;
+            labelDerecho[11] = LabelD12;
+            labelDerecho[12] = LabelD13;
+            labelDerecho[13] = LabelD14;
+            labelDerecho[14] = LabelD15;
+            labelDerecho[15] = LabelD16;
+            labelDerecho[16] = LabelD17;
+            labelDerecho[17] = LabelD18;
+            labelDerecho[18] = LabelD19;
+            labelDerecho[19] = LabelD20;
 
+            labelSuperior[0] = LabelAS;
+            labelSuperior[1] = LabelBS;
+            labelSuperior[2] = LabelCS;
+            labelSuperior[3] = LabelDS;
+            labelSuperior[4] = LabelES;
+            labelSuperior[5] = LabelFS;
+            labelSuperior[6] = LabelGS;
+            labelSuperior[7] = LabelHS;
+            labelSuperior[8] = LabelIS;
+            labelSuperior[9] = LabelJS;
+            labelSuperior[10] = LabelKS;
+            labelSuperior[11] = LabelLS;
+            labelSuperior[12] = LabelMS;
+            labelSuperior[13] = LabelNS;
+            labelSuperior[14] = LabelÑS;
+            labelSuperior[15] = LabelOS;
+            labelSuperior[16] = LabelPS;
+            labelSuperior[17] = LabelQS;
+            labelSuperior[18] = LabelRS;
+            labelSuperior[19] = LabelSS;
+
+            labelInferior[0] = LabelAI;
+            labelInferior[1] = LabelBI;
+            labelInferior[2] = LabelCI;
+            labelInferior[3] = LabelDI;
+            labelInferior[4] = LabelEI;
+            labelInferior[5] = LabelFI;
+            labelInferior[6] = LabelGI;
+            labelInferior[7] = LabelHI;
+            labelInferior[8] = LabelII;
+            labelInferior[9] = LabelJI;
+            labelInferior[10] = LabelKI;
+            labelInferior[11] = LabelLI;
+            labelInferior[12] = LabelMI;
+            labelInferior[13] = LabelNI;
+            labelInferior[14] = LabelÑI;
+            labelInferior[15] = LabelOI;
+            labelInferior[16] = LabelPI;
+            labelInferior[17] = LabelQI;
+            labelInferior[18] = LabelRI;
+            labelInferior[19] = LabelSI;
+
+            //botones para el tablero
             tableroColor[0, 0] = BtnA1;
             tableroColor[0, 1] = BtnB1;
             tableroColor[0, 2] = BtnC1;
@@ -105,11 +195,11 @@ namespace PROYECTO1
             tableroColor[0, 12] = BtnM1;
             tableroColor[0, 13] = BtnN1;
             tableroColor[0, 14] = BtnÑ1;
-            tableroColor[0, 16] = BtnO1;
-            tableroColor[0, 17] = BtnP1;
-            tableroColor[0, 18] = BtnQ1;
-            tableroColor[0, 19] = BtnR1;
-            tableroColor[0, 20] = BtnS1;
+            tableroColor[0, 15] = BtnO1;
+            tableroColor[0, 16] = BtnP1;
+            tableroColor[0, 17] = BtnQ1;
+            tableroColor[0, 18] = BtnR1;
+            tableroColor[0, 19] = BtnS1;
 
             tableroColor[1, 0] = BtnA2;
             tableroColor[1, 1] = BtnB2;
@@ -126,11 +216,11 @@ namespace PROYECTO1
             tableroColor[1, 12] = BtnM2;
             tableroColor[1, 13] = BtnN2;
             tableroColor[1, 14] = BtnÑ2;
-            tableroColor[1, 16] = BtnO2;
-            tableroColor[1, 17] = BtnP2;
-            tableroColor[1, 18] = BtnQ2;
-            tableroColor[1, 19] = BtnR2;
-            tableroColor[1, 20] = BtnS2;
+            tableroColor[1, 15] = BtnO2;
+            tableroColor[1, 16] = BtnP2;
+            tableroColor[1, 17] = BtnQ2;
+            tableroColor[1, 18] = BtnR2;
+            tableroColor[1, 19] = BtnS2;
 
 
             tableroColor[2, 0] = BtnA3;
@@ -148,11 +238,11 @@ namespace PROYECTO1
             tableroColor[2, 12] = BtnM3;
             tableroColor[2, 13] = BtnN3;
             tableroColor[2, 14] = BtnÑ3;
-            tableroColor[2, 16] = BtnO3;
-            tableroColor[2, 17] = BtnP3;
-            tableroColor[2, 18] = BtnQ3;
-            tableroColor[2, 19] = BtnR3;
-            tableroColor[2, 20] = BtnS3;
+            tableroColor[2, 15] = BtnO3;
+            tableroColor[2, 16] = BtnP3;
+            tableroColor[2, 17] = BtnQ3;
+            tableroColor[2, 18] = BtnR3;
+            tableroColor[2, 19] = BtnS3;
 
             tableroColor[3, 0] = BtnA4;
             tableroColor[3, 1] = BtnB4;
@@ -169,11 +259,11 @@ namespace PROYECTO1
             tableroColor[3, 12] = BtnM4;
             tableroColor[3, 13] = BtnN4;
             tableroColor[3, 14] = BtnÑ4;
-            tableroColor[3, 16] = BtnO4;
-            tableroColor[3, 17] = BtnP4;
-            tableroColor[3, 18] = BtnQ4;
-            tableroColor[3, 19] = BtnR4;
-            tableroColor[3, 20] = BtnS4;
+            tableroColor[3, 15] = BtnO4;
+            tableroColor[3, 16] = BtnP4;
+            tableroColor[3, 17] = BtnQ4;
+            tableroColor[3, 18] = BtnR4;
+            tableroColor[3, 19] = BtnS4;
 
             tableroColor[4, 0] = BtnA5;
             tableroColor[4, 1] = BtnB5;
@@ -190,11 +280,11 @@ namespace PROYECTO1
             tableroColor[4, 12] = BtnM5;
             tableroColor[4, 13] = BtnN5;
             tableroColor[4, 14] = BtnÑ5;
-            tableroColor[4, 16] = BtnO5;
-            tableroColor[4, 17] = BtnP5;
-            tableroColor[4, 18] = BtnQ5;
-            tableroColor[4, 19] = BtnR5;
-            tableroColor[4, 20] = BtnS5;
+            tableroColor[4, 15] = BtnO5;
+            tableroColor[4, 16] = BtnP5;
+            tableroColor[4, 17] = BtnQ5;
+            tableroColor[4, 18] = BtnR5;
+            tableroColor[4, 19] = BtnS5;
 
             tableroColor[5, 0] = BtnA6;
             tableroColor[5, 1] = BtnB6;
@@ -204,6 +294,18 @@ namespace PROYECTO1
             tableroColor[5, 5] = BtnF6;
             tableroColor[5, 6] = BtnG6;
             tableroColor[5, 7] = BtnH6;
+            tableroColor[5, 8] = BtnI6;
+            tableroColor[5, 9] = BtnJ6;
+            tableroColor[5, 10] = BtnK6;
+            tableroColor[5, 11] = BtnL6;
+            tableroColor[5, 12] = BtnM6;
+            tableroColor[5, 13] = BtnN6;
+            tableroColor[5, 14] = BtnÑ6;
+            tableroColor[5, 15] = BtnO6;
+            tableroColor[5, 16] = BtnP6;
+            tableroColor[5, 17] = BtnQ6;
+            tableroColor[5, 18] = BtnR6;
+            tableroColor[5, 19] = BtnS6;
 
             tableroColor[6, 0] = BtnA7;
             tableroColor[6, 1] = BtnB7;
@@ -213,6 +315,18 @@ namespace PROYECTO1
             tableroColor[6, 5] = BtnF7;
             tableroColor[6, 6] = BtnG7;
             tableroColor[6, 7] = BtnH7;
+            tableroColor[6, 8] = BtnI7;
+            tableroColor[6, 9] = BtnJ7;
+            tableroColor[6, 10] = BtnK7;
+            tableroColor[6, 11] = BtnL7;
+            tableroColor[6, 12] = BtnM7;
+            tableroColor[6, 13] = BtnN7;
+            tableroColor[6, 14] = BtnÑ7;
+            tableroColor[6, 15] = BtnO7;
+            tableroColor[6, 16] = BtnP7;
+            tableroColor[6, 17] = BtnQ7;
+            tableroColor[6, 18] = BtnR7;
+            tableroColor[6, 19] = BtnS7;
 
             tableroColor[7, 0] = BtnA8;
             tableroColor[7, 1] = BtnB8;
@@ -222,169 +336,291 @@ namespace PROYECTO1
             tableroColor[7, 5] = BtnF8;
             tableroColor[7, 6] = BtnG8;
             tableroColor[7, 7] = BtnH8;
+            tableroColor[7, 8] = BtnI8;
+            tableroColor[7, 9] = BtnJ8;
+            tableroColor[7, 10] = BtnK8;
+            tableroColor[7, 11] = BtnL8;
+            tableroColor[7, 12] = BtnM8;
+            tableroColor[7, 13] = BtnN8;
+            tableroColor[7, 14] = BtnÑ8;
+            tableroColor[7, 15] = BtnO8;
+            tableroColor[7, 16] = BtnP8;
+            tableroColor[7, 17] = BtnQ8;
+            tableroColor[7, 18] = BtnR8;
+            tableroColor[7, 19] = BtnS8;
+
+            tableroColor[8, 0] = BtnA9;
+            tableroColor[8, 1] = BtnB9;
+            tableroColor[8, 2] = BtnC9;
+            tableroColor[8, 3] = BtnD9;
+            tableroColor[8, 4] = BtnE9;
+            tableroColor[8, 5] = BtnF9;
+            tableroColor[8, 6] = BtnG9;
+            tableroColor[8, 7] = BtnH9;
+            tableroColor[8, 8] = BtnI9;
+            tableroColor[8, 9] = BtnJ9;
+            tableroColor[8, 10] = BtnK9;
+            tableroColor[8, 11] = BtnL9;
+            tableroColor[8, 12] = BtnM9;
+            tableroColor[8, 13] = BtnN9;
+            tableroColor[8, 14] = BtnÑ9;
+            tableroColor[8, 15] = BtnO9;
+            tableroColor[8, 16] = BtnP9;
+            tableroColor[8, 17] = BtnQ9;
+            tableroColor[8, 18] = BtnR9;
+            tableroColor[8, 19] = BtnS9;
+
+            tableroColor[9, 0] = BtnA10;
+            tableroColor[9, 1] = BtnB10;
+            tableroColor[9, 2] = BtnC10;
+            tableroColor[9, 3] = BtnD10;
+            tableroColor[9, 4] = BtnE10;
+            tableroColor[9, 5] = BtnF10;
+            tableroColor[9, 6] = BtnG10;
+            tableroColor[9, 7] = BtnH10;
+            tableroColor[9, 8] = BtnI10;
+            tableroColor[9, 9] = BtnJ10;
+            tableroColor[9, 10] = BtnK10;
+            tableroColor[9, 11] = BtnL10;
+            tableroColor[9, 12] = BtnM10;
+            tableroColor[9, 13] = BtnN10;
+            tableroColor[9, 14] = BtnÑ10;
+            tableroColor[9, 15] = BtnO10;
+            tableroColor[9, 16] = BtnP10;
+            tableroColor[9, 17] = BtnQ10;
+            tableroColor[9, 18] = BtnR10;
+            tableroColor[9, 19] = BtnS10;
+
+            tableroColor[10, 0] = BtnA11;
+            tableroColor[10, 1] = BtnB11;
+            tableroColor[10, 2] = BtnC11;
+            tableroColor[10, 3] = BtnD11;
+            tableroColor[10, 4] = BtnE11;
+            tableroColor[10, 5] = BtnF11;
+            tableroColor[10, 6] = BtnG11;
+            tableroColor[10, 7] = BtnH11;
+            tableroColor[10, 8] = BtnI11;
+            tableroColor[10, 9] = BtnJ11;
+            tableroColor[10, 10] = BtnK11;
+            tableroColor[10, 11] = BtnL11;
+            tableroColor[10, 12] = BtnM11;
+            tableroColor[10, 13] = BtnN11;
+            tableroColor[10, 14] = BtnÑ11;
+            tableroColor[10, 15] = BtnO11;
+            tableroColor[10, 16] = BtnP11;
+            tableroColor[10, 17] = BtnQ11;
+            tableroColor[10, 18] = BtnR11;
+            tableroColor[10, 19] = BtnS11;
+
+            tableroColor[11, 0] = BtnA12;
+            tableroColor[11, 1] = BtnB12;
+            tableroColor[11, 2] = BtnC12;
+            tableroColor[11, 3] = BtnD12;
+            tableroColor[11, 4] = BtnE12;
+            tableroColor[11, 5] = BtnF12;
+            tableroColor[11, 6] = BtnG12;
+            tableroColor[11, 7] = BtnH12;
+            tableroColor[11, 8] = BtnI12;
+            tableroColor[11, 9] = BtnJ12;
+            tableroColor[11, 10] = BtnK12;
+            tableroColor[11, 11] = BtnL12;
+            tableroColor[11, 12] = BtnM12;
+            tableroColor[11, 13] = BtnN12;
+            tableroColor[11, 14] = BtnÑ12;
+            tableroColor[11, 15] = BtnO12;
+            tableroColor[11, 16] = BtnP12;
+            tableroColor[11, 17] = BtnQ12;
+            tableroColor[11, 18] = BtnR12;
+            tableroColor[11, 19] = BtnS12;
+
+            tableroColor[12, 0] = BtnA13;
+            tableroColor[12, 1] = BtnB13;
+            tableroColor[12, 2] = BtnC13;
+            tableroColor[12, 3] = BtnD13;
+            tableroColor[12, 4] = BtnE13;
+            tableroColor[12, 5] = BtnF13;
+            tableroColor[12, 6] = BtnG13;
+            tableroColor[12, 7] = BtnH13;
+            tableroColor[12, 8] = BtnI13;
+            tableroColor[12, 9] = BtnJ13;
+            tableroColor[12, 10] = BtnK13;
+            tableroColor[12, 11] = BtnL13;
+            tableroColor[12, 12] = BtnM13;
+            tableroColor[12, 13] = BtnN13;
+            tableroColor[12, 14] = BtnÑ13;
+            tableroColor[12, 15] = BtnO13;
+            tableroColor[12, 16] = BtnP13;
+            tableroColor[12, 17] = BtnQ13;
+            tableroColor[12, 18] = BtnR13;
+            tableroColor[12, 19] = BtnS13;
+
+            tableroColor[13, 0] = BtnA14;
+            tableroColor[13, 1] = BtnB14;
+            tableroColor[13, 2] = BtnC14;
+            tableroColor[13, 3] = BtnD14;
+            tableroColor[13, 4] = BtnE14;
+            tableroColor[13, 5] = BtnF14;
+            tableroColor[13, 6] = BtnG14;
+            tableroColor[13, 7] = BtnH14;
+            tableroColor[13, 8] = BtnI14;
+            tableroColor[13, 9] = BtnJ14;
+            tableroColor[13, 10] = BtnK14;
+            tableroColor[13, 11] = BtnL14;
+            tableroColor[13, 12] = BtnM14;
+            tableroColor[13, 13] = BtnN14;
+            tableroColor[13, 14] = BtnÑ14;
+            tableroColor[13, 15] = BtnO14;
+            tableroColor[13, 16] = BtnP14;
+            tableroColor[13, 17] = BtnQ14;
+            tableroColor[13, 18] = BtnR14;
+            tableroColor[13, 19] = BtnS14;
+
+            tableroColor[14, 0] = BtnA15;
+            tableroColor[14, 1] = BtnB15;
+            tableroColor[14, 2] = BtnC15;
+            tableroColor[14, 3] = BtnD15;
+            tableroColor[14, 4] = BtnE15;
+            tableroColor[14, 5] = BtnF15;
+            tableroColor[14, 6] = BtnG15;
+            tableroColor[14, 7] = BtnH15;
+            tableroColor[14, 8] = BtnI15;
+            tableroColor[14, 9] = BtnJ15;
+            tableroColor[14, 10] = BtnK15;
+            tableroColor[14, 11] = BtnL15;
+            tableroColor[14, 12] = BtnM15;
+            tableroColor[14, 13] = BtnN15;
+            tableroColor[14, 14] = BtnÑ15;
+            tableroColor[14, 15] = BtnO15;
+            tableroColor[14, 16] = BtnP15;
+            tableroColor[14, 17] = BtnQ15;
+            tableroColor[14, 18] = BtnR15;
+            tableroColor[14, 19] = BtnS15;
+
+            tableroColor[15, 0] = BtnA16;
+            tableroColor[15, 1] = BtnB16;
+            tableroColor[15, 2] = BtnC16;
+            tableroColor[15, 3] = BtnD16;
+            tableroColor[15, 4] = BtnE16;
+            tableroColor[15, 5] = BtnF16;
+            tableroColor[15, 6] = BtnG16;
+            tableroColor[15, 7] = BtnH16;
+            tableroColor[15, 8] = BtnI16;
+            tableroColor[15, 9] = BtnJ16;
+            tableroColor[15, 10] = BtnK16;
+            tableroColor[15, 11] = BtnL16;
+            tableroColor[15, 12] = BtnM16;
+            tableroColor[15, 13] = BtnN16;
+            tableroColor[15, 14] = BtnÑ16;
+            tableroColor[15, 15] = BtnO16;
+            tableroColor[15, 16] = BtnP16;
+            tableroColor[15, 17] = BtnQ16;
+            tableroColor[15, 18] = BtnR16;
+            tableroColor[15, 19] = BtnS16;
 
 
 
+            tableroColor[16, 0] = BtnA17;
+            tableroColor[16, 1] = BtnB17;
+            tableroColor[16, 2] = BtnC17;
+            tableroColor[16, 3] = BtnD17;
+            tableroColor[16, 4] = BtnE17;
+            tableroColor[16, 5] = BtnF17;
+            tableroColor[16, 6] = BtnG17;
+            tableroColor[16, 7] = BtnH17;
+            tableroColor[16, 8] = BtnI17;
+            tableroColor[16, 9] = BtnJ17;
+            tableroColor[16, 10] = BtnK17;
+            tableroColor[16, 11] = BtnL17;
+            tableroColor[16, 12] = BtnM17;
+            tableroColor[16, 13] = BtnN17;
+            tableroColor[16, 14] = BtnÑ17;
+            tableroColor[16, 15] = BtnO17;
+            tableroColor[16, 16] = BtnP17;
+            tableroColor[16, 17] = BtnQ17;
+            tableroColor[16, 18] = BtnR17;
+            tableroColor[16, 19] = BtnS17;
 
-            //if (!IsPostBack)
-            //{
-            //    BtnA1.Enabled = false;
-            //    BtnA2.Enabled = false;
-            //    BtnA3.Enabled = false;
-            //    BtnA4.Enabled = false;
-            //    BtnA5.Enabled = false;
-            //    BtnA6.Enabled = false;
-            //    BtnA7.Enabled = false;
-            //    BtnA8.Enabled = false;
+            tableroColor[17, 0] = BtnA18;
+            tableroColor[17, 1] = BtnB18;
+            tableroColor[17, 2] = BtnC18;
+            tableroColor[17, 3] = BtnD18;
+            tableroColor[17, 4] = BtnE18;
+            tableroColor[17, 5] = BtnF18;
+            tableroColor[17, 6] = BtnG18;
+            tableroColor[17, 7] = BtnH18;
+            tableroColor[17, 8] = BtnI18;
+            tableroColor[17, 9] = BtnJ18;
+            tableroColor[17, 10] = BtnK18;
+            tableroColor[17, 11] = BtnL18;
+            tableroColor[17, 12] = BtnM18;
+            tableroColor[17, 13] = BtnN18;
+            tableroColor[17, 14] = BtnÑ18;
+            tableroColor[17, 15] = BtnO18;
+            tableroColor[17, 16] = BtnP18;
+            tableroColor[17, 17] = BtnQ18;
+            tableroColor[17, 18] = BtnR18;
+            tableroColor[17, 19] = BtnS18;
 
-            //    BtnB1.Enabled = false;
-            //    BtnB2.Enabled = false;
-            //    BtnB3.Enabled = false;
-            //    BtnB4.Enabled = false;
-            //    BtnB5.Enabled = false;
-            //    BtnB6.Enabled = false;
-            //    BtnB7.Enabled = false;
-            //    BtnB8.Enabled = false;
+            tableroColor[18, 0] = BtnA19;
+            tableroColor[18, 1] = BtnB19;
+            tableroColor[18, 2] = BtnC19;
+            tableroColor[18, 3] = BtnD19;
+            tableroColor[18, 4] = BtnE19;
+            tableroColor[18, 5] = BtnF19;
+            tableroColor[18, 6] = BtnG19;
+            tableroColor[18, 7] = BtnH19;
+            tableroColor[18, 8] = BtnI19;
+            tableroColor[18, 9] = BtnJ19;
+            tableroColor[18, 10] = BtnK19;
+            tableroColor[18, 11] = BtnL19;
+            tableroColor[18, 12] = BtnM19;
+            tableroColor[18, 13] = BtnN19;
+            tableroColor[18, 14] = BtnÑ19;
+            tableroColor[18, 15] = BtnO19;
+            tableroColor[18, 16] = BtnP19;
+            tableroColor[18, 17] = BtnQ19;
+            tableroColor[18, 18] = BtnR19;
+            tableroColor[18, 19] = BtnS19;
 
-            //    BtnC1.Enabled = false;
-            //    BtnC2.Enabled = false;
-            //    BtnC3.Enabled = false;
-            //    BtnC4.Enabled = false;
-            //    BtnC5.Enabled = false;
-            //    BtnC6.Enabled = false;
-            //    BtnC7.Enabled = false;
-            //    BtnC8.Enabled = false;
+            tableroColor[19, 0] = BtnA20;
+            tableroColor[19, 1] = BtnB20;
+            tableroColor[19, 2] = BtnC20;
+            tableroColor[19, 3] = BtnD20;
+            tableroColor[19, 4] = BtnE20;
+            tableroColor[19, 5] = BtnF20;
+            tableroColor[19, 6] = BtnG20;
+            tableroColor[19, 7] = BtnH20;
+            tableroColor[19, 8] = BtnI20;
+            tableroColor[19, 9] = BtnJ20;
+            tableroColor[19, 10] = BtnK20;
+            tableroColor[19, 11] = BtnL20;
+            tableroColor[19, 12] = BtnM20;
+            tableroColor[19, 13] = BtnN20;
+            tableroColor[19, 14] = BtnÑ20;
+            tableroColor[19, 15] = BtnO20;
+            tableroColor[19, 16] = BtnP20;
+            tableroColor[19, 17] = BtnQ20;
+            tableroColor[19, 18] = BtnR20;
+            tableroColor[19, 19] = BtnS20;
 
-            //    BtnD1.Enabled = false;
-            //    BtnD2.Enabled = false;
-            //    BtnD3.Enabled = false;
-            //    BtnD4.Enabled = true;
-            //    BtnD5.Enabled = true;
-            //    BtnD6.Enabled = false;
-            //    BtnD7.Enabled = false;
-            //    BtnD8.Enabled = false;
+            //al iniciar todo es bloqueado
+            if (!IsPostBack)
+            {
 
-
-            //    BtnE1.Enabled = false;
-            //    BtnE2.Enabled = false;
-            //    BtnE3.Enabled = false;
-            //    BtnE4.Enabled = true;
-            //    BtnE5.Enabled = true;
-            //    BtnE6.Enabled = false;
-            //    BtnE7.Enabled = false;
-            //    BtnE8.Enabled = false;
-
-
-            //    BtnF1.Enabled = false;
-            //    BtnF2.Enabled = false;
-            //    BtnF3.Enabled = false;
-            //    BtnF4.Enabled = false;
-            //    BtnF5.Enabled = false;
-            //    BtnF6.Enabled = false;
-            //    BtnF7.Enabled = false;
-            //    BtnF8.Enabled = false;
-
-            //    BtnG1.Enabled = false;
-            //    BtnG2.Enabled = false;
-            //    BtnG3.Enabled = false;
-            //    BtnG4.Enabled = false;
-            //    BtnG5.Enabled = false;
-            //    BtnG6.Enabled = false;
-            //    BtnG7.Enabled = false;
-            //    BtnG8.Enabled = false;
-
-            //    BtnH1.Enabled = false;
-            //    BtnH2.Enabled = false;
-            //    BtnH3.Enabled = false;
-            //    BtnH4.Enabled = false;
-            //    BtnH5.Enabled = false;
-            //    BtnH6.Enabled = false;
-            //    BtnH7.Enabled = false;
-            //    BtnH8.Enabled = false;
-
-
-
-            //}
-
-            //if (!IsPostBack)
-            //{
-            //    BtnA1.BackColor = Color.Green;
-            //    BtnA2.BackColor = Color.Green;
-            //    BtnA3.BackColor = Color.Green;
-            //    BtnA4.BackColor = Color.Green;
-            //    BtnA5.BackColor = Color.Green;
-            //    BtnA6.BackColor = Color.Green;
-            //    BtnA7.BackColor = Color.Green;
-            //    BtnA8.BackColor = Color.Green;
-
-            //    BtnB1.BackColor = Color.Green;
-            //    BtnB2.BackColor = Color.Green;
-            //    BtnB3.BackColor = Color.Green;
-            //    BtnB4.BackColor = Color.Green;
-            //    BtnB5.BackColor = Color.Green;
-            //    BtnB6.BackColor = Color.Green;
-            //    BtnB7.BackColor = Color.Green;
-            //    BtnB8.BackColor = Color.Green;
-
-            //    BtnC1.BackColor = Color.Green;
-            //    BtnC2.BackColor = Color.Green;
-            //    BtnC3.BackColor = Color.Green;
-            //    BtnC4.BackColor = Color.Green;
-            //    BtnC5.BackColor = Color.Green;
-            //    BtnC6.BackColor = Color.Green;
-            //    BtnC7.BackColor = Color.Green;
-            //    BtnC8.BackColor = Color.Green;
-
-            //    BtnD1.BackColor = Color.Green;
-            //    BtnD2.BackColor = Color.Green;
-            //    BtnD3.BackColor = Color.Green;
-            //    BtnD4.BackColor = Color.Green;
-            //    BtnD5.BackColor = Color.Green;
-            //    BtnD6.BackColor = Color.Green;
-            //    BtnD7.BackColor = Color.Green;
-            //    BtnD8.BackColor = Color.Green;
+                for (int i = 0; i < 20; i++)
+                {
+                    for (int j = 0; j < 20; j++)
+                    {
+                        tableroColor[i, j].BackColor = Color.GreenYellow;
+                        tableroColor[i, j].Enabled = false;
+                    }
+                }
+                
 
 
-            //    BtnE1.BackColor = Color.Green;
-            //    BtnE2.BackColor = Color.Green;
-            //    BtnE3.BackColor = Color.Green;
-            //    BtnE4.BackColor = Color.Green;
-            //    BtnE5.BackColor = Color.Green;
-            //    BtnE6.BackColor = Color.Green;
-            //    BtnE7.BackColor = Color.Green;
-            //    BtnE8.BackColor = Color.Green;
+            }
 
-
-            //    BtnF1.BackColor = Color.Green;
-            //    BtnF2.BackColor = Color.Green;
-            //    BtnF3.BackColor = Color.Green;
-            //    BtnF4.BackColor = Color.Green;
-            //    BtnF5.BackColor = Color.Green;
-            //    BtnF6.BackColor = Color.Green;
-            //    BtnF7.BackColor = Color.Green;
-            //    BtnF8.BackColor = Color.Green;
-
-            //    BtnG1.BackColor = Color.Green;
-            //    BtnG2.BackColor = Color.Green;
-            //    BtnG3.BackColor = Color.Green;
-            //    BtnG4.BackColor = Color.Green;
-            //    BtnG5.BackColor = Color.Green;
-            //    BtnG6.BackColor = Color.Green;
-            //    BtnG7.BackColor = Color.Green;
-            //    BtnG8.BackColor = Color.Green;
-
-            //    BtnH1.BackColor = Color.Green;
-            //    BtnH2.BackColor = Color.Green;
-            //    BtnH3.BackColor = Color.Green;
-            //    BtnH4.BackColor = Color.Green;
-            //    BtnH5.BackColor = Color.Green;
-            //    BtnH6.BackColor = Color.Green;
-            //    BtnH7.BackColor = Color.Green;
-            //    BtnH8.BackColor = Color.Green;
-
-
-
-            //}
+           
         }
 
         protected void ButtonSeleccionar2_Click(object sender, EventArgs e)
@@ -6709,7 +6945,7 @@ namespace PROYECTO1
 
         protected void BtnD4_Click(object sender, EventArgs e)
         {
-            LabelSeleccionJugador1.Text = arrayJugador1[0].ToString();
+           
         }
 
         protected void BtnE4_Click(object sender, EventArgs e)
@@ -6915,34 +7151,185 @@ namespace PROYECTO1
         {
            
             //para realizar la seleccion
-            int fila = Int32.Parse(DropDownListFila.SelectedItem.Value);
-            int columna = Int32.Parse(DropDownListColumna.SelectedItem.Value);
+             filaTamaño = Int32.Parse(DropDownListFila.SelectedItem.Value);
+             columnaTamaño = Int32.Parse(DropDownListColumna.SelectedItem.Value);
 
+            //generador general
 
-            if(fila == 6 && columna == 6)
+            for (int i = 0; i < 20; i++)
             {
-                //para eliminar las columnas no necesarias
-                for (int j = 20; j >=7; j--)
+                for (int j = 0; j < 20; j++)
                 {
-                    for (int i = 0; i <= 21; i++)
+                    if (i < filaTamaño && j < columnaTamaño)
                     {
-                        HtmlTableCell cell = TableroCompleto.Rows[i].Cells[j];
-                        TableroCompleto.Rows[i].Cells.Remove(cell);
+                        tableroColor[i, j].Enabled = false;
                     }
-
+                    else
+                    {
+                        tableroColor[i, j].Visible = false;
+                    }
                 }
-
-                //para eliminar las filas no necesarias
-                for (int i = 20; i >=7; i--)
-                {
-                    HtmlTableRow row = TableroCompleto.Rows[i];
-                    TableroCompleto.Rows.Remove(row);
-                }
-               
-               
             }
+
+            //para eliminar las columnas no necesarias
+            for (int j = 20; j >= columnaTamaño+1; j--)
+            {
+                for (int i = 0; i <= 21; i++)
+                {
+                    HtmlTableCell cell = TableroCompleto.Rows[i].Cells[j];
+                    TableroCompleto.Rows[i].Cells[j].Visible = false;
+                }
+
+            }
+
+            //para eliminar las filas no necesarias
+            for (int i = 20; i >= filaTamaño+1; i--)
+            {
+                HtmlTableRow row = TableroCompleto.Rows[i];
+                TableroCompleto.Rows[i].Visible = false;
+            }
+
            
+
         }
+
+        public void habilitarLosCuatro(int fil, int col)
+        {
+            string opcion = fila.ToString() + "-" + col.ToString();
+
+            switch (opcion)
+            {
+                case "6-6":
+                    break;
+                case "6-8":
+                    break;
+                case "6-10":
+                    break;
+                case "6-12":
+                    break;
+                case "6-14":
+                    break;
+                case "6-16":
+                    break;
+                case "6-18":
+                    break;
+                case "6-20":
+                    break;
+                case "8-6":
+                    break;
+                case "8-8":
+                    break;
+                case "8-10":
+                    break;
+                case "8-12":
+                    break;
+                case "8-14":
+                    break;
+                case "8-16":
+                    break;
+                case "8-18":
+                    break;
+                case "8-20":
+                    break;
+                case "10-6":
+                    break;
+                case "10-8":
+                    break;
+                case "10-10":
+                    break;
+                case "10-12":
+                    break;
+                case "10-14":
+                    break;
+                case "10-16":
+                    break;
+                case "10-18":
+                    break;
+                case "10-20":
+                    break;
+                case "12-6":
+                    break;
+                case "12-8":
+                    break;
+                case "12-10":
+                    break;
+                case "12-12":
+                    break;
+                case "12-14":
+                    break;
+                case "12-16":
+                    break;
+                case "12-18":
+                    break;
+                case "12-20":
+                    break;
+                case "14-6":
+                    break;
+                case "14-8":
+                    break;
+                case "14-10":
+                    break;
+                case "14-12":
+                    break;
+                case "14-14":
+                    break;
+                case "14-16":
+                    break;
+                case "14-18":
+                    break;
+                case "14-20":
+                    break;
+                case "16-6":
+                    break;
+                case "16-8":
+                    break;
+                case "16-10":
+                    break;
+                case "16-12":
+                    break;
+                case "16-14":
+                    break;
+                case "16-16":
+                    break;
+                case "16-18":
+                    break;
+                case "16-20":
+                    break;
+                case "18-6":
+                    break;
+                case "18-8":
+                    break;
+                case "18-10":
+                    break;
+                case "18-12":
+                    break;
+                case "18-14":
+                    break;
+                case "18-16":
+                    break;
+                case "18-18":
+                    break;
+                case "18-20":
+                    break;
+                case "20-6":
+                    break;
+                case "20-8":
+                    break;
+                case "20-10":
+                    break;
+                case "20-12":
+                    break;
+                case "20-14":
+                    break;
+                case "20-16":
+                    break;
+                case "20-18":
+                    break;
+                case "20-20":
+                    break;
+            }
+        }
+        
 
         protected void BtnJ1_Click(object sender, EventArgs e)
         {

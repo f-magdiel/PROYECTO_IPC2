@@ -366,184 +366,184 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
-        /// Control Label1.
+        /// Control LabelAS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label LabelAS;
 
         /// <summary>
-        /// Control Label2.
+        /// Control LabelBS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label LabelBS;
 
         /// <summary>
-        /// Control Label3.
+        /// Control LabelCS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label LabelCS;
 
         /// <summary>
-        /// Control Label4.
+        /// Control LabelDS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label LabelDS;
 
         /// <summary>
-        /// Control Label5.
+        /// Control LabelES.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label LabelES;
 
         /// <summary>
-        /// Control Label6.
+        /// Control LabelFS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label LabelFS;
 
         /// <summary>
-        /// Control Label7.
+        /// Control LabelGS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label LabelGS;
 
         /// <summary>
-        /// Control Label8.
+        /// Control LabelHS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label LabelHS;
 
         /// <summary>
-        /// Control Label37.
+        /// Control LabelIS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label37;
+        protected global::System.Web.UI.WebControls.Label LabelIS;
 
         /// <summary>
-        /// Control Label38.
+        /// Control LabelJS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label38;
+        protected global::System.Web.UI.WebControls.Label LabelJS;
 
         /// <summary>
-        /// Control Label39.
+        /// Control LabelKS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label39;
+        protected global::System.Web.UI.WebControls.Label LabelKS;
 
         /// <summary>
-        /// Control Label40.
+        /// Control LabelLS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label40;
+        protected global::System.Web.UI.WebControls.Label LabelLS;
 
         /// <summary>
-        /// Control Label41.
+        /// Control LabelMS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label41;
+        protected global::System.Web.UI.WebControls.Label LabelMS;
 
         /// <summary>
-        /// Control Label42.
+        /// Control LabelNS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label42;
+        protected global::System.Web.UI.WebControls.Label LabelNS;
 
         /// <summary>
-        /// Control Label43.
+        /// Control LabelÑS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label43;
+        protected global::System.Web.UI.WebControls.Label LabelÑS;
 
         /// <summary>
-        /// Control Label44.
+        /// Control LabelOS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label44;
+        protected global::System.Web.UI.WebControls.Label LabelOS;
 
         /// <summary>
-        /// Control Label45.
+        /// Control LabelPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label45;
+        protected global::System.Web.UI.WebControls.Label LabelPS;
 
         /// <summary>
-        /// Control Label46.
+        /// Control LabelQS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label46;
+        protected global::System.Web.UI.WebControls.Label LabelQS;
 
         /// <summary>
-        /// Control Label47.
+        /// Control LabelRS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label47;
+        protected global::System.Web.UI.WebControls.Label LabelRS;
 
         /// <summary>
-        /// Control Label48.
+        /// Control LabelSS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label48;
+        protected global::System.Web.UI.WebControls.Label LabelSS;
 
         /// <summary>
         /// Control Label9.
@@ -555,13 +555,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// Control Label11.
+        /// Control LabelI1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label LabelI1;
 
         /// <summary>
         /// Control BtnA1.
@@ -744,22 +744,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS1;
 
         /// <summary>
-        /// Control Label12.
+        /// Control LabelD1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label LabelD1;
 
         /// <summary>
-        /// Control Label13.
+        /// Control LabelI2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label LabelI2;
 
         /// <summary>
         /// Control BtnA2.
@@ -942,22 +942,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS2;
 
         /// <summary>
-        /// Control Label14.
+        /// Control LabelD2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label LabelD2;
 
         /// <summary>
-        /// Control Label15.
+        /// Control LabelI3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
+        protected global::System.Web.UI.WebControls.Label LabelI3;
 
         /// <summary>
         /// Control BtnA3.
@@ -1140,22 +1140,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS3;
 
         /// <summary>
-        /// Control Label16.
+        /// Control LabelD3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
+        protected global::System.Web.UI.WebControls.Label LabelD3;
 
         /// <summary>
-        /// Control Label17.
+        /// Control LabelI4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::System.Web.UI.WebControls.Label LabelI4;
 
         /// <summary>
         /// Control BtnA4.
@@ -1338,22 +1338,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS4;
 
         /// <summary>
-        /// Control Label18.
+        /// Control LabelD4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label LabelD4;
 
         /// <summary>
-        /// Control Label19.
+        /// Control LabelI5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
+        protected global::System.Web.UI.WebControls.Label LabelI5;
 
         /// <summary>
         /// Control BtnA5.
@@ -1536,22 +1536,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS5;
 
         /// <summary>
-        /// Control Label20.
+        /// Control LabelD5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label LabelD5;
 
         /// <summary>
-        /// Control Label21.
+        /// Control LabelI6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
+        protected global::System.Web.UI.WebControls.Label LabelI6;
 
         /// <summary>
         /// Control BtnA6.
@@ -1734,22 +1734,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS6;
 
         /// <summary>
-        /// Control Label22.
+        /// Control LabelD6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label22;
+        protected global::System.Web.UI.WebControls.Label LabelD6;
 
         /// <summary>
-        /// Control Label23.
+        /// Control LabelI7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label23;
+        protected global::System.Web.UI.WebControls.Label LabelI7;
 
         /// <summary>
         /// Control BtnA7.
@@ -1932,22 +1932,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS7;
 
         /// <summary>
-        /// Control Label24.
+        /// Control LabelD7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
+        protected global::System.Web.UI.WebControls.Label LabelD7;
 
         /// <summary>
-        /// Control Label25.
+        /// Control LabelI8.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
+        protected global::System.Web.UI.WebControls.Label LabelI8;
 
         /// <summary>
         /// Control BtnA8.
@@ -2130,22 +2130,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS8;
 
         /// <summary>
-        /// Control Label26.
+        /// Control LabelD8.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
+        protected global::System.Web.UI.WebControls.Label LabelD8;
 
         /// <summary>
-        /// Control Label61.
+        /// Control LabelI9.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label61;
+        protected global::System.Web.UI.WebControls.Label LabelI9;
 
         /// <summary>
         /// Control BtnA9.
@@ -2328,22 +2328,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS9;
 
         /// <summary>
-        /// Control Label62.
+        /// Control LabelD9.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label62;
+        protected global::System.Web.UI.WebControls.Label LabelD9;
 
         /// <summary>
-        /// Control Label63.
+        /// Control LabelI10.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label63;
+        protected global::System.Web.UI.WebControls.Label LabelI10;
 
         /// <summary>
         /// Control BtnA10.
@@ -2526,22 +2526,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS10;
 
         /// <summary>
-        /// Control Label64.
+        /// Control LabelD10.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label64;
+        protected global::System.Web.UI.WebControls.Label LabelD10;
 
         /// <summary>
-        /// Control Label65.
+        /// Control LabelI11.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label65;
+        protected global::System.Web.UI.WebControls.Label LabelI11;
 
         /// <summary>
         /// Control BtnA11.
@@ -2724,22 +2724,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS11;
 
         /// <summary>
-        /// Control Label66.
+        /// Control LabelD11.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label66;
+        protected global::System.Web.UI.WebControls.Label LabelD11;
 
         /// <summary>
-        /// Control Label67.
+        /// Control LabelI12.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label67;
+        protected global::System.Web.UI.WebControls.Label LabelI12;
 
         /// <summary>
         /// Control BtnA12.
@@ -2922,22 +2922,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS12;
 
         /// <summary>
-        /// Control Label68.
+        /// Control LabelD12.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label68;
+        protected global::System.Web.UI.WebControls.Label LabelD12;
 
         /// <summary>
-        /// Control Label69.
+        /// Control LabelI13.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label69;
+        protected global::System.Web.UI.WebControls.Label LabelI13;
 
         /// <summary>
         /// Control BtnA13.
@@ -3120,22 +3120,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS13;
 
         /// <summary>
-        /// Control Label70.
+        /// Control LabelD13.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label70;
+        protected global::System.Web.UI.WebControls.Label LabelD13;
 
         /// <summary>
-        /// Control Label71.
+        /// Control LabelI14.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label71;
+        protected global::System.Web.UI.WebControls.Label LabelI14;
 
         /// <summary>
         /// Control BtnA14.
@@ -3318,22 +3318,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS14;
 
         /// <summary>
-        /// Control Label72.
+        /// Control LabelD14.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label72;
+        protected global::System.Web.UI.WebControls.Label LabelD14;
 
         /// <summary>
-        /// Control Label73.
+        /// Control LabelI15.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label73;
+        protected global::System.Web.UI.WebControls.Label LabelI15;
 
         /// <summary>
         /// Control BtnA15.
@@ -3516,22 +3516,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS15;
 
         /// <summary>
-        /// Control Label74.
+        /// Control LabelD15.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label74;
+        protected global::System.Web.UI.WebControls.Label LabelD15;
 
         /// <summary>
-        /// Control Label75.
+        /// Control LabelI16.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label75;
+        protected global::System.Web.UI.WebControls.Label LabelI16;
 
         /// <summary>
         /// Control BtnA16.
@@ -3714,22 +3714,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS16;
 
         /// <summary>
-        /// Control Label76.
+        /// Control LabelD16.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label76;
+        protected global::System.Web.UI.WebControls.Label LabelD16;
 
         /// <summary>
-        /// Control Label77.
+        /// Control LabelI17.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label77;
+        protected global::System.Web.UI.WebControls.Label LabelI17;
 
         /// <summary>
         /// Control BtnA17.
@@ -3912,22 +3912,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS17;
 
         /// <summary>
-        /// Control Label78.
+        /// Control LabelD17.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label78;
+        protected global::System.Web.UI.WebControls.Label LabelD17;
 
         /// <summary>
-        /// Control Label79.
+        /// Control LabelI18.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label79;
+        protected global::System.Web.UI.WebControls.Label LabelI18;
 
         /// <summary>
         /// Control BtnA18.
@@ -4110,22 +4110,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS18;
 
         /// <summary>
-        /// Control Label80.
+        /// Control LabelD18.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label80;
+        protected global::System.Web.UI.WebControls.Label LabelD18;
 
         /// <summary>
-        /// Control Label81.
+        /// Control LabelI19.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label81;
+        protected global::System.Web.UI.WebControls.Label LabelI19;
 
         /// <summary>
         /// Control BtnA19.
@@ -4308,22 +4308,22 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS19;
 
         /// <summary>
-        /// Control Label82.
+        /// Control LabelD19.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label82;
+        protected global::System.Web.UI.WebControls.Label LabelD19;
 
         /// <summary>
-        /// Control Label83.
+        /// Control LabelI20.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label83;
+        protected global::System.Web.UI.WebControls.Label LabelI20;
 
         /// <summary>
         /// Control BtnA20.
@@ -4506,13 +4506,13 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button BtnS20;
 
         /// <summary>
-        /// Control Label84.
+        /// Control LabelD20.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label84;
+        protected global::System.Web.UI.WebControls.Label LabelD20;
 
         /// <summary>
         /// Control Label27.
@@ -4524,184 +4524,184 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Label Label27;
 
         /// <summary>
-        /// Control Label28.
+        /// Control LabelAI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label28;
+        protected global::System.Web.UI.WebControls.Label LabelAI;
 
         /// <summary>
-        /// Control Label29.
+        /// Control LabelBI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label29;
+        protected global::System.Web.UI.WebControls.Label LabelBI;
 
         /// <summary>
-        /// Control Label30.
+        /// Control LabelCI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label30;
+        protected global::System.Web.UI.WebControls.Label LabelCI;
 
         /// <summary>
-        /// Control Label31.
+        /// Control LabelDI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label31;
+        protected global::System.Web.UI.WebControls.Label LabelDI;
 
         /// <summary>
-        /// Control Label32.
+        /// Control LabelEI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label32;
+        protected global::System.Web.UI.WebControls.Label LabelEI;
 
         /// <summary>
-        /// Control Label33.
+        /// Control LabelFI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label33;
+        protected global::System.Web.UI.WebControls.Label LabelFI;
 
         /// <summary>
-        /// Control Label34.
+        /// Control LabelGI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label34;
+        protected global::System.Web.UI.WebControls.Label LabelGI;
 
         /// <summary>
-        /// Control Label35.
+        /// Control LabelHI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label35;
+        protected global::System.Web.UI.WebControls.Label LabelHI;
 
         /// <summary>
-        /// Control Label49.
+        /// Control LabelII.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label49;
+        protected global::System.Web.UI.WebControls.Label LabelII;
 
         /// <summary>
-        /// Control Label50.
+        /// Control LabelJI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label50;
+        protected global::System.Web.UI.WebControls.Label LabelJI;
 
         /// <summary>
-        /// Control Label51.
+        /// Control LabelKI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label51;
+        protected global::System.Web.UI.WebControls.Label LabelKI;
 
         /// <summary>
-        /// Control Label52.
+        /// Control LabelLI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label52;
+        protected global::System.Web.UI.WebControls.Label LabelLI;
 
         /// <summary>
-        /// Control Label53.
+        /// Control LabelMI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label53;
+        protected global::System.Web.UI.WebControls.Label LabelMI;
 
         /// <summary>
-        /// Control Label54.
+        /// Control LabelNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label54;
+        protected global::System.Web.UI.WebControls.Label LabelNI;
 
         /// <summary>
-        /// Control Label55.
+        /// Control LabelÑI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label55;
+        protected global::System.Web.UI.WebControls.Label LabelÑI;
 
         /// <summary>
-        /// Control Label56.
+        /// Control LabelOI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label56;
+        protected global::System.Web.UI.WebControls.Label LabelOI;
 
         /// <summary>
-        /// Control Label57.
+        /// Control LabelPI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label57;
+        protected global::System.Web.UI.WebControls.Label LabelPI;
 
         /// <summary>
-        /// Control Label58.
+        /// Control LabelQI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label58;
+        protected global::System.Web.UI.WebControls.Label LabelQI;
 
         /// <summary>
-        /// Control Label59.
+        /// Control LabelRI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label59;
+        protected global::System.Web.UI.WebControls.Label LabelRI;
 
         /// <summary>
-        /// Control Label60.
+        /// Control LabelSI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label60;
+        protected global::System.Web.UI.WebControls.Label LabelSI;
 
         /// <summary>
         /// Control Label36.
