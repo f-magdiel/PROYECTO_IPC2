@@ -34,7 +34,7 @@
                 <asp:ListItem>Inversa</asp:ListItem>
              </asp:DropDownList>
             <asp:Button CssClass="btnmodalidad" ID="ButtonModalidad" runat="server" Text="Modalidad" OnClick="ButtonModalidad_Click" />
-           
+            <asp:Button CssClass="btnempezar" ID="ButtonEmpezar" runat="server" Text="Empezar" OnClick="ButtonEmpezar_Click" />
             <asp:Label CssClass="titulojugador2" ID="Label87" runat="server" Text="Jugador 2"></asp:Label>
             <asp:Label CssClass="titulojugador1" ID="Label86" runat="server" Text="Jugador 1"></asp:Label>
             <asp:Label CssClass="tituloCronometro" ID="Label85" runat="server" Text="Cronometro"></asp:Label>

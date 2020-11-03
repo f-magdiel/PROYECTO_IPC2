@@ -41,8 +41,18 @@ namespace PROYECTO1
         public static int filaTamaño;
         public static int columnaTamaño;
 
+        //cambio de color
+        public static int cambio1 = 0;
+        public static int cambio2 = 0;
 
+        //contador de los 4
+        public static int contador4 = 0;
 
+        //modalidad
+        public static bool modalidaJuego;
+
+        //lllave para capturar
+        public static bool llaveCaptura = false;
 
         //para monstrar los movimiento se usar bool
         public static bool usuarioBlanco = false;
@@ -81,12 +91,14 @@ namespace PROYECTO1
         public static Label[] labelDerecho = new Label[20];
         public static Label[] labelSuperior = new Label[20];
         public static Label[] labelInferior = new Label[20];
-
+        public static string[,] tableroInterno; //tablero que simular los movimientos internamente
         //para los colores que se seleccionaran
         public static ArrayList arrayJugador1 = new ArrayList();
         public static ArrayList arrayJugador2 = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+           
 
             //para los turnos
             if(!IsPostBack){
@@ -833,8 +845,8 @@ namespace PROYECTO1
 
         //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
-        // para cuando se ficha blanca--------------------------------------------------------------------y
-        public void capturaFichaBlanca(int fil, int column)
+        // Para J1
+        public void capturaFichaJ1(int fil, int column)
         {   //x,y
             int fila = fil;
             int columna = column;
@@ -846,16 +858,16 @@ namespace PROYECTO1
             //fila = cambia , columna = igual
             for (int i = fila - 1; i >= 0; i--) // para fila
             {
-                if (tableroColor[i, columna].BackColor == Color.Black)
+                if (tableroInterno[i,columna].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[i, columna].BackColor == Color.White)
+                else if (tableroInterno[i, columna].ToString() == "1")
                 {
                     if (posicion >= 1)
                     {
-                        pintarBlancoDireccion1(fila, i, columna);
+                        pintarJ1Direccion1(fila, i, columna);
                         posicion = 0;
                         break;
                     }
@@ -869,7 +881,7 @@ namespace PROYECTO1
             //direccion2
             //fila=disminuye   columna = aumenta
             int filaContador = fila;
-            for (int i = columna + 1; i <= 7; i++) // para columna
+            for (int i = columna + 1; i <= columnaTamaño-1; i++) // para columna
             {
 
                 filaContador--;
@@ -877,17 +889,16 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroColor[filaContador, i].BackColor == Color.Black)
+                if (tableroInterno[filaContador, i].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[filaContador, i].BackColor == Color.White)
+                else if (tableroInterno[filaContador,i].ToString() == "1")
                 {
-
                     if (posicion >= 1)
                     {
-                        pintarBlancoDireccion2(fila, columna, i);
+                        pintarJ1Direccion2(fila, columna, i);
                         posicion = 0;
                         break;
                     }
@@ -904,19 +915,19 @@ namespace PROYECTO1
 
             //direccion3
             //fila = fija, columna = aumenta
-            for (int i = columna + 1; i <= 7; i++) // para columna 
+            for (int i = columna + 1; i <= columnaTamaño-1; i++) // para columna 
             {
-                if (tableroColor[fila, i].BackColor == Color.Black)
+                if (tableroInterno[fila,i].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[fila, i].BackColor == Color.White)
+                else if (tableroInterno[fila,i].ToString() == "1")
                 {
 
                     if (posicion >= 1)
                     {
-                        pintarBlancoDireccion3(fila, columna, i);
+                        pintarJ1Direccion3(fila, columna, i);
                         posicion = 0;
                         break;
                     }
@@ -934,25 +945,25 @@ namespace PROYECTO1
             //direcion4
             //fila = aumenta  columna = aumenta
             int filadireccion4 = fila;
-            for (int i = columna + 1; i <= 7; i++) // para columna
+            for (int i = columna + 1; i <= columnaTamaño-1; i++) // para columna
             {
                 filadireccion4++;
 
-                if (filadireccion4 >= 8) // fila >= 8 se sale del ciclo
+                if (filadireccion4 >= filaTamaño) // fila >= tamañofila se sale del ciclo
                 {
                     break;
                 }
-                if (tableroColor[filadireccion4, i].BackColor == Color.Black)
+                if (tableroInterno[i, columna].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[filadireccion4, i].BackColor == Color.White)
+                else if (tableroInterno[i, columna].ToString() == "1")
                 {
 
                     if (posicion >= 1)
                     {
-                        pintarBlancoDireccion4(fila, columna, i);
+                        pintarJ1Direccion4(fila, columna, i);
                         posicion = 0;
                         break;
                     }
@@ -969,19 +980,19 @@ namespace PROYECTO1
 
             //direccion5
             //fila = aumenta   columna = fija
-            for (int i = fila + 1; i <= 7; i++) // para fila
+            for (int i = fila + 1; i <= filaTamaño-1; i++) // para fila
             {
-                if (tableroColor[i, columna].BackColor == Color.Black)
+                if (tableroInterno[i, columna].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[i, columna].BackColor == Color.White)
+                else if (tableroInterno[i, columna].ToString() == "1")
                 {
                     if (posicion >= 1)
                     {
                         //metodo
-                        pintarBlancoDireccion5(fila, i, columna);
+                        pintarJ1Direccion5(fila, i, columna);
                         posicion = 0;
                         break;
                     }
@@ -992,29 +1003,29 @@ namespace PROYECTO1
 
                 }
             }
-
+            
             //Direccion6
             // fila = aumenta   columna = disminuye
             int columnadireccion6 = columna;
-            for (int i = fila + 1; i <= 7; i++) // para fila
+            for (int i = fila + 1; i <= filaTamaño-1; i++) // para fila
             {
                 columnadireccion6--;
                 if (columnadireccion6 < 0)
                 {
                     break;
                 }
-                if (tableroColor[i, columnadireccion6].BackColor == Color.Black)
+                if (tableroInterno[i, columna].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[i, columnadireccion6].BackColor == Color.White)
+                else if (tableroInterno[i, columna].ToString() == "1")
                 {
 
                     if (posicion >= 1)
                     {
                         //metododireccion6
-                        pintarBlancoDireccion6(fila, i, columna);
+                        pintarJ1Direccion6(fila, i, columna);
                         posicion = 0;
                         break;
                     }
@@ -1034,18 +1045,17 @@ namespace PROYECTO1
 
             for (int i = columna - 1; i >= 0; i--) // columna
             {
-                if (tableroColor[fila, i].BackColor == Color.Black)
+                if (tableroInterno[i, columna].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[fila, i].BackColor == Color.White)
+                else if (tableroInterno[i, columna].ToString() == "1")
                 {
                     if (posicion >= 1)
                     {
-
                         //metodo
-                        pintarBlancoDireccion7(columna, i, fila);
+                        pintarJ1Direccion7(columna, i, fila);
                         posicion = 0;
                         break;
                     }
@@ -1068,17 +1078,17 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroColor[i, columnadireccion8].BackColor == Color.Black)
+                if (tableroInterno[i, columna].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroColor[i, columnadireccion8].BackColor == Color.White)
+                else if (tableroInterno[i, columna].ToString() == "1")
                 {
                     if (posicion >= 1)
                     {
                         //metodod
-                        pintarBlancoDireccion8(fila, i, columna);
+                        pintarJ1Direccion8(fila, i, columna);
                         posicion = 0;
                         break;
                     }
@@ -1096,710 +1106,464 @@ namespace PROYECTO1
 
         }
         //metodos que pinta, recibe valores para pintar ************************************************************
-        public void pintarBlancoDireccion1(int filaInicio, int filaFin, int columna)
+        public void pintarJ1Direccion1(int filaInicio, int filaFin, int columna)
         {
             for (int i = filaInicio; i >= filaFin; i--)
             {
-                tableroColor[i, columna].BackColor = Color.White;
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columna].BackColor = Color.Red;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columna].BackColor = Color.Yellow;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Azul":
+                        tableroColor[i, columna].BackColor = Color.Blue;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columna].BackColor = Color.Orange;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Verde":
+                        tableroColor[i, columna].BackColor = Color.Green;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columna].BackColor = Color.Violet;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columna].BackColor = Color.White;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Negro":
+                        tableroColor[i, columna].BackColor = Color.Black;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columna].BackColor = Color.LightBlue;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Gris":
+                        tableroColor[i, columna].BackColor = Color.Gray;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                }
+                
             }
+
         }
 
-        public void pintarBlancoDireccion2(int filaInicio, int columnaInicio, int columnaFin)
+        public void pintarJ1Direccion2(int filaInicio, int columnaInicio, int columnaFin)
         {
             int fila = filaInicio;
             for (int i = columnaInicio; i <= columnaFin; i++)
             {
-                tableroColor[fila, i].BackColor = Color.White;
-                fila--;
+                switch(arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[fila, i].BackColor = Color.Red;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Amarillo":
+                        tableroColor[fila, i].BackColor = Color.Yellow;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Azul":
+                        tableroColor[fila, i].BackColor = Color.Blue;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[fila, i].BackColor = Color.Orange;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Verde":
+                        tableroColor[fila, i].BackColor = Color.Green;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Violeta":
+                        tableroColor[fila, i].BackColor = Color.Violet;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Blanco":
+                        tableroColor[fila, i].BackColor = Color.White;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Negro":
+                        tableroColor[fila, i].BackColor = Color.Black;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Celeste":
+                        tableroColor[fila, i].BackColor = Color.LightBlue;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                    case "Gris":
+                        tableroColor[fila, i].BackColor = Color.Gray;
+                        tableroInterno[fila, i] = "1";
+                        fila--;
+                        break;
+                }
+                
 
             }
+
         }
 
-        public void pintarBlancoDireccion3(int fila, int inicioColumna, int finColumna)
+        public void pintarJ1Direccion3(int fila, int inicioColumna, int finColumna)
         {
             for (int i = inicioColumna; i <= finColumna; i++) //columna
             {
-                tableroColor[fila, i].BackColor = Color.White;
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[fila, i].BackColor = Color.Red;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Amarillo":
+                        tableroColor[fila, i].BackColor = Color.Yellow;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Azul":
+                        tableroColor[fila, i].BackColor = Color.Blue;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[fila, i].BackColor = Color.Orange;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Verde":
+                        tableroColor[fila, i].BackColor = Color.Green;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Violeta":
+                        tableroColor[fila, i].BackColor = Color.Violet;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Blanco":
+                        tableroColor[fila, i].BackColor = Color.White;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Negro":
+                        tableroColor[fila, i].BackColor = Color.Black;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Celeste":
+                        tableroColor[fila, i].BackColor = Color.LightBlue;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Gris":
+                        tableroColor[fila, i].BackColor = Color.Gray;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                }
+               
             }
         }
 
-        public void pintarBlancoDireccion4(int fila, int inicioColumna, int finColumna)
+        public void pintarJ1Direccion4(int fila, int inicioColumna, int finColumna)
         {
             int filaInicio = fila;
             for (int i = inicioColumna; i <= finColumna; i++)
             {
-                tableroColor[filaInicio, i].BackColor = Color.White;
-                filaInicio++;
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[filaInicio, i].BackColor = Color.Red;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Amarillo":
+                        tableroColor[filaInicio, i].BackColor = Color.Yellow;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Azul":
+                        tableroColor[filaInicio, i].BackColor = Color.Blue;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[filaInicio, i].BackColor = Color.Orange;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Verde":
+                        tableroColor[filaInicio, i].BackColor = Color.Green;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Violeta":
+                        tableroColor[filaInicio, i].BackColor = Color.Violet;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Blanco":
+                        tableroColor[filaInicio, i].BackColor = Color.White;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Negro":
+                        tableroColor[filaInicio, i].BackColor = Color.Black;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Celeste":
+                        tableroColor[filaInicio, i].BackColor = Color.LightBlue;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                    case "Gris":
+                        tableroColor[filaInicio, i].BackColor = Color.Gray;
+                        tableroInterno[filaInicio, i] = "1";
+                        filaInicio++;
+                        break;
+                }
+               
             }
 
         }
 
-        public void pintarBlancoDireccion5(int filaInicio, int filaFin, int columna)
+        public void pintarJ1Direccion5(int filaInicio, int filaFin, int columna)
         {
             for (int i = filaInicio; i <= filaFin; i++)
             {
-                tableroColor[i, columna].BackColor = Color.White;
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columna].BackColor = Color.Red;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columna].BackColor = Color.Yellow;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Azul":
+                        tableroColor[i, columna].BackColor = Color.Blue;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columna].BackColor = Color.Orange;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Verde":
+                        tableroColor[i, columna].BackColor = Color.Green;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columna].BackColor = Color.Violet;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columna].BackColor = Color.White;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Negro":
+                        tableroColor[i, columna].BackColor = Color.Black;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columna].BackColor = Color.LightBlue;
+                        tableroInterno[i, columna] = "1";
+                        break;
+                    case "Gris":
+                        tableroColor[i, columna].BackColor = Color.Gray;
+                        tableroInterno[i, columna] = "1";
+                        break;
+
+                }
+                
             }
         }
 
-        public void pintarBlancoDireccion6(int inicioFila, int finFila, int columna)
+        public void pintarJ1Direccion6(int inicioFila, int finFila, int columna)
         {
             int columnadireccion = columna;
             for (int i = inicioFila; i <= finFila; i++)
             {
-                tableroColor[i, columnadireccion].BackColor = Color.White;
-                columnadireccion--;
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Red;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Yellow;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Azul":
+                        tableroColor[i, columnadireccion].BackColor = Color.Blue;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columnadireccion].BackColor = Color.Orange;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Verde":
+                        tableroColor[i, columnadireccion].BackColor = Color.Green;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columnadireccion].BackColor = Color.Violet;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columnadireccion].BackColor = Color.White;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Negro":
+                        tableroColor[i, columnadireccion].BackColor = Color.Black;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Gris":
+                        tableroColor[i, columnadireccion].BackColor = Color.Gray;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                }
+                
             }
         }
 
-        public void pintarBlancoDireccion7(int inicioColumna, int finColumna, int fila)
+        public void pintarJ1Direccion7(int inicioColumna, int finColumna, int fila)
         {
             for (int i = inicioColumna; i >= finColumna; i--)
             {
-                tableroColor[fila, i].BackColor = Color.White;
+                switch(arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[fila, i].BackColor = Color.Red;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Amarillo":
+                        tableroColor[fila, i].BackColor = Color.Yellow;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Azul":
+                        tableroColor[fila, i].BackColor = Color.Blue;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[fila, i].BackColor = Color.Orange;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Verde":
+                        tableroColor[fila, i].BackColor = Color.Green;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Violeta":
+                        tableroColor[fila, i].BackColor = Color.Violet;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Blanco":
+                        tableroColor[fila, i].BackColor = Color.White;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Negro":
+                        tableroColor[fila, i].BackColor = Color.Black;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Celeste":
+                        tableroColor[fila, i].BackColor = Color.LightBlue;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                    case "Gris":
+                        tableroColor[fila, i].BackColor = Color.Gray;
+                        tableroInterno[fila, i] = "1";
+                        break;
+                }
+               
             }
         }
 
-        public void pintarBlancoDireccion8(int inicioFila, int finFila, int columna)
+        public void pintarJ1Direccion8(int inicioFila, int finFila, int columna)
         {
             int columnadireccion = columna;
             for (int i = inicioFila; i >= finFila; i--)
             {
-                tableroColor[i, columnadireccion].BackColor = Color.White;
-                columnadireccion--;
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Red;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Yellow;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Azul":
+                        tableroColor[i, columnadireccion].BackColor = Color.Blue;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columnadireccion].BackColor = Color.Orange;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Verde":
+                        tableroColor[i, columnadireccion].BackColor = Color.Green;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columnadireccion].BackColor = Color.Violet;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columnadireccion].BackColor = Color.White;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Negro":
+                        tableroColor[i, columnadireccion].BackColor = Color.Black;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                    case "Gris":
+                        tableroColor[i, columnadireccion].BackColor = Color.Gray;
+                        tableroInterno[i, columnadireccion] = "1";
+                        columnadireccion--;
+                        break;
+                }
+                
             }
 
         }
-
-        //metodo para habilitar botones si soy negro
-        public void activacionBoton2(int fila, int columna)
-        {
-            int filaTemp = fila;
-            int columnaTemp = columna;
-            int contadorFicha = 0;
-
-
-            //fila = disminuye  ------------->Direccion1
-
-            for (int i = filaTemp - 1; i >= 0; i--)
-            {
-                if (tableroColor[i, columnaTemp].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[i, columnaTemp].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[i, columnaTemp].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        //para habilitar boton
-                        tableroColor[i, columnaTemp].Enabled = true;
-                        tableroColor[i, columnaTemp].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-                }
-            }
-
-            //fila = disminuye, columna = aumenta   ------------>Direccion2
-            int auxColumnaD2 = columnaTemp; //fila
-            for (int i = filaTemp - 1; i >= 0; i--)
-            {
-                auxColumnaD2++;
-                if (auxColumnaD2 >= 8)
-                {
-                    break;
-                }
-                if (tableroColor[i, auxColumnaD2].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[i, auxColumnaD2].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[i, auxColumnaD2].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        //para habilitar el boton
-                        tableroColor[i, auxColumnaD2].Enabled = true;
-                        tableroColor[i, auxColumnaD2].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-
-                    }
-                }
-
-
-            }
-            //fila = fija, columna= aumenta -----------> Direccion3
-            int auxFilaD3 = filaTemp;
-            for (int i = columna + 1; i <= 7; i++)
-            {
-                if (tableroColor[auxFilaD3, i].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[auxFilaD3, i].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[auxFilaD3, i].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        //habilitar boton
-
-                        tableroColor[auxFilaD3, i].Enabled = true;
-                        tableroColor[auxFilaD3, i].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-                }
-            }
-
-            //fila = aumenta, columna= aumenta  ---------------->Direccion4
-            int auxFilaD4 = filaTemp;
-            for (int i = columnaTemp + 1; i <= 7; i++) // columna
-            {
-                auxFilaD4++;
-                if (auxFilaD4 >= 8)
-                {
-                    break;
-                }
-                if (tableroColor[auxFilaD4, i].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[auxFilaD4, i].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-
-                }
-                else if (tableroColor[auxFilaD4, i].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        tableroColor[auxFilaD4, i].Enabled = true;
-                        tableroColor[auxFilaD4, i].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-                }
-            }
-
-            //fila = aumenta, columna = fija ---------------->Direccion5
-            int auxColumnaD5 = columnaTemp;
-            for (int i = filaTemp + 1; i <= 7; i++) //fila
-            {
-                if (tableroColor[i, auxColumnaD5].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[i, auxColumnaD5].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[i, auxColumnaD5].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        tableroColor[i, auxColumnaD5].Enabled = true;
-                        tableroColor[i, auxColumnaD5].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-                }
-            }
-
-            //fila = aumenta, columna = disminuye -------------->Direccion6
-            int auxFilaD6 = filaTemp;
-            for (int i = columnaTemp - 1; i >= 0; i--) //columna
-            {
-                auxFilaD6++;
-                if (auxFilaD6 >= 8)
-                {
-                    break;
-                }
-                if (tableroColor[auxFilaD6, i].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[auxFilaD6, i].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[auxFilaD6, i].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        tableroColor[auxFilaD6, i].Enabled = true;
-                        tableroColor[auxFilaD6, i].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-                }
-            }
-
-            //fila = fija, columna = disminuye  --------------->Direccion7
-            int auxFilaD7 = filaTemp;
-            for (int i = columnaTemp - 1; i >= 0; i--) //columna
-            {
-                if (tableroColor[auxFilaD7, i].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[auxFilaD7, i].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[auxFilaD7, i].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        tableroColor[auxFilaD7, i].Enabled = true;
-                        tableroColor[auxFilaD7, i].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-
-                }
-            }
-
-            //fila = disminuye, columna = disminuye ---------------->Direccion8
-            int auxColumnaD8 = columnaTemp;
-            for (int i = filaTemp - 1; i >= 0; i--) //fila
-            {
-                auxColumnaD8--;
-                if (auxColumnaD8 < 0)
-                {
-                    break;
-                }
-                if (tableroColor[i, auxColumnaD8].BackColor == Color.Black)
-                {
-                    contadorFicha = 0;
-                    break;
-                }
-                else if (tableroColor[i, auxColumnaD8].BackColor == Color.White)
-                {
-                    contadorFicha++;
-                    continue;
-                }
-                else if (tableroColor[i, auxColumnaD8].BackColor == Color.Green)
-                {
-                    if (contadorFicha >= 1)
-                    {
-                        tableroColor[i, auxColumnaD8].Enabled = true;
-                        tableroColor[i, auxColumnaD8].Text = "O";
-                        contadorFicha = 0;
-                        break;
-                    }
-                    else
-                    {
-                        contadorFicha = 0;
-                        break;
-                    }
-                }
-            }
-        }
-
-        //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-
-
-        //NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-
-        // para cuando se ficha negra--------------------------------------------------------------------y
-        public void capturaFichaNegra(int fil, int column)
-        {   //x,y
-            int fila = fil;
-            int columna = column;
-            int posicion = 0;
-
-
-
-            //direccion1
-            //fila = cambia , columna = igual
-            for (int i = fila - 1; i >= 0; i--) // para fila
-            {
-                if (tableroColor[i, columna].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[i, columna].BackColor == Color.Black)
-                {
-                    if (posicion >= 1)
-                    {
-                        pintarNegroDireccion1(fila, i, columna);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
-
-            //direccion2
-            //fila=disminuye   columna = aumenta
-            int filaContador = fila;
-            for (int i = columna + 1; i <= 7; i++) // para columna
-            {
-
-                filaContador--;
-                if (filaContador < 0)
-                {
-                    break;
-                }
-                if (tableroColor[filaContador, i].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[filaContador, i].BackColor == Color.Black)
-                {
-
-                    if (posicion >= 1)
-                    {
-                        pintarNegroDireccion2(fila, columna, i);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-                }
-
-
-            }
-
-            //direccion3
-            //fila = fija, columna = aumenta
-            for (int i = columna + 1; i <= 7; i++) // para columna 
-            {
-                if (tableroColor[fila, i].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[fila, i].BackColor == Color.Black)
-                {
-
-                    if (posicion >= 1)
-                    {
-                        pintarNegroDireccion3(fila, columna, i);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-
-
-                }
-            }
-
-            //direcion4
-            //fila = aumenta  columna = aumenta
-            int filadireccion4 = fila;
-            for (int i = columna + 1; i <= 7; i++) // para columna
-            {
-                filadireccion4++;
-
-                if (filadireccion4 >= 8) // fila >= 8 se sale del ciclo
-                {
-                    break;
-                }
-                if (tableroColor[filadireccion4, i].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[filadireccion4, i].BackColor == Color.Black)
-                {
-
-                    if (posicion >= 1)
-                    {
-                        pintarNegroDireccion4(fila, columna, i);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-                }
-
-
-            }
-
-            //direccion5
-            //fila = aumenta   columna = fija
-            for (int i = fila + 1; i <= 7; i++) // para fila
-            {
-                if (tableroColor[i, columna].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[i, columna].BackColor == Color.Black)
-                {
-                    if (posicion >= 1)
-                    {
-                        //metodo
-                        pintarNegroDireccion5(fila, i, columna);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-                }
-            }
-
-            //Direccion6
-            // fila = aumenta   columna = disminuye
-            int columnadireccion6 = columna;
-            for (int i = fila + 1; i <= 7; i++) // para fila
-            {
-                columnadireccion6--;
-                if (columnadireccion6 < 0)
-                {
-                    break;
-                }
-                if (tableroColor[i, columnadireccion6].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[i, columnadireccion6].BackColor == Color.Black)
-                {
-
-                    if (posicion >= 1)
-                    {
-                        //metododireccion6
-                        pintarNegroDireccion6(fila, i, columna);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-                }
-
-
-            }
-
-            //direccion7
-            //fila = fija, columna = disminuye
-
-            for (int i = columna - 1; i >= 0; i--) // columna
-            {
-                if (tableroColor[fila, i].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[fila, i].BackColor == Color.Black)
-                {
-                    if (posicion >= 1)
-                    {
-
-                        //metodo
-                        pintarNegroDireccion7(columna, i, fila);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-                }
-            }
-
-            //direcion8
-            // fila = disminuye, columna = diminuye
-            int columnadireccion8 = columna;
-            for (int i = fila - 1; i >= 0; i--) // fila
-            {
-                columnadireccion8--;
-                if (columnadireccion8 < 0)
-                {
-                    break;
-                }
-                if (tableroColor[i, columnadireccion8].BackColor == Color.White)
-                {
-                    posicion++;
-                    continue;
-                }
-                else if (tableroColor[i, columnadireccion8].BackColor == Color.Black)
-                {
-                    if (posicion >= 1)
-                    {
-                        //metodod
-                        pintarNegroDireccion8(fila, i, columna);
-                        posicion = 0;
-                        break;
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-
-                }
-
-
-
-            }
-
-        }
-        //metodos que pinta, recibe valores para pintar ************************************************************
-        public void pintarNegroDireccion1(int filaInicio, int filaFin, int columna)
-        {
-            for (int i = filaInicio; i >= filaFin; i--)
-            {
-                tableroColor[i, columna].BackColor = Color.Black;
-            }
-        }
-
-        public void pintarNegroDireccion2(int filaInicio, int columnaInicio, int columnaFin)
-        {
-            int fila = filaInicio;
-            for (int i = columnaInicio; i <= columnaFin; i++)
-            {
-                tableroColor[fila, i].BackColor = Color.Black;
-                fila--;
-
-            }
-        }
-
-        public void pintarNegroDireccion3(int fila, int inicioColumna, int finColumna)
-        {
-            for (int i = inicioColumna; i <= finColumna; i++) //columna
-            {
-                tableroColor[fila, i].BackColor = Color.Black;
-            }
-        }
-
-        public void pintarNegroDireccion4(int fila, int inicioColumna, int finColumna)
-        {
-            int filaInicio = fila;
-            for (int i = inicioColumna; i <= finColumna; i++)
-            {
-                tableroColor[filaInicio, i].BackColor = Color.Black;
-                filaInicio++;
-            }
-
-        }
-
-        public void pintarNegroDireccion5(int filaInicio, int filaFin, int columna)
-        {
-            for (int i = filaInicio; i <= filaFin; i++)
-            {
-                tableroColor[i, columna].BackColor = Color.Black;
-            }
-        }
-
-        public void pintarNegroDireccion6(int inicioFila, int finFila, int columna)
-        {
-            int columnadireccion = columna;
-            for (int i = inicioFila; i <= finFila; i++)
-            {
-                tableroColor[i, columnadireccion].BackColor = Color.Black;
-                columnadireccion--;
-            }
-        }
-
-        public void pintarNegroDireccion7(int inicioColumna, int finColumna, int fila)
-        {
-            for (int i = inicioColumna; i >= finColumna; i--)
-            {
-                tableroColor[fila, i].BackColor = Color.Black;
-            }
-        }
-
-        public void pintarNegroDireccion8(int inicioFila, int finFila, int columna)
-        {
-            int columnadireccion = columna;
-            for (int i = inicioFila; i >= finFila; i--)
-            {
-                tableroColor[i, columnadireccion].BackColor = Color.Black;
-                columnadireccion--;
-            }
-
-        }
-
-        //metodo para habilitar botones si soy blanco
+        //metodo para habilitar botones si soy J1
         public void activacionBoton1(int fila, int columna)
         {
             int filaTemp = fila;
@@ -1811,17 +1575,17 @@ namespace PROYECTO1
 
             for (int i = filaTemp - 1; i >= 0; i--)
             {
-                if (tableroColor[i, columnaTemp].BackColor == Color.White)
+                if (tableroInterno[i, columnaTemp] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[i, columnaTemp].BackColor == Color.Black)
+                else if (tableroInterno[i, columnaTemp] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[i, columnaTemp].BackColor == Color.Green)
+                else if (tableroInterno[i, columnaTemp] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -1840,25 +1604,25 @@ namespace PROYECTO1
             }
 
             //fila = disminuye, columna = aumenta   ------------>Direccion2
-            int auxColumnaD2 = columnaTemp; //fila
+            int auxColumnaD2 = columnaTemp; //columna
             for (int i = filaTemp - 1; i >= 0; i--)
             {
                 auxColumnaD2++;
-                if (auxColumnaD2 >= 8)
+                if (auxColumnaD2 >= columnaTamaño)
                 {
                     break;
                 }
-                if (tableroColor[i, auxColumnaD2].BackColor == Color.White)
+                if (tableroInterno[i, auxColumnaD2] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[i, auxColumnaD2].BackColor == Color.Black)
+                else if (tableroInterno[i, auxColumnaD2] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[i, auxColumnaD2].BackColor == Color.Green)
+                else if (tableroInterno[i, auxColumnaD2] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -1880,19 +1644,19 @@ namespace PROYECTO1
             }
             //fila = fija, columna= aumenta -----------> Direccion3
             int auxFilaD3 = filaTemp;
-            for (int i = columna + 1; i <= 7; i++)
+            for (int i = columna + 1; i <= columnaTamaño-1; i++)
             {
-                if (tableroColor[auxFilaD3, i].BackColor == Color.White)
+                if (tableroInterno[auxFilaD3, i] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[auxFilaD3, i].BackColor == Color.Black)
+                else if (tableroInterno[auxFilaD3, i] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[auxFilaD3, i].BackColor == Color.Green)
+                else if (tableroInterno[auxFilaD3, i] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -1913,25 +1677,25 @@ namespace PROYECTO1
 
             //fila = aumenta, columna= aumenta  ---------------->Direccion4
             int auxFilaD4 = filaTemp;
-            for (int i = columnaTemp + 1; i <= 7; i++) // columna
+            for (int i = columnaTemp + 1; i <= columnaTamaño-1; i++) // columna
             {
                 auxFilaD4++;
-                if (auxFilaD4 >= 8)
+                if (auxFilaD4 >= filaTamaño)
                 {
                     break;
                 }
-                if (tableroColor[auxFilaD4, i].BackColor == Color.White)
+                if (tableroInterno[auxFilaD4, i] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[auxFilaD4, i].BackColor == Color.Black)
+                else if (tableroInterno[auxFilaD4, i] == "0")
                 {
                     contadorFicha++;
                     continue;
 
                 }
-                else if (tableroColor[auxFilaD4, i].BackColor == Color.Green)
+                else if (tableroInterno[auxFilaD4, i] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -1950,19 +1714,19 @@ namespace PROYECTO1
 
             //fila = aumenta, columna = fija ---------------->Direccion5
             int auxColumnaD5 = columnaTemp;
-            for (int i = filaTemp + 1; i <= 7; i++) //fila
+            for (int i = filaTemp + 1; i <= filaTamaño-1; i++) //fila
             {
-                if (tableroColor[i, auxColumnaD5].BackColor == Color.White)
+                if (tableroInterno[i, auxColumnaD5] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[i, auxColumnaD5].BackColor == Color.Black)
+                else if (tableroInterno[i, auxColumnaD5] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[i, auxColumnaD5].BackColor == Color.Green)
+                else if (tableroInterno[i, auxColumnaD5] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -1984,21 +1748,21 @@ namespace PROYECTO1
             for (int i = columnaTemp - 1; i >= 0; i--) //columna
             {
                 auxFilaD6++;
-                if (auxFilaD6 >= 8)
+                if (auxFilaD6 >= filaTamaño)
                 {
                     break;
                 }
-                if (tableroColor[auxFilaD6, i].BackColor == Color.White)
+                if (tableroInterno[auxFilaD6, i] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[auxFilaD6, i].BackColor == Color.Black)
+                else if (tableroInterno[auxFilaD6, i] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[auxFilaD6, i].BackColor == Color.Green)
+                else if (tableroInterno[auxFilaD6, i] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -2019,17 +1783,17 @@ namespace PROYECTO1
             int auxFilaD7 = filaTemp;
             for (int i = columnaTemp - 1; i >= 0; i--) //columna
             {
-                if (tableroColor[auxFilaD7, i].BackColor == Color.White)
+                if (tableroInterno[auxFilaD7, i] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[auxFilaD7, i].BackColor == Color.Black)
+                else if (tableroInterno[auxFilaD7, i] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[auxFilaD7, i].BackColor == Color.Green)
+                else if (tableroInterno[auxFilaD7, i] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -2056,17 +1820,1028 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroColor[i, auxColumnaD8].BackColor == Color.White)
+                if (tableroInterno[i, auxColumnaD8] == "1")
                 {
                     contadorFicha = 0;
                     break;
                 }
-                else if (tableroColor[i, auxColumnaD8].BackColor == Color.Black)
+                else if (tableroInterno[i, auxColumnaD8] == "0")
                 {
                     contadorFicha++;
                     continue;
                 }
-                else if (tableroColor[i, auxColumnaD8].BackColor == Color.Green)
+                else if (tableroInterno[i, auxColumnaD8] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        tableroColor[i, auxColumnaD8].Enabled = true;
+                        tableroColor[i, auxColumnaD8].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+                }
+            }
+        }
+
+
+
+        //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+
+
+        //NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+        // para cuando se ficha negra--------------------------------------------------------------------y
+        // Para J1
+        public void capturaFichaJ2(int fil, int column)
+        {   //x,y
+            int fila = fil;
+            int columna = column;
+            int posicion = 0;
+
+
+
+            //direccion1
+            //fila = cambia , columna = igual
+            for (int i = fila - 1; i >= 0; i--) // para fila
+            {
+                if (tableroInterno[i, columna].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[i, columna].ToString() == "0")
+                {
+                    if (posicion >= 1)
+                    {
+                        pintarJ2Direccion1(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            //direccion2
+            //fila=disminuye   columna = aumenta
+            int filaContador = fila;
+            for (int i = columna + 1; i <= columnaTamaño - 1; i++) // para columna
+            {
+
+                filaContador--;
+                if (filaContador < 0)
+                {
+                    break;
+                }
+                if (tableroInterno[filaContador, i].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[filaContador, i].ToString() == "0")
+                {
+                    if (posicion >= 1)
+                    {
+                        pintarJ2Direccion2(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+            }
+
+            //direccion3
+            //fila = fija, columna = aumenta
+            for (int i = columna + 1; i <= columnaTamaño - 1; i++) // para columna 
+            {
+                if (tableroInterno[fila, i].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[fila, i].ToString() == "0")
+                {
+
+                    if (posicion >= 1)
+                    {
+                        pintarJ2Direccion3(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+
+
+                }
+            }
+
+            //direcion4
+            //fila = aumenta  columna = aumenta
+            int filadireccion4 = fila;
+            for (int i = columna + 1; i <= columnaTamaño - 1; i++) // para columna
+            {
+                filadireccion4++;
+
+                if (filadireccion4 >= filaTamaño) // fila >= tamañofila se sale del ciclo
+                {
+                    break;
+                }
+                if (tableroInterno[i, columna].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[i, columna].ToString() == "0")
+                {
+
+                    if (posicion >= 1)
+                    {
+                        pintarJ2Direccion4(fila, columna, i);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+            }
+
+            //direccion5
+            //fila = aumenta   columna = fija
+            for (int i = fila + 1; i <= filaTamaño - 1; i++) // para fila
+            {
+                if (tableroInterno[i, columna].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[i, columna].ToString() == "0")
+                {
+                    if (posicion >= 1)
+                    {
+                        //metodo
+                        pintarJ2Direccion5(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                }
+            }
+
+            //Direccion6
+            // fila = aumenta   columna = disminuye
+            int columnadireccion6 = columna;
+            for (int i = fila + 1; i <= filaTamaño - 1; i++) // para fila
+            {
+                columnadireccion6--;
+                if (columnadireccion6 < 0)
+                {
+                    break;
+                }
+                if (tableroInterno[i, columna].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[i, columna].ToString() == "0")
+                {
+
+                    if (posicion >= 1)
+                    {
+                        //metododireccion6
+                        pintarJ2Direccion6(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+            }
+
+            //direccion7
+            //fila = fija, columna = disminuye
+
+            for (int i = columna - 1; i >= 0; i--) // columna
+            {
+                if (tableroInterno[i, columna].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[i, columna].ToString() == "0")
+                {
+                    if (posicion >= 1)
+                    {
+                        //metodo
+                        pintarJ2Direccion7(columna, i, fila);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+            }
+
+            //direcion8
+            // fila = disminuye, columna = diminuye
+            int columnadireccion8 = columna;
+            for (int i = fila - 1; i >= 0; i--) // fila
+            {
+                columnadireccion8--;
+                if (columnadireccion8 < 0)
+                {
+                    break;
+                }
+                if (tableroInterno[i, columna].ToString() == "1")
+                {
+                    posicion++;
+                    continue;
+                }
+                else if (tableroInterno[i, columna].ToString() == "0")
+                {
+                    if (posicion >= 1)
+                    {
+                        //metodod
+                        pintarJ2Direccion8(fila, i, columna);
+                        posicion = 0;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+
+                }
+
+
+
+            }
+
+        }
+        //metodos que pinta, recibe valores para pintar ************************************************************
+        public void pintarJ2Direccion1(int filaInicio, int filaFin, int columna)
+        {
+            for (int i = filaInicio; i >= filaFin; i--)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columna].BackColor = Color.Red;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columna].BackColor = Color.Yellow;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Azul":
+                        tableroColor[i, columna].BackColor = Color.Blue;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columna].BackColor = Color.Orange;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Verde":
+                        tableroColor[i, columna].BackColor = Color.Green;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columna].BackColor = Color.Violet;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columna].BackColor = Color.White;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Negro":
+                        tableroColor[i, columna].BackColor = Color.Black;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columna].BackColor = Color.LightBlue;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Gris":
+                        tableroColor[i, columna].BackColor = Color.Gray;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                }
+
+            }
+
+        }
+
+        public void pintarJ2Direccion2(int filaInicio, int columnaInicio, int columnaFin)
+        {
+            int fila = filaInicio;
+            for (int i = columnaInicio; i <= columnaFin; i++)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[fila, i].BackColor = Color.Red;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Amarillo":
+                        tableroColor[fila, i].BackColor = Color.Yellow;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Azul":
+                        tableroColor[fila, i].BackColor = Color.Blue;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[fila, i].BackColor = Color.Orange;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Verde":
+                        tableroColor[fila, i].BackColor = Color.Green;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Violeta":
+                        tableroColor[fila, i].BackColor = Color.Violet;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Blanco":
+                        tableroColor[fila, i].BackColor = Color.White;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Negro":
+                        tableroColor[fila, i].BackColor = Color.Black;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Celeste":
+                        tableroColor[fila, i].BackColor = Color.LightBlue;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                    case "Gris":
+                        tableroColor[fila, i].BackColor = Color.Gray;
+                        tableroInterno[fila, i] = "0";
+                        fila--;
+                        break;
+                }
+
+
+            }
+
+        }
+
+        public void pintarJ2Direccion3(int fila, int inicioColumna, int finColumna)
+        {
+            for (int i = inicioColumna; i <= finColumna; i++) //columna
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[fila, i].BackColor = Color.Red;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Amarillo":
+                        tableroColor[fila, i].BackColor = Color.Yellow;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Azul":
+                        tableroColor[fila, i].BackColor = Color.Blue;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[fila, i].BackColor = Color.Orange;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Verde":
+                        tableroColor[fila, i].BackColor = Color.Green;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Violeta":
+                        tableroColor[fila, i].BackColor = Color.Violet;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Blanco":
+                        tableroColor[fila, i].BackColor = Color.White;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Negro":
+                        tableroColor[fila, i].BackColor = Color.Black;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Celeste":
+                        tableroColor[fila, i].BackColor = Color.LightBlue;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Gris":
+                        tableroColor[fila, i].BackColor = Color.Gray;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                }
+
+            }
+        }
+
+        public void pintarJ2Direccion4(int fila, int inicioColumna, int finColumna)
+        {
+            int filaInicio = fila;
+            for (int i = inicioColumna; i <= finColumna; i++)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[filaInicio, i].BackColor = Color.Red;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Amarillo":
+                        tableroColor[filaInicio, i].BackColor = Color.Yellow;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Azul":
+                        tableroColor[filaInicio, i].BackColor = Color.Blue;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[filaInicio, i].BackColor = Color.Orange;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Verde":
+                        tableroColor[filaInicio, i].BackColor = Color.Green;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Violeta":
+                        tableroColor[filaInicio, i].BackColor = Color.Violet;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Blanco":
+                        tableroColor[filaInicio, i].BackColor = Color.White;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Negro":
+                        tableroColor[filaInicio, i].BackColor = Color.Black;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Celeste":
+                        tableroColor[filaInicio, i].BackColor = Color.LightBlue;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                    case "Gris":
+                        tableroColor[filaInicio, i].BackColor = Color.Gray;
+                        tableroInterno[filaInicio, i] = "0";
+                        filaInicio++;
+                        break;
+                }
+
+            }
+
+        }
+
+        public void pintarJ2Direccion5(int filaInicio, int filaFin, int columna)
+        {
+            for (int i = filaInicio; i <= filaFin; i++)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columna].BackColor = Color.Red;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columna].BackColor = Color.Yellow;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Azul":
+                        tableroColor[i, columna].BackColor = Color.Blue;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columna].BackColor = Color.Orange;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Verde":
+                        tableroColor[i, columna].BackColor = Color.Green;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columna].BackColor = Color.Violet;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columna].BackColor = Color.White;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Negro":
+                        tableroColor[i, columna].BackColor = Color.Black;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columna].BackColor = Color.LightBlue;
+                        tableroInterno[i, columna] = "0";
+                        break;
+                    case "Gris":
+                        tableroColor[i, columna].BackColor = Color.Gray;
+                        tableroInterno[i, columna] = "0";
+                        break;
+
+                }
+
+            }
+        }
+
+        public void pintarJ2Direccion6(int inicioFila, int finFila, int columna)
+        {
+            int columnadireccion = columna;
+            for (int i = inicioFila; i <= finFila; i++)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Red;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Yellow;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Azul":
+                        tableroColor[i, columnadireccion].BackColor = Color.Blue;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columnadireccion].BackColor = Color.Orange;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Verde":
+                        tableroColor[i, columnadireccion].BackColor = Color.Green;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columnadireccion].BackColor = Color.Violet;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columnadireccion].BackColor = Color.White;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Negro":
+                        tableroColor[i, columnadireccion].BackColor = Color.Black;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Gris":
+                        tableroColor[i, columnadireccion].BackColor = Color.Gray;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                }
+
+            }
+        }
+
+        public void pintarJ2Direccion7(int inicioColumna, int finColumna, int fila)
+        {
+            for (int i = inicioColumna; i >= finColumna; i--)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[fila, i].BackColor = Color.Red;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Amarillo":
+                        tableroColor[fila, i].BackColor = Color.Yellow;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Azul":
+                        tableroColor[fila, i].BackColor = Color.Blue;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Anaranjado":
+                        tableroColor[fila, i].BackColor = Color.Orange;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Verde":
+                        tableroColor[fila, i].BackColor = Color.Green;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Violeta":
+                        tableroColor[fila, i].BackColor = Color.Violet;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Blanco":
+                        tableroColor[fila, i].BackColor = Color.White;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Negro":
+                        tableroColor[fila, i].BackColor = Color.Black;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Celeste":
+                        tableroColor[fila, i].BackColor = Color.LightBlue;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                    case "Gris":
+                        tableroColor[fila, i].BackColor = Color.Gray;
+                        tableroInterno[fila, i] = "0";
+                        break;
+                }
+
+            }
+        }
+
+        public void pintarJ2Direccion8(int inicioFila, int finFila, int columna)
+        {
+            int columnadireccion = columna;
+            for (int i = inicioFila; i >= finFila; i--)
+            {
+                switch (arrayJugador1[cambio1].ToString())
+                {
+                    case "Rojo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Red;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Amarillo":
+                        tableroColor[i, columnadireccion].BackColor = Color.Yellow;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Azul":
+                        tableroColor[i, columnadireccion].BackColor = Color.Blue;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Anaranjado":
+                        tableroColor[i, columnadireccion].BackColor = Color.Orange;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Verde":
+                        tableroColor[i, columnadireccion].BackColor = Color.Green;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Violeta":
+                        tableroColor[i, columnadireccion].BackColor = Color.Violet;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Blanco":
+                        tableroColor[i, columnadireccion].BackColor = Color.White;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Negro":
+                        tableroColor[i, columnadireccion].BackColor = Color.Black;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Celeste":
+                        tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                    case "Gris":
+                        tableroColor[i, columnadireccion].BackColor = Color.Gray;
+                        tableroInterno[i, columnadireccion] = "0";
+                        columnadireccion--;
+                        break;
+                }
+
+            }
+
+        }
+        //metodo para habilitar botones si soy J2
+        public void activacionBoton2(int fila, int columna)
+        {
+            int filaTemp = fila;
+            int columnaTemp = columna;
+            int contadorFicha = 0;
+
+
+            //fila = disminuye  ------------->Direccion1
+
+            for (int i = filaTemp - 1; i >= 0; i--)
+            {
+                if (tableroInterno[i, columnaTemp] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[i, columnaTemp] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[i, columnaTemp] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        //para habilitar boton
+                        tableroColor[i, columnaTemp].Enabled = true;
+                        tableroColor[i, columnaTemp].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+                }
+            }
+
+            //fila = disminuye, columna = aumenta   ------------>Direccion2
+            int auxColumnaD2 = columnaTemp; //columna
+            for (int i = filaTemp - 1; i >= 0; i--)
+            {
+                auxColumnaD2++;
+                if (auxColumnaD2 >= columnaTamaño)
+                {
+                    break;
+                }
+                if (tableroInterno[i, auxColumnaD2] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[i, auxColumnaD2] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[i, auxColumnaD2] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        //para habilitar el boton
+                        tableroColor[i, auxColumnaD2].Enabled = true;
+                        tableroColor[i, auxColumnaD2].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+
+                    }
+                }
+
+
+            }
+            //fila = fija, columna= aumenta -----------> Direccion3
+            int auxFilaD3 = filaTemp;
+            for (int i = columna + 1; i <= columnaTamaño - 1; i++)
+            {
+                if (tableroInterno[auxFilaD3, i] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[auxFilaD3, i] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[auxFilaD3, i] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        //habilitar boton
+
+                        tableroColor[auxFilaD3, i].Enabled = true;
+                        tableroColor[auxFilaD3, i].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+                }
+            }
+
+            //fila = aumenta, columna= aumenta  ---------------->Direccion4
+            int auxFilaD4 = filaTemp;
+            for (int i = columnaTemp + 1; i <= columnaTamaño - 1; i++) // columna
+            {
+                auxFilaD4++;
+                if (auxFilaD4 >= filaTamaño)
+                {
+                    break;
+                }
+                if (tableroInterno[auxFilaD4, i] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[auxFilaD4, i] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+
+                }
+                else if (tableroInterno[auxFilaD4, i] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        tableroColor[auxFilaD4, i].Enabled = true;
+                        tableroColor[auxFilaD4, i].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+                }
+            }
+
+            //fila = aumenta, columna = fija ---------------->Direccion5
+            int auxColumnaD5 = columnaTemp;
+            for (int i = filaTemp + 1; i <= filaTamaño - 1; i++) //fila
+            {
+                if (tableroInterno[i, auxColumnaD5] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[i, auxColumnaD5] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[i, auxColumnaD5] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        tableroColor[i, auxColumnaD5].Enabled = true;
+                        tableroColor[i, auxColumnaD5].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+                }
+            }
+
+            //fila = aumenta, columna = disminuye -------------->Direccion6
+            int auxFilaD6 = filaTemp;
+            for (int i = columnaTemp - 1; i >= 0; i--) //columna
+            {
+                auxFilaD6++;
+                if (auxFilaD6 >= filaTamaño)
+                {
+                    break;
+                }
+                if (tableroInterno[auxFilaD6, i] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[auxFilaD6, i] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[auxFilaD6, i] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        tableroColor[auxFilaD6, i].Enabled = true;
+                        tableroColor[auxFilaD6, i].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+                }
+            }
+
+            //fila = fija, columna = disminuye  --------------->Direccion7
+            int auxFilaD7 = filaTemp;
+            for (int i = columnaTemp - 1; i >= 0; i--) //columna
+            {
+                if (tableroInterno[auxFilaD7, i] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[auxFilaD7, i] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[auxFilaD7, i] == "+")
+                {
+                    if (contadorFicha >= 1)
+                    {
+                        tableroColor[auxFilaD7, i].Enabled = true;
+                        tableroColor[auxFilaD7, i].Text = "X";
+                        contadorFicha = 0;
+                        break;
+                    }
+                    else
+                    {
+                        contadorFicha = 0;
+                        break;
+                    }
+
+                }
+            }
+
+            //fila = disminuye, columna = disminuye ---------------->Direccion8
+            int auxColumnaD8 = columnaTemp;
+            for (int i = filaTemp - 1; i >= 0; i--) //fila
+            {
+                auxColumnaD8--;
+                if (auxColumnaD8 < 0)
+                {
+                    break;
+                }
+                if (tableroInterno[i, auxColumnaD8] == "0")
+                {
+                    contadorFicha = 0;
+                    break;
+                }
+                else if (tableroInterno[i, auxColumnaD8] == "1")
+                {
+                    contadorFicha++;
+                    continue;
+                }
+                else if (tableroInterno[i, auxColumnaD8] == "+")
                 {
                     if (contadorFicha >= 1)
                     {
@@ -2098,9 +2873,9 @@ namespace PROYECTO1
             bloquesN = 0;
 
             // resetea la tabla 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < filaTamaño; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < columnaTamaño; j++)
                 {
                     if (tableroColor[i, j].Text == "X")
                     {
@@ -2116,32 +2891,28 @@ namespace PROYECTO1
             }
 
 
-            //blancas
-            for (int i = 0; i < 8; i++)
+            //para J1
+            for (int i = 0; i < filaTamaño; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < columnaTamaño; j++)
                 {
 
 
-                    //if (banderaBlanca == true)
-                    //{
-                    //    if (tableroColor[i, j].BackColor == Color.Black)
-                    //    {
+                    if (turnoJ1 == true)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            activacionBoton1(i, j);//metodo para habilitar botones si soy primero J1
+                        }
 
-                    //        activacionBoton2(i, j);//metodo para habilitar botones si soy negro
-
-                    //    }
-
-                    //}
-                    //else if (banderaNegra == true)
-                    //{
-                    //    if (tableroColor[i, j].BackColor == Color.White)
-                    //    {
-
-                    //        activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
-
-                    //    }
-                    //}
+                    }
+                    else if (turnoJ2 == true)
+                    {
+                        if (tableroInterno[i, j] == "0")
+                        {
+                            activacionBoton2(i, j);//metodo para habilitar botones si soy J2
+                        }
+                    }
 
 
 
@@ -2149,15 +2920,15 @@ namespace PROYECTO1
             }
 
             //solo para movimientos
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < filaTamaño; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < columnaTamaño; j++)
                 {
-                    if (tableroColor[i, j].BackColor == Color.White)
+                    if (tableroInterno[i, j] == "1")
                     {
                         movimientoB++;
                     }
-                    else if (tableroColor[i, j].BackColor == Color.Black)
+                    else if (tableroInterno[i, j] == "0")
                     {
                         movimientoN++;
                     }
@@ -2165,9 +2936,9 @@ namespace PROYECTO1
                 }
             }
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < filaTamaño; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < columnaTamaño; j++)
                 {
                     if (tableroColor[i, j].Text == "X")
                     {
@@ -6795,7 +7566,7 @@ namespace PROYECTO1
 
         protected void BtnA1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void BtnB1_Click(object sender, EventArgs e)
@@ -6898,12 +7669,38 @@ namespace PROYECTO1
 
         protected void BtnC3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 2);
+                turnoJ1 = false;
+                turnoJ2 = true;
+                if(llaveCaptura == true)
+                {
 
+                }
+            }
+            else if(turnoJ2 == true)
+            {
+                pintarJ2(2, 2);
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnD3_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 3);
+                turnoJ1 = false;
+                turnoJ2 = true;
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 3);
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
@@ -6939,13 +7736,35 @@ namespace PROYECTO1
 
         protected void BtnC4_Click(object sender, EventArgs e)
         {
-            
-
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 2);
+                turnoJ1 = false;
+                turnoJ2 = true;
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 2);
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnD4_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 3);
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 3);
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnE4_Click(object sender, EventArgs e)
@@ -7197,12 +8016,14 @@ namespace PROYECTO1
 
         public void habilitarLosCuatro(int filaObtenido, int columnaObtenido)
         {
+            tableroInterno = new string[filaTamaño, columnaTamaño];
             string opcion = filaObtenido.ToString() + "-" + columnaObtenido.ToString();
 
             switch (opcion)
             {
                 
                 case "6-6":
+                    //habilitar los 4 btn
                     BtnC3.Enabled = true;
                     BtnD3.Enabled = true;
                     BtnC4.Enabled = true;
@@ -7588,6 +8409,14 @@ namespace PROYECTO1
                     break;
                
 
+            }
+            //para simular el color de fondo
+            for (int i = 0; i < filaTamaño; i++)
+            {
+                for (int j = 0; j < columnaTamaño; j++)
+                {
+                    tableroInterno[i, j] = "+";
+                }
             }
         }
         
@@ -8789,6 +9618,167 @@ namespace PROYECTO1
 
         protected void ButtonModalidad_Click(object sender, EventArgs e)
         {
+            string modo = DropDownListModalidad.SelectedValue;
+            //true = normal,false = inversa
+            if(modo == "Normal")
+            {
+                modalidaJuego = true;
+            }
+            else if(modo == "Inversa")
+            {
+                modalidaJuego = false;
+            }
+        }
+
+        protected void ButtonEmpezar_Click(object sender, EventArgs e)
+        {
+            //meotodo
+            informacionFinal();
+        }
+
+        public void pintarJ1(int x, int y)
+        {
+
+            if (cambio1 == contadorColorj1)
+            {
+                cambio1 = 0;
+            }
+
+            if (arrayJugador1[cambio1].ToString() == "Rojo")
+            {
+                tableroColor[x, y].BackColor = Color.Red;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if(arrayJugador1[cambio1].ToString() == "Amarillo")
+            {
+                tableroColor[x, y].BackColor = Color.Yellow;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Azul")
+            {
+                tableroColor[x, y].BackColor = Color.Blue;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Anaranjado")
+            {
+                tableroColor[x, y].BackColor = Color.Orange;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Verde")
+            {
+                tableroColor[x, y].BackColor = Color.Green;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Violeta")
+            {
+                tableroColor[x, y].BackColor = Color.Violet;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Blanco")
+            {
+                tableroColor[x, y].BackColor = Color.White;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Negro")
+            {
+                tableroColor[x, y].BackColor = Color.Black;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Celeste")
+            {
+                tableroColor[x, y].BackColor = Color.LightBlue;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+            else if (arrayJugador1[cambio1].ToString() == "Gris")
+            {
+                tableroColor[x, y].BackColor = Color.Gray;
+                tableroInterno[x, y] = "1";
+                cambio1++;
+            }
+
+            
+            
+            //contador guia
+        }
+
+        public void pintarJ2(int x, int y)
+        {
+
+            if (cambio2 == contadorColorj2)
+            {
+                cambio2 = 0;
+            }
+
+            if (arrayJugador2[cambio2].ToString() == "Rojo")
+            {
+                tableroColor[x, y].BackColor = Color.Red;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Amarillo")
+            {
+                tableroColor[x, y].BackColor = Color.Yellow;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Azul")
+            {
+                tableroColor[x, y].BackColor = Color.Blue;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Anaranjado")
+            {
+                tableroColor[x, y].BackColor = Color.Orange;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Verde")
+            {
+                tableroColor[x, y].BackColor = Color.Green;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Violeta")
+            {
+                tableroColor[x, y].BackColor = Color.Violet;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Blanco")
+            {
+                tableroColor[x, y].BackColor = Color.White;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Negro")
+            {
+                tableroColor[x, y].BackColor = Color.Black;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Celeste")
+            {
+                tableroColor[x, y].BackColor = Color.LightBlue;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+            else if (arrayJugador2[cambio2].ToString() == "Gris")
+            {
+                tableroColor[x, y].BackColor = Color.Gray;
+                tableroInterno[x, y] = "0";
+                cambio2++;
+            }
+
 
         }
     }

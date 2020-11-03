@@ -87,6 +87,15 @@ namespace PROYECTO1
         protected global::System.Web.UI.WebControls.Button ButtonModalidad;
 
         /// <summary>
+        /// Control ButtonEmpezar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonEmpezar;
+
+        /// <summary>
         /// Control Label87.
         /// </summary>
         /// <remarks>

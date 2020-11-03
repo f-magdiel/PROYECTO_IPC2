@@ -500,7 +500,7 @@ namespace PROYECTO1
                 else if (tableroColor[filadireccion4, i].BackColor == Color.White)
                 {
 
-                    if (posicion >= 1)
+                    if (posicion >= 1)  
                     {
                         pintarBlancoDireccion4(fila, columna, i);
                         posicion = 0;
