@@ -1111,7 +1111,7 @@ namespace PROYECTO1
         //metodos que pinta, recibe valores para pintar ************************************************************
         public void pintarJ1Direccion1(int filaInicio, int filaFin, int columna)
         {
-            for (int i = filaInicio; i >= filaFin; i--)
+            for (int i = filaInicio; i >= filaFin+1; i--)
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
@@ -1165,6 +1165,7 @@ namespace PROYECTO1
         public void pintarJ1Direccion2(int filaInicio, int columnaInicio, int columnaFin)
         {
             int fila = filaInicio;
+            columnaFin = columnaFin - 1;
             for (int i = columnaInicio; i <= columnaFin; i++)
             {
                 switch(arrayJugador1[cambio1-1].ToString())
@@ -1228,7 +1229,7 @@ namespace PROYECTO1
 
         public void pintarJ1Direccion3(int fila, int inicioColumna, int finColumna)
         {
-            for (int i = inicioColumna; i <= finColumna; i++) //columna
+            for (int i = inicioColumna; i <= finColumna-1; i++) //columna
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
@@ -1280,7 +1281,7 @@ namespace PROYECTO1
         public void pintarJ1Direccion4(int fila, int inicioColumna, int finColumna)
         {
             int filaInicio = fila;
-            for (int i = inicioColumna; i <= finColumna; i++)
+            for (int i = inicioColumna; i <= finColumna-1; i++)
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
@@ -1342,7 +1343,7 @@ namespace PROYECTO1
 
         public void pintarJ1Direccion5(int filaInicio, int filaFin, int columna)
         {
-            for (int i = filaInicio; i <= filaFin; i++)
+            for (int i = filaInicio; i <= filaFin-1; i++)
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
@@ -1395,7 +1396,7 @@ namespace PROYECTO1
         public void pintarJ1Direccion6(int inicioFila, int finFila, int columna)
         {
             int columnadireccion = columna;
-            for (int i = inicioFila; i <= finFila; i++)
+            for (int i = inicioFila; i <= finFila-1; i++)
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
@@ -1456,7 +1457,7 @@ namespace PROYECTO1
 
         public void pintarJ1Direccion7(int inicioColumna, int finColumna, int fila)
         {
-            for (int i = inicioColumna; i >= finColumna; i--)
+            for (int i = inicioColumna; i >= finColumna+1; i--)
             {
                 switch(arrayJugador1[cambio1-1].ToString())
                 {
@@ -1508,7 +1509,7 @@ namespace PROYECTO1
         public void pintarJ1Direccion8(int inicioFila, int finFila, int columna)
         {
             int columnadireccion = columna;
-            for (int i = inicioFila; i >= finFila; i--)
+            for (int i = inicioFila; i >= finFila+1; i--)
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
@@ -2123,7 +2124,7 @@ namespace PROYECTO1
         //metodos que pinta, recibe valores para pintar ************************************************************
         public void pintarJ2Direccion1(int filaInicio, int filaFin, int columna)
         {
-            for (int i = filaInicio; i >= filaFin; i--)
+            for (int i = filaInicio; i >= filaFin+1; i--)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
@@ -2176,6 +2177,7 @@ namespace PROYECTO1
         public void pintarJ2Direccion2(int filaInicio, int columnaInicio, int columnaFin)
         {
             int fila = filaInicio;
+            columnaFin = columnaFin - 1;
             for (int i = columnaInicio; i <= columnaFin; i++)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
@@ -2239,7 +2241,7 @@ namespace PROYECTO1
 
         public void pintarJ2Direccion3(int fila, int inicioColumna, int finColumna)
         {
-            for (int i = inicioColumna; i <= finColumna; i++) //columna
+            for (int i = inicioColumna; i <= finColumna-1; i++) //columna
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
@@ -2291,7 +2293,7 @@ namespace PROYECTO1
         public void pintarJ2Direccion4(int fila, int inicioColumna, int finColumna)
         {
             int filaInicio = fila;
-            for (int i = inicioColumna; i <= finColumna; i++)
+            for (int i = inicioColumna; i <= finColumna-1; i++)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
@@ -2353,7 +2355,7 @@ namespace PROYECTO1
 
         public void pintarJ2Direccion5(int filaInicio, int filaFin, int columna)
         {
-            for (int i = filaInicio; i <= filaFin; i++)
+            for (int i = filaInicio; i <= filaFin-1; i++)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
@@ -2406,7 +2408,7 @@ namespace PROYECTO1
         public void pintarJ2Direccion6(int inicioFila, int finFila, int columna)
         {
             int columnadireccion = columna;
-            for (int i = inicioFila; i <= finFila; i++)
+            for (int i = inicioFila; i <= finFila-1; i++)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
@@ -2467,7 +2469,7 @@ namespace PROYECTO1
 
         public void pintarJ2Direccion7(int inicioColumna, int finColumna, int fila)
         {
-            for (int i = inicioColumna; i >= finColumna; i--)
+            for (int i = inicioColumna; i >= finColumna+1; i--)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
@@ -2519,7 +2521,7 @@ namespace PROYECTO1
         public void pintarJ2Direccion8(int inicioFila, int finFila, int columna)
         {
             int columnadireccion = columna;
-            for (int i = inicioFila; i >= finFila; i--)
+            for (int i = inicioFila; i >= finFila+1; i--)
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
