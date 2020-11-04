@@ -23,10 +23,13 @@ namespace PROYECTO1
     public partial class Xtream : System.Web.UI.Page
     {
         //tablero
-        public static int tiempoJ1 = 0;
-        public static int tiempoJ2 = 0;
+        public static int tiempoJ1S = 0;
+        public static int tiempoJ2S = 0;
+        public static int tiempoJ1M = 0;
+        public static int tiempoJ2M = 0;
         public static bool llaveTiempo1 = false;
         public static bool llaveTiempo2 = false;
+        public static bool llaveTiempoGeneral = false;
 
         //colores
         public static int contadorColorj1 = 0;
@@ -49,7 +52,7 @@ namespace PROYECTO1
         public static int contador4 = 0;
 
         //modalidad
-        public static bool modalidaJuego;
+        public static bool modalidaJuego = true;
 
         //lllave para capturar
         public static bool llaveCaptura = false;
@@ -2962,47 +2965,76 @@ namespace PROYECTO1
             //para indicar los movimiento que se han realizado en el tablero
              LabelContadorJ1.Text = movimientoB.ToString();
              LabelContadorJ2.Text = movimientoN.ToString();
-            //if (usuarioBlanco == true)//cuando yo sea blanco
-            //{
-            //    LabelContadorUsuario.Text = movimientoB.ToString();
-            //    LabelContadorInvitado.Text = movimientoN.ToString();
-            //}
-            //else if (usuarioNegro == true)//cuando yo sea negro
-            //{
-            //    LabelContadorUsuario.Text = movimientoN.ToString();
-            //    LabelContadorInvitado.Text = movimientoB.ToString();
-            //}
+            
 
             //validar estado de partida opciones normar  e inversa ->falta
-            if (movimientoGeneral == 0)
+            if(modalidaJuego == true)
             {
-                if (movimientoB > movimientoN)
+                if (movimientoGeneral == 0)
                 {
-                    //gana blanca
-                    Labelestado.Text = "Ganó ficha blanca";
+                    if (movimientoB > movimientoN)
+                    {
+                        //gana blanca
+                        Labelestado.Text = "Ganó Jugador 1";
+                        LabelIndicadorTurno.Text = "No Disponible";
+                        llaveTiempoGeneral = false;
+                    }
+                    else if (movimientoN > movimientoB)
+                    {
+                        //gana negras
+                        Labelestado.Text = "Ganó Jugador 2";
+                        LabelIndicadorTurno.Text = "No Disponible";
+                        llaveTiempoGeneral = false;
+                    }
+                    else if (movimientoB == movimientoN)
+                    {
+                        //es empate
+                        Labelestado.Text = "Empate";
+                        LabelIndicadorTurno.Text = "No Disponible";
+                        llaveTiempoGeneral = false;
+                    }
+
                 }
-                else if (movimientoN > movimientoB)
+                else
                 {
-                    //gana negras
-                    Labelestado.Text = "Ganó ficha negra";
-
+                    movimientoGeneral = 0;
+                    //se esta jugando
+                    Labelestado.Text = "Se está jugando";
                 }
-                else if (movimientoB == movimientoN)
-                {
-                    //es empate
-                    Labelestado.Text = "Empate";
-
-                }
-
-
-
-
             }
-            else
+            else if(modalidaJuego == false)
             {
-                movimientoGeneral = 0;
-                //se esta jugando
-                Labelestado.Text = "Se está jugando";
+                if (movimientoGeneral == 0)
+                {
+                    if (movimientoB < movimientoN)
+                    {
+                        //gana blanca
+                        Labelestado.Text = "Ganó Jugador 1";
+                        LabelIndicadorTurno.Text = "No Disponible";
+                        llaveTiempoGeneral = false;
+                    }
+                    else if (movimientoN < movimientoB)
+                    {
+                        //gana negras
+                        Labelestado.Text = "Ganó Jugador 2";
+                        LabelIndicadorTurno.Text = "No Disponible";
+                        llaveTiempoGeneral = false;
+                    }
+                    else if (movimientoB == movimientoN)
+                    {
+                        //es empate
+                        Labelestado.Text = "Empate";
+                        LabelIndicadorTurno.Text = "No Disponible";
+                        llaveTiempoGeneral = false;
+                    }
+
+                }
+                else
+                {
+                    movimientoGeneral = 0;
+                    //se esta jugando
+                    Labelestado.Text = "Se está jugando";
+                }
             }
 
         }
@@ -7586,6 +7618,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7599,6 +7633,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -7615,7 +7651,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -7628,6 +7665,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -7644,6 +7683,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7657,6 +7698,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7674,7 +7717,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -7687,6 +7731,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7704,7 +7750,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -7717,6 +7764,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -7733,7 +7782,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -7746,6 +7796,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7779,6 +7831,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7792,6 +7846,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7809,6 +7865,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7822,6 +7880,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7839,7 +7899,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -7852,6 +7913,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -7868,6 +7931,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7881,6 +7946,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7898,6 +7965,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7911,6 +7980,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7928,7 +7999,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -7941,6 +8013,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -7969,6 +8043,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -7982,6 +8058,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -7998,6 +8076,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8011,6 +8091,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8027,6 +8109,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if(turnoJ2 == true)
@@ -8040,6 +8124,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8056,6 +8142,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8068,6 +8156,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -8085,6 +8175,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8098,6 +8190,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8114,6 +8208,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8127,6 +8223,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8153,6 +8251,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8166,6 +8266,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8183,6 +8285,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8196,6 +8300,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8212,6 +8318,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8224,6 +8332,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8240,6 +8350,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8253,6 +8365,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8270,6 +8384,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8283,6 +8399,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8300,6 +8418,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8313,6 +8433,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8339,7 +8461,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8352,6 +8475,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8368,7 +8493,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8381,6 +8507,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8397,7 +8525,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8410,6 +8539,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8426,7 +8557,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8439,6 +8571,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8455,7 +8589,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8468,6 +8603,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8484,7 +8621,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8497,6 +8635,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -8525,7 +8665,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8538,6 +8679,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8554,7 +8697,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8567,6 +8711,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8583,6 +8729,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8596,6 +8744,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8612,7 +8762,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8625,6 +8776,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8641,7 +8794,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
-
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
             }
             else if (turnoJ2 == true)
             {
@@ -8654,6 +8808,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
         }
 
@@ -8670,6 +8826,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = false;
                 turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
             }
             else if (turnoJ2 == true)
@@ -8683,6 +8841,8 @@ namespace PROYECTO1
                 }
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
             }
 
         }
@@ -8782,16 +8942,31 @@ namespace PROYECTO1
         protected void Timer1_Tick(object sender, EventArgs e)
         {
 
-            if (llaveTiempo1 == true)
+           if(llaveTiempoGeneral == true)
             {
-                tiempoJ1++;
-                LabelTiempoJ1.Text = tiempoJ1.ToString();
-            }
+                if (llaveTiempo1 == true)
+                {
 
-            if (llaveTiempo2 == true)
-            {
-                tiempoJ2++;
-                LabelTiempoJ2.Text = tiempoJ2.ToString();
+                    LabelTiempoJ1.Text = tiempoJ1M.ToString() + ":" + tiempoJ1S.ToString();
+                    tiempoJ1S++;
+                    if (tiempoJ1S == 61)
+                    {
+                        tiempoJ1S = 0;
+                        tiempoJ1M++;
+                    }
+                }
+
+                if (llaveTiempo2 == true)
+                {
+
+                    LabelTiempoJ2.Text = tiempoJ2M.ToString() + ":" + tiempoJ2S.ToString();
+                    tiempoJ2S++;
+                    if (tiempoJ2S == 61)
+                    {
+                        tiempoJ2S = 0;
+                        tiempoJ2M++;
+                    }
+                }
             }
         }
 
@@ -10478,6 +10653,12 @@ namespace PROYECTO1
             //habilita la parte del metodo informacionFina()
             //para realizar las capturas
             llaveCaptura = true;
+
+            //llave general tiempo
+            llaveTiempoGeneral = true;
+
+            //llave par empezar a contar
+            llaveTiempo1 = true;
         }
 
         public void pintarJ1(int x, int y)

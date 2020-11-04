@@ -20,13 +20,14 @@
             <asp:AsyncPostBackTrigger ControlID="Timer1" />
         </Triggers>
         <ContentTemplate>
-             <asp:Label CssClass="tiempojugador1" ID="LabelTiempoJ1" runat="server" Text="0"></asp:Label>
+             <asp:Label CssClass="tiempojugador1" ID="LabelTiempoJ1" runat="server" Text="0:0"></asp:Label>
+             <asp:Label CssClass="tiempojugador2" ID="LabelTiempoJ2" runat="server" Text="0:0"></asp:Label>
         </ContentTemplate>
         </asp:UpdatePanel>
 
 
 
-            <asp:Label CssClass="tiempojugador2" ID="LabelTiempoJ2" runat="server" Text="0"></asp:Label>
+            
             
             <asp:DropDownList CssClass="listamodalidad" ID="DropDownListModalidad" runat="server">
                 <asp:ListItem>Elegir</asp:ListItem>
@@ -38,7 +39,7 @@
             <asp:Label CssClass="titulojugador2" ID="Label87" runat="server" Text="Jugador 2"></asp:Label>
             <asp:Label CssClass="titulojugador1" ID="Label86" runat="server" Text="Jugador 1"></asp:Label>
             <asp:Label CssClass="tituloCronometro" ID="Label85" runat="server" Text="Cronometro"></asp:Label>
-            <asp:Label CssClass="estadoturno" ID="LabelIndicadorTurno" runat="server" Text="Indefinido"></asp:Label>
+            <asp:Label CssClass="estadoturno" ID="LabelIndicadorTurno" runat="server" Text="No Disponible"></asp:Label>
             <asp:Label CssClass="tituloturno" ID="LabelTurnos" runat="server" Text="Turno:"></asp:Label>
             <asp:Label CssClass="filaTamaño" ID="Labelfila" runat="server" Text="Fila"></asp:Label>
             <asp:Label CssClass="columnaTamaño" ID="Labelcolumna" runat="server" Text="Columna"></asp:Label>
