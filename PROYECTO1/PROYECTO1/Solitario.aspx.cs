@@ -350,7 +350,7 @@ namespace PROYECTO1
         {
             ButtonSeleccionar.Text = "Seleccionado";
             string seleccion = DropDownListFicha.SelectedValue.ToString();
-            if (seleccion == "O")
+            if (seleccion == "O")//blanco
             {
                 // el color es activado
                 banderaBlanca = true;
@@ -366,7 +366,7 @@ namespace PROYECTO1
 
 
             }
-            else if (seleccion == "X")
+            else if (seleccion == "X")//negro
             {
                 // el color es activado
                 banderaNegra = true;
@@ -487,7 +487,6 @@ namespace PROYECTO1
             for (int i = columna + 1; i <= 7; i++) // para columna
             {
                 filadireccion4++;
-
                 if (filadireccion4 >= 8) // fila >= 8 se sale del ciclo
                 {
                     break;
@@ -7163,7 +7162,7 @@ namespace PROYECTO1
                 informacionFinal();
                 banderaNegra = true;
                 banderaBlanca = false;
-
+               
             }
             else if (banderaNegra == true)
             {

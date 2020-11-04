@@ -54,6 +54,9 @@ namespace PROYECTO1
         //lllave para capturar
         public static bool llaveCaptura = false;
 
+        //opcion de colores al pintar  y capturar
+        public static string opColor = "";
+
         //para monstrar los movimiento se usar bool
         public static bool usuarioBlanco = false;
         public static bool usuarioNegro = false;
@@ -104,6 +107,7 @@ namespace PROYECTO1
             if(!IsPostBack){
                 turnoJ1 = true;
                 turnoJ2 = false;
+                llaveCaptura = false;
             }
 
             //labels para el tablero
@@ -838,20 +842,19 @@ namespace PROYECTO1
                 }
 
             }
-            
-           
 
+
+           
         }
 
         //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
-        // Para J1
+        // Para J1 digamos blanca
         public void capturaFichaJ1(int fil, int column)
         {   //x,y
             int fila = fil;
             int columna = column;
             int posicion = 0;
-
 
 
             //direccion1
@@ -953,12 +956,12 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroInterno[i, columna].ToString() == "0")
+                if (tableroInterno[filadireccion4, i].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "1")
+                else if (tableroInterno[filadireccion4, i].ToString() == "1")
                 {
 
                     if (posicion >= 1)
@@ -1014,12 +1017,12 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroInterno[i, columna].ToString() == "0")
+                if (tableroInterno[i, columnadireccion6].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "1")
+                else if (tableroInterno[i, columnadireccion6].ToString() == "1")
                 {
 
                     if (posicion >= 1)
@@ -1045,12 +1048,12 @@ namespace PROYECTO1
 
             for (int i = columna - 1; i >= 0; i--) // columna
             {
-                if (tableroInterno[i, columna].ToString() == "0")
+                if (tableroInterno[fila, i].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "1")
+                else if (tableroInterno[fila, i].ToString() == "1")
                 {
                     if (posicion >= 1)
                     {
@@ -1078,12 +1081,12 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroInterno[i, columna].ToString() == "0")
+                if (tableroInterno[i, columnadireccion8].ToString() == "0")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "1")
+                else if (tableroInterno[i, columnadireccion8].ToString() == "1")
                 {
                     if (posicion >= 1)
                     {
@@ -1110,7 +1113,7 @@ namespace PROYECTO1
         {
             for (int i = filaInicio; i >= filaFin; i--)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
@@ -1153,8 +1156,9 @@ namespace PROYECTO1
                         tableroInterno[i, columna] = "1";
                         break;
                 }
-                
+
             }
+
 
         }
 
@@ -1163,7 +1167,7 @@ namespace PROYECTO1
             int fila = filaInicio;
             for (int i = columnaInicio; i <= columnaFin; i++)
             {
-                switch(arrayJugador1[cambio1].ToString())
+                switch(arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
@@ -1226,7 +1230,7 @@ namespace PROYECTO1
         {
             for (int i = inicioColumna; i <= finColumna; i++) //columna
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
@@ -1278,7 +1282,7 @@ namespace PROYECTO1
             int filaInicio = fila;
             for (int i = inicioColumna; i <= finColumna; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[filaInicio, i].BackColor = Color.Red;
@@ -1340,7 +1344,7 @@ namespace PROYECTO1
         {
             for (int i = filaInicio; i <= filaFin; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
@@ -1393,7 +1397,7 @@ namespace PROYECTO1
             int columnadireccion = columna;
             for (int i = inicioFila; i <= finFila; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
@@ -1454,7 +1458,7 @@ namespace PROYECTO1
         {
             for (int i = inicioColumna; i >= finColumna; i--)
             {
-                switch(arrayJugador1[cambio1].ToString())
+                switch(arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
@@ -1506,7 +1510,7 @@ namespace PROYECTO1
             int columnadireccion = columna;
             for (int i = inicioFila; i >= finFila; i--)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador1[cambio1-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
@@ -1964,12 +1968,12 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroInterno[i, columna].ToString() == "1")
+                if (tableroInterno[filadireccion4, i].ToString() == "1")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "0")
+                else if (tableroInterno[filadireccion4, i].ToString() == "0")
                 {
 
                     if (posicion >= 1)
@@ -2025,12 +2029,12 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroInterno[i, columna].ToString() == "1")
+                if (tableroInterno[i, columnadireccion6].ToString() == "1")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "0")
+                else if (tableroInterno[i, columnadireccion6].ToString() == "0")
                 {
 
                     if (posicion >= 1)
@@ -2056,12 +2060,12 @@ namespace PROYECTO1
 
             for (int i = columna - 1; i >= 0; i--) // columna
             {
-                if (tableroInterno[i, columna].ToString() == "1")
+                if (tableroInterno[fila,i].ToString() == "1")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "0")
+                else if (tableroInterno[fila,i].ToString() == "0")
                 {
                     if (posicion >= 1)
                     {
@@ -2089,12 +2093,12 @@ namespace PROYECTO1
                 {
                     break;
                 }
-                if (tableroInterno[i, columna].ToString() == "1")
+                if (tableroInterno[i, columnadireccion8].ToString() == "1")
                 {
                     posicion++;
                     continue;
                 }
-                else if (tableroInterno[i, columna].ToString() == "0")
+                else if (tableroInterno[i, columnadireccion8].ToString() == "0")
                 {
                     if (posicion >= 1)
                     {
@@ -2121,7 +2125,7 @@ namespace PROYECTO1
         {
             for (int i = filaInicio; i >= filaFin; i--)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
@@ -2174,7 +2178,7 @@ namespace PROYECTO1
             int fila = filaInicio;
             for (int i = columnaInicio; i <= columnaFin; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
@@ -2237,7 +2241,7 @@ namespace PROYECTO1
         {
             for (int i = inicioColumna; i <= finColumna; i++) //columna
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
@@ -2289,7 +2293,7 @@ namespace PROYECTO1
             int filaInicio = fila;
             for (int i = inicioColumna; i <= finColumna; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[filaInicio, i].BackColor = Color.Red;
@@ -2351,7 +2355,7 @@ namespace PROYECTO1
         {
             for (int i = filaInicio; i <= filaFin; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
@@ -2404,7 +2408,7 @@ namespace PROYECTO1
             int columnadireccion = columna;
             for (int i = inicioFila; i <= finFila; i++)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
@@ -2465,7 +2469,7 @@ namespace PROYECTO1
         {
             for (int i = inicioColumna; i >= finColumna; i--)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
@@ -2517,7 +2521,7 @@ namespace PROYECTO1
             int columnadireccion = columna;
             for (int i = inicioFila; i >= finFila; i--)
             {
-                switch (arrayJugador1[cambio1].ToString())
+                switch (arrayJugador2[cambio2-1].ToString())
                 {
                     case "Rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
@@ -2602,7 +2606,7 @@ namespace PROYECTO1
                     {
                         //para habilitar boton
                         tableroColor[i, columnaTemp].Enabled = true;
-                        tableroColor[i, columnaTemp].Text = "X";
+                        tableroColor[i, columnaTemp].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2639,7 +2643,7 @@ namespace PROYECTO1
                     {
                         //para habilitar el boton
                         tableroColor[i, auxColumnaD2].Enabled = true;
-                        tableroColor[i, auxColumnaD2].Text = "X";
+                        tableroColor[i, auxColumnaD2].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2674,7 +2678,7 @@ namespace PROYECTO1
                         //habilitar boton
 
                         tableroColor[auxFilaD3, i].Enabled = true;
-                        tableroColor[auxFilaD3, i].Text = "X";
+                        tableroColor[auxFilaD3, i].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2711,7 +2715,7 @@ namespace PROYECTO1
                     if (contadorFicha >= 1)
                     {
                         tableroColor[auxFilaD4, i].Enabled = true;
-                        tableroColor[auxFilaD4, i].Text = "X";
+                        tableroColor[auxFilaD4, i].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2742,7 +2746,7 @@ namespace PROYECTO1
                     if (contadorFicha >= 1)
                     {
                         tableroColor[i, auxColumnaD5].Enabled = true;
-                        tableroColor[i, auxColumnaD5].Text = "X";
+                        tableroColor[i, auxColumnaD5].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2778,7 +2782,7 @@ namespace PROYECTO1
                     if (contadorFicha >= 1)
                     {
                         tableroColor[auxFilaD6, i].Enabled = true;
-                        tableroColor[auxFilaD6, i].Text = "X";
+                        tableroColor[auxFilaD6, i].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2809,7 +2813,7 @@ namespace PROYECTO1
                     if (contadorFicha >= 1)
                     {
                         tableroColor[auxFilaD7, i].Enabled = true;
-                        tableroColor[auxFilaD7, i].Text = "X";
+                        tableroColor[auxFilaD7, i].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2846,7 +2850,7 @@ namespace PROYECTO1
                     if (contadorFicha >= 1)
                     {
                         tableroColor[i, auxColumnaD8].Enabled = true;
-                        tableroColor[i, auxColumnaD8].Text = "X";
+                        tableroColor[i, auxColumnaD8].Text = "O";
                         contadorFicha = 0;
                         break;
                     }
@@ -2900,17 +2904,17 @@ namespace PROYECTO1
 
                     if (turnoJ1 == true)
                     {
-                        if (tableroInterno[i, j] == "1")
+                        if (tableroInterno[i, j] == "0")
                         {
-                            activacionBoton1(i, j);//metodo para habilitar botones si soy primero J1
+                            activacionBoton2(i, j);//metodo para habilitar botones si soy primero J1
                         }
 
                     }
                     else if (turnoJ2 == true)
                     {
-                        if (tableroInterno[i, j] == "0")
+                        if (tableroInterno[i, j] == "1")
                         {
-                            activacionBoton2(i, j);//metodo para habilitar botones si soy J2
+                            activacionBoton1(i, j);//metodo para habilitar botones si soy J2
                         }
                     }
 
@@ -2953,6 +2957,9 @@ namespace PROYECTO1
                 }
             }
 
+            //para indicar los movimiento que se han realizado en el tablero
+             LabelContadorJ1.Text = movimientoB.ToString();
+             LabelContadorJ2.Text = movimientoN.ToString();
             //if (usuarioBlanco == true)//cuando yo sea blanco
             //{
             //    LabelContadorUsuario.Text = movimientoB.ToString();
@@ -2964,24 +2971,24 @@ namespace PROYECTO1
             //    LabelContadorInvitado.Text = movimientoB.ToString();
             //}
 
-            //validar estado de partida
+            //validar estado de partida opciones normar  e inversa ->falta
             if (movimientoGeneral == 0)
             {
                 if (movimientoB > movimientoN)
                 {
                     //gana blanca
-                    LabelTitulo.Text = "Ganó ficha blanca";
+                    Labelestado.Text = "Ganó ficha blanca";
                 }
                 else if (movimientoN > movimientoB)
                 {
                     //gana negras
-                    LabelTitulo.Text = "Ganó ficha negra";
+                    Labelestado.Text = "Ganó ficha negra";
 
                 }
                 else if (movimientoB == movimientoN)
                 {
                     //es empate
-                    LabelTitulo.Text = "Empate";
+                    Labelestado.Text = "Empate";
 
                 }
 
@@ -2993,7 +3000,7 @@ namespace PROYECTO1
             {
                 movimientoGeneral = 0;
                 //se esta jugando
-                LabelTitulo.Text = "Se está jugando";
+                Labelestado.Text = "Se está jugando";
             }
 
         }
@@ -7566,34 +7573,179 @@ namespace PROYECTO1
 
         protected void BtnA1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 0); 
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnB1_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 1);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnC1_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 2);             
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 2);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
         protected void BtnD1_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 3);    
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 3);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
         protected void BtnE1_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0,4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0,4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0,4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0,4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnF1_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0,5);            
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0,5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0,5);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0,5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
+
         }
 
         protected void BtnG1_Click(object sender, EventArgs e)
@@ -7614,36 +7766,181 @@ namespace PROYECTO1
        
         protected void BtnA2_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 0);            
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 0);             
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
         protected void BtnB2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
 
-            
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 1);               
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
+
         }
 
         protected void BtnC2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 2);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 2);             
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnD2_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 3);      
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
         protected void BtnE2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
         protected void BtnF2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
 
-           
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 5);             
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
+
         }
 
         protected void BtnG2_Click(object sender, EventArgs e)
@@ -7659,12 +7956,60 @@ namespace PROYECTO1
 
         protected void BtnA3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 0);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 0);             
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnB3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 1);             
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 1);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnC3_Click(object sender, EventArgs e)
@@ -7672,16 +8017,25 @@ namespace PROYECTO1
             if (turnoJ1 == true)
             {
                 pintarJ1(2, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2,2);
+                    informacionFinal();
+                }
                 turnoJ1 = false;
                 turnoJ2 = true;
-                if(llaveCaptura == true)
-                {
 
-                }
             }
             else if(turnoJ2 == true)
             {
                 pintarJ2(2, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 2);
+                    informacionFinal();
+                }
                 turnoJ1 = true;
                 turnoJ2 = false;
             }
@@ -7691,13 +8045,25 @@ namespace PROYECTO1
         {
             if (turnoJ1 == true)
             {
-                pintarJ1(2, 3);
+                pintarJ1(2, 3);            
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 3);
+                    informacionFinal();
+                }
                 turnoJ1 = false;
                 turnoJ2 = true;
             }
             else if (turnoJ2 == true)
             {
-                pintarJ2(2, 3);
+                pintarJ2(2, 3);            
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2,3);
+                    informacionFinal();
+                }
                 turnoJ1 = true;
                 turnoJ2 = false;
             }
@@ -7706,12 +8072,60 @@ namespace PROYECTO1
 
         protected void BtnE3_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 4);       
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 4);   
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnF3_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 5);  
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnG3_Click(object sender, EventArgs e)
@@ -7726,12 +8140,61 @@ namespace PROYECTO1
 
         protected void BtnA4_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 0);    
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 0);  
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnB4_Click(object sender, EventArgs e)
         {
-            
+
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 1);    
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 1); 
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnC4_Click(object sender, EventArgs e)
@@ -7739,12 +8202,24 @@ namespace PROYECTO1
             if (turnoJ1 == true)
             {
                 pintarJ1(3, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3,2);
+                    informacionFinal();
+                }
                 turnoJ1 = false;
                 turnoJ2 = true;
             }
             else if (turnoJ2 == true)
             {
                 pintarJ2(3, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 2);
+                    informacionFinal();
+                }
                 turnoJ1 = true;
                 turnoJ2 = false;
             }
@@ -7754,7 +8229,13 @@ namespace PROYECTO1
         {
             if (turnoJ1 == true)
             {
-                pintarJ1(3, 3);
+                pintarJ1(3, 3);  
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3,3);
+                    informacionFinal();
+                }
                 turnoJ1 = false;
                 turnoJ2 = true;
 
@@ -7762,6 +8243,12 @@ namespace PROYECTO1
             else if (turnoJ2 == true)
             {
                 pintarJ2(3, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3,3);
+                    informacionFinal();
+                }
                 turnoJ1 = true;
                 turnoJ2 = false;
             }
@@ -7769,12 +8256,62 @@ namespace PROYECTO1
 
         protected void BtnE4_Click(object sender, EventArgs e)
         {
-            
+
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnF4_Click(object sender, EventArgs e)
         {
-            
+
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 5);             
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 5);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnG4_Click(object sender, EventArgs e)
@@ -7788,32 +8325,177 @@ namespace PROYECTO1
 
         protected void BtnA5_Click(object sender, EventArgs e)
         {
-            
+
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 0);             
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 0);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnB5_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 1);               
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 1);           
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnC5_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 2);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 2);            
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnD5_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 3); 
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnE5_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 4);               
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 4); 
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnF5_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 5);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 5); 
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
 
         }
 
@@ -7830,32 +8512,177 @@ namespace PROYECTO1
 
         protected void BtnA6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 0);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 0);             
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnB6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 1);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 1);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnC6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 2);             
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 2);               
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnD6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 3);              
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 3);              
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnE6_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 4);             
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
         }
 
         protected void BtnF6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+            }
+
         }
 
         protected void BtnG6_Click(object sender, EventArgs e)
@@ -7973,6 +8800,8 @@ namespace PROYECTO1
              filaTamaño = Int32.Parse(DropDownListFila.SelectedItem.Value);
              columnaTamaño = Int32.Parse(DropDownListColumna.SelectedItem.Value);
 
+            //tamaño tablero interno
+            tableroInterno = new string[filaTamaño, columnaTamaño];
             //generador general
 
             for (int i = 0; i < 20; i++)
@@ -8012,11 +8841,21 @@ namespace PROYECTO1
 
             //metodo para habilitar los 4 botones en medio
             habilitarLosCuatro(filaTamaño, columnaTamaño);
+
+
+            //para simular el color de fondo
+            for (int i = 0; i < filaTamaño; i++)
+            {
+                for (int j = 0; j < columnaTamaño; j++)
+                {
+                    tableroInterno[i, j] = "+";
+                }
+            }
         }
 
         public void habilitarLosCuatro(int filaObtenido, int columnaObtenido)
         {
-            tableroInterno = new string[filaTamaño, columnaTamaño];
+           
             string opcion = filaObtenido.ToString() + "-" + columnaObtenido.ToString();
 
             switch (opcion)
@@ -8410,14 +9249,7 @@ namespace PROYECTO1
                
 
             }
-            //para simular el color de fondo
-            for (int i = 0; i < filaTamaño; i++)
-            {
-                for (int j = 0; j < columnaTamaño; j++)
-                {
-                    tableroInterno[i, j] = "+";
-                }
-            }
+            
         }
         
 
@@ -9632,8 +10464,18 @@ namespace PROYECTO1
 
         protected void ButtonEmpezar_Click(object sender, EventArgs e)
         {
+            
+          
+            LabelIndicadorTurno.Text = "Jugador 1";
+            turnoJ1 = false;
+            turnoJ2 = true;
             //meotodo
             informacionFinal();
+            turnoJ1 = true;
+            turnoJ2 = false;
+            //habilita la parte del metodo informacionFina()
+            //para realizar las capturas
+            llaveCaptura = true;
         }
 
         public void pintarJ1(int x, int y)
