@@ -7804,18 +7804,102 @@ namespace PROYECTO1
 
         protected void BtnG1_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
 
         }
 
         protected void BtnH1_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
        
         protected void BtnA2_Click(object sender, EventArgs e)
@@ -8021,13 +8105,69 @@ namespace PROYECTO1
 
         protected void BtnG2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
-            
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+
         }
 
         protected void BtnH2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnA3_Click(object sender, EventArgs e)
@@ -8230,12 +8370,68 @@ namespace PROYECTO1
 
         protected void BtnG3_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnH3_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnA4_Click(object sender, EventArgs e)
@@ -8440,11 +8636,68 @@ namespace PROYECTO1
 
         protected void BtnG4_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnH4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnA5_Click(object sender, EventArgs e)
@@ -8643,13 +8896,69 @@ namespace PROYECTO1
 
         protected void BtnG5_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
 
         }
 
         protected void BtnH5_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnA6_Click(object sender, EventArgs e)
@@ -8849,91 +9158,596 @@ namespace PROYECTO1
 
         protected void BtnG6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnH6_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnA7_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnB7_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnC7_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnD7_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnE7_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnF7_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6,5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnG7_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnH7_Click(object sender, EventArgs e)
         {
-           
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnA8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnB8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnC8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnD8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnE8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnF8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnG8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnH8_Click(object sender, EventArgs e)
         {
-            
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7,7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
         protected void DropDownListFicha_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -9432,1197 +10246,7889 @@ namespace PROYECTO1
 
         protected void BtnJ1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS1_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(0, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(0, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(0, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(0, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS2_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(1, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(1, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(1, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(1, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS3_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(2, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(2, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(2, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(2, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS4_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(3, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(3, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(3, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(3, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS5_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(4, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(4, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(4, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(4, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS6_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(5, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(5, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(5, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(5, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS7_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(6, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(6, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(6, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(6, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS8_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(7, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(7, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(7, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(7, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS9_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9,13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS10_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10,16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS11_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11,8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS12_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS13_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS14_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS15_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS16_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15,19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS17_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17,18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS18_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS19_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnI20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 8);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 8);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 8);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnJ20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 9);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 9);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 9);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnK20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 10);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 10);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 10);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnL20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 11);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 11);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 11);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnM20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 12);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 12);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 12);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnN20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 13);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 13);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 13);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnÑ20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 14);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 14);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 14);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnO20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 15);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 15);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 15);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnP20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 16);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 16);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 16);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnQ20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 17);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 17);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 17);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnR20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 18);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 18);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 18);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void BtnS20_Click(object sender, EventArgs e)
         {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 19);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
 
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 19);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 19);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
 
         protected void ButtonModalidad_Click(object sender, EventArgs e)
@@ -10805,6 +18311,3174 @@ namespace PROYECTO1
             }
 
 
+        }
+
+        protected void BtnA9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH9_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(8, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(8, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(8, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(8, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH10_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(9, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(9, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(9, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(9, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH11_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(10, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(10, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(10, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(10, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11,2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH12_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(11, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(11, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(11, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(11, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH13_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(12, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(12, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(12, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(12, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH14_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(13, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(13, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(13, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(13, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14,1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH15_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(14, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(14, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(14, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(14, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH16_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(15, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(15, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(15, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(15, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH17_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(16, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(16, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(16, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(16, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH18_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(17, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(17, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(17, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(17, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH19_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(18, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(18, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(18, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(18, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnA20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 0);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 0);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 0);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnB20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 1);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 1);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 1);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnC20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 2);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 2);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 2);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnD20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 3);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 3);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 3);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnE20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 4);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 4);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 4);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnF20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 5);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 5);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 5);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnG20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 6);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 6);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 6);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
+        }
+
+        protected void BtnH20_Click(object sender, EventArgs e)
+        {
+            if (turnoJ1 == true)
+            {
+                pintarJ1(19, 7);
+                LabelIndicadorTurno.Text = "Jugador 2";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ1(19, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = false;
+                turnoJ2 = true;
+                llaveTiempo1 = false;
+                llaveTiempo2 = true;
+
+            }
+            else if (turnoJ2 == true)
+            {
+                pintarJ2(19, 7);
+                LabelIndicadorTurno.Text = "Jugador 1";
+                if (llaveCaptura == true)
+                {
+                    capturaFichaJ2(19, 7);
+                    informacionFinal();
+                }
+                turnoJ1 = true;
+                turnoJ2 = false;
+                llaveTiempo1 = true;
+                llaveTiempo2 = false;
+            }
         }
     }
 }
