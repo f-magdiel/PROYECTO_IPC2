@@ -3182,10 +3182,7 @@ namespace PROYECTO1
         {
             try
             {
-
                 string texto1 = TextBoxCarga.Text;
-
-
 
                 XmlReader lector = XmlReader.Create(texto1);
                 while (lector.Read())
