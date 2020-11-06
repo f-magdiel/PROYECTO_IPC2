@@ -22,6 +22,9 @@ namespace PROYECTO1
 {
     public partial class Xtream : System.Web.UI.Page
     {
+
+        //numero a letra columnas
+        public static string columnaConversion;
         //nuevo tamaño de tablero, solo para condicionar
         public static int nuevoTamaño = 0;
 
@@ -102,6 +105,7 @@ namespace PROYECTO1
         public static string color;
         public static string colorTiro;
         public static int contador = 0;
+        //para xml
         public ArrayList arrayFila = new ArrayList();
         public ArrayList arrayColumna = new ArrayList();
         public ArrayList arrayColor = new ArrayList();
@@ -5288,1022 +5292,308 @@ namespace PROYECTO1
         }
 
 
-        //public void recorrerCuadros()
-        //{
-        //    int opcion;
-
-        //    for (opcion = 1; opcion <= 64; opcion++)
-        //    {
-
-        //        switch (opcion)
-        //        {
-        //            case 1:
-        //                if (BtnA1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnA1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("1");
-        //                }
-        //                break;
-
-        //            case 2:
-        //                if (BtnA2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnA2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 3:
-        //                if (BtnA3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnA3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("3");
-        //                }
-        //                break;
-        //            case 4:
-        //                if (BtnA4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnA4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("4");
-        //                }
-
-        //                break;
-        //            case 5:
-        //                if (BtnA5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnA5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("5");
-        //                }
-
-        //                break;
-        //            case 6:
-        //                if (BtnA6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnA6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("6");
-        //                }
-
-        //                break;
-        //            case 7:
-        //                if (BtnA7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnA7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 8:
-        //                if (BtnA8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnA8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("A");
-        //                    arrayFila.Add("8");
-        //                }
-
-        //                break;
-        //            case 9:
-        //                if (BtnB1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnB1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("1");
-        //                }
-        //                break;
-        //            case 10:
-        //                if (BtnB2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnB2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 11:
-        //                if (BtnB3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnB3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("3");
-        //                }
-
-        //                break;
-        //            case 12:
-        //                if (BtnB4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnB4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("4");
-        //                }
-        //                break;
-        //            case 13:
-        //                if (BtnB5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnB5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("5");
-        //                }
-        //                break;
-        //            case 14:
-        //                if (BtnB6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnB6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("6");
-        //                }
-        //                break;
-
-        //            case 15:
-        //                if (BtnB7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnB7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 16:
-        //                if (BtnB8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnB8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("B");
-        //                    arrayFila.Add("8");
-        //                }
-
-        //                break;
-        //            case 17:
-        //                if (BtnC1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnC1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("1");
-        //                }
-
-        //                break;
-        //            case 18:
-        //                if (BtnC2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnC2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 19:
-        //                if (BtnC3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnC3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("3");
-        //                }
-        //                break;
-        //            case 20:
-        //                if (BtnC4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnC4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("4");
-        //                }
-        //                break;
-        //            case 21:
-        //                if (BtnC5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnC5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("5");
-        //                }
-        //                break;
-
-        //            case 22:
-        //                if (BtnC6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnC6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("6");
-        //                }
-        //                break;
-        //            case 23:
-        //                if (BtnC7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnC7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 24:
-        //                if (BtnC8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnC8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("C");
-        //                    arrayFila.Add("8");
-        //                }
-
-        //                break;
-        //            case 25:
-        //                if (BtnD1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnD1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("1");
-        //                }
-        //                break;
-        //            case 26:
-        //                if (BtnD2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnD2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 27:
-        //                if (BtnD3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnD3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("3");
-        //                }
-        //                break;
-        //            case 28:
-        //                if (BtnD4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnD4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("4");
-        //                }
-        //                break;
-        //            case 29:
-        //                if (BtnD5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnD5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("5");
-        //                }
-        //                break;
-        //            case 30:
-        //                if (BtnD6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnD6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("6");
-        //                }
-        //                break;
-        //            case 31:
-        //                if (BtnD7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnD7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-
-        //            case 32:
-        //                if (BtnD8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnD8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("D");
-        //                    arrayFila.Add("8");
-        //                }
-        //                break;
-        //            case 33:
-        //                if (BtnE1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnE1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("1");
-        //                }
-        //                break;
-        //            case 34:
-        //                if (BtnE2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnE2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 35:
-        //                if (BtnE3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnE3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("3");
-        //                }
-
-        //                break;
-        //            case 36:
-        //                if (BtnE4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnE4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("4");
-        //                }
-        //                break;
-        //            case 37:
-        //                if (BtnE5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnE5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("5");
-        //                }
-        //                break;
-        //            case 38:
-        //                if (BtnE6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnE6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("6");
-        //                }
-
-        //                break;
-        //            case 39:
-        //                if (BtnE7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnE7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 40:
-        //                if (BtnE8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnE8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("E");
-        //                    arrayFila.Add("8");
-        //                }
-        //                break;
-        //            case 41:
-        //                if (BtnF1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnF1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("1");
-        //                }
-        //                break;
-
-        //            case 42:
-        //                if (BtnF2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnF2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 43:
-        //                if (BtnF3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnF3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("3");
-        //                }
-        //                break;
-        //            case 44:
-        //                if (BtnF4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnF4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("4");
-        //                }
-
-        //                break;
-        //            case 45:
-        //                if (BtnF5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnF5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("5");
-        //                }
-
-        //                break;
-        //            case 46:
-        //                if (BtnF6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnF6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("6");
-        //                }
-        //                break;
-        //            case 47:
-        //                if (BtnF7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnF7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 48:
-        //                if (BtnF8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnF8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("F");
-        //                    arrayFila.Add("8");
-        //                }
-        //                break;
-        //            case 49:
-        //                if (BtnG1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnG1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("1");
-        //                }
-
-        //                break;
-        //            case 50:
-        //                if (BtnG2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnG2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 51:
-        //                if (BtnG3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnG3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("3");
-        //                }
-
-        //                break;
-
-        //            case 52:
-        //                if (BtnG4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnG4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("4");
-        //                }
-        //                break;
-        //            case 53:
-        //                if (BtnG5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnG5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("5");
-        //                }
-
-        //                break;
-        //            case 54:
-        //                if (BtnG6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnG6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("6");
-        //                }
-
-        //                break;
-        //            case 55:
-        //                if (BtnG7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnG7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 56:
-        //                if (BtnG8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnG8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("G");
-        //                    arrayFila.Add("8");
-        //                }
-        //                break;
-        //            case 57:
-        //                if (BtnH1.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("1");
-
-        //                }
-        //                else if (BtnH1.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("1");
-        //                }
-        //                break;
-        //            case 58:
-        //                if (BtnH2.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("2");
-
-        //                }
-        //                else if (BtnH2.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("2");
-        //                }
-        //                break;
-        //            case 59:
-        //                if (BtnH3.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("3");
-
-        //                }
-        //                else if (BtnH3.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("3");
-        //                }
-
-        //                break;
-        //            case 60:
-        //                if (BtnH4.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("4");
-
-        //                }
-        //                else if (BtnH4.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("4");
-        //                }
-        //                break;
-        //            case 61:
-        //                if (BtnH5.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("5");
-
-        //                }
-        //                else if (BtnH5.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("5");
-        //                }
-
-        //                break;
-
-        //            case 62:
-        //                if (BtnH6.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("6");
-
-        //                }
-        //                else if (BtnH6.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("6");
-        //                }
-        //                break;
-        //            case 63:
-        //                if (BtnH7.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("7");
-
-        //                }
-        //                else if (BtnH7.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("7");
-        //                }
-        //                break;
-        //            case 64:
-        //                if (BtnH8.BackColor == Color.White)
-        //                {
-        //                    arrayColor.Add("blanco");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("8");
-
-        //                }
-        //                else if (BtnH8.BackColor == Color.Black)
-        //                {
-        //                    arrayColor.Add("negro");
-        //                    arrayColumna.Add("H");
-        //                    arrayFila.Add("8");
-        //                }
-        //                break;
-
-
-
-        //        }
-        //    }
-        //}
-        //FINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-
+        public void recorrerCuadros()
+        {
+            for (int i = 0; i < filaTamaño; i++)
+            {
+                for (int j = 0; j < columnaTamaño; j++)
+                {
+                    if(tableroColor[i,j].BackColor == Color.Red)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("rojo");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if(tableroInterno[i,j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("rojo");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else  if (tableroColor[i, j].BackColor == Color.Yellow)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("amarillo");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("amarillo");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.Blue)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("azul");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("azul");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.Orange)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("anaranjado");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("anaranjado");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.Green)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("verde");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("verde");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.Violet)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("violeta");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("violeta");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.White)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("blanco");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("blanco");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.Black)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("negro");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("negro");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.LightBlue)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("celeste");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("celeste");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                    else if (tableroColor[i, j].BackColor == Color.Gray)
+                    {
+                        if (tableroInterno[i, j] == "1")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("gris");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+                        }
+                        else if (tableroInterno[i, j] == "0")
+                        {
+                            transformarColumna(j);
+                            arrayColor.Add("gris");
+                            arrayColumna.Add(columnaConversion);
+                            arrayFila.Add(i.ToString());
+
+                        }
+                    }
+                }
+            }
+        }
+        public void transformarColumna(int valorColumna)
+        {
+            switch (valorColumna)
+            {
+                case 0:
+                    columnaConversion = "A";
+                    break;
+                case 1:
+                    columnaConversion = "B";
+                    break;
+                case 2:
+                    columnaConversion = "C";
+                    break;
+                case 3:
+                    columnaConversion = "D";
+                    break;
+                case 4:
+                    columnaConversion = "E";
+                    break;
+                case 5:
+                    columnaConversion = "F";
+                    break;
+                case 6:
+                    columnaConversion = "G";
+                    break;
+                case 7:
+                    columnaConversion = "H";
+                    break;
+                case 8:
+                    columnaConversion = "I  ";
+                    break;
+                case 9:
+                    columnaConversion = "J";
+                    break;
+                case 10:
+                    columnaConversion = "K";
+                    break;
+                case 11:
+                    columnaConversion = "L";
+                    break;
+                case 12:
+                    columnaConversion = "M";
+                    break;
+                case 13:
+                    columnaConversion = "N";
+                    break;
+                case 14:
+                    columnaConversion = "Ñ";
+                    break;
+                case 15:
+                    columnaConversion = "O";
+                    break;
+                case 16:
+                    columnaConversion = "P";
+                    break;
+                case 17:
+                    columnaConversion = "Q";
+                    break;
+                case 18:
+                    columnaConversion = "R";
+                    break;
+                case 19:
+                    columnaConversion = "S";
+                    break;
+            }
+        }
         protected void ButtonDescarga_Click(object sender, EventArgs e)
         {
-            //recorrerCuadros();
+            recorrerCuadros();
 
 
             XmlDocument doc = new XmlDocument();
-            XmlElement raiz = doc.CreateElement("tablero");
+            XmlElement raiz = doc.CreateElement("partida");
             doc.AppendChild(raiz);
+
+            XmlElement filas = doc.CreateElement("filas");
+            filas.AppendChild(doc.CreateTextNode(filaTamaño.ToString()));
+            raiz.AppendChild(filas);
+
+            XmlElement columnas = doc.CreateElement("columnas");
+            columnas.AppendChild(doc.CreateTextNode(columnaTamaño.ToString()));
+            raiz.AppendChild(columnas);
+
+            XmlElement Jugador1 = doc.CreateElement("Jugador1");
+            raiz.AppendChild(Jugador1);
+
+            for (int i = 0; i < arrayJugador1.Count; i++)
+            {
+                XmlElement color = doc.CreateElement("color");
+                color.AppendChild(doc.CreateTextNode(arrayJugador1[i].ToString()));
+                Jugador1.AppendChild(color);
+            }
+            XmlElement Jugador2 = doc.CreateElement("Jugador2");
+            raiz.AppendChild(Jugador2);
+
+            for (int i = 0; i < arrayJugador2.Count; i++)
+            {
+                XmlElement color = doc.CreateElement("color");
+                color.AppendChild(doc.CreateTextNode(arrayJugador2[i].ToString()));
+                Jugador2.AppendChild(color);
+            }
+            XmlElement Mod = doc.CreateElement("Modalidad");
+            Mod.AppendChild(doc.CreateTextNode("Normal | Inversa"));
+            raiz.AppendChild(Mod);
+
+            XmlElement tablero = doc.CreateElement("tablero");
+            raiz.AppendChild(tablero);
+
+            //para las fichas
             for (int i = 0; i < arrayColor.Count; i++)
             {
-
-
                 XmlElement ficha = doc.CreateElement("ficha");
-                raiz.AppendChild(ficha);
+                tablero.AppendChild(ficha);
 
                 XmlElement color = doc.CreateElement("color");
                 color.AppendChild(doc.CreateTextNode(arrayColor[i].ToString()));
@@ -6316,28 +5606,26 @@ namespace PROYECTO1
                 XmlElement fila = doc.CreateElement("fila");
                 fila.AppendChild(doc.CreateTextNode(arrayFila[i].ToString()));
                 ficha.AppendChild(fila);
-
             }
 
+            
+
             XmlElement siguiente = doc.CreateElement("siguienteTiro");
-            raiz.AppendChild(siguiente);
+            tablero.AppendChild(siguiente);
 
-            //if (banderaBlanca == true)
-            //{
-            //    XmlElement colorTiro = doc.CreateElement("color");
-            //    colorTiro.AppendChild(doc.CreateTextNode("blanco"));
-            //    siguiente.AppendChild(colorTiro);
-            //}
-            //else if (banderaNegra == true)
-            //{
-            //    XmlElement colorTiro = doc.CreateElement("color");
-            //    colorTiro.AppendChild(doc.CreateTextNode("negro"));
-            //    siguiente.AppendChild(colorTiro);
-            //}
-
-            doc.Save("C:\\Users\\MAGDIEL\\Desktop\\Pruebas\\PartidaSolitario.xml");
-
-
+            if (turnoJ1 == true)
+            {
+                XmlElement colorTiro = doc.CreateElement("color");
+                colorTiro.AppendChild(doc.CreateTextNode(arrayJugador1[cambio1 - 1].ToString()));
+                siguiente.AppendChild(colorTiro);
+            }
+            else if (turnoJ2 == true)
+            {
+                XmlElement colorTiro = doc.CreateElement("color");
+                colorTiro.AppendChild(doc.CreateTextNode(arrayJugador2[cambio2 - 1].ToString()));
+                siguiente.AppendChild(colorTiro);
+            }
+            doc.Save("C:\\Users\\MAGDIEL\\Desktop\\Pruebas\\PartidaXtream.xml");
 
 
         }
