@@ -71,30 +71,30 @@
             <asp:Button Cssclass="btnseleccionar1" ID="ButtonSeleccionar1" runat="server" Text="Seleccionar" OnClick="ButtonSeleccionar1_Click" />
             <asp:DropDownList Cssclass="listaficha1" ID="DropDownListFicha1" runat="server" OnSelectedIndexChanged="DropDownListFicha_SelectedIndexChanged">
                 <asp:ListItem>Elegir</asp:ListItem>
-                <asp:ListItem Value="1">Rojo</asp:ListItem>
-                <asp:ListItem Value="2">Amarillo</asp:ListItem>
-                 <asp:ListItem Value="3">Azul</asp:ListItem>
-                <asp:ListItem Value="4">Anaranjado</asp:ListItem>
-                 <asp:ListItem Value="5">Verde</asp:ListItem>
-                <asp:ListItem Value="6">Violeta</asp:ListItem>
-                 <asp:ListItem Value="7">Blanco</asp:ListItem>
-                <asp:ListItem Value="8">Negro</asp:ListItem>
-                 <asp:ListItem Value="9">Celeste</asp:ListItem>
-                <asp:ListItem Value="10">Gris</asp:ListItem>
+                <asp:ListItem Value="1">rojo</asp:ListItem>
+                <asp:ListItem Value="2">amarillo</asp:ListItem>
+                 <asp:ListItem Value="3">azul</asp:ListItem>
+                <asp:ListItem Value="4">anaranjado</asp:ListItem>
+                 <asp:ListItem Value="5">verde</asp:ListItem>
+                <asp:ListItem Value="6">violeta</asp:ListItem>
+                 <asp:ListItem Value="7">blanco</asp:ListItem>
+                <asp:ListItem Value="8">negro</asp:ListItem>
+                 <asp:ListItem Value="9">celeste</asp:ListItem>
+                <asp:ListItem Value="10">gris</asp:ListItem>
             </asp:DropDownList>
 
             <asp:DropDownList Cssclass="listaficha2" ID="DropDownListFicha2" runat="server">
                 <asp:ListItem>Elegir</asp:ListItem>
-                <asp:ListItem Value="1">Rojo</asp:ListItem>
-                <asp:ListItem Value="2">Amarillo</asp:ListItem>
-                 <asp:ListItem Value="3">Azul</asp:ListItem>
-                <asp:ListItem Value="4">Anaranjado</asp:ListItem>
-                 <asp:ListItem Value="5">Verde</asp:ListItem>
-                <asp:ListItem Value="6">Violeta</asp:ListItem>
-                 <asp:ListItem Value="7">Blanco</asp:ListItem>
-                <asp:ListItem Value="8">Negro</asp:ListItem>
-                 <asp:ListItem Value="9">Celeste</asp:ListItem>
-                <asp:ListItem Value="10">Gris</asp:ListItem>
+                <asp:ListItem Value="1">rojo</asp:ListItem>
+                <asp:ListItem Value="2">amarillo</asp:ListItem>
+                 <asp:ListItem Value="3">azul</asp:ListItem>
+                <asp:ListItem Value="4">anaranjado</asp:ListItem>
+                 <asp:ListItem Value="5">verde</asp:ListItem>
+                <asp:ListItem Value="6">violeta</asp:ListItem>
+                 <asp:ListItem Value="7">blanco</asp:ListItem>
+                <asp:ListItem Value="8">negro</asp:ListItem>
+                 <asp:ListItem Value="9">celeste</asp:ListItem>
+                <asp:ListItem Value="10">gris</asp:ListItem>
             </asp:DropDownList>
             <asp:Label CssClass="seleccion2" ID="LabelSeleccionJugador2" runat="server" Text="Color Jugador 2:"></asp:Label>
              <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>

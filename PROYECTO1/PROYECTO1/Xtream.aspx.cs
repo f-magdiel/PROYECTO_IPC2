@@ -22,6 +22,9 @@ namespace PROYECTO1
 {
     public partial class Xtream : System.Web.UI.Page
     {
+        //nuevo tamaño de tablero, solo para condicionar
+        public static int nuevoTamaño = 0;
+
         //tablero
         public static int tiempoJ1S = 0;
         public static int tiempoJ2S = 0;
@@ -35,6 +38,9 @@ namespace PROYECTO1
         public static int contadorColorj1 = 0;
         public static int contadorColorj2 = 0;
 
+        //asignacion color desde xml jugadores
+        public static int asignacionJ1 = 0;
+        public static int asignacionJ2 = 0;
 
         //turnos
         public static bool turnoJ1 = false;
@@ -47,6 +53,13 @@ namespace PROYECTO1
         //cambio de color
         public static int cambio1 = 0;
         public static int cambio2 = 0;
+
+        //cambio de columna xml
+        public static int cambioDeColumna;
+
+        //llave jugador 1 y jugador 2 para el xml
+        public static bool llaveJugador1 = false;
+        public static bool llaveJugador2 = false;
 
         //contador de los 4
         public static int contador4 = 0;
@@ -81,6 +94,7 @@ namespace PROYECTO1
        
         public static bool banderaFicha = false;
         public static bool banderaTiro = false;
+        //condicion principal del xml
         public static bool banderaGeneral = true;
 
         public static string columna;
@@ -649,95 +663,95 @@ namespace PROYECTO1
             {
                 string seleccion = DropDownListFicha2.SelectedItem.ToString();
                 int valor = DropDownListFicha2.SelectedIndex;
-                if (seleccion == "Rojo")
+                if (seleccion == "rojo")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Rojo");
+                    arrayJugador2.Add("rojo");
                 }
-                else if (seleccion == "Amarillo")
+                else if (seleccion == "amarillo")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Amarillo");
+                    arrayJugador2.Add("amarillo");
                 }
-                else if (seleccion == "Azul")
+                else if (seleccion == "azul")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Azul");
+                    arrayJugador2.Add("azul");
                 }
-                else if (seleccion == "Anaranjado")
+                else if (seleccion == "anaranjado")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Anaranjado");
+                    arrayJugador2.Add("anaranjado");
                 }
-                else if (seleccion == "Verde")
+                else if (seleccion == "verde")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Verde");
+                    arrayJugador2.Add("verde");
                 }
-                else if (seleccion == "Violeta")
+                else if (seleccion == "violeta")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Violeta");
+                    arrayJugador2.Add("violeta");
                 }
-                else if (seleccion == "Blanco")
+                else if (seleccion == "blanco")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Blanco");
+                    arrayJugador2.Add("blanco");
                 }
-                else if (seleccion == "Negro")
+                else if (seleccion == "negro")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Negro");
+                    arrayJugador2.Add("negro");
                 }
-                else if (seleccion == "Celeste")
+                else if (seleccion == "celeste")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Celeste");
+                    arrayJugador2.Add("celeste");
                 }
-                else if (seleccion == "Gris")
+                else if (seleccion == "gris")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha2.SelectedValue = "Elegir";
                     contadorColorj2++;
                     LabelSeleccionJugador2.Text = "Color Jugador 2:" + contadorColorj2;
-                    arrayJugador2.Add("Gris");
+                    arrayJugador2.Add("gris");
                 }
             }
         }
@@ -751,97 +765,97 @@ namespace PROYECTO1
                 int valor = DropDownListFicha1.SelectedIndex;
 
 
-                if (seleccion == "Rojo")
+                if (seleccion == "rojo")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Rojo");
+                    arrayJugador1.Add("rojo");
                     
 
                 }
-                else if (seleccion == "Amarillo")
+                else if (seleccion == "amarillo")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Amarillo");
+                    arrayJugador1.Add("amarillo");
                 }
-                else if (seleccion == "Azul")
+                else if (seleccion == "azul")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Azul");
+                    arrayJugador1.Add("azul");
                 }
-                else if (seleccion == "Anaranjado")
+                else if (seleccion == "anaranjado")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Anaranjado");
+                    arrayJugador1.Add("anaranjado");
                 }
-                else if (seleccion == "Verde")
+                else if (seleccion == "verde")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Verde");
+                    arrayJugador1.Add("verde");
                 }
-                else if (seleccion == "Violeta")
+                else if (seleccion == "violeta")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Violeta");
+                    arrayJugador1.Add("violeta");
                 }
-                else if (seleccion == "Blanco")
+                else if (seleccion == "blanco")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Blanco");
+                    arrayJugador1.Add("blanco");
                 }
-                else if (seleccion == "Negro")
+                else if (seleccion == "negro")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Negro");
+                    arrayJugador1.Add("negro");
                 }
-                else if (seleccion == "Celeste")
+                else if (seleccion == "celeste")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Celeste");
+                    arrayJugador1.Add("celeste");
                 }
-                else if (seleccion == "Gris")
+                else if (seleccion == "gris")
                 {
                     DropDownListFicha1.Items.RemoveAt(valor);
                     DropDownListFicha2.Items.RemoveAt(valor);
                     DropDownListFicha1.SelectedValue = "Elegir";
                     contadorColorj1++;
                     LabelSeleccionJugador1.Text = "Color Jugador 1:" + contadorColorj1;
-                    arrayJugador1.Add("Gris");
+                    arrayJugador1.Add("gris");
                 }
 
             }
@@ -1118,43 +1132,43 @@ namespace PROYECTO1
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columna].BackColor = Color.Yellow;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columna].BackColor = Color.Blue;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columna].BackColor = Color.Orange;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columna].BackColor = Color.Green;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columna].BackColor = Color.Violet;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columna].BackColor = Color.White;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columna].BackColor = Color.Black;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columna].BackColor = Color.LightBlue;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columna].BackColor = Color.Gray;
                         tableroInterno[i, columna] = "1";
                         break;
@@ -1173,52 +1187,52 @@ namespace PROYECTO1
             {
                 switch(arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[fila, i].BackColor = Color.Yellow;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[fila, i].BackColor = Color.Blue;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[fila, i].BackColor = Color.Orange;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[fila, i].BackColor = Color.Green;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[fila, i].BackColor = Color.Violet;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[fila, i].BackColor = Color.White;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[fila, i].BackColor = Color.Black;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[fila, i].BackColor = Color.LightBlue;
                         tableroInterno[fila, i] = "1";
                         fila--;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[fila, i].BackColor = Color.Gray;
                         tableroInterno[fila, i] = "1";
                         fila--;
@@ -1236,43 +1250,43 @@ namespace PROYECTO1
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[fila, i].BackColor = Color.Yellow;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[fila, i].BackColor = Color.Blue;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[fila, i].BackColor = Color.Orange;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[fila, i].BackColor = Color.Green;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[fila, i].BackColor = Color.Violet;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[fila, i].BackColor = Color.White;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[fila, i].BackColor = Color.Black;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[fila, i].BackColor = Color.LightBlue;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[fila, i].BackColor = Color.Gray;
                         tableroInterno[fila, i] = "1";
                         break;
@@ -1288,52 +1302,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[filaInicio, i].BackColor = Color.Red;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[filaInicio, i].BackColor = Color.Yellow;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[filaInicio, i].BackColor = Color.Blue;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[filaInicio, i].BackColor = Color.Orange;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[filaInicio, i].BackColor = Color.Green;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[filaInicio, i].BackColor = Color.Violet;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[filaInicio, i].BackColor = Color.White;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[filaInicio, i].BackColor = Color.Black;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[filaInicio, i].BackColor = Color.LightBlue;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[filaInicio, i].BackColor = Color.Gray;
                         tableroInterno[filaInicio, i] = "1";
                         filaInicio++;
@@ -1350,35 +1364,35 @@ namespace PROYECTO1
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columna].BackColor = Color.Yellow;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columna].BackColor = Color.Blue;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columna].BackColor = Color.Orange;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columna].BackColor = Color.Green;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columna].BackColor = Color.Violet;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columna].BackColor = Color.White;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columna].BackColor = Color.Black;
                         tableroInterno[i, columna] = "1";
                         break;
@@ -1386,7 +1400,7 @@ namespace PROYECTO1
                         tableroColor[i, columna].BackColor = Color.LightBlue;
                         tableroInterno[i, columna] = "1";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columna].BackColor = Color.Gray;
                         tableroInterno[i, columna] = "1";
                         break;
@@ -1403,52 +1417,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columnadireccion].BackColor = Color.Yellow;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columnadireccion].BackColor = Color.Blue;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columnadireccion].BackColor = Color.Orange;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columnadireccion].BackColor = Color.Green;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columnadireccion].BackColor = Color.Violet;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columnadireccion].BackColor = Color.White;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columnadireccion].BackColor = Color.Black;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columnadireccion].BackColor = Color.Gray;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
@@ -1464,43 +1478,43 @@ namespace PROYECTO1
             {
                 switch(arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[fila, i].BackColor = Color.Yellow;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[fila, i].BackColor = Color.Blue;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[fila, i].BackColor = Color.Orange;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[fila, i].BackColor = Color.Green;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[fila, i].BackColor = Color.Violet;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[fila, i].BackColor = Color.White;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[fila, i].BackColor = Color.Black;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[fila, i].BackColor = Color.LightBlue;
                         tableroInterno[fila, i] = "1";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[fila, i].BackColor = Color.Gray;
                         tableroInterno[fila, i] = "1";
                         break;
@@ -1516,52 +1530,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador1[cambio1-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columnadireccion].BackColor = Color.Yellow;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columnadireccion].BackColor = Color.Blue;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columnadireccion].BackColor = Color.Orange;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columnadireccion].BackColor = Color.Green;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columnadireccion].BackColor = Color.Violet;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columnadireccion].BackColor = Color.White;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columnadireccion].BackColor = Color.Black;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columnadireccion].BackColor = Color.Gray;
                         tableroInterno[i, columnadireccion] = "1";
                         columnadireccion--;
@@ -2131,43 +2145,43 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columna].BackColor = Color.Yellow;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columna].BackColor = Color.Blue;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columna].BackColor = Color.Orange;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columna].BackColor = Color.Green;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columna].BackColor = Color.Violet;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columna].BackColor = Color.White;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columna].BackColor = Color.Black;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columna].BackColor = Color.LightBlue;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columna].BackColor = Color.Gray;
                         tableroInterno[i, columna] = "0";
                         break;
@@ -2185,52 +2199,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[fila, i].BackColor = Color.Yellow;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[fila, i].BackColor = Color.Blue;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[fila, i].BackColor = Color.Orange;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[fila, i].BackColor = Color.Green;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[fila, i].BackColor = Color.Violet;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[fila, i].BackColor = Color.White;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[fila, i].BackColor = Color.Black;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[fila, i].BackColor = Color.LightBlue;
                         tableroInterno[fila, i] = "0";
                         fila--;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[fila, i].BackColor = Color.Gray;
                         tableroInterno[fila, i] = "0";
                         fila--;
@@ -2248,43 +2262,43 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[fila, i].BackColor = Color.Yellow;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[fila, i].BackColor = Color.Blue;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[fila, i].BackColor = Color.Orange;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[fila, i].BackColor = Color.Green;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[fila, i].BackColor = Color.Violet;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[fila, i].BackColor = Color.White;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[fila, i].BackColor = Color.Black;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[fila, i].BackColor = Color.LightBlue;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[fila, i].BackColor = Color.Gray;
                         tableroInterno[fila, i] = "0";
                         break;
@@ -2300,52 +2314,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[filaInicio, i].BackColor = Color.Red;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[filaInicio, i].BackColor = Color.Yellow;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[filaInicio, i].BackColor = Color.Blue;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[filaInicio, i].BackColor = Color.Orange;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[filaInicio, i].BackColor = Color.Green;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[filaInicio, i].BackColor = Color.Violet;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[filaInicio, i].BackColor = Color.White;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[filaInicio, i].BackColor = Color.Black;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[filaInicio, i].BackColor = Color.LightBlue;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[filaInicio, i].BackColor = Color.Gray;
                         tableroInterno[filaInicio, i] = "0";
                         filaInicio++;
@@ -2362,43 +2376,43 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columna].BackColor = Color.Red;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columna].BackColor = Color.Yellow;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columna].BackColor = Color.Blue;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columna].BackColor = Color.Orange;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columna].BackColor = Color.Green;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columna].BackColor = Color.Violet;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columna].BackColor = Color.White;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columna].BackColor = Color.Black;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columna].BackColor = Color.LightBlue;
                         tableroInterno[i, columna] = "0";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columna].BackColor = Color.Gray;
                         tableroInterno[i, columna] = "0";
                         break;
@@ -2415,52 +2429,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columnadireccion].BackColor = Color.Yellow;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columnadireccion].BackColor = Color.Blue;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columnadireccion].BackColor = Color.Orange;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columnadireccion].BackColor = Color.Green;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columnadireccion].BackColor = Color.Violet;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columnadireccion].BackColor = Color.White;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columnadireccion].BackColor = Color.Black;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columnadireccion].BackColor = Color.Gray;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
@@ -2476,43 +2490,43 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[fila, i].BackColor = Color.Red;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[fila, i].BackColor = Color.Yellow;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[fila, i].BackColor = Color.Blue;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[fila, i].BackColor = Color.Orange;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[fila, i].BackColor = Color.Green;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[fila, i].BackColor = Color.Violet;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[fila, i].BackColor = Color.White;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[fila, i].BackColor = Color.Black;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[fila, i].BackColor = Color.LightBlue;
                         tableroInterno[fila, i] = "0";
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[fila, i].BackColor = Color.Gray;
                         tableroInterno[fila, i] = "0";
                         break;
@@ -2528,52 +2542,52 @@ namespace PROYECTO1
             {
                 switch (arrayJugador2[cambio2-1].ToString())
                 {
-                    case "Rojo":
+                    case "rojo":
                         tableroColor[i, columnadireccion].BackColor = Color.Red;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Amarillo":
+                    case "amarillo":
                         tableroColor[i, columnadireccion].BackColor = Color.Yellow;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Azul":
+                    case "azul":
                         tableroColor[i, columnadireccion].BackColor = Color.Blue;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Anaranjado":
+                    case "anaranjado":
                         tableroColor[i, columnadireccion].BackColor = Color.Orange;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Verde":
+                    case "verde":
                         tableroColor[i, columnadireccion].BackColor = Color.Green;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Violeta":
+                    case "violeta":
                         tableroColor[i, columnadireccion].BackColor = Color.Violet;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Blanco":
+                    case "blanco":
                         tableroColor[i, columnadireccion].BackColor = Color.White;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Negro":
+                    case "negro":
                         tableroColor[i, columnadireccion].BackColor = Color.Black;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Celeste":
+                    case "celeste":
                         tableroColor[i, columnadireccion].BackColor = Color.LightBlue;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
                         break;
-                    case "Gris":
+                    case "gris":
                         tableroColor[i, columnadireccion].BackColor = Color.Gray;
                         tableroInterno[i, columnadireccion] = "0";
                         columnadireccion--;
@@ -2905,8 +2919,6 @@ namespace PROYECTO1
             {
                 for (int j = 0; j < columnaTamaño; j++)
                 {
-
-
                     if (turnoJ1 == true)
                     {
                         if (tableroInterno[i, j] == "0")
@@ -2922,9 +2934,6 @@ namespace PROYECTO1
                             activacionBoton1(i, j);//metodo para habilitar botones si soy J2
                         }
                     }
-
-
-
                 }
             }
 
@@ -3048,135 +3057,45 @@ namespace PROYECTO1
             bloquesB = 0;
             bloquesN = 0;
 
-            // resetea la tabla 
-            for (int i = 0; i < 8; i++)
+            //para eliminar las columnas no necesarias
+            for (int j = 20; j >= columnaTamaño + 1; j--)
             {
-                for (int j = 0; j < 8; j++)
+                for (int i = 0; i <= 21; i++)
                 {
-                    if (tableroColor[i, j].Text == "X")
+                    HtmlTableCell cell = TableroCompleto.Rows[i].Cells[j];
+                    TableroCompleto.Rows[i].Cells[j].Visible = false;
+                }
+
+            }
+
+            //para eliminar las filas no necesarias
+            for (int i = 20; i >= filaTamaño + 1; i--)
+            {
+                HtmlTableRow row = TableroCompleto.Rows[i];
+                TableroCompleto.Rows[i].Visible = false;
+            }
+
+            //guia
+            for (int i = 0; i < filaTamaño; i++)
+            {
+                for (int j = 0; j < columnaTamaño; j++)
+                {
+                    if(tableroInterno[i,j] == "1" || tableroInterno[i,j] == "0")
                     {
-                        tableroColor[i, j].Text = " ";
-                        tableroColor[i, j].Enabled = false;
+                        continue;
                     }
-                    else if (tableroColor[i, j].Text == "O")
+                    else
                     {
-                        tableroColor[i, j].Text = " ";
-                        tableroColor[i, j].Enabled = false;
+                        tableroInterno[i, j] = "+";
                     }
                 }
+
             }
 
 
-            //blancas
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
+           
 
-
-                    //if (banderaBlanca == true)
-                    //{
-                    //    if (tableroColor[i, j].BackColor == Color.White)
-                    //    {
-
-                    //        activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
-
-                    //    }
-
-                    //}
-                    //else if (banderaNegra == true)
-                    //{
-
-                    //    if (tableroColor[i, j].BackColor == Color.Black)
-                    //    {
-
-                    //        activacionBoton2(i, j);//metodo para habilitar botones si soy negro
-
-                    //    }
-                    //}
-
-
-
-                }
-            }
-
-            //solo para movimientos
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    if (tableroColor[i, j].BackColor == Color.White)
-                    {
-                        movimientoB++;
-                    }
-                    else if (tableroColor[i, j].BackColor == Color.Black)
-                    {
-                        movimientoN++;
-                    }
-
-                }
-            }
-
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    if (tableroColor[i, j].Text == "X")
-                    {
-                        //posiciones que diga que no hay mas movimientos
-                        movimientoGeneral++;
-                    }
-                    else if (tableroColor[i, j].Text == "O")
-                    {
-                        //posiciones que diga que no hay mas movimientos
-                        movimientoGeneral++;
-                    }
-                }
-            }
-
-            //if (usuarioBlanco == true)//cuando yo sea blanco
-            //{
-            //    LabelContadorUsuario.Text = movimientoB.ToString();
-            //    LabelContadorInvitado.Text = movimientoN.ToString();
-            //}
-            //else if (usuarioNegro == true)//cuando yo sea negro
-            //{
-            //    LabelContadorUsuario.Text = movimientoN.ToString();
-            //    LabelContadorInvitado.Text = movimientoB.ToString();
-            //}
-
-            //validar estado de partida
-            if (movimientoGeneral == 0)
-            {
-                if (movimientoB > movimientoN)
-                {
-                    //gana blanca
-                    LabelTitulo.Text = "Ganó ficha blanca";
-                }
-                else if (movimientoN > movimientoB)
-                {
-                    //gana negras
-                    LabelTitulo.Text = "Ganó ficha negra";
-
-                }
-                else if (movimientoB == movimientoN)
-                {
-                    //es empate
-                    LabelTitulo.Text = "Empate";
-
-                }
-
-
-
-
-            }
-            else
-            {
-                movimientoGeneral = 0;
-                //se esta jugando
-                LabelTitulo.Text = "Se está jugando";
-            }
-
+          
         }
         protected void ButtonCarga_Click1(object sender, EventArgs e)
         {
@@ -3187,1514 +3106,340 @@ namespace PROYECTO1
                 XmlReader lector = XmlReader.Create(texto1);
                 while (lector.Read())
                 {
-                    if (lector.IsStartElement())
+                    // otra solucion para leer
+
+                    if(lector.NodeType == XmlNodeType.Element)
                     {
-                        string valor = lector.Name.ToString();
-
-                        if (banderaGeneral == true)
+                        if (lector.Name.ToString() == "filas")
                         {
-                            if (valor == "ficha")
+                            //asgnacion tamaño fila
+                            filaTamaño = Int32.Parse(lector.ReadString());
+                            nuevoTamaño++;
+                            if(nuevoTamaño == 2)
                             {
-                                banderaGeneral = false;
-                                banderaFicha = true;
-                                continue;
-                            }
-                            else if (valor == "siguienteTiro")
-                            {
-                                banderaGeneral = false;
-                                banderaTiro = true;
-                                continue;
+                                tableroInterno = new string[filaTamaño,columnaTamaño];
+                                nuevoTamaño =10;
                             }
                         }
-
-                        if (banderaFicha == true)
+                        else if (lector.Name.ToString() == "columnas")
                         {
-                            contador++;
-                            if (valor == "color")
+                            //asignacion tamaño columna
+                            columnaTamaño = Int32.Parse(lector.ReadString());
+                            nuevoTamaño++;
+                            if (nuevoTamaño == 2)
                             {
-                                color = lector.ReadString();
-                            }
-                            else if (valor == "columna")
-                            {
-                                columna = lector.ReadString();
-                            }
-                            else if (valor == "fila")
-                            {
-                                fila = lector.ReadString();
-                            }
-                            if (contador == 3)
-                            {
-                                cargarValores(color, columna, fila);  // para ingresar los datos en la matriz
-                                contador = 0;
-                                banderaGeneral = true;
-                                banderaFicha = false;
-                            }
-
-                        }
-
-                        if (banderaTiro == true)
-                        {
-                            if (valor == "color")
-                            {
-                                colorTiro = lector.ReadString();
-                                colorTiro = colorTiro.Replace(" ", "");
-
-                                //if (colorTiro == "blanco")
-                                //{
-
-                                //    banderaNegra = false;
-                                //    banderaBlanca = true;
-                                //    usuarioBlanco = true;
-                                //    banderaGeneral = true;
-                                //    banderaTiro = false;
-                                //}
-                                //else if (colorTiro == "negro")
-                                //{
-
-                                //    banderaNegra = true;
-                                //    banderaBlanca = false;
-                                //    usuarioNegro = true;
-                                //    banderaGeneral = true;
-                                //    banderaTiro = false;
-                                //}
-
+                                tableroInterno = new string[filaTamaño, columnaTamaño];
+                                nuevoTamaño = 10;
                             }
                         }
-
-
+                        else if (lector.Name.ToString() == "Jugador1")
+                        {
+                            llaveJugador1 = true;
+                        }
+                        else if (lector.Name.ToString() == "Jugador2")
+                        {
+                            llaveJugador2 = true;
+                        }
+                        else if (lector.Name.ToString() == "ficha")
+                        {
+                            banderaFicha = true;
+                        }
+                        else if (lector.Name.ToString() == "siguienteTiro")
+                        {
+                            banderaTiro = true;
+                        }
+                    }
+                    else if(lector.NodeType == XmlNodeType.EndElement)
+                    {
+                       
+                        if (lector.Name.ToString() == "Jugador1")
+                        {
+                            llaveJugador1 = false;
+                            contadorColorj1 = arrayJugador1.Count;
+                        }
+                        else if (lector.Name.ToString() == "Jugador2")
+                        {
+                            llaveJugador2 = false;
+                            contadorColorj2 = arrayJugador2.Count;
+                        }
+                        else if (lector.Name.ToString() == "ficha")
+                        {
+                            banderaFicha = false;
+                            cargarValores(color, columna, fila);  // para ingresar los datos en la matriz
+                           
+                        }
+                        else if (lector.Name.ToString() == "siguienteTiro")
+                        {
+                            banderaTiro = false;
+                        }
 
                     }
+
+                    if (llaveJugador1 == true)
+                    {
+                        if (lector.Name.ToString() == "color")
+                        {
+                            arrayJugador1.Add(lector.ReadString());
+                            asignacionJ1++;
+                        }
+                    }
+
+                    if (llaveJugador2 == true)
+                    {
+                        if (lector.Name.ToString() == "color")
+                        {
+                            arrayJugador2.Add(lector.ReadString());
+                            asignacionJ2++;
+                        }
+                    }
+
+                    if (banderaFicha == true)
+                    {
+                       
+                        if (lector.Name.ToString() == "color")
+                        {
+                            color = lector.ReadString();
+                        }
+                        else if (lector.Name.ToString() == "columna")
+                        {
+                            columna = lector.ReadString();
+                        }
+                        else if (lector.Name.ToString() == "fila")
+                        {
+                            fila = lector.ReadString();
+                        }
+                        
+
+                    }
+
+                    if (banderaTiro == true)
+                    {
+                        if (lector.Name.ToString() == "color")
+                        {
+                            colorTiro = lector.ReadString();
+                            colorTiro = colorTiro.Replace(" ", "");
+
+                            //para jugador 1
+                            for (int i = 0; i < arrayJugador1.Count; i++)
+                            {
+                                if (arrayJugador1[i].ToString() == colorTiro)
+                                {
+                                    turnoJ1 = true;
+                                    turnoJ2 = false;
+                                    LabelIndicadorTurno.Text = "Jugador1";
+                                    break;
+                                }
+                            }
+
+                            //para jugador 2
+                            for (int i = 0; i < arrayJugador2.Count; i++)
+                            {
+                                if (arrayJugador2[i].ToString() == colorTiro)
+                                {
+                                    turnoJ2 = true;
+                                    turnoJ1 = false;
+                                    LabelIndicadorTurno.Text = "Jugador2";
+                                    break;
+                                }
+                            }
+
+                        }
+                    }
+
                 }
 
-                analizarMatriz();
-                //ingresarFichas();
+                //analizarMatriz();
+                ////ingresarFichas();
                 informacionFinalCarga();
 
 
             }
             catch (Exception exc)
             {
-                Response.Write("No se encontro el archivo" + exc);
+                Response.Write("Error al cargar el archivo" + exc);
             }
         }
 
-        //CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA-CARGA
-        //public void ingresarFichas()
-        //{
-        //    for (int i = 0; i < 8; i++)
-        //    {
-        //        for (int j = 0; j < 8; j++)
-        //        {
-        //            string opcion = i.ToString() + "-" + j.ToString();
-
-        //            switch (opcion)
-        //            {
-        //                case "0-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-0":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnA8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnA8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-1":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnB8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnB8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-2":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnC8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnC8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-3":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnD8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnD8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-4":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnE8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnE8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-5":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnF8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnF8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-6":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnG8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnG8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "0-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH1.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH1.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "1-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH2.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH2.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "2-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH3.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH3.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "3-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH4.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH4.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "4-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH5.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH5.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "5-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH6.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH6.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "6-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH7.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH7.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //                case "7-7":
-        //                    if (tablero[i, j] == "O")
-        //                    {
-        //                        BtnH8.BackColor = Color.White;
-        //                    }
-        //                    else if (tablero[i, j] == "X")
-        //                    {
-        //                        BtnH8.BackColor = Color.Black;
-        //                    }
-        //                    break;
-        //            }
-        //        }
-        //    }
-        //}
-
+       
 
 
         //metodo que reciber los valores de la fichas y es ingresado a una matriz para despues
         //ser analizado si es válida
         public void cargarValores(string color, string col, string fil)
         {
-
-            string coordenada = col + "-" + fil;
-
-            //para A
-            if (coordenada == "A-1")
+           
+            //cambio de letras a Numero para columnas
+            switch (col)
             {
-                if (color == "blanco")
-                {
-
-                    tablero[0, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-
-                    tablero[0, 0] = "X";
-                }
+                case "A":
+                    cambioDeColumna = 0;
+                    break;
+                case "B":
+                    cambioDeColumna = 1;
+                    break;
+                case "C":
+                    cambioDeColumna = 2;
+                    break;
+                case "D":
+                    cambioDeColumna = 3;
+                    break;
+                case "E":
+                    cambioDeColumna = 4;
+                    break;
+                case "F":
+                    cambioDeColumna = 5;
+                    break;
+                case "G":
+                    cambioDeColumna = 6;
+                    break;
+                case "H":
+                    cambioDeColumna = 7;
+                    break;
+                case "I":
+                    cambioDeColumna = 8;
+                    break;
+                case "J":
+                    cambioDeColumna = 9;
+                    break;
+                case "K":
+                    cambioDeColumna = 10;
+                    break;
+                case "L":
+                    cambioDeColumna = 11;
+                    break;
+                case "M":
+                    cambioDeColumna = 12;
+                    break;
+                case "N":
+                    cambioDeColumna = 13;
+                    break;
+                case "Ñ":
+                    cambioDeColumna = 14;
+                    break;
+                case "O":
+                    cambioDeColumna = 15;
+                    break;
+                case "P":
+                    cambioDeColumna = 16;
+                    break;
+                case "Q":
+                    cambioDeColumna = 17;
+                    break;
+                case "R":
+                    cambioDeColumna = 18;
+                    break;
+                case "S":
+                    cambioDeColumna = 19;
+                    break;
             }
+            //buscar primero a quien le pertenece el color
 
-            if (coordenada == "A-2")
+            //busca en el color de jugador 1
+            for (int i = 0; i < arrayJugador1.Count; i++)
             {
-                if (color == "blanco")
+                if (arrayJugador1[i].ToString() == color)
                 {
+                   
+                    switch (color)
+                    {
+                        case "rojo":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Red;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "amarillo":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Yellow;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "azul":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Blue;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "anaranjado":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Orange;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "verde":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Green;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "violeta":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Violet;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "blanco":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.White;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "negro":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Black;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "celeste":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.LightBlue;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "1";
+                            break;
+                        case "gris":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Gray;
+                            tableroInterno[Int32.Parse(fila), cambioDeColumna] = "1";
+                            break;
 
-                    tablero[1, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-
-                    tablero[1, 0] = "X";
-                }
-            }
-
-            if (coordenada == "A-3")
-            {
-                if (color == "blanco")
-                {
-
-                    tablero[2, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-
-                    tablero[2, 0] = "X";
-                }
-            }
-            if (coordenada == "A-4")
-            {
-                if (color == "blanco")
-                {
-
-                    tablero[3, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-
-                    tablero[3, 0] = "X";
-                }
-            }
-            if (coordenada == "A-5")
-            {
-                if (color == "blanco")
-                {
-
-                    tablero[4, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-
-                    tablero[4, 0] = "X";
-                }
-            }
-            if (coordenada == "A-6")
-            {
-                if (color == "blanco")
-                {
-
-                    tablero[5, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-
-                    tablero[5, 0] = "X";
-                }
-            }
-            if (coordenada == "A-7")
-            {
-                if (color == "blanco")
-                {
-
-                    tablero[6, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 0] = "X";
-
-                }
-            }
-            if (coordenada == "A-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 0] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 0] = "X";
-                }
-            }
-
-            //para B
-            if (coordenada == "B-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 1] = "X";
-                }
-            }
-
-            if (coordenada == "B-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 1] = "X";
+                    }
+                    
                 }
             }
 
-            if (coordenada == "B-3")
+            //busca en el color de jugador 2
+            for (int i = 0; i < arrayJugador2.Count; i++)
             {
-                if (color == "blanco")
+                if (arrayJugador2[i].ToString() == color)
                 {
-                    tablero[2, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 1] = "X";
-                }
-            }
-            if (coordenada == "B-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 1] = "X";
-                }
-            }
-            if (coordenada == "B-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 1] = "X";
-                }
-            }
-            if (coordenada == "B-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 1] = "X";
-                }
-            }
-            if (coordenada == "B-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 1] = "X";
-                }
-            }
-            if (coordenada == "B-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 1] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 1] = "X";
-                }
-            }
+                    switch (color)
+                    {
+                        case "rojo":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Red;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "amarillo":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Yellow;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "azul":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Blue;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "anaranjado":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Orange;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "verde":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Green;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "violeta":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Violet;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "blanco":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.White;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "negro":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Black;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "celeste":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.LightBlue;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
+                        case "gris":
+                            tableroColor[Int32.Parse(fil), cambioDeColumna].BackColor = Color.Gray;
+                            tableroInterno[Int32.Parse(fil), cambioDeColumna] = "0";
+                            break;
 
-            //para C
-            if (coordenada == "C-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 2] = "X";
+                    }
+                    
                 }
             }
-
-            if (coordenada == "C-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 2] = "X";
-                }
-            }
-
-            if (coordenada == "C-3")
-            {
-                if (color == "blanco")
-                {
-                    tablero[2, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 2] = "X";
-                }
-            }
-            if (coordenada == "C-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 2] = "X";
-                }
-            }
-            if (coordenada == "C-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 2] = "X";
-                }
-            }
-            if (coordenada == "C-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 2] = "X";
-                }
-            }
-            if (coordenada == "C-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 2] = "X";
-                }
-            }
-            if (coordenada == "C-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 2] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 2] = "X";
-                }
-            }
-
-            //para D
-            if (coordenada == "D-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 3] = "X";
-                }
-            }
-
-            if (coordenada == "D-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 3] = "X";
-                }
-            }
-
-            if (coordenada == "D-3")
-            {
-                if (color == "blanco")
-                {
-                    tablero[2, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 3] = "X";
-                }
-            }
-            if (coordenada == "D-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 3] = "X";
-                }
-            }
-            if (coordenada == "D-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 3] = "X";
-                }
-            }
-            if (coordenada == "D-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 3] = "X";
-                }
-            }
-            if (coordenada == "D-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 3] = "X";
-                }
-            }
-            if (coordenada == "D-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 3] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 3] = "X";
-                }
-            }
-
-            //para E
-            if (coordenada == "E-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 4] = "X";
-                }
-            }
-
-            if (coordenada == "E-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 4] = "X";
-                }
-            }
-
-            if (coordenada == "E-3")
-            {
-                if (color == "blanco")
-                {
-                    tablero[2, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 4] = "X";
-                }
-            }
-            if (coordenada == "E-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 4] = "X";
-                }
-            }
-            if (coordenada == "E-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 4] = "X";
-                }
-            }
-            if (coordenada == "E-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 4] = "X";
-                }
-            }
-            if (coordenada == "E-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 4] = "X";
-                }
-            }
-            if (coordenada == "E-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 4] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 4] = "X";
-                }
-            }
-
-            //para F
-            if (coordenada == "F-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 5] = "X";
-                }
-            }
-
-            if (coordenada == "F-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 5] = "X";
-                }
-            }
-
-            if (coordenada == "F-3")
-            {
-                if (color == "blanco")
-                {
-                    tablero[2, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 5] = "X";
-                }
-            }
-            if (coordenada == "F-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 5] = "X";
-                }
-            }
-            if (coordenada == "F-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 5] = "O";
-                }
-            }
-            if (coordenada == "F-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 5] = "X";
-                }
-            }
-            if (coordenada == "F-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 5] = "X";
-                }
-            }
-            if (coordenada == "F-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 5] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 5] = "X";
-
-                }
-            }
-
-            //para G
-            if (coordenada == "G-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 6] = "X";
-                }
-            }
-
-            if (coordenada == "G-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 6] = "X";
-                }
-            }
-
-            if (coordenada == "G-3")
-            {
-                if (color == "blanco")
-                {
-                    tablero[2, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 6] = "X";
-                }
-            }
-            if (coordenada == "G-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 6] = "X";
-                }
-            }
-            if (coordenada == "G-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 6] = "X";
-                }
-            }
-            if (coordenada == "G-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 6] = "X";
-                }
-            }
-            if (coordenada == "G-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 6] = "X";
-                }
-            }
-            if (coordenada == "G-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 6] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 6] = "X";
-
-                }
-            }
-            //para H
-            if (coordenada == "H-1")
-            {
-                if (color == "blanco")
-                {
-                    tablero[0, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[0, 7] = "X";
-                }
-            }
-
-            if (coordenada == "H-2")
-            {
-                if (color == "blanco")
-                {
-                    tablero[1, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[1, 7] = "X";
-                }
-            }
-
-            if (coordenada == "H-3")
-            {
-                if (color == "blanco")
-                {
-                    tablero[2, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[2, 7] = "X";
-                }
-            }
-            if (coordenada == "H-4")
-            {
-                if (color == "blanco")
-                {
-                    tablero[3, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[3, 7] = "X";
-                }
-            }
-            if (coordenada == "H-5")
-            {
-                if (color == "blanco")
-                {
-                    tablero[4, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[4, 7] = "X";
-                }
-            }
-            if (coordenada == "H-6")
-            {
-                if (color == "blanco")
-                {
-                    tablero[5, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[5, 7] = "X";
-                }
-            }
-            if (coordenada == "H-7")
-            {
-                if (color == "blanco")
-                {
-                    tablero[6, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[6, 7] = "X";
-                }
-            }
-            if (coordenada == "H-8")
-            {
-                if (color == "blanco")
-                {
-                    tablero[7, 7] = "O";
-                }
-                else if (color == "negro")
-                {
-                    tablero[7, 7] = "X";
-
-                }
-            }
-
 
         }
 
@@ -18144,24 +16889,45 @@ namespace PROYECTO1
 
         protected void ButtonEmpezar_Click(object sender, EventArgs e)
         {
-            
-          
-            LabelIndicadorTurno.Text = "Jugador 1";
-            turnoJ1 = false;
-            turnoJ2 = true;
-            //meotodo
-            informacionFinal();
-            turnoJ1 = true;
-            turnoJ2 = false;
-            //habilita la parte del metodo informacionFina()
-            //para realizar las capturas
-            llaveCaptura = true;
 
-            //llave general tiempo
-            llaveTiempoGeneral = true;
+            if (turnoJ1 == true)
+            {
+                LabelIndicadorTurno.Text = "Jugador 1";
+                turnoJ1 = false;
+                turnoJ2 = true;
+                //meotodo
+                informacionFinal();
+                turnoJ1 = true;
+                turnoJ2 = false;
+                //habilita la parte del metodo informacionFina()
+                //para realizar las capturas
+                llaveCaptura = true;
 
-            //llave par empezar a contar
-            llaveTiempo1 = true;
+                //llave general tiempo
+                llaveTiempoGeneral = true;
+
+                //llave par empezar a contar
+                llaveTiempo1 = true;
+            }
+            else if(turnoJ2 == true)
+            {
+                
+                turnoJ2 = false;
+                turnoJ1 = true;
+                //meotodo
+                informacionFinal();
+                turnoJ1 = false;
+                turnoJ2 = true;
+                //habilita la parte del metodo informacionFina()
+                //para realizar las capturas
+                llaveCaptura = true;
+
+                //llave general tiempo
+                llaveTiempoGeneral = true;
+
+                //llave par empezar a contar
+                llaveTiempo2 = true;
+            }
         }
 
         public void pintarJ1(int x, int y)
@@ -18172,61 +16938,61 @@ namespace PROYECTO1
                 cambio1 = 0;
             }
 
-            if (arrayJugador1[cambio1].ToString() == "Rojo")
+            if (arrayJugador1[cambio1].ToString() == "rojo")
             {
                 tableroColor[x, y].BackColor = Color.Red;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if(arrayJugador1[cambio1].ToString() == "Amarillo")
+            else if(arrayJugador1[cambio1].ToString() == "amarillo")
             {
                 tableroColor[x, y].BackColor = Color.Yellow;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Azul")
+            else if (arrayJugador1[cambio1].ToString() == "azul")
             {
                 tableroColor[x, y].BackColor = Color.Blue;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Anaranjado")
+            else if (arrayJugador1[cambio1].ToString() == "anaranjado")
             {
                 tableroColor[x, y].BackColor = Color.Orange;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Verde")
+            else if (arrayJugador1[cambio1].ToString() == "verde")
             {
                 tableroColor[x, y].BackColor = Color.Green;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Violeta")
+            else if (arrayJugador1[cambio1].ToString() == "violeta")
             {
                 tableroColor[x, y].BackColor = Color.Violet;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Blanco")
+            else if (arrayJugador1[cambio1].ToString() == "blanco")
             {
                 tableroColor[x, y].BackColor = Color.White;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Negro")
+            else if (arrayJugador1[cambio1].ToString() == "negro")
             {
                 tableroColor[x, y].BackColor = Color.Black;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Celeste")
+            else if (arrayJugador1[cambio1].ToString() == "celeste")
             {
                 tableroColor[x, y].BackColor = Color.LightBlue;
                 tableroInterno[x, y] = "1";
                 cambio1++;
             }
-            else if (arrayJugador1[cambio1].ToString() == "Gris")
+            else if (arrayJugador1[cambio1].ToString() == "gris")
             {
                 tableroColor[x, y].BackColor = Color.Gray;
                 tableroInterno[x, y] = "1";
@@ -18246,61 +17012,61 @@ namespace PROYECTO1
                 cambio2 = 0;
             }
 
-            if (arrayJugador2[cambio2].ToString() == "Rojo")
+            if (arrayJugador2[cambio2].ToString() == "rojo")
             {
                 tableroColor[x, y].BackColor = Color.Red;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Amarillo")
+            else if (arrayJugador2[cambio2].ToString() == "amarillo")
             {
                 tableroColor[x, y].BackColor = Color.Yellow;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Azul")
+            else if (arrayJugador2[cambio2].ToString() == "azul")
             {
                 tableroColor[x, y].BackColor = Color.Blue;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Anaranjado")
+            else if (arrayJugador2[cambio2].ToString() == "anaranjado")
             {
                 tableroColor[x, y].BackColor = Color.Orange;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Verde")
+            else if (arrayJugador2[cambio2].ToString() == "verde")
             {
                 tableroColor[x, y].BackColor = Color.Green;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Violeta")
+            else if (arrayJugador2[cambio2].ToString() == "violeta")
             {
                 tableroColor[x, y].BackColor = Color.Violet;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Blanco")
+            else if (arrayJugador2[cambio2].ToString() == "blanco")
             {
                 tableroColor[x, y].BackColor = Color.White;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Negro")
+            else if (arrayJugador2[cambio2].ToString() == "negro")
             {
                 tableroColor[x, y].BackColor = Color.Black;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Celeste")
+            else if (arrayJugador2[cambio2].ToString() == "celeste")
             {
                 tableroColor[x, y].BackColor = Color.LightBlue;
                 tableroInterno[x, y] = "0";
                 cambio2++;
             }
-            else if (arrayJugador2[cambio2].ToString() == "Gris")
+            else if (arrayJugador2[cambio2].ToString() == "gris")
             {
                 tableroColor[x, y].BackColor = Color.Gray;
                 tableroInterno[x, y] = "0";
