@@ -129,6 +129,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Maquina.aspx" />
     <Content Include="MenuPrincipal.aspx" />
+    <Content Include="Styles\estiloCampeonato.css" />
     <Content Include="Styles\estiloXtream.css" />
     <Content Include="Xtream.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

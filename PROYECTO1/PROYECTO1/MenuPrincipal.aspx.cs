@@ -41,7 +41,7 @@ namespace PROYECTO1
 
         protected void ButtonTorneo_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Torneo.aspx");
         }
 
         protected void ButtonReporte_Click(object sender, EventArgs e)
