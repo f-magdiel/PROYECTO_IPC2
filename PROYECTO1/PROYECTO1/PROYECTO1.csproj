@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Grafica.aspx" />
     <Content Include="Iniciar.aspx" />
     <Content Include="MaquinaInverso.aspx" />
     <Content Include="Prueba.aspx" />
@@ -129,6 +130,7 @@
     <Content Include="Maquina.aspx" />
     <Content Include="MenuPrincipal.aspx" />
     <Content Include="Styles\estiloCampeonato.css" />
+    <Content Include="Styles\estiloGrafica.css" />
     <Content Include="Styles\estiloXtream.css" />
     <Content Include="Xtream.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -176,6 +178,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Grafica.aspx.cs">
+      <DependentUpon>Grafica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grafica.aspx.designer.cs">
+      <DependentUpon>Grafica.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar.aspx.cs">
       <DependentUpon>Iniciar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

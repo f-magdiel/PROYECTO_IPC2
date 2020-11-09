@@ -11,13 +11,30 @@
 <body>
     <form id="form1" runat="server">
         <div>
+             <asp:ScriptManager ID="ScriptManager1" runat="server" />
+            
+            <asp:Timer ID="Timer1" OnTick="Timer1_Tick"  Interval="1000" runat="server"/>
+             <asp:UpdatePanel ID="TimeJ1" runat="server" UpdateMode="Conditional">
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="Timer1" />
+        </Triggers>
+        <ContentTemplate>
+             <asp:Label CssClass="tiempoj1" ID="LabelTiempoJ1" runat="server" Text="0:0"></asp:Label>
+            <asp:Label CssClass="tiempoj2" ID="LabelTiempoJ2" runat="server" Text="0:0"></asp:Label>
+        </ContentTemplate>
+        </asp:UpdatePanel>
+
+            <asp:Button CssClass="elegirequipo1" ID="ButtonElegirEquipo1" runat="server" Text="Elegir" OnClick="ButtonElegirEquipo1_Click" />
+            <asp:Button CssClass="elegirj1" ID="ButtonElegirJ1" runat="server" Text="Elegir" />
+            <asp:Button CssClass="elegirequipo2" ID="ButtonElegirEquipo2" runat="server" Text="Elegir" OnClick="ButtonElegirEquipo2_Click" />
+            <asp:Button CssClass="elegirj2" ID="ButtonElegirJ2" runat="server" Text="Elegir" />
+
             <asp:Label CssClass="tutilocampeonato" ID="LabelTituloCampeonato" runat="server" Text="Nombre Campeonato"></asp:Label>
             <asp:Label CssClass="nombrecampeonato" ID="LabelNombreCampeonato" runat="server" Text="Nombre"></asp:Label>
             <asp:Label CssClass="cronometro" ID="LabelCronometro" runat="server" Text="Cronometro"></asp:Label>
             <asp:Label CssClass="titulotiempoj1" ID="LabelTituloTiempoJ1" runat="server" Text="Jugador 1"></asp:Label>
             <asp:Label CssClass="titulotiempoj2" ID="LabelTituloTiempoJ2" runat="server" Text="Jugador 2"></asp:Label>
-            <asp:Label CssClass="tiempoj1" ID="LabelTiempoJ1" runat="server" Text="0:0"></asp:Label>
-            <asp:Label CssClass="tiempoj2" ID="LabelTiempoJ2" runat="server" Text="0:0"></asp:Label>
+           
             <asp:Label CssClass="tituloestado" ID="LabelTurnoTitulo" runat="server" Text="Turno"></asp:Label>
             <asp:Label CssClass="turnoJugador" ID="LabelTurnoJugador" runat="server" Text="No Disponible"></asp:Label>
             <asp:Label CssClass="equipo1" ID="LabelEquipo1" runat="server" Text="Equipo 1"></asp:Label>
@@ -25,11 +42,11 @@
            
             <asp:Label CssClass="jugadorelegir1" ID="LabelNombreJugador1" runat="server" Text="Jugador"></asp:Label>
             <asp:Label CssClass="jugadorelegir2" ID="LabelNombreJugador2" runat="server" Text="Jugador"></asp:Label>
-            <asp:DropDownList CssClass="listaequipo1" ID="DropDownListEquipo1" runat="server"></asp:DropDownList>
+            <asp:DropDownList CssClass="listaequipo1" ID="DropDownListEquipo1" runat="server" OnSelectedIndexChanged="DropDownListEquipo1_SelectedIndexChanged"></asp:DropDownList>
             <asp:DropDownList CssClass="listajugador1" ID="DropDownListJugador1" runat="server"></asp:DropDownList>
             <asp:DropDownList CssClass="listaequipo2" ID="DropDownListEquipo2" runat="server"></asp:DropDownList>
             <asp:DropDownList CssClass="listajugador2" ID="DropDownListJugador2" runat="server"></asp:DropDownList>
-            <asp:Button CssClass="btnempezar" ID="ButtonEmpezar" runat="server" Text="Empezar" />
+            <asp:Button CssClass="btnempezar" ID="ButtonEmpezar" runat="server" Text="Empezar" OnClick="ButtonEmpezar_Click" />
 
              <asp:Label Cssclass="movimientos" ID="LabeMovimienntos" runat="server" Text="Movimientos"></asp:Label>
             <asp:Label Cssclass="movimientosjugador1" ID="LabelJugador1" runat="server" Text="Jugador 1"></asp:Label>

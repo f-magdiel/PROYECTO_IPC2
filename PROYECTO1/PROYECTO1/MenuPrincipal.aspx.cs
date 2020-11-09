@@ -46,7 +46,7 @@ namespace PROYECTO1
 
         protected void ButtonReporte_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Grafica.aspx");
         }
     }
 }

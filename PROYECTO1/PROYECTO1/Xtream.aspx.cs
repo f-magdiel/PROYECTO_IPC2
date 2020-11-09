@@ -129,7 +129,18 @@ namespace PROYECTO1
                 turnoJ1 = true;
                 turnoJ2 = false;
                 llaveCaptura = false;
-            }
+                arrayJugador1.Clear();
+                arrayJugador2.Clear();
+                cambio1 = 0;
+                cambio2 = 0;
+                contadorColorj1 = 0;
+                contadorColorj2 = 0;
+                 //tablero
+                 tiempoJ1S = 0;
+                 tiempoJ2S = 0;
+                 tiempoJ1M = 0;
+                 tiempoJ2M = 0;
+             }
 
             //labels para el tablero
             labelIzquierdo[0] = LabelI1;

@@ -18,7 +18,7 @@
             <asp:Button class="opcion" ID="ButtonMaquina" runat="server" Text="1 vs 1 Normal" OnClick="ButtonMaquina_Click" />
             <asp:Button class= "opcion" ID="ButtonSolitario" runat="server" Text="Máquina Normal" OnClick="ButtonSolitario_Click" />
             <asp:Button class= "opcion" ID="ButtonTorneo" runat="server" Text="Torneo" OnClick="ButtonTorneo_Click" />
-            <asp:Button class =" opcion" ID="ButtonReporte" runat="server" Text="Reporte" OnClick="ButtonReporte_Click" />
+            <asp:Button class =" opcion" ID="ButtonReporte" runat="server" Text="Grafica" OnClick="ButtonReporte_Click" />
 
         </section>
         </div>

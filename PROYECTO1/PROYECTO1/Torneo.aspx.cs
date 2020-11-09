@@ -53,12 +53,60 @@ namespace PROYECTO1
         public ArrayList arrayColor = new ArrayList();
         public static string[,] tablero = new string[8, 8];
         public static Button[,] tableroColor = new Button[8, 8];
+
+        //para los equipos
+        public static ArrayList arrayListado = new ArrayList();
+        public static int contadorEquipo = 0;
+        public static string nombreCampeonato = "";
+        public static string seleccionEquipo1 = "";
+        public static string seleccionEquipo2 = "";
+
+        public static int ptsEquipo1 = 0;
+        public static int ptsEquipo2 = 0;
+        public static int ptsEquipo3 = 0;
+        public static int ptsEquipo4 = 0;
+        public static int ptsEquipo5 = 0;
+        public static int ptsEquipo6 = 0;
+        public static int ptsEquipo7 = 0;
+        public static int ptsEquipo8 = 0;
+        public static int ptsEquipo9 = 0;
+        public static int ptsEquipo10 = 0;
+        public static int ptsEquipo11 = 0;
+        public static int ptsEquipo12 = 0;
+        public static int ptsEquipo13 = 0;
+        public static int ptsEquipo14 = 0;
+        public static int ptsEquipo15 = 0;
+        public static int ptsEquipo16 = 0;
+
+
+
+        //tiempo equipo
+        public static bool llaveTiempo1 = false;
+        public static bool llaveTiempo2 = false;
+        public static bool llaveTiempoGeneral = false;
+
+        public static int minutosT1 = 0;
+        public static int segundoT1 = 0;
+        public static int minutosT2 = 0;
+        public static int segundoT2 = 0;
+
+        public static string actualEquipo1 = "";
+        public static string actualEquipo2 = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
+                llenarDropLista();
                 banderaBlanca = false;
                 banderaNegra = false;
+                llaveTiempoGeneral = false;
+                llaveTiempo1 = false;
+                llaveTiempo2 = false;
+                minutosT1 = 0;
+                segundoT1 = 0;
+                minutosT2 = 0;
+                segundoT2 = 0;
             }
             if (!IsPostBack)
             {
@@ -313,7 +361,36 @@ namespace PROYECTO1
 
             }
         }
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
 
+            if (llaveTiempoGeneral == true)
+            {
+                if (llaveTiempo1 == true)
+                {
+
+                    LabelTiempoJ1.Text = minutosT1.ToString() + ":" + segundoT1.ToString();
+                    segundoT1++;
+                    if (segundoT1 == 61)
+                    {
+                        segundoT1 = 0;
+                        minutosT1++;
+                    }
+                }
+
+                if (llaveTiempo2 == true)
+                {
+
+                    LabelTiempoJ2.Text = minutosT2.ToString() + ":" + segundoT2.ToString();
+                    segundoT2++;
+                    if (segundoT2 == 61)
+                    {
+                        segundoT2 = 0;
+                        minutosT2++;
+                    }
+                }
+            }
+        }
         protected void ButtonRandom_Click(object sender, EventArgs e)
         {
             Random aleatoria = new Random();
@@ -1676,7 +1753,9 @@ namespace PROYECTO1
                     {
                         if (tableroColor[i, j].BackColor == Color.Black)
                         {
-
+                            LabelTurnoJugador.Text = "Jugador 2";
+                            llaveTiempo2 = true;
+                            llaveTiempo1 = false;
                             activacionBoton2(i, j);//metodo para habilitar botones si soy negro
 
                         }
@@ -1686,7 +1765,9 @@ namespace PROYECTO1
                     {
                         if (tableroColor[i, j].BackColor == Color.White)
                         {
-
+                            LabelTurnoJugador.Text = "Jugador 1";
+                            llaveTiempo1 = true;
+                            llaveTiempo2 = false;
                             activacionBoton1(i, j);//metodo para habilitar botones si soy blanco
 
                         }
@@ -1731,6 +1812,9 @@ namespace PROYECTO1
                 }
             }
 
+            LabelContadorJugador1.Text = movimientoB.ToString();
+            LabelContadorJugador2.Text = movimientoN.ToString();
+
             if (usuarioBlanco == true)//cuando yo sea blanco
             {
                 //LabelContadorUsuario.Text = movimientoB.ToString();
@@ -1748,19 +1832,29 @@ namespace PROYECTO1
                 if (movimientoB > movimientoN)
                 {
                     //gana blanca
-                    LabelTitulo.Text = "Ganó ficha blanca";
+                    llaveTiempoGeneral = false;
+                    llaveTiempo1 = false;
+                    llaveTiempo2 = false;
+                    LabelEstado.Text = "Gana Jugador 1";
+                    LabelTurnoJugador.Text = "No Disponible";
+                    validacionGanador(actualEquipo1, actualEquipo2);
                 }
                 else if (movimientoN > movimientoB)
                 {
                     //gana negras
-                    LabelTitulo.Text = "Ganó ficha negra";
-
+                    llaveTiempoGeneral = false;
+                    llaveTiempo1 = false;
+                    llaveTiempo2 = false;
+                    LabelEstado.Text = "Gana Jugador 2";
+                    LabelTurnoJugador.Text = "No Disponible";
+                    validacionGanador(actualEquipo2, actualEquipo1);
                 }
                 else if (movimientoB == movimientoN)
                 {
                     //es empate
-                    LabelTitulo.Text = "Empate";
-
+                    llaveTiempoGeneral = false;
+                    LabelEstado.Text = "Empate";
+                    LabelTurnoJugador.Text = "No Disponible";
                 }
 
 
@@ -1771,11 +1865,145 @@ namespace PROYECTO1
             {
                 movimientoGeneral = 0;
                 //se esta jugando
-                LabelTitulo.Text = "Se está jugando";
+                LabelEstado.Text = "Se está jugando";
             }
 
         }
 
+
+        public void validacionGanador(string ganador, string perdedor)
+        {
+            if(contadorEquipo == 4)
+            {
+                if (Grafica.A2Equipo1 == actualEquipo1 && Grafica.A2Equipo2 == actualEquipo2)
+                {
+                    Grafica.A1Equipo1 = ganador;
+                }
+
+                if (Grafica.B2Equipo1 == actualEquipo1 && Grafica.B2Equipo2 == actualEquipo2)
+                {
+                    Grafica.B1Equipo1 = ganador;
+                }
+
+                //final
+                if (Grafica.A1Equipo1 == actualEquipo1 && Grafica.B1Equipo1 == actualEquipo2)
+                {
+                    Grafica.ganador = ganador;
+                }
+            }
+            else if(contadorEquipo == 8)
+            {
+                //lado A
+                if (Grafica.A4Equipo1 == actualEquipo1 && Grafica.A4Equipo2 == actualEquipo2)
+                {
+                    Grafica.A2Equipo1 = ganador;
+                }
+                else if (Grafica.A4Equipo3 == actualEquipo1 && Grafica.A4Equipo4 == actualEquipo2)
+                {
+                    Grafica.A2Equipo2 = ganador;
+                }
+
+                if (Grafica.A2Equipo1 == actualEquipo1 && Grafica.A2Equipo2 == actualEquipo2)
+                {
+                    Grafica.A1Equipo1 = ganador;
+                }
+
+                //lado B
+                if (Grafica.B4Equipo1 == actualEquipo1 && Grafica.B4Equipo2 == actualEquipo2)
+                {
+                    Grafica.B2Equipo1 = ganador;
+                }
+                else if (Grafica.B4Equipo3 == actualEquipo1 && Grafica.B4Equipo4 == actualEquipo2)
+                {
+                    Grafica.B2Equipo2 = ganador;
+                }
+
+                if (Grafica.B2Equipo1 == actualEquipo1 && Grafica.B2Equipo2 == actualEquipo2)
+                {
+                    Grafica.B1Equipo1 = ganador;
+                }
+
+                //final
+                if (Grafica.A1Equipo1 == actualEquipo1 && Grafica.B1Equipo1 == actualEquipo2)
+                {
+                    Grafica.ganador = ganador;
+                }
+            }
+            else if (contadorEquipo == 16)
+            {
+                //lado A
+                if (Grafica.A8Equipo1 == actualEquipo1 && Grafica.A8Equipo2 == actualEquipo2)
+                {
+                    Grafica.A4Equipo1 = ganador;                 
+                }
+                else if(Grafica.A8Equipo3 == actualEquipo1 && Grafica.A8Equipo4 == actualEquipo2)
+                {
+                    Grafica.A4Equipo2 = ganador;
+                }
+                else if (Grafica.A8Equipo5 == actualEquipo1 && Grafica.A8Equipo6 == actualEquipo2)
+                {
+                    Grafica.A4Equipo3 = ganador;
+                }
+                else if (Grafica.A8Equipo7 == actualEquipo1 && Grafica.A8Equipo8 == actualEquipo2)
+                {
+                    Grafica.A4Equipo4 = ganador;
+                }
+
+                if(Grafica.A4Equipo1 == actualEquipo1 && Grafica.A4Equipo2 == actualEquipo2)
+                {
+                    Grafica.A2Equipo1 = ganador;
+                }
+                else if (Grafica.A4Equipo3 == actualEquipo1 && Grafica.A4Equipo4 == actualEquipo2)
+                {
+                    Grafica.A2Equipo2 = ganador;
+                }
+
+                if(Grafica.A2Equipo1 == actualEquipo1 && Grafica.A2Equipo2 == actualEquipo2)
+                {
+                    Grafica.A1Equipo1 = ganador;
+                }
+
+
+                //lado B
+                if (Grafica.B8Equipo1 == actualEquipo1 && Grafica.B8Equipo2 == actualEquipo2)
+                {
+                    Grafica.B4Equipo1 = ganador;
+                }
+                else if (Grafica.B8Equipo3 == actualEquipo1 && Grafica.B8Equipo4 == actualEquipo2)
+                {
+                    Grafica.B4Equipo2 = ganador;
+                }
+                else if (Grafica.B8Equipo5 == actualEquipo1 && Grafica.B8Equipo6 == actualEquipo2)
+                {
+                    Grafica.B4Equipo3 = ganador;
+                }
+                else if (Grafica.B8Equipo7 == actualEquipo1 && Grafica.B8Equipo8 == actualEquipo2)
+                {
+                    Grafica.B4Equipo4 = ganador;
+                }
+
+                if (Grafica.B4Equipo1 == actualEquipo1 && Grafica.B4Equipo2 == actualEquipo2)
+                {
+                    Grafica.B2Equipo1 = ganador;
+                }
+                else if (Grafica.B4Equipo3 == actualEquipo1 && Grafica.B4Equipo4 == actualEquipo2)
+                {
+                    Grafica.B2Equipo2 = ganador;
+                }
+
+                if (Grafica.B2Equipo1 == actualEquipo1 && Grafica.B2Equipo2 == actualEquipo2)
+                {
+                    Grafica.B1Equipo1 = ganador;
+                }
+
+
+                //final
+                if (Grafica.A1Equipo1 == actualEquipo1 && Grafica.B1Equipo1 == actualEquipo2)
+                {
+                    Grafica.ganador = ganador;
+                }
+            }
+        }
         //informacion final para carga
         public void informacionFinalCarga()
         {
@@ -1930,91 +2158,90 @@ namespace PROYECTO1
                     if (lector.IsStartElement())
                     {
                         string valor = lector.Name.ToString();
-
-                        if (banderaGeneral == true)
+                        //inicio de elemento
+                       if(lector.NodeType == XmlNodeType.Element)
                         {
-                            if (valor == "ficha")
+                            if (lector.Name.ToString() == "nombre")
                             {
-                                banderaGeneral = false;
-                                banderaFicha = true;
-                                continue;
+                                nombreCampeonato = lector.ReadString();
                             }
-                            else if (valor == "siguienteTiro")
+                            else if (lector.Name.ToString() == "nombreEquipo")
                             {
-                                banderaGeneral = false;
-                                banderaTiro = true;
-                                continue;
+                                arrayListado.Add(lector.ReadString());
+                                contadorEquipo++;
+                            }
+                            else if(lector.Name.ToString() == "jugador")
+                            {
+                                arrayListado.Add(lector.ReadString());
                             }
                         }
-
-                        if (banderaFicha == true)
-                        {
-                            contador++;
-                            if (valor == "color")
-                            {
-                                color = lector.ReadString();
-                            }
-                            else if (valor == "columna")
-                            {
-                                columna = lector.ReadString();
-                            }
-                            else if (valor == "fila")
-                            {
-                                fila = lector.ReadString();
-                            }
-                            if (contador == 3)
-                            {
-                                cargarValores(color, columna, fila);  // para ingresar los datos en la matriz
-                                contador = 0;
-                                banderaGeneral = true;
-                                banderaFicha = false;
-                            }
-
-                        }
-
-                        if (banderaTiro == true)
-                        {
-                            if (valor == "color")
-                            {
-                                colorTiro = lector.ReadString();
-                                colorTiro = colorTiro.Replace(" ", "");
-
-                                if (colorTiro == "blanco")
-                                {
-
-                                    banderaNegra = false;
-                                    banderaBlanca = true;
-                                    usuarioBlanco = true;
-                                    banderaGeneral = true;
-                                    banderaTiro = false;
-                                }
-                                else if (colorTiro == "negro")
-                                {
-
-                                    banderaNegra = true;
-                                    banderaBlanca = false;
-                                    usuarioNegro = true;
-                                    banderaGeneral = true;
-                                    banderaTiro = false;
-                                }
-
-                            }
-                        }
-
+                       
 
 
                     }
                 }
 
-                analizarMatriz();
-                ingresarFichas();
-                informacionFinalCarga();
-
+                llenarDropLista();
+                validacionCantidadEquipo();
 
             }
             catch (Exception exc)
             {
                 Response.Write("No se encontro el archivo" + exc);
+            }
+        }
+
+        public void llenarDropLista()
+        {
+            for (int i = 0; i < arrayListado.Count; i+=4)
+            {
+                LabelNombreCampeonato.Text = nombreCampeonato;
+                DropDownListEquipo1.Items.Add(arrayListado[i].ToString());
+                DropDownListEquipo2.Items.Add(arrayListado[i].ToString());
+            }
+        }
+
+        public void validacionCantidadEquipo()
+        {
+            if(contadorEquipo == 4)
+            {
+                //si solo hay cuatro equipos
+                Grafica.A2Equipo1 = arrayListado[0].ToString();
+                Grafica.A2Equipo2 = arrayListado[4].ToString();
+                Grafica.B2Equipo1 = arrayListado[8].ToString();
+                Grafica.B2Equipo2 = arrayListado[12].ToString();
+            }
+            else if (contadorEquipo == 8)
+            {
+                Grafica.A4Equipo1 = arrayListado[0].ToString();
+                Grafica.A4Equipo2 = arrayListado[4].ToString();
+                Grafica.A4Equipo3 = arrayListado[8].ToString();
+                Grafica.A4Equipo4 = arrayListado[12].ToString();
+
+                Grafica.B4Equipo1 = arrayListado[16].ToString();
+                Grafica.B4Equipo2 = arrayListado[20].ToString();
+                Grafica.B4Equipo3 = arrayListado[24].ToString();
+                Grafica.B4Equipo4 = arrayListado[28].ToString();
+            }
+            else if(contadorEquipo == 16)
+            {
+                Grafica.A8Equipo1 = arrayListado[0].ToString();
+                Grafica.A8Equipo2 = arrayListado[4].ToString();
+                Grafica.A8Equipo3 = arrayListado[8].ToString();
+                Grafica.A8Equipo4 = arrayListado[12].ToString();
+                Grafica.A8Equipo5 = arrayListado[16].ToString();
+                Grafica.A8Equipo6 = arrayListado[20].ToString();
+                Grafica.A8Equipo7 = arrayListado[24].ToString();
+                Grafica.A8Equipo8 = arrayListado[28].ToString();
+
+                Grafica.B8Equipo1 = arrayListado[32].ToString();
+                Grafica.B8Equipo2 = arrayListado[36].ToString();
+                Grafica.B8Equipo3 = arrayListado[40].ToString();
+                Grafica.B8Equipo4 = arrayListado[44].ToString();
+                Grafica.B8Equipo5 = arrayListado[48].ToString();
+                Grafica.B8Equipo6 = arrayListado[52].ToString();
+                Grafica.B8Equipo7 = arrayListado[56].ToString();
+                Grafica.B8Equipo8 = arrayListado[60].ToString();
             }
         }
 
@@ -7703,6 +7930,64 @@ namespace PROYECTO1
 
         protected void DropDownListFicha_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected void DropDownListEquipo1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+           
+        }
+
+        protected void ButtonElegirEquipo1_Click(object sender, EventArgs e)
+        {
+            seleccionEquipo1 = DropDownListEquipo1.SelectedItem.ToString();
+            actualEquipo1 = seleccionEquipo1;
+            for (int i = 0; i < arrayListado.Count; i++)
+            {
+                if (seleccionEquipo1 == arrayListado[i].ToString())
+                {
+                    DropDownListJugador1.Items.Add(arrayListado[i + 1].ToString());
+                    DropDownListJugador1.Items.Add(arrayListado[i + 2].ToString());
+                    DropDownListJugador1.Items.Add(arrayListado[i + 3].ToString());
+                    break;
+                }
+            }
+        }
+
+        protected void ButtonElegirEquipo2_Click(object sender, EventArgs e)
+        {
+            seleccionEquipo2 = DropDownListEquipo2.SelectedItem.ToString();
+            actualEquipo2 = seleccionEquipo2;
+            for (int i = 0; i < arrayListado.Count; i++)
+            {
+                if (seleccionEquipo2 == arrayListado[i].ToString())
+                {
+                    DropDownListJugador2.Items.Add(arrayListado[i + 1].ToString());
+                    DropDownListJugador2.Items.Add(arrayListado[i + 2].ToString());
+                    DropDownListJugador2.Items.Add(arrayListado[i + 3].ToString());
+                    break;
+                }
+            }
+        }
+
+        protected void ButtonEmpezar_Click(object sender, EventArgs e)
+        {
+           
+            // el color es activado
+            banderaBlanca = true;
+            usuarioBlanco = true;
+            llaveTiempoGeneral = true;
+            llaveTiempo1 = true;
+            LabelEstado.Text = "Se está jugando";
+            LabelTurnoJugador.Text = "Jugador 1";
+            //se habilitan los botones para las blancas
+
+
+            BtnF4.Enabled = true;
+            BtnE3.Enabled = true;
+            BtnC5.Enabled = true;
+            BtnD6.Enabled = true;
 
         }
     }
